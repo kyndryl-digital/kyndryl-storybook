@@ -2,11 +2,7 @@ import { html } from 'lit-element';
 import '../footer';
 
 export default {
-    title: 'Example/Footer',
-    argTypes: {
-        backgroundColor: { control: 'color' },
-        onClick: { action: 'onClick' },
-    },
+    title: 'Kyndryl/Footer',
 };
 
 export const Default = () => {

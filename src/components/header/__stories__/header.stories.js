@@ -2,11 +2,7 @@ import { html } from 'lit-element';
 import '../header';
 
 export default {
-    title: 'Example/Header',
-    argTypes: {
-        backgroundColor: { control: 'color' },
-        onClick: { action: 'onClick' },
-    },
+    title: 'Kyndryl/Header',
 };
 
 export const Default = () => {

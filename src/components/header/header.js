@@ -1,26 +1,28 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
+import { LitElement, html } from 'lit-element';
 
-import {LitElement, html, css} from 'lit';
+// import logo from './header-logo.png';
+import markup from './header.html.js';
+import css from './header.css.js';
 
 import globalSettings from '../../globalSettings';
 const { stablePrefix: prefix } = globalSettings;
 
 /**
- * An example element.
+ * Kyndryl branded L0
  *
  * @slot - This element has a slot
  * @csspart button - The button
  */
 export class Header extends LitElement {
-    render() {
-        return html`
-            <header><h1>Kyndryl</h1></header>
-        `;
+
+    static get styles() {
+        return [ css ];
     }
+
+    render() {
+        return markup;
+    }
+
 }
 
-window.customElements.define(`${prefix}-header`, Header);
+customElements.define(`${prefix}-header`, Header);
