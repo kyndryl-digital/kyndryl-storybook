@@ -1,0 +1,27 @@
+{
+  "name": "kyndryl-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@storybook/addon-actions": "^6.3.6",
+    "@storybook/addon-essentials": "^6.3.6",
+    "@storybook/addon-links": "^6.3.6",
+    "@storybook/web-components": "^6.3.6",
+    "babel-loader": "^8.2.2"
+  },
+  "dependencies": {
+    "lit": "^2.0.0-rc.2",
+    "lit-element": "^2.5.1",
+    "lit-html": "^1.4.1"
+  }
+}
