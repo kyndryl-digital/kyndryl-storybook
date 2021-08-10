@@ -15,14 +15,20 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <body>
 
-<kyndryl-header></kyndryl-header>
-<kyndryl-footer></kyndryl-footer>
+<kyndryl-wrapper>
+    <p>Nullam id dolor id nibh ultricies vehicula ut id elit. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+</kyndryl-wrapper>
 
-    <script src="babel-polyfills.js"></script>
-    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
-    <script src="node_modules/systemjs/dist/s.min.js"></script>
-    <script src="components/header.js"></script>
-    <script src="components/footer.js"></script>
+<script src="nomodule/babel-polyfills-nomodule.js"></script>
+
+<!-- Load Web Components polyfills, if needed. -->
+<script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+
+<!-- SystemJS loader -->
+<script src="node_modules/systemjs/dist/s.min.js"></script>
+
+<!-- Use SystemJS to load the application bundle -->
+<script src="components/wrapper.js"></script>
 
 </body>
 </html>

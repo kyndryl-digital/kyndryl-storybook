@@ -1,16 +1,6 @@
-/**
- * @license
- * Copyright (c) 2020 The Polymer Project Authors. All rights reserved.
- * This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
- * The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
- * The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
- * Code distributed by Google as part of the polymer project is also
- * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
- */
-
-import babel from 'rollup-plugin-babel';
-import litcss from 'rollup-plugin-lit-css';
-import commonjs from 'rollup-plugin-commonjs';
+import babel from '@rollup/plugin-babel';
+import image from '@rollup/plugin-image';
+import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
@@ -39,43 +29,47 @@ const filesizeConfig = {
     showMinifiedSize: false,
 };
 
+// Static assets will vary depending on the application
 const copyConfig = {
     targets: [
         { src: 'node_modules/@webcomponents', dest: 'build/node_modules' },
         { src: 'node_modules/systemjs/dist/s.min.js', dest: 'build/node_modules/systemjs/dist' },
         { src: 'images', dest: 'build' },
         { src: 'data', dest: 'build' },
-        { src: 'public/index.html', dest: 'build', rename: 'index.html' },
+        { src: 'public/index.html', dest: 'build' },
     ],
 };
 
+// The main JavaScript bundle for modern browsers that support
+// JavaScript modules and other ES2015+ features.
 const configs = [
     {
-        input: ['src/components/header/header.js','src/components/footer/footer.js'],
+        input: [
+            'src/components/wrapper/wrapper.js',
+            'src/components/header/header.js',
+            'src/components/footer/footer.js',
+        ],
         output: {
             dir: 'build/components',
             format: 'systemjs',
         },
         plugins: [
-            litcss(),
+            image(),
             minifyHTML(),
             babel(babelConfig),
             resolve(),
             copy(copyConfig),
         ],
-        preserveEntrySignatures: false,
+        preserveEntrySignatures: false
     },
     // Babel polyfills for older browsers that don't support ES2015+.
     {
-        input: 'src/babel-polyfills.js',
+        input: 'src/babel-polyfills-nomodule.js',
         output: {
-            file: 'build/babel-polyfills.js',
+            file: 'build/nomodule/babel-polyfills-nomodule.js',
             format: 'iife',
         },
-        plugins: [
-            commonjs({ include: ['node_modules/**'] }),
-            resolve()
-        ],
+        plugins: [commonjs({ include: ['node_modules/**'] }), resolve()],
     },
 ];
 
