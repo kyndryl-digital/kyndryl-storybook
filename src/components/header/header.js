@@ -1,6 +1,5 @@
 import { LitElement, html } from 'lit-element';
 
-// import logo from './header-logo.png';
 import markup from './header.html.js';
 import css from './header.css.js';
 
@@ -14,15 +13,12 @@ const { stablePrefix: prefix } = globalSettings;
  * @csspart button - The button
  */
 export class Header extends LitElement {
-
     static get styles() {
         return [ css ];
     }
-
     render() {
         return markup;
     }
-
 }
 
 customElements.define(`${prefix}-header`, Header);
