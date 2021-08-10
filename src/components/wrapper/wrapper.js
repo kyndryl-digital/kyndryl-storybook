@@ -3,9 +3,6 @@ import { LitElement, html } from 'lit-element';
 import markup from './wrapper.html.js';
 import css from './wrapper.css.js';
 
-import header_markup from '../header/header.html.js';
-import header_css from '../header/header.css.js';
-
 import globalSettings from '../../globalSettings';
 const { stablePrefix: prefix } = globalSettings;
 
@@ -17,11 +14,10 @@ const { stablePrefix: prefix } = globalSettings;
  */
 export class Wrapper extends LitElement {
     static get styles() {
-        return [ css, header_css ];
+        return [ css ];
     }
     render() {
         return html`
-            ${header_markup}
             ${markup}
         `;
     }
