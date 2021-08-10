@@ -252,17 +252,17 @@ export default css`
     content: ""
   }
   
-  :host {
-    margin: 0;
-    font-size: 1pc;
-    font-family: TWK Everett,Helvetica,Arial,sans-serif;
-    line-height: 1.5;
-    color: #3d3c3c;
-    background: #fff;
-    overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+  //.header * {
+  //  margin: 0;
+  //  font-size: 1pc;
+  //  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  //  line-height: 1.5;
+  //  color: #3d3c3c;
+  //  background: #fff;
+  //  overflow-x: hidden;
+  //  -webkit-font-smoothing: antialiased;
+  //  -moz-osx-font-smoothing: grayscale;
+  //}
 
   a {
     color: #187e3f;
@@ -271,6 +271,7 @@ export default css`
   }
 
   .header {
+    font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
     background-color: #fff;
     left: 0;
     position: fixed;
@@ -279,7 +280,10 @@ export default css`
     z-index: 500;
   }
 
-  .cmp-container__max-width, .cmp-footer, .cmp-navigation__group-wrapper, .header__container {
+  .cmp-container__max-width, 
+  .cmp-footer,
+  .cmp-navigation__group-wrapper, 
+  .header__container {
     max-width: 107pc;
     padding-left: 36px;
     padding-right: 36px;
@@ -421,6 +425,119 @@ export default css`
     padding-top: 40px;
     width: 100%;
   }
+
+  .header__desktop-menu .cmp-navigation__group-right-container {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 380px;
+    flex: 0 0 380px;
+    margin: 0 18px 0 0;
+  }
+  .cmp-navigation__learn-title {
+    color: #3d3c3c;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 38px;
+    margin-top: 0px;
+  }
+  .cmp-navigation__learn-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .cmp-navigation__learn-list-item {
+    margin: 0 0 18px;
+    padding: 0;
+  }
+  .cmp-navigation__learn-link {
+    color: #3d3c3c;
+    font-size: 1pc;
+    line-height: 22px;
+  }
+  .cmp-navigation__address-title {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 24px;
+    margin-bottom: 18px;
+  }
+  .cmp-navigation__address-content {
+    font-size: 1pc;
+    font-style: normal;
+    line-height: 26px;
+  }
+  .cmp-navigation__group {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__desktop-menu .cmp-navigation__group {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__group {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  
+  .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item--level-1 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 1 33.333%;
+    flex: 0 1 33.333%;
+    padding: 0 34px 0 0;
+  }
+  .cmp-navigation__item--level-1 {
+    padding: 0 0 28px;
+  }
+  .cmp-navigation__item-link {
+    color: #3d3c3c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .header__desktop-menu .cmp-navigation__item-link {
+    color: #3d3c3c;
+  }
+  .header__desktop-menu .cmp-navigation__item-link--landing, .header__desktop-menu .cmp-navigation__item-link--level-1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item-description {
+    color: #565049;
+    font-size: 1pc;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 8px;
+    margin-bottom: 38px;
+  }
+  
+  .header__desktop-menu .cmp-navigation__item-link {
+    color: #3d3c3c;
+  }
+  .header__desktop-menu .cmp-navigation__item-link--landing, .header__desktop-menu .cmp-navigation__item-link--level-1 {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  .header__desktop-menu .cmp-navigation__item-link--landing {
+    display: none;
+  }
+  .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item-link--landing {
+    display: block;
+    padding: 0 34px 0 0;
+  }
+  
+  
+  
+  
+  
+  
+  
   
   ////////// cmp-navigation__group-wrapper
 
@@ -437,6 +554,7 @@ export default css`
     background-color: transparent;
     padding-right: 20px;
     color: #3d3c3c;
+    font: inherit;
   }
   .cmp-languagenavigation__current-lang-icon:before {
     position: absolute;
