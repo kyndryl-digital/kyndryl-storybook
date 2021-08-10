@@ -1,26 +1,28 @@
-/**
- * @license
- * Copyright 2019 Google LLC
- * SPDX-License-Identifier: BSD-3-Clause
- */
+import { LitElement, html } from 'lit-element';
 
-import {LitElement, html, css} from 'lit';
+
+import markup from './footer.html.js';
+import css from './footer.css.js';
 
 import globalSettings from '../../globalSettings';
 const { stablePrefix: prefix } = globalSettings;
 
 /**
- * An example element.
+ * Kyndryl branded L0
  *
  * @slot - This element has a slot
  * @csspart button - The button
  */
 export class Footer extends LitElement {
-    render() {
-        return html`
-            <footer><h1>Footer</h1></footer>
-        `;
+
+    static get styles() {
+        return [ css ];
     }
+
+    render() {
+        return markup;
+    }
+
 }
 
-window.customElements.define(`${prefix}-footer`, Footer);
+customElements.define(`${prefix}-footer`, Footer);
