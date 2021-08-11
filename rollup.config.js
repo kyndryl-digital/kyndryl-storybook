@@ -6,6 +6,7 @@ import { terser } from 'rollup-plugin-terser';
 import filesize from 'rollup-plugin-filesize';
 import minifyHTML from 'rollup-plugin-minify-html-literals';
 import copy from 'rollup-plugin-copy';
+import multiInput from 'rollup-plugin-multi-input';
 
 const babelConfig = {
     babelrc: false,
@@ -34,8 +35,6 @@ const copyConfig = {
     targets: [
         { src: 'node_modules/@webcomponents', dest: 'build/node_modules' },
         { src: 'node_modules/systemjs/dist/s.min.js', dest: 'build/node_modules/systemjs/dist' },
-        { src: 'images', dest: 'build' },
-        { src: 'data', dest: 'build' },
         { src: 'public/index.html', dest: 'build' },
     ],
 };
@@ -50,17 +49,19 @@ const configs = [
             'src/components/footer/footer.js',
         ],
         output: {
-            dir: 'build/components',
+            dir: 'build/dist',
             format: 'systemjs',
         },
         plugins: [
+            multiInput(),
             image(),
             minifyHTML(),
             babel(babelConfig),
             resolve(),
             copy(copyConfig),
         ],
-        preserveEntrySignatures: false
+        preserveEntrySignatures: false,
+        sourceMap: 'inline',
     },
     // Babel polyfills for older browsers that don't support ES2015+.
     {
