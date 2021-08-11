@@ -398,10 +398,32 @@ a {
   box-sizing: border-box;
 }
 
+html, body {
+  margin:0;
+  font-size:1pc;
+  font-family:TWK Everett,Helvetica,Arial,sans-serif;
+  line-height:1.5;
+  color:#3d3c3c;
+  background:#fff;
+  overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale
+}
+
 .cmp-list__item-link {
   color: #000;
   font-size: 1pc;
   font-weight: 400;
   line-height: 1;
+}
+
+.cmp-social__link-text {
+  text-transform: capitalize;
+}
+
+.cmp-social__image {
+  display: block;
+  margin-right: 8px;
+  width: 13px;
 }
 `;
