@@ -1,0 +1,28 @@
+<!---README.stories.mdx--->
+
+import { Description } from '@storybook/addon-docs/blocks';
+import { vars } from '../../../global/storybook/vars';
+
+## Getting started
+
+Here's a quick example to get you started.
+
+## Usage
+
+Make sure to include the web component bundle within the `<head>` section of your html.
+
+<Description markdown={vars.cdnUrl} />
+
+```html
+<script src="//{vars.cdnUrl}/kyndryl-web-components.bundle.js"></script>
+```
+
+### Markup
+
+Wrap your page content with the custom web component tags.
+
+```html
+<kyndryl-wrapper>
+  YOUR CONTENT HERE
+</kyndryl-wrapper>
+```
