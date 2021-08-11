@@ -7,14 +7,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "storybook": "start-storybook -p 6007 -s public",
-    "build-storybook": "build-storybook -s public"
+    "storybook": "start-storybook -p 6007 -s src/public",
+    "build-storybook": "build-storybook -s src/public"
   },
   "keywords": [],
   "author": "Ian Whitcomb (ian.whitcomb@kyndryl.com)",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-proposal-decorators": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "@babel/preset-typescript": "^7.15.0",
+    "@babel/runtime": "^7.15.3",
     "@storybook/addon-actions": "^6.3.7",
     "@storybook/addon-essentials": "^6.3.7",
     "@storybook/addon-links": "^6.3.7",
@@ -22,7 +28,10 @@
     "@storybook/manager-webpack5": "^6.3.7",
     "@storybook/web-components": "^6.3.7",
     "babel-loader": "^8.2.2",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "html-minimizer-webpack-plugin": "^3.1.1",
     "html-webpack-plugin": "^5.3.2",
+    "terser-webpack-plugin": "^5.1.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.50.0",
     "webpack-cli": "^4.7.2",
@@ -30,6 +39,7 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "core-js": "^3.16.1",
     "lit": "^2.0.0-rc.2",
     "lit-element": "^2.5.1",
     "lit-html": "^1.4.1"

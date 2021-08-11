@@ -1,8 +1,11 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './src/components.js',
+  entry: ['core-js/stable', './src/components.js'],
   mode: 'development',
   plugins: [
     new HtmlWebpackPlugin({
@@ -16,6 +19,13 @@ module.exports = {
   },
   module: {
     rules: [
+      {
+        test: /\.m?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        }
+      },
       {
         test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/i,
         use: [
@@ -31,5 +41,14 @@ module.exports = {
   },
   performance: {
     maxAssetSize: 10485760,
+  },
+  optimization: {
+    minimizer: [
+      new HtmlMinimizerPlugin(),
+      new CssMinimizerPlugin(),
+      new TerserPlugin({
+        parallel: true,
+      }),
+    ],
   },
 };

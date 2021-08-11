@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import logo from './header-logo.png';
+import logo from '../../lib/images/logo.png';
 export default html`
 
     <section class="header">

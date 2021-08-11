@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import logo from '../header/header-logo.png';
+import logo from '../../lib/images/logo.png';
 import linkedin from '../../lib/images/linkedin.png';
 import twitter from '../../lib/images/twitter.png';
 
