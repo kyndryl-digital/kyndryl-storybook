@@ -12,7 +12,7 @@ module.exports = {
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'kyndryl-components.bundle.js',
+    filename: 'kyndryl-web-components.bundle.js',
   },
   module: {
     rules: [
