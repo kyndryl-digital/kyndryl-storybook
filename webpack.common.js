@@ -7,13 +7,12 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Kyndryl Web Components',
-      template: 'public/index.html',
+      template: 'src/public/index.html',
     }),
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
     filename: 'kyndryl-components.bundle.js',
-    clean: true,
   },
   module: {
     rules: [
