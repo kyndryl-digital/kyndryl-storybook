@@ -1,4 +1,4 @@
-# Kyndryl Web Components [![Build Status](https://travis.ibm.com/kyndryl/kyndryl-web-components.svg?token=BC3q7E17sjDsspnSrSRR&branch=master)](https://travis.ibm.com/kyndryl/kyndryl-web-components) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# Kyndryl Web Components [![Build Status](https://travis.kyndryl.com/marketing/kyndryl-web-components.svg?token=BC3q7E17sjDsspnSrSRR&branch=master)](https://travis.ibm.com/kyndryl/kyndryl-web-components) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This is a repository of sharable Kyndryl branded web-components.
 
@@ -10,7 +10,7 @@ This is a repository of sharable Kyndryl branded web-components.
 ## Setup
 
 ```
-git clone git@github.ibm.com:kyndryl/kyndryl-web-components.git
+git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
 npm install
 ```
 
