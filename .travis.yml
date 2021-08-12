@@ -52,18 +52,18 @@ jobs:
 #          branch: master
 #          tags: false
 
-#    # Uncomment this section to enable GitHub Pages publishing.
-#    -
-#      env:
-#        - JOB_NAME="Publish GitHub Pages"
-#      deploy:
-#        provider: pages
-#        skip_cleanup: true
-#        github_token: $GITHUB_TOKEN
-#        keep_history: true
-#        github_url: github.ibm.com
-#        local_dir: build
-#        verbose: true
-#        on:
-#          branch: master
-#          tags: false
+    # Uncomment this section to enable GitHub Pages publishing.
+    -
+      env:
+        - JOB_NAME="Publish GitHub Pages"
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        github_token: $GITHUB_TOKEN
+        keep_history: true
+        github_url: github.ibm.com
+        local_dir: build
+        verbose: true
+        on:
+          branch: master
+          tags: false
