@@ -2,6 +2,8 @@
 
 This is a repository of sharable Kyndryl branded web-components.
 
+[Click here to view the Storybook documentation.](https://pages.github.kyndryl.net/marketing/kyndryl-web-components/)
+
 ## Requirements
 
 - npm 6.14
