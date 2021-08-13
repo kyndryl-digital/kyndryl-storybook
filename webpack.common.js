@@ -13,7 +13,9 @@ module.exports = {
       title: 'Kyndryl Web Components',
       template: 'src/public/index.html',
     }),
-    new MiniCssExtractPlugin(),
+    new MiniCssExtractPlugin({
+      filename: 'kyndryl-web-components.css',
+    }),
   ],
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -29,11 +31,7 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader", "postcss-loader"],
-      },
-      {
-        test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
             loader: 'url-loader',
@@ -41,6 +39,23 @@ module.exports = {
               limit: 10485760, // 10MB
             },
           },
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: (resourcePath, resourceQuery) => {
+                if (process.env.NODE_ENV === 'development') {
+                  return 'http://localhost:8080/';
+                }
+                return process.env.PUBLIC_URL;
+              },
+            },
+          },
+          "css-loader",
         ],
       },
     ],
