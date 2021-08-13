@@ -13,7 +13,7 @@ This is a repository of sharable Kyndryl branded web-components.
 
 ```
 git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
-nvm use
+(Optional) nvm use (If you want the project to specify what version of node to use)
 npm install
 ```
 
