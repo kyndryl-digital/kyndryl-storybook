@@ -39,6 +39,7 @@ Implementation of the web components is as simple as including the compiled pack
   <head>
 
     <script src="//domain/path/to/file/kyndryl-web-components.bundle.js"></script>
+    <link href="//domain/path/to/file/kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>

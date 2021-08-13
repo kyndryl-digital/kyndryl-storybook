@@ -1,8 +1,5 @@
 import { css } from 'lit-element';
 export default css`
-
-
-
   .button__icon, .header__mobile-menu-social .cmp-text a:after, .icon, [class*=" icon-"], [class^=icon-] {
     font-family: kyndryl-Icons !important;
     speak: never;
@@ -67,20 +64,8 @@ export default css`
   .icon-icon--play:before {
     content: ""
   }
-  
-  //.header * {
-  //  margin: 0;
-  //  font-size: 1pc;
-  //  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  //  line-height: 1.5;
-  //  color: #3d3c3c;
-  //  background: #fff;
-  //  overflow-x: hidden;
-  //  -webkit-font-smoothing: antialiased;
-  //  -moz-osx-font-smoothing: grayscale;
-  //}
 
-  a {
+  .header a {
     color: #187e3f;
     font-weight: 600;
     text-decoration: none;
