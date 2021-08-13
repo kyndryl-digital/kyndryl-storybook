@@ -318,9 +318,7 @@ export default html`
             </div>
 
             <div class="header__language-nav">
-
-                
-
+            
             </div>
 
             <div class="header__mobile-menu">
