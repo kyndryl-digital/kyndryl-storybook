@@ -3,8 +3,7 @@ import { LitElement, html } from 'lit-element';
 import markup from './header.html.js';
 import css from './header.css.js';
 
-import globalSettings from '../../globalSettings';
-const { stablePrefix: prefix } = globalSettings;
+import { settings } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -21,4 +20,4 @@ export class Header extends LitElement {
     }
 }
 
-customElements.define(`${prefix}-header`, Header);
+customElements.define(`${settings.prefix}-header`, Header);
