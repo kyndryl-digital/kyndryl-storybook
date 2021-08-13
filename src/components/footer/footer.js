@@ -4,8 +4,7 @@ import { LitElement, html } from 'lit-element';
 import markup from './footer.html.js';
 import css from './footer.css.js';
 
-import globalSettings from '../../globalSettings';
-const { stablePrefix: prefix } = globalSettings;
+import { settings } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -25,4 +24,4 @@ export class Footer extends LitElement {
 
 }
 
-customElements.define(`${prefix}-footer`, Footer);
+customElements.define(`${settings.prefix}-footer`, Footer);

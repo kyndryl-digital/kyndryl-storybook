@@ -3,8 +3,7 @@ import { LitElement, html } from 'lit-element';
 import markup from './wrapper.html.js';
 import css from './wrapper.css.js';
 
-import globalSettings from '../../globalSettings';
-const { stablePrefix: prefix } = globalSettings;
+import { settings } from '../../global/settings';
 
 /**
  * Branded page wrapper with Kyndryl header and footer.
@@ -23,4 +22,4 @@ export class Wrapper extends LitElement {
     }
 }
 
-customElements.define(`${prefix}-wrapper`, Wrapper);
+customElements.define(`${settings.prefix}-wrapper`, Wrapper);
