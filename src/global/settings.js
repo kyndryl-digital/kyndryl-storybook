@@ -1,4 +1,5 @@
 export const settings = {
   prefix: 'kyndryl',
-  cdnUrl: 'http://cdn.kyndryl.com/path/to/components/',
+  cdnUrl: 'https://publish-p35268-e142028.adobeaemcloud.com',
+  urlPath: 'https://publish-p35268-e142028.adobeaemcloud.com',
 }
