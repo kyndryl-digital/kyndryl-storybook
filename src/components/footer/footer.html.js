@@ -265,6 +265,12 @@ export default html`
             
         </article>
     </li>
+
+
+    <li class="cmp-list__item">
+      <slot name="trustarc"></slot>
+    </li>
+
     </ul>
 
         

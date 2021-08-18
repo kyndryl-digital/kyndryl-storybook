@@ -13,6 +13,7 @@ export const Default = () => {
   return html`
     <kyndryl-wrapper>
         <p>YOUR CONTENT HERE</p>
+        <div slot="trustarc" id="teconsent"></div>
     </kyndryl-wrapper>
   `;
 };
