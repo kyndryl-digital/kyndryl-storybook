@@ -1,5 +1,5 @@
 import { LitElement, html } from 'lit-element';
-import { loadTrustArc } from '../footer/footer';
+import { loadTrustArc } from '../../global/mixins/trustarc.js';
 
 import markup from './wrapper.html.js';
 import css from './wrapper.css.js';
