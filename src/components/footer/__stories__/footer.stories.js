@@ -11,6 +11,8 @@ export default {
 
 export const Default = () => {
   return html`
-    <kyndryl-footer></kyndryl-footer>
+    <kyndryl-footer>
+      <span slot="trustarc" id="teconsent"></span>
+    </kyndryl-footer>
   `;
 };

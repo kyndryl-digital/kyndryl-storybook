@@ -231,6 +231,7 @@ a {
   margin-right: 1pc;
   min-width: 122px;
   padding-bottom: 0;
+  font-weight: 500;
 }
 
 .cmp-footer__bottom-link .cmp-list__item-link {
@@ -426,4 +427,5 @@ html, body {
   margin-right: 8px;
   width: 13px;
 }
+
 `;

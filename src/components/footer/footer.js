@@ -1,5 +1,5 @@
-import { LitElement, html } from 'lit-element';
-
+import { LitElement } from 'lit-element';
+import { loadTrustArc } from '../../global/mixins/trustarc.js';
 
 import markup from './footer.html.js';
 import css from './footer.css.js';
@@ -19,6 +19,7 @@ export class Footer extends LitElement {
     }
 
     render() {
+        loadTrustArc();
         return markup;
     }
 
