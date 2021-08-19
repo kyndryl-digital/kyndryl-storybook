@@ -12,7 +12,7 @@ export default {
 export const Default = () => {
   return html`
     <kyndryl-footer>
-      <div slot="trustarc" id="teconsent"></div>
+      <span slot="trustarc" id="teconsent"></span>
     </kyndryl-footer>
   `;
 };
