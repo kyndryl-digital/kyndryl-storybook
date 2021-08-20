@@ -1,5 +1,5 @@
 export const settings = {
   prefix: 'kyndryl',
-  cdnUrl: 'https://publish-p35268-e142028.adobeaemcloud.com/content/dam/kyndryl-apps/navigation',
+  cdnUrl: '//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/',
   urlPath: 'https://publish-p35268-e142028.adobeaemcloud.com',
 }
