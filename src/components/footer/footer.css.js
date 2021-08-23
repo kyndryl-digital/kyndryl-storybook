@@ -1,5 +1,8 @@
 import { css } from 'lit-element';
+import icons from '../../lib/styles/icons.css.js';
+
 export default css` 
+${icons}
 * {
   font-family: TWK Everett,Helvetica,Arial,sans-serif;
 }
@@ -277,12 +280,8 @@ a {
 }
 
 .cmp-footer .cmp-languagenavigation__current-lang-icon:before, .header__mobile-nav .cmp-languagenavigation__current-lang-icon:before {
-  -webkit-transform: rotate(
-180deg
-) translateY(50%);
-  transform: rotate(
-180deg
-) translateY(50%);
+  -webkit-transform: rotate(180deg) translateY(50%);
+  transform: rotate(180deg) translateY(50%);
 }
 
 .cmp-languagenavigation__current-lang-icon:before {
@@ -296,9 +295,6 @@ a {
   transition: -webkit-transform .4s ease-in-out .5s;
   transition: transform .4s ease-in-out .5s;
   transition: transform .4s ease-in-out .5s,-webkit-transform .4s ease-in-out .5s;
-}
-.icon-chevron-down:before {
-  content: "";
 }
 
 @media (min-width: 767px)

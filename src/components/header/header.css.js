@@ -1,5 +1,8 @@
 import { css } from 'lit-element';
+import icons from '../../lib/styles/icons.css.js';
+
 export default css`
+  ${icons}
   .button__icon, .header__mobile-menu-social .cmp-text a:after, .icon, [class*=" icon-"], [class^=icon-] {
     font-family: kyndryl-Icons !important;
     speak: never;
@@ -17,59 +20,6 @@ export default css`
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-}
-
-  .icon-close:before {
-    content: ""
-  }
-
-  .icon-hamburger:before {
-    content: ""
-  }
-
-  .icon-chevron-up:before {
-    content: ""
-  }
-
-  .icon-chevron-down:before {
-    content: ""
-  }
-
-  .icon-linkedin:before {
-    content: ""
-  }
-
-  .icon-twitter:before {
-    content: ""
-  }
-
-  .icon-icon--pdf:before {
-    content: ""
-  }
-
-  .icon-icon--pop-out:before {
-    content: ""
-  }
-
-  .icon-icon--arrow-right:before {
-    content: ""
-  }
-
-  .icon-icon--arrow-left:before {
-    content: ""
-  }
-
-  .icon-icon--arrow-up {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg)
-  }
-
-  .icon-icon--arrow-up:before {
-    content: ""
-  }
-
-  .icon-icon--play:before {
-    content: ""
   }
 
   .header a {
