@@ -22,11 +22,12 @@ export default css`
     box-sizing: border-box;
   }
 
-  .header a {
-    color: #187e3f;
+
+  a {
     font-weight: 600;
     text-decoration: none;
-  }
+}
+  
 
   .header {
     font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
@@ -179,10 +180,13 @@ export default css`
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-bottom: 58px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-bottom: 60px;
     padding-top: 40px;
     width: 100%;
-  }
+}
 
   .header__desktop-menu .cmp-navigation__group-right-container {
     -webkit-box-flex: 0;
@@ -204,13 +208,14 @@ export default css`
     padding: 0;
   }
   .cmp-navigation__learn-list-item {
-    margin: 0 0 18px;
+    margin: 0 0 28px;
     padding: 0;
   }
   .cmp-navigation__learn-link {
     color: #3d3c3c;
-    font-size: 1pc;
-    line-height: 22px;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 18px;
   }
   .cmp-navigation__address-title {
     font-size: 18px;
@@ -234,12 +239,10 @@ export default css`
     flex: 1 1 auto;
   }
   .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__group {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-row-gap: 40px;
+}
 
   
   .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item--level-1 {
@@ -260,19 +263,14 @@ export default css`
   .header__desktop-menu .cmp-navigation__item-link {
     color: #3d3c3c;
   }
-  .header__desktop-menu .cmp-navigation__item-link--landing, .header__desktop-menu .cmp-navigation__item-link--level-1 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 24px;
-  }
+ 
   .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item-description {
     color: #565049;
-    font-size: 1pc;
-    font-weight: 400;
-    line-height: 22px;
-    margin-top: 8px;
-    margin-bottom: 38px;
-  }
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 18px;
+    margin-top: 10px;
+}
   
   .header__desktop-menu .cmp-navigation__item-link {
     color: #3d3c3c;
@@ -282,17 +280,23 @@ export default css`
     font-weight: 500;
     line-height: 24px;
   }
+
   .header__desktop-menu .cmp-navigation__item-link--landing {
     display: none;
   }
+
+  
   .header__desktop-menu .cmp-navigation__item--level-0:first-child .cmp-navigation__item-link--landing {
     display: block;
     padding: 0 34px 0 0;
-  }
+    margin-bottom: 40px;
+}
   
-  
-  
-  
+  .header__desktop-menu .cmp-navigation__item-link--landing, .header__desktop-menu .cmp-navigation__item-link--level-1 {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+}
   
   
   
