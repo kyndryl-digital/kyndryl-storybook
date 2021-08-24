@@ -310,10 +310,8 @@ export default html`
 
                       </article>
                     </li>
-                    <li class="cmp-list__item" id="teconsent" consent="undefined" aria-label="Open Cookie Preferences Modal" role="complementary">
-                      <script type="text/javascript" src="//consent.truste.com/notice?domain=kyndryl.com&amp;c=teconsent&amp;text=true&amp;gtm=1" id="truste_0.9811692856725818"></script>
-                      <script async="async" type="text/javascript" crossorigin="" src="https://consent.trustarc.com/asset/notice.js/v/v1.7-8690"></script><a role="link" id="icon-id027645473302123724" tabindex="0" lang="en"
-                        aria-label="Cookie Preferences" style="cursor: pointer;">Cookie Preferences</a>
+                    <li class="cmp-list__item">
+                      <slot name="trustarc"></slot>
                     </li>
                   </ul>
 
