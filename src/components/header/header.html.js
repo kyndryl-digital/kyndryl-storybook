@@ -1,6 +1,7 @@
 import { html } from 'lit-element';
 import { settings } from '../../global/settings';
 import logo from '../../lib/images/logo.png';
+import icon_chevron_down from '../../lib/images/icon-chevron-down.png';
 export default html`
 <section class="header ">
   <div class="header__container">
@@ -38,7 +39,7 @@ export default html`
             data-cmp-data-layer="{&quot;navigation-7238cfa551-item-06105c1ec2&quot;:{&quot;@type&quot;:&quot;kyndrylprogram/components/navigation/item&quot;,&quot;repo:modifyDate&quot;:&quot;2021-07-02T16:38:41Z&quot;,&quot;dc:title&quot;:&quot;Services&quot;,&quot;xdm:linkURL&quot;:&quot;/us/en/services.html&quot;}}">
 
             <a href="${settings.urlPath}/us/en/services.html" title="Services" data-cmp-clickable="" data-nav-right-rail="links" class="cmp-navigation__item-link cmp-navigation__item-link--level-0 cmp-navigation__item-link-sub">Services <span
-                class="cmp-navigation__item-link-icon icon-chevron-down"></span></a>
+                class="cmp-navigation__item-link-icon icon-chevron-down"><img src="${icon_chevron_down}"></span></a>
 
 
 
@@ -218,7 +219,7 @@ export default html`
             data-cmp-data-layer="{&quot;navigation-7238cfa551-item-53adebf38c&quot;:{&quot;@type&quot;:&quot;kyndrylprogram/components/navigation/item&quot;,&quot;repo:modifyDate&quot;:&quot;2021-07-30T18:39:02Z&quot;,&quot;dc:title&quot;:&quot;About Us&quot;,&quot;xdm:linkURL&quot;:&quot;/us/en/about-us.html&quot;}}">
 
             <a href="${settings.urlPath}/us/en/about-us.html" title="About Us" data-cmp-clickable="" data-nav-right-rail="address" class="cmp-navigation__item-link cmp-navigation__item-link--level-0 cmp-navigation__item-link-sub">About Us <span
-                class="cmp-navigation__item-link-icon icon-chevron-down"></span></a>
+                class="cmp-navigation__item-link-icon icon-chevron-down"><img src="${icon_chevron_down}"></span></a>
 
 
 

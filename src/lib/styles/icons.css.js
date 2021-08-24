@@ -22,12 +22,12 @@ export default css`
 .icon-hamburger:before {
   content: "\\E90A";
 }
-.icon-chevron-up:before {
-  content: "\\E908";
-}
-.icon-chevron-down:before {
-  content: "\\E903";
-}
+// .icon-chevron-up:before {
+//   content: "\\E908";
+// }
+// .icon-chevron-down:before {
+//   content: "\\E903";
+// }
 .icon-linkedin:before {
   content: "\\E900";
 }
