@@ -17,6 +17,13 @@ ${icons}
   line-height: 1;
 }
 
+.cmp-list__item-link, .cmp-list__item a {
+  color: #3d3c3c;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+}
+
 .cmp-container {
   position: relative;
 }
@@ -180,10 +187,15 @@ a {
   font-size: 14px;
 }
 
+.cmp-footer__bottom-link .cmp-list__item-link, .cmp-footer__bottom-link .cmp-list__item a {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
 .cmp-footer__language-footer-text a {
   color: #000;
   text-decoration: none;
-  margin-left: 5pc;
 }
 
 .cmp-footer__bottom-container {
