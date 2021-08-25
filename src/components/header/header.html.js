@@ -306,7 +306,7 @@ export default html`
 
 
           <li class="cmp-navigation__item cmp-navigation__item--level-0 cmp-navigation__item--main">
-            <a href="https://newsroom.ibm.com/index.php?s=search_results&amp;l=10&amp;query=kyndryl&amp;submit=Search" title="Newsroom" data-cmp-clickable="true" class="cmp-navigation__item-link cmp-navigation__item-link--level-0">Newsroom</a>
+            <a href="https://newsroom.kyndryl.com" title="Newsroom" data-cmp-clickable="true" class="cmp-navigation__item-link cmp-navigation__item-link--level-0">Newsroom</a>
           </li>
 
 
