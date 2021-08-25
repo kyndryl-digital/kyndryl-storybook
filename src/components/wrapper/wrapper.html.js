@@ -1,10 +1,10 @@
 import { html } from 'lit-element';
-import header from '../header/header.html';
-import footer from '../footer/footer.html';
+import '../header/header.js';
+import '../footer/footer.js';
 export default html`
-    ${header}
+    <kyndryl-header></kyndryl-header>
     <main>
         <slot></slot>
     </main>
-    ${footer}
+    <kyndryl-footer></kyndryl-footer>
 `;
