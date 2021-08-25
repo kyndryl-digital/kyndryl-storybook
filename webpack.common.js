@@ -31,7 +31,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
+        test: /\.(png|jpg|gif)$/i,
         use: [
           {
             loader: "url-loader",
@@ -57,6 +57,33 @@ module.exports = {
           },
           "css-loader",
           "postcss-loader",
+        ],
+      },
+      {
+        test: /\.css|\.s(c|a)ss$/i,
+        exclude: [path.resolve(__dirname, "src/components")],
+        use: [
+          // Creates `style` nodes from JS strings
+          "style-loader",
+          // Translates CSS into CommonJS
+          "css-loader",
+          // Compiles Sass to CSS
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.css|\.s(c|a)ss$/,
+        include: [path.resolve(__dirname, "src/components")],
+        use: [
+          {
+            loader: "lit-scss-loader",
+            options: {
+              minify: true,
+            },
+          },
+          "extract-loader",
+          "css-loader",
+          "sass-loader",
         ],
       },
     ],
