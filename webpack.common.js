@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlMinimizerPlugin = require("html-minimizer-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
@@ -11,6 +12,9 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: "Kyndryl Web Components",
       template: "src/public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: "kyndryl-web-components.css",
     }),
   ],
   output: {
@@ -27,7 +31,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(png|jpg|gif)$/i,
+        test: /\.(png|jpg|gif|svg)$/i,
         use: [
           {
             loader: "url-loader",
@@ -38,23 +42,21 @@ module.exports = {
         ],
       },
       {
-        test: /\.css|\.s(c|a)ss$/i,
-        exclude: [path.resolve(__dirname, "src/components")],
-        use: ["style-loader", "css-loader", "sass-loader"],
-      },
-      {
-        test: /\.css|\.s(c|a)ss$/,
-        include: [path.resolve(__dirname, "src/components")],
+        test: /\.css$/i,
         use: [
           {
-            loader: "lit-scss-loader",
+            loader: MiniCssExtractPlugin.loader,
             options: {
-              minify: true,
+              publicPath: (resourcePath, resourceQuery) => {
+                if (process.env.NODE_ENV === "development") {
+                  return "http://localhost:8080/";
+                }
+                return process.env.PUBLIC_URL;
+              },
             },
           },
-          "extract-loader",
           "css-loader",
-          "sass-loader",
+          "postcss-loader",
         ],
       },
     ],
