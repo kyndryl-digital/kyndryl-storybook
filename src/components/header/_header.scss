@@ -738,6 +738,18 @@ padding: 0;
   border-bottom: 2px solid #ff462d;
 }
 
+@media (min-width: 1400px) {
+  .header__logo {
+    margin-right: 150px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  .header__logo {
+    margin-right: 50px;
+  }
+}
+
 @media (max-width: 1200px) {
   .header__desktop-menu,
   .header__language-nav {
