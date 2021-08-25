@@ -1,8 +1,8 @@
 import { html } from "lit-element";
 import { settings } from "../../global/settings";
-import logo from "../../lib/images/logo.png";
-import linkedin from '../../lib/images/linkedin.png';
-import twitter from '../../lib/images/twitter.png';
+import logo from "../../lib/images/kyndryl-logo.svg";
+import linkedin from "../../lib/images/linkedin.png";
+import twitter from "../../lib/images/twitter.png";
 
 export default html`
 
@@ -600,4 +600,3 @@ export default html`
 
 </div>
 `;
-
