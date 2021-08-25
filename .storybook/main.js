@@ -20,13 +20,14 @@ module.exports = {
         "extract-loader",
         "css-loader",
         "sass-loader",
+        "postcss-loader",
       ],
     });
 
     config.module.rules.push({
       test: /\.css|\.s(c|a)ss$/i,
       exclude: [path.resolve(__dirname, "../src/components")],
-      use: ["style-loader", "css-loader", "sass-loader"],
+      use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
     });
 
     return config;
