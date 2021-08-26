@@ -1,0 +1,27 @@
+name: Publish release
+on:
+  push:
+    branches:
+      - 'master'
+jobs:
+  Publish_release:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install project
+        run: npm install
+      - name: Publish storybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npm run publish
+      - name: Compile production build
+        run: npm run build:prod
+      - name: Tag release
+        run: npx semantic-release
