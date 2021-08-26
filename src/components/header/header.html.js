@@ -205,7 +205,6 @@ export default html`
 
                           <span>New York,&nbsp;NY&nbsp;10017<br /></span>
                           <span>United States<br /></span>
-                          <span>US: 212-500-1901</span>
                         </address>
                       </div>
                     </div>
