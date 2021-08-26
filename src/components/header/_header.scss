@@ -738,6 +738,13 @@ padding: 0;
   border-bottom: 2px solid #ff462d;
 }
 
+@media (min-width: 2500px) {
+  .cmp-navigation__item-link {
+      font-size: 18px;
+      line-height: 24px;
+  }
+}
+
 @media (min-width: 1400px) {
   .header__logo {
     margin-right: 150px;
