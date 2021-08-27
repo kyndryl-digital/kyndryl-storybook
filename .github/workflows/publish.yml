@@ -18,8 +18,11 @@ jobs:
       - name: Install project
         run: npm install
       - name: Publish storybook
-        env:
+        uses: JamesIves/github-pages-deploy-action@3.6.2
+        with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: storybook-static
         run: npm run publish
       - name: Compile production build
         run: npm run build:prod
