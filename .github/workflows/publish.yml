@@ -23,7 +23,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
           FOLDER: storybook-static
-        run: npm run publish
       - name: Compile production build
         run: npm run build:prod
       - name: Tag release
