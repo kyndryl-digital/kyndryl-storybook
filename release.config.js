@@ -1,9 +1,18 @@
-module.export = {
+module.exports = {
+  branches: ["master"],
   plugins: [
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/github",
+      "@semantic-release/changelog",
+      {
+        changelogFile: "CHANGELOG.md",
+      },
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/github",
+    [
+      "@semantic-release/git",
       {
         assets: [
           { path: "build/*.js", label: "Web-component script" },
@@ -13,6 +22,8 @@ module.export = {
             label: "Web-component fonts",
           },
         ],
+        message:
+          "chore(release): set `package.json` to ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}",
       },
     ],
   ],

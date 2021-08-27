@@ -47,6 +47,7 @@
     "postcss-short": "^5.0.0",
     "sass": "^1.38.1",
     "sass-loader": "^12.1.0",
+    "semantic-release": "^17.4.7",
     "terser-webpack-plugin": "^5.1.4",
     "url-loader": "^4.1.1",
     "webpack": "^5.50.0",
