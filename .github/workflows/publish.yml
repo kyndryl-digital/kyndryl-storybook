@@ -29,6 +29,7 @@ jobs:
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.kyndryl.net/${GITHUB_REPOSITORY}.git
           npx semantic-release
