@@ -27,7 +27,8 @@ jobs:
       - name: Compile production build
         run: npm run build:prod
       - name: Instal IBM Cloud CLI
-        run: curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+        run: |
+          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
           ibmcloud --version
           ibmcloud config --check-version=false
           ibmcloud plugin install -f cloud-object-storage
