@@ -31,5 +31,4 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_URL: https://github.kyndryl.net
           GITHUB_PREFIX: /api/v3
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: npx semantic-release
