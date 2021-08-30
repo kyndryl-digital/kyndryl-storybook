@@ -15,11 +15,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Instal IBM Cloud CLI
-        uses: actions/ibmcloud-action@v1
-        with:
-          APIKEY: ${{ secrets.IBM_CLOUD_API_KEY }}
-          CLOUD_REGION: us-south
       - name: Install project
         run: npm install
       - name: Publish storybook
@@ -31,8 +26,15 @@ jobs:
           npx gh-pages -d storybook-static -u "github-actions-bot <support+actions@github.com>"
       - name: Compile production build
         run: npm run build:prod
+      - name: Instal IBM Cloud CLI
+        run: curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+          ibmcloud --version
+          ibmcloud config --check-version=false
+          ibmcloud plugin install -f cloud-object-storage
       - name: Deploy to Cloud Object Storage
         env:
+          IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
+          IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_RESOURCE_ID }}
           IBM_CLOUD_BUCKET: ${{ secrets.IBM_CLOUD_BUCKET }}
         run: bash ./.github/scripts/cos-upload.sh ./build
       - name: Tag release
