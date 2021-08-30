@@ -1,5 +1,6 @@
 export const settings = {
   prefix: "kyndryl",
-  cdnUrl: "//www.kyndryl.com/content/dam/kyndryl-apps/navigation/",
+  cdnUrl:
+    "//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/",
   urlPath: "https://www.kyndryl.com",
 };

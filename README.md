@@ -37,8 +37,8 @@ Implementation of the web components is as simple as including the compiled pack
 <html>
   <head>
 
-    <script src="//www.kyndryl.com/content/dam/kyndryl-apps/navigation/kyndryl-web-components.bundle.js"></script>
-    <link href="//www.kyndryl.com/content/dam/kyndryl-apps/navigation/kyndryl-web-components.css" rel="stylesheet">
+    <script src="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.bundle.js"></script>
+    <link href="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>
