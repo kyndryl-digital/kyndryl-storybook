@@ -1,4 +1,4 @@
-# Kyndryl Web Components [![Build Status](https://travis.kyndryl.com/marketing/kyndryl-web-components.svg?token=BC3q7E17sjDsspnSrSRR&branch=master)](https://travis.ibm.com/kyndryl/kyndryl-web-components) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
+# Kyndryl Web Components [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 This is a repository of sharable Kyndryl branded web-components.
 
@@ -6,6 +6,7 @@ This is a repository of sharable Kyndryl branded web-components.
 
 ## Requirements
 
+- node 12.21.0
 - npm 6.14
 - npx 6.14
 
@@ -13,8 +14,13 @@ This is a repository of sharable Kyndryl branded web-components.
 
 ```
 git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
-(Optional) nvm use (If you want the project to specify what version of node to use)
 npm install
+```
+
+(optional) Specify which version of `node` to use.
+
+```
+nvm use 12.21.0
 ```
 
 ### Run storybook
@@ -39,14 +45,15 @@ Implementation of the web components is as simple as including the compiled pack
 <html>
   <head>
 
-    <script src="//domain/path/to/file/kyndryl-web-components.bundle.js"></script>
-    <link href="//domain/path/to/file/kyndryl-web-components.css" rel="stylesheet">
+    <script src="//www.kyndryl.com/content/dam/kyndryl-apps/navigation/kyndryl-web-components.bundle.js"></script>
+    <link href="//www.kyndryl.com/content/dam/kyndryl-apps/navigation/kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>
   
     <kyndryl-wrapper>
       YOUR CONTENT HERE
+      <span slot="trustarc" id="teconsent"></span>
     </kyndryl-wrapper>
     
   </body>
