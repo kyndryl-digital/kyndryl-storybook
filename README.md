@@ -29,14 +29,6 @@ nvm use 12.21.0
 npm run storybook
 ```
 
-## Build
-
-```
-npm run build
-```
-
-This will compile the the web components into a single package located at **build/kyndryl-web-components.bundle.js** that will be hosted in its final location
-
 ## Usage
 
 Implementation of the web components is as simple as including the compiled package in the markup of the page and freely utilizing any of the custom web component tags within the body of the page.
