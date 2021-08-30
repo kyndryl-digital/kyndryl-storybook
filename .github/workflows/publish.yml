@@ -15,21 +15,16 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Install project
+        run: npm install
+      - name: Run tests
+        run: npm test
       - name: Instal IBM Cloud CLI
         run: |
           curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
           ibmcloud --version
           ibmcloud config --check-version=false
           ibmcloud plugin install -f cloud-object-storage
-      - name: Install project
-        run: npm install
-      - name: Publish storybook
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.kyndryl.net/${GITHUB_REPOSITORY}.git
-          npm run build:storybook
-          npx gh-pages -d storybook-static -u "github-actions-bot <support+actions@github.com>"
       - name: Compile production build
         run: npm run build:prod
       - name: Deploy to Cloud Object Storage
@@ -38,6 +33,13 @@ jobs:
           IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_RESOURCE_ID }}
           IBM_CLOUD_BUCKET: ${{ secrets.IBM_CLOUD_BUCKET }}
         run: bash ./.github/scripts/cos-upload.sh ./build
+      - name: Publish storybook
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.kyndryl.net/${GITHUB_REPOSITORY}.git
+          npm run build:storybook
+          npx gh-pages -d storybook-static -u "github-actions-bot <support+actions@github.com>"
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
