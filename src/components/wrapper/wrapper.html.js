@@ -6,5 +6,5 @@ export default html`
     <main>
         <slot></slot>
     </main>
-    <kyndryl-footer><span slot="trustarc"></span></kyndryl-footer>
+    <kyndryl-footer><span slot="trustarc"><slot name="trustarc"></slot></span></kyndryl-footer>
 `;

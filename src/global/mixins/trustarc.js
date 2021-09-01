@@ -16,6 +16,6 @@ export const loadTrustArc = (country, language) => {
         document.head.appendChild(ta);
         eval(ta);
     } catch(error) {
-        consolr.error('Unable to load TrustArc');
+        console.error('Unable to load TrustArc');
     }
 }
