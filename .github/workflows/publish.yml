@@ -44,5 +44,5 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_URL: https://github.kyndryl.net
-          GITHUB_PREFIX: /
+          GITHUB_PREFIX: 
         run: npx semantic-release
