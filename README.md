@@ -58,10 +58,9 @@ New components may be contributed via pull request to the main component reposit
 
 ### Approval requirements
 
-- [] Passing unit tests
-- [] Design review and approval
-- [] Developer peer review
-
+- [x] Passing unit tests
+- [x] Design review and approval
+- [x] Developer peer review
 
 ## Primary maintainer(s)
 
