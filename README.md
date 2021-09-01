@@ -51,3 +51,12 @@ Implementation of the web components is as simple as including the compiled pack
   </body>
 </html>
 ```
+
+## Contributing
+
+New components may be contributed via pull request to the main component repository.
+
+### Approval requirements
+- [] Passing unit tests
+- [] Design review and approval
+- [] Developer peer review
