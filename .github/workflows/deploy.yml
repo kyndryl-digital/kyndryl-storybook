@@ -1,9 +1,10 @@
-name: Deployment
+name: Deploy
 on:
-  release:
-    types: [published]
+  push:
+    tags:
+      - 'v*'
 jobs:
-  Deploy_package:
+  Deploy_release:
     runs-on: ubuntu-latest
     strategy:
       matrix:
