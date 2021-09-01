@@ -1,8 +1,10 @@
 name: Release
 on:
-  push:
-    branches:
-      - master
+  workflow_run:
+    workflows: ["Test"]
+    branches: [master]
+    types: 
+      - completed
 jobs:
   Publish_release:
     runs-on: ubuntu-latest
@@ -17,8 +19,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install project
         run: npm install
-      - name: Run tests
-        run: npm test
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
