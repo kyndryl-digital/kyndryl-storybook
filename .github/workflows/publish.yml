@@ -43,6 +43,6 @@ jobs:
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          GITHUB_URL: https://github.kyndryl.net
-          GITHUB_PREFIX: /v3
+          GITHUB_URL: ${{ secrets.GITHUB_API_URL }}
+          GITHUB_PREFIX: ${{ secrets.GITHUB_PREFIX }}
         run: npx semantic-release
