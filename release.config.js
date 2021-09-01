@@ -4,17 +4,13 @@ module.exports = {
     "@semantic-release/commit-analyzer",
     "@semantic-release/release-notes-generator",
     [
-      "@semantic-release/changelog",
-      {
-        changelogFile: "CHANGELOG.md",
-      },
-    ],
-    [
       "@semantic-release/github",
       {
         assets: [
-          "CHANGELOG.md",
-          { path: "kyndryl-web-components.gz", label: "Web-component bundle" },
+          {
+            path: "kyndryl-web-components.gz",
+            label: "Kyndryl web-component bundle",
+          },
         ],
       },
     ],
