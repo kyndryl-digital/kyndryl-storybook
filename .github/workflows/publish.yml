@@ -45,4 +45,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           GITHUB_URL: ${{ secrets.GITHUB_API_URL }}
           GITHUB_PREFIX: ${{ secrets.GITHUB_PREFIX }}
-        run: npx semantic-release
+        run: |
+          tar -zcvf kyndryl-web-components.gz ./build
+          npx semantic-release

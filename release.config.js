@@ -14,12 +14,7 @@ module.exports = {
       {
         assets: [
           "CHANGELOG.md",
-          { path: "build/*.js", label: "Web-component bundle" },
-          { path: "build/*.css", label: "Global styles" },
-          {
-            path: "build/*.{woff,woff2,eot,svg,ttf}",
-            label: "Fonts",
-          },
+          { path: "kyndryl-web-components.gz", label: "Web-component bundle" },
         ],
       },
     ],
