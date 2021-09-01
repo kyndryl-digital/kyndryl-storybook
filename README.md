@@ -57,6 +57,13 @@ Implementation of the web components is as simple as including the compiled pack
 New components may be contributed via pull request to the main component repository.
 
 ### Approval requirements
+
 - [] Passing unit tests
 - [] Design review and approval
 - [] Developer peer review
+
+
+## Primary maintainer(s)
+
+- Ian Whitcomb(ian.whitcomb@kyndryl.com)
+- Dennis Dolliver(dennis.dolliver@kyndryl.com)
