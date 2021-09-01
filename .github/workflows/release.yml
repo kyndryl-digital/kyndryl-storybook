@@ -1,13 +1,10 @@
-name: Test
+name: Release
 on:
   push:
     branches:
-      - '**'
-  pull_request:
-    branches:
       - master
 jobs:
-  Run_tests:
+  Publish_release:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -22,3 +19,10 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
+      - name: Tag release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_URL: ${{ secrets.GITHUB_API_URL }}
+          GITHUB_PREFIX: ${{ secrets.GITHUB_PREFIX }}
+        run: |
+          npx semantic-release
