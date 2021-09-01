@@ -6,9 +6,17 @@ module.exports = {
     [
       "@semantic-release/changelog",
       {
-        changelogFile: "docs/CHANGELOG.md",
+        changelogFile: "CHANGELOG.md",
+        changelogTitle: "# Release notes",
       },
     ],
-    "@semantic-release/github",
+    [
+      "@semantic-release/github",
+      {
+        assets: ["CHANGELOG.md"],
+        successComment:
+          ":tada: This issue has been resolved in version ${nextRelease.version}(<github_release_url>)",
+      },
+    ],
   ],
 };
