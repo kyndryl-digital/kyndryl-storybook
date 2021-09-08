@@ -43,6 +43,17 @@ constructor(){
 
     _bindEvents() {
 
+       document.addEventListener("keydown", e=>{
+            "Escape" === e.code && this.closeAllMenu()
+        }
+        );
+        window.addEventListener("click", e=>{
+            if(!e.composedPath().includes(this)) {
+                this.closeAllMenu();
+            }
+        }
+        );
+
         for (const e of this.mainNavItems) {
             if (e.addEventListener("keydown", this.toggleMenu.bind(this)),
             e.classList.contains("cmp-navigation__item-link-sub")) {
@@ -53,10 +64,10 @@ constructor(){
                 )
             } else
                 e.addEventListener("focus", this.closeAllMenu.bind(this));
-            e.parentNode.addEventListener("click", ()=>{
-                e.classList.contains("cmp-navigation__item-link--active") ? this.closeMenu(e) : (this.closeAllMenu(),
-                this.openMenu(e))
-            }
+                e.parentNode.addEventListener("click", ()=>{
+                    e.classList.contains("cmp-navigation__item-link--active") ? this.closeMenu(e) : (this.closeAllMenu(),
+                    this.openMenu(e))
+                }
             )
         }
         for (const e of this.mobileNavItems)
