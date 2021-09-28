@@ -9,7 +9,7 @@
     "start": "webpack serve --open --config webpack.dev.js",
     "build": "rm -rvf build && webpack --config webpack.prod.js",
     "build:storybook": "build-storybook -s src/public",
-    "build:prod": "NODE_ENV=production PUBLIC_URL=https://kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/ npm run build",
+    "build:prod": "NODE_ENV=production PUBLIC_URL=https://www.kyndryl.com/content/dam/kyndryl-apps/navigation/ npm run build",
     "storybook": "start-storybook -p 6007 -s src/public",
     "publish": "npm run build:storybook && gh-pages -d storybook-static"
   },
