@@ -147,25 +147,6 @@ export default html`
 
             <li
               class="cmp-list__item"
-              data-cmp-data-layer='{"list-6b91df533d-item-074fd93081":{"@type":"kyndrylprogram/components/list/item","repo:modifyDate":"2021-10-12T05:02:45Z","dc:title":"Advisory &amp; Implementation Services","xdm:linkURL":"/us/en/services/advisory-implementation-services.html"}}'
-            >
-              <article>
-                <a
-                  class="cmp-list__item-link"
-                  href="${formatUrl(
-                    "us/en/services/advisory-implementation-services"
-                  )}"
-                  data-cmp-clickable=""
-                >
-                  <span class="cmp-list__item-title"
-                    >Advisory &amp; Implementation Services</span
-                  >
-                </a>
-              </article>
-            </li>
-
-            <li
-              class="cmp-list__item"
               data-cmp-data-layer='{"list-6b91df533d-item-dc7518c087":{"@type":"kyndrylprogram/components/list/item","repo:modifyDate":"2021-10-06T19:26:51Z","dc:title":"Digital Workplace","xdm:linkURL":"/us/en/services/digital-workplace.html"}}'
             >
               <article>
@@ -206,6 +187,25 @@ export default html`
                 >
                   <span class="cmp-list__item-title"
                     >Security and Resiliency</span
+                  >
+                </a>
+              </article>
+            </li>
+
+            <li
+              class="cmp-list__item"
+              data-cmp-data-layer='{"list-6b91df533d-item-074fd93081":{"@type":"kyndrylprogram/components/list/item","repo:modifyDate":"2021-10-12T05:02:45Z","dc:title":"Advisory &amp; Implementation Services","xdm:linkURL":"/us/en/services/advisory-implementation-services.html"}}'
+            >
+              <article>
+                <a
+                  class="cmp-list__item-link"
+                  href="${formatUrl(
+                    "us/en/services/advisory-implementation-services"
+                  )}"
+                  data-cmp-clickable=""
+                >
+                  <span class="cmp-list__item-title"
+                    >Advisory &amp; Implementation Services</span
                   >
                 </a>
               </article>
