@@ -407,11 +407,12 @@ export default html`
               </li>
               <li
                 class="cmp-list__item"
-                id="teconsent"
                 consent="undefined"
                 aria-label="Open Cookie Preferences Modal"
                 role="complementary"
-              ></li>
+              >
+                <slot name="trustarc"></slot>
+              </li>
             </ul>
           </div>
           <div class="cmp-footer__footer-copyright">
