@@ -6,22 +6,25 @@ This is a repository of sharable Kyndryl branded web-components.
 
 ## Requirements
 
-- node 12.21.0
-- npm 6.14
-- npx 6.14
+- nvm
+- node v16
+- npm v8
 
 ## Setup
+
+Install node v16 using nvm.
+
+```
+nvm install 16 --lts
+nvm use 16
+```
+
+Clone the web component library and install.
 
 ```
 git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
 cd kyndryl-web-components
 npm install
-```
-
-(optional) Specify which version of `node` to use.
-
-```
-nvm use 12.21.0
 ```
 
 ### Run storybook
