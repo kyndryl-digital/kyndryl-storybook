@@ -98,16 +98,6 @@ export default css`
     z-index: 500;
   }
 
-  .cmp-container__max-width, 
-  .cmp-footer,
-  .cmp-navigation__group-wrapper, 
-  .header__container {
-    max-width: 107pc;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 
   .header__container {
     -webkit-box-align: center;
@@ -120,18 +110,15 @@ export default css`
     flex-wrap: no-wrap;
   }
 
-  .header__logo {
-    -webkit-box-flex: 0;
-    -ms-flex: 0 0 126px;
-    flex: 0 0 126px;
-    margin: 0 150px 0 0;
-    padding: 23px 0 17px;
-  }
   
   .cmp-image__image {
     width: 100%;
   }
   
+  .header__logo {
+    width: 124px;
+  }
+
   .header__logo img {
     display: block;
   }
@@ -228,13 +215,7 @@ export default css`
     width: 100%;
   }
 
-  .cmp-container__max-width, .cmp-footer, .cmp-navigation__group-wrapper, .header__container {
-    max-width: 107pc;
-    padding-left: 36px;
-    padding-right: 36px;
-    margin-left: auto;
-    margin-right: auto;
-  }
+  
   .header__desktop-menu .cmp-navigation__group-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -437,7 +418,7 @@ export default css`
   }
 
   .header__mobile-nav {
-    padding: 1pc 0 24px;
+    padding: 36px 0;
 }
 .header__mobile-nav {
     background-color: #fff;
@@ -531,13 +512,7 @@ export default css`
   border-top: 1px solid #bbb;
 }
 
-.cmp-container__max-width, .cmp-footer, .cmp-navigation__group-wrapper, .header__container {
-  max-width: 107pc;
-  padding-left: 36px;
-  padding-right: 36px;
-  margin-left: auto;
-  margin-right: auto;
-}
+
 
 .cmp-navigation__group-wrapper>div {
   opacity: 0;
@@ -590,7 +565,7 @@ export default css`
   display: block;
 }
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1022px) {
 
     .header__desktop-menu, .header__language-nav {
         display: none;
@@ -619,7 +594,13 @@ export default css`
       flex-direction: column;
   }
 
-
+  .base-content-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 18px;
+    padding-right: 18px;
+    width: 100%;
+  }
 
   .header__logo {
     -webkit-box-flex: 0;
