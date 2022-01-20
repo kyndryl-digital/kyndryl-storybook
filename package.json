@@ -6,7 +6,7 @@
   "repository": "git@github.kyndryl.net:marketing/kyndryl-web-components.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
-    "start": "webpack serve --open --config webpack.dev.js",
+    "start": "npm run build:dev && webpack serve --open --config webpack.prod.js",
     "build": "rm -rvf build && webpack --config webpack.prod.js",
     "build:storybook": "build-storybook -s src/public",
     "build:dev": "NODE_ENV=development npm run build",

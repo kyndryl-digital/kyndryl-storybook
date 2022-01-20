@@ -1,0 +1,15 @@
+$tag-prefix: 'kyndryl' !default;
+
+$breakpoints: (
+  sm: 320px,
+  md: 672px,
+  lg: 1056px,
+  xlg: 1312px,
+  max: 1584px,
+) !default;
+
+$devices: (
+  mobile: (sm, md),
+  tablet: (lg),
+  desktop: (xlg, max)
+) !default;
