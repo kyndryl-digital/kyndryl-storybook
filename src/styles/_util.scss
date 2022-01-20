@@ -1,0 +1,56 @@
+@use "sass:math";
+
+@import "./vars";
+
+/// Converts amount in pixel units to the corresponding rem amount according to the base font size.
+///
+/// @param {Keyword|Number} $px - The amount of pixels
+/// @param {Keyword|Number} $base - The base font size
+///
+/// @output Outputs the calculated rem units.
+@function px2rem($px, $base: 16) {
+  $multiplier: math.div(10, $base);
+  @return math.div($px * $multiplier, 10) + 'rem';
+}
+
+/// Adds the appropriate padding according to the sub-grid units.
+///
+/// @param {Keyword|Number} $side... - The direction the padding should go. (top, right, bottom, left)
+/// @param {Keyword|Number} $amount - The number of sub-grid units.
+/// @param {Keyword|Number} $unit - The number of pixels per sub-grid unit.
+///
+/// @output Adds the appropriate padding in rems.
+@mixin padding($side, $amount, $unit: $sub-grid-px) {
+  @each $s in $side {
+    @if $s == 'top' or
+      $s == 'right' or
+      $s == 'bottom' or
+      $s == 'left' {
+      padding-#{$s}: #{px2rem($amount * $unit)};
+    }
+    @else {
+      @warn 'padding(): "#{$s}" is not a supported side.';
+    }
+  }
+}
+
+/// Adds the appropriate margin according to the sub-grid units.
+///
+/// @param {Keyword|Number} $side... - The direction the margin should go. (top, right, bottom, left)
+/// @param {Keyword|Number} $amount - The number of sub-grid units.
+/// @param {Keyword|Number} $unit - The number of pixels per sub-grid unit.
+///
+/// @output Adds the appropriate margins in rems.
+@mixin margin($side, $amount, $unit: $sub-grid-px) {
+  @each $s in $side {
+    @if $s == 'top' or
+      $s == 'right' or
+      $s == 'bottom' or
+      $s == 'left' {
+      margin-#{$s}: #{px2rem($amount * $unit)};
+    }
+    @else {
+      @warn 'margin(): "#{$s}" is not a supported side.';
+    }
+  }
+}

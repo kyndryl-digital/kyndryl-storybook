@@ -1,4 +1,5 @@
 $tag-prefix: 'kyndryl' !default;
+$class-prefix: 'orb' !default;
 
 $breakpoints: (
   sm: 320px,
@@ -13,3 +14,33 @@ $devices: (
   tablet: (lg),
   desktop: (xlg, max)
 ) !default;
+
+$sub-grid-px: 8;
+
+/// Color definiitons
+$white: #FAFAFC;
+$warm-red: #FF462D;
+$cloud: #F2F1EE;
+$spruce: #29707A;
+$stone: #BBBBBB;
+$dark-stone: #3D3C3C;
+$deep-forest: #042315;
+$dark-spring-green: #187E3F;
+$spring-green: #4CDD84;
+$sage: #8D978B;
+$earth: #9E9287;
+$dark-earth: #565049;
+
+$background: $white;
+$default-text: $dark-stone;
+$h1-color: $dark-stone;
+$h2-color: $dark-stone;
+$h3-color: $dark-stone;
+$h4-color: $dark-stone;
+$h5-color: $warm-red;
+$h6-color: $dark-stone;
+
+$link: $dark-stone;
+$link-focus: $link;
+$link-active: $link;
+$link-hover: $link;

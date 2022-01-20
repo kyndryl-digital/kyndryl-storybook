@@ -1,0 +1,190 @@
+@import "./breakpoints";
+@import "./fonts";
+@import "./util";
+@import "./vars";
+
+:root {
+  --font-size--small: #{px2rem(14)};
+  --font-size--default: #{px2rem(16)};
+  --font-size--large: #{px2rem(24)};
+}
+
+html, body, p, .#{$class-prefix}-text {
+  font-family: 'TWK Everett', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  color: $default-text;
+  font-size: #{px2rem(16)};
+  line-height: #{px2rem(28)};
+  @include margin(top bottom, 3);
+  @include device(tablet) {
+    font-size: #{px2rem(18)};
+    line-height: #{px2rem(28)};
+    @include margin(top bottom, 2);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(18)};
+    line-height: #{px2rem(28)};
+    @include margin(top bottom, 1);
+  }
+}
+
+h1,
+.#{$class-prefix}-h1 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $h1-color;
+  font-size: #{px2rem(64)};
+  line-height: #{px2rem(68)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(48)};
+    line-height: #{px2rem(63)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(36)};
+    line-height: #{px2rem(46)};
+    @include margin(top bottom, 2);
+  }
+}
+
+h2,
+.#{$class-prefix}-h2 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $h2-color;
+  font-size: #{px2rem(36)};
+  line-height: #{px2rem(46)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(36)};
+    line-height: #{px2rem(46)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(32)};
+    line-height: #{px2rem(42)};
+    @include margin(top bottom, 2);
+  }
+}
+
+h3,
+.#{$class-prefix}-h3 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  color: $h3-color;
+  font-size: #{px2rem(32)};
+  line-height: #{px2rem(42)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(32)};
+    line-height: #{px2rem(42)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(28)};
+    line-height: #{px2rem(37)};
+    @include margin(top bottom, 2);
+  }
+}
+
+h4,
+.#{$class-prefix}-h4 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $h4-color;
+  font-size: #{px2rem(36)};
+  line-height: #{px2rem(54)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(28)};
+    line-height: #{px2rem(54)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(28)};
+    line-height: #{px2rem(54)};
+    @include margin(top bottom, 2);
+  }
+}
+
+h5,
+.#{$class-prefix}-h5 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $h5-color;
+  font-size: #{px2rem(30)};
+  line-height: #{px2rem(44)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(20)};
+    line-height: #{px2rem(30)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(20)};
+    line-height: #{px2rem(30)};
+    @include margin(top bottom, 2);
+  }
+}
+
+h6,
+.#{$class-prefix}-h6 {
+  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: $h6-color;
+  font-size: #{px2rem(22)};
+  line-height: #{px2rem(28)};
+  @include margin(top bottom, 4);
+  @include device(tablet) {
+    font-size: #{px2rem(18)};
+    line-height: #{px2rem(24)};
+    @include margin(top bottom, 3);
+  }
+  @include device(mobile) {
+    font-size: #{px2rem(18)};
+    line-height: #{px2rem(24)};
+    @include margin(top bottom, 2);
+  }
+}
+
+a, .#{$class-prefix}-link {
+  &:link {
+    color: $link;
+    text-decoration: none;
+  }
+  &:focus {
+    color: $link-focus;
+    text-decoration: none;
+  }
+  &:active {
+    color: $link-active;
+    text-decoration: underline;
+  }
+  &:hover {
+    color: $link-hover;
+    text-decoration: underline;
+  }
+}
+
+ul, ol {
+  @include padding(left, 6);
+  @include margin(top bottom, 3);
+  @include device(tablet) {
+    @include margin(top bottom, 2);
+  }
+  @include device(mobile) {
+    @include margin(top bottom, 1);
+  }
+  li {
+    @include margin(top bottom, 2);
+    @include device(tablet) {
+      @include margin(top bottom, 2);
+    }
+    @include device(mobile) {
+      @include margin(top bottom, 1);
+    }
+  }
+}
