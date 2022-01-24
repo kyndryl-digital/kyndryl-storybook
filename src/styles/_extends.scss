@@ -1,0 +1,37 @@
+@import "./buttons";
+@import "./typeography";
+@import "./vars";
+
+html, body, p, div {
+  @extend .#{$class-prefix}-text;
+}
+
+h1 {
+  @extend .#{$class-prefix}-h1;
+}
+h2 {
+  @extend .#{$class-prefix}-h2;
+}
+h3 {
+  @extend .#{$class-prefix}-h3;
+}
+h4 {
+  @extend .#{$class-prefix}-h4;
+}
+h5 {
+  @extend .#{$class-prefix}-h5;
+}
+h6 {
+  @extend .#{$class-prefix}-h6;
+}
+
+a {
+  @extend .#{$class-prefix}-link;
+}
+
+ol, ul {
+  @extend .#{$class-prefix}-list;
+  li {
+    @extend .#{$class-prefix}-list-item;
+  }
+}

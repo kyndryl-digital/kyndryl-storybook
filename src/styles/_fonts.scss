@@ -15,6 +15,14 @@
   }
 }
 @font-face {
+  font-family: 'kyndryl-Icons';
+  src: url(../lib/fonts/kyndryl-Icons.eot);
+  src: url(../lib/fonts/kyndryl-Icons.eot) format("embedded-opentype"),url(../lib/fonts/kyndryl-Icons.ttf) format("truetype"),url(../lib/fonts/kyndryl-Icons.woff) format("woff"),url(../lib/fonts/kyndryl-Icons.svg) format("svg");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
   font-family: TWK Everett;
   src: url(../lib/fonts/TWKEverett-HairlineItalic-web.woff2) format("woff2"),url(../lib/fonts/TWKEverett-HairlineItalic-web.woff) format("woff");
   font-weight: 100;
@@ -153,12 +161,4 @@
   font-weight: 1000;
   font-style: normal;
   font-display: swap;
-}
-@font-face {
-  font-family: 'kyndryl-Icons';
-  src: url(../lib/fonts/kyndryl-Icons.eot);
-  src: url(../lib/fonts/kyndryl-Icons.eot) format("embedded-opentype"),url(../lib/fonts/kyndryl-Icons.ttf) format("truetype"),url(../lib/fonts/kyndryl-Icons.woff) format("woff"),url(../lib/fonts/kyndryl-Icons.svg) format("svg");
-  font-weight: 400;
-  font-style: normal;
-  font-display: block;
 }
