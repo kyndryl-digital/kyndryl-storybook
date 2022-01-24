@@ -1,5 +1,8 @@
 @import "./breakpoints";
+@import "./buttons";
+@import "./extends";
 @import "./fonts";
+@import "./icons";
 @import "./typeography";
 @import "./vars";
 
@@ -9,11 +12,17 @@ html {
   box-sizing: border-box;
 }
 
-*, :after, :before {
-  -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
 }
 
 body {

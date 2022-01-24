@@ -3,17 +3,12 @@
 @import "./util";
 @import "./vars";
 
-:root {
-  --font-size--small: #{px2rem(14)};
-  --font-size--default: #{px2rem(16)};
-  --font-size--large: #{px2rem(24)};
-}
-
-html, body, p, .#{$class-prefix}-text {
-  font-family: 'TWK Everett', Arial, Helvetica, sans-serif;
-  font-weight: 400;
+.#{$class-prefix}-text {
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   color: $default-text;
   font-size: #{px2rem(16)};
   line-height: #{px2rem(28)};
@@ -28,12 +23,16 @@ html, body, p, .#{$class-prefix}-text {
     line-height: #{px2rem(28)};
     @include margin(top bottom, 1);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    background-color: $inverted-background;
+    color: $inverted-default-text;
+  }
 }
 
-h1,
 .#{$class-prefix}-h1 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   color: $h1-color;
   font-size: #{px2rem(64)};
   line-height: #{px2rem(68)};
@@ -48,12 +47,15 @@ h1,
     line-height: #{px2rem(46)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h1-color;
+  }
 }
 
-h2,
 .#{$class-prefix}-h2 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   color: $h2-color;
   font-size: #{px2rem(36)};
   line-height: #{px2rem(46)};
@@ -68,12 +70,15 @@ h2,
     line-height: #{px2rem(42)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h2-color;
+  }
 }
 
-h3,
 .#{$class-prefix}-h3 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 300;
+  font-family: $font-family;
+  font-weight: $font-weight-light;
   color: $h3-color;
   font-size: #{px2rem(32)};
   line-height: #{px2rem(42)};
@@ -88,12 +93,15 @@ h3,
     line-height: #{px2rem(37)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h3-color;
+  }
 }
 
-h4,
 .#{$class-prefix}-h4 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   color: $h4-color;
   font-size: #{px2rem(36)};
   line-height: #{px2rem(54)};
@@ -108,12 +116,15 @@ h4,
     line-height: #{px2rem(54)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h4-color;
+  }
 }
 
-h5,
 .#{$class-prefix}-h5 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   color: $h5-color;
   font-size: #{px2rem(30)};
   line-height: #{px2rem(44)};
@@ -128,12 +139,15 @@ h5,
     line-height: #{px2rem(30)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h5-color;
+  }
 }
 
-h6,
 .#{$class-prefix}-h6 {
-  font-family: 'TWK Everett', Helvetica, Arial, sans-serif;
-  font-weight: 400;
+  font-family: $font-family;
+  font-weight: $font-weight-normal;
   color: $h6-color;
   font-size: #{px2rem(22)};
   line-height: #{px2rem(28)};
@@ -148,10 +162,15 @@ h6,
     line-height: #{px2rem(24)};
     @include margin(top bottom, 2);
   }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    color: $inverted-h6-color;
+  }
 }
 
-a, .#{$class-prefix}-link {
+.#{$class-prefix}-link {
   &:link {
+    font-weight: $font-weight-bold;
     color: $link;
     text-decoration: none;
   }
@@ -167,9 +186,34 @@ a, .#{$class-prefix}-link {
     color: $link-hover;
     text-decoration: underline;
   }
+  .#{$class-prefix}-icon {
+    @include margin(left, 1);
+    font-size: #{px2rem(14)};
+    font-weight: $font-weight-bold;
+  }
+  .#{$class-prefix}-invert &,
+  &.#{$class-prefix}-invert {
+    &:link {
+      font-weight: $font-weight-bold;
+      color: $inverted-link;
+      text-decoration: none;
+    }
+    &:focus {
+      color: $inverted-link-focus;
+      text-decoration: none;
+    }
+    &:active {
+      color: $inverted-link-active;
+      text-decoration: underline;
+    }
+    &:hover {
+      color: $inverted-link-hover;
+      text-decoration: underline;
+    }
+  }
 }
 
-ul, ol {
+.#{$class-prefix}-list {
   @include padding(left, 6);
   @include margin(top bottom, 3);
   @include device(tablet) {
@@ -178,7 +222,7 @@ ul, ol {
   @include device(mobile) {
     @include margin(top bottom, 1);
   }
-  li {
+  .#{$class-prefix}-list-item {
     @include margin(top bottom, 2);
     @include device(tablet) {
       @include margin(top bottom, 2);
