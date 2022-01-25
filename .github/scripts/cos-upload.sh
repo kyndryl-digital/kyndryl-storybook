@@ -17,5 +17,11 @@ ibmcloud cos config region --region us-geo;
 echo "Uploading directory..."
 for asset in `find ${DIR} -type f -printf "%P\n"`
 do
-  ibmcloud cos upload --bucket ${IBM_CLOUD_BUCKET} --key ${asset} --file ${DIR}/${asset};
+  # Set root dir.
+  if [ -n "$2" ]
+  then
+    ibmcloud cos upload --bucket ${IBM_CLOUD_BUCKET} --key $2/${asset} --file ${DIR}/${asset};
+  else
+    ibmcloud cos upload --bucket ${IBM_CLOUD_BUCKET} --key ${asset} --file ${DIR}/${asset};
+  fi
 done
