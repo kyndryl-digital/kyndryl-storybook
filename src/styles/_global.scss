@@ -1,6 +1,5 @@
 @import "./breakpoints";
 @import "./buttons";
-@import "./extends";
 @import "./fonts";
 @import "./icons";
 @import "./typeography";
@@ -10,6 +9,9 @@ html {
   min-width: map-get($breakpoints, sm);
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 *,
@@ -23,8 +25,4 @@ html {
 
 :focus:not(:focus-visible) {
   outline: none;
-}
-
-body {
-  background-color: $background;
 }

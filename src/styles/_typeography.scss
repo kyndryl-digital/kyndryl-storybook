@@ -169,6 +169,7 @@
 }
 
 .#{$class-prefix}-link {
+  font-family: $font-family;
   &:link,
   &:visited {
     font-weight: $font-weight-bold;
