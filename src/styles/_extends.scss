@@ -29,6 +29,11 @@ a {
   @extend .#{$class-prefix}-link;
 }
 
+button {
+  @extend .#{$class-prefix}-text;
+  @extend .#{$class-prefix}-link;
+}
+
 ol, ul {
   @extend .#{$class-prefix}-list;
   li {

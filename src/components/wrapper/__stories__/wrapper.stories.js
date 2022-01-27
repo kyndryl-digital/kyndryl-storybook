@@ -3,7 +3,7 @@ import readme from './README.stories.mdx';
 import '../wrapper';
 
 export default {
-  title: 'Kyndryl/Wrapper',
+  title: 'Web Components/Wrapper',
   parameters: {
     ...readme.parameters
   },

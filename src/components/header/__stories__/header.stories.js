@@ -3,7 +3,7 @@ import readme from './README.stories.mdx';
 import '../header';
 
 export default {
-  title: 'Kyndryl/Header',
+  title: 'Web Components/Header',
   parameters: {
     ...readme.parameters
   },

@@ -3,7 +3,7 @@ import readme from './README.stories.mdx';
 import '../footer';
 
 export default {
-  title: 'Kyndryl/Footer',
+  title: 'Web Components/Footer',
   parameters: {
     ...readme.parameters
   },
