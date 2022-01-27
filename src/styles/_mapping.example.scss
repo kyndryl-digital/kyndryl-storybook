@@ -1,10 +1,9 @@
+@import "./breakpoints";
 @import "./buttons";
 @import "./typeography";
 @import "./vars";
 
-html, body, p, div {
-  @extend .#{$class-prefix}-text;
-}
+/// This is an example file where users will map the design system classes to the elements on a page.
 
 h1 {
   @extend .#{$class-prefix}-h1;
