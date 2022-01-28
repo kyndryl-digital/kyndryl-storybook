@@ -8,21 +8,23 @@
 @mixin breakpoint($breakpoint...) {
     @each $bp in $breakpoint {
         @if map-has-key($breakpoints, $bp) {
-            $value: map-get($breakpoints, $bp);
-            @if $bp == sm {
-                @media (max-width: $value) { @content ; }
+            @if $bp == xs {
+                @media (max-width: 320px) { @content ; }
+            }
+            @else if $bp == sm {
+                @media (min-width: 321px) and (max-width: 672px) { @content ; }
             }
             @else if $bp == md {
-                @media (min-width: map-get($breakpoints, sm) + 1) and (max-width: $value) { @content ; }
+                @media (min-width: 673px) and (max-width: 1055px) { @content ; }
             }
             @else if $bp == lg {
-                @media (min-width: map-get($breakpoints, md) + 1) and (max-width: $value) { @content ; }
+                @media (min-width: 1056px) and (max-width: 1311px) { @content ; }
             }
             @else if $bp == xlg {
-                @media (min-width: map-get($breakpoints, lg) + 1) and (max-width: $value) { @content ; }
+                @media (min-width: 1312px) and (max-width: 1583px) { @content ; }
             }
             @else if $bp == max {
-                @media (min-width: map-get($breakpoints, xlg) + 1) { @content ; }
+                @media (min-width: 1584px) { @content ; }
             }
         }
         @else {
