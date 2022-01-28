@@ -1,9 +1,10 @@
 import { html } from 'lit-element';
 import { Button } from '../button';
+import { settings } from "../../../global/settings";
 
 export default {
   title: 'Web Components/Button',
-  component: 'kyndryl-button',
+  component: `${settings.tag_prefix}-button`,
   parameters: {},
   argTypes: {
     type: {
@@ -58,13 +59,13 @@ export default {
 
 const Template = (args) => {
   return html`
-    <kyndryl-button
+    <kd-button
         type=${args.type}
         size=${(args.size != 'default' ? args.size : null)}
         icon=${(args.icon != 'none' ? args.icon : null)}
         href=${args.href}
         target=${args.target}
-    >${args.label}</kyndryl-button>
+    >${args.label}</-button>
   `;
 };
 

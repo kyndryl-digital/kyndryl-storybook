@@ -1,7 +1,7 @@
 @import "../../styles/vars";
 @import "../../styles/icons";
 
-:host(#{$tag-prefix}-footer) {
+:host(kyndryl-footer) {
 
   ::slotted(#teconsent) {
     color: #3d3c3c;

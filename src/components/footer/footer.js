@@ -23,4 +23,4 @@ export class Footer extends LitElement {
   }
 }
 
-customElements.define(`${settings.prefix}-footer`, Footer);
+customElements.define(`kyndryl-footer`, Footer);

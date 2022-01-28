@@ -4,8 +4,6 @@ import { loadTrustArc } from "../../global/mixins/trustarc.js";
 import markup from "./wrapper.html.js";
 import stylesheet from "./_wrapper.scss";
 
-import { settings } from "../../global/settings";
-
 /**
  * Branded page wrapper with Kyndryl header and footer.
  *
@@ -24,4 +22,4 @@ export class Wrapper extends LitElement {
   }
 }
 
-customElements.define(`${settings.prefix}-wrapper`, Wrapper);
+customElements.define(`kyndryl-wrapper`, Wrapper);
