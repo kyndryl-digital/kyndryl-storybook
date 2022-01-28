@@ -1,5 +1,6 @@
 import { html } from 'lit-element';
 import {classMap} from "lit-html/directives/class-map.js";
+import { settings } from "../../global/settings";
 
 export default {
   title: 'Styles/Buttons/Button',
@@ -52,15 +53,15 @@ export default {
 
 const Template = (args) => {
   const classes = classMap({
-    [`orb-btn-primary`]: args.type === 'primary',
-    [`orb-btn-secondary`]: args.type === 'secondary',
-    [`orb-btn-text`]: args.type === 'text',
-    [`orb-btn-lg`]: args.size === 'large',
-    [`orb-btn-sm`]: args.size === 'small'
+    [`${settings.class_prefix}-btn-primary`]: args.type === 'primary',
+    [`${settings.class_prefix}-btn-secondary`]: args.type === 'secondary',
+    [`${settings.class_prefix}-btn-text`]: args.type === 'text',
+    [`${settings.class_prefix}-btn-lg`]: args.size === 'large',
+    [`${settings.class_prefix}-btn-sm`]: args.size === 'small'
   });
   const icon_classes = classMap({
-    [`orb-icon`]: args.icon,
-    [`orb-icon-`+args.icon]: args.icon,
+    [`${settings.class_prefix}-icon`]: args.icon,
+    [`${settings.class_prefix}-icon-`+args.icon]: args.icon,
   });
   if (!args.icon || args.icon === 'none') {
     return html`<button class=${classes}>

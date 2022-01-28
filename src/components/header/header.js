@@ -3,10 +3,6 @@ import { LitElement, html } from "lit-element";
 import markup from "./header.html.js";
 import stylesheet from "./_header.scss";
 
-import { settings } from "../../global/settings";
-
-
-
 /**
  * Kyndryl branded L0
  *
@@ -153,4 +149,4 @@ constructor(){
   }
 }
 
-customElements.define(`${settings.prefix}-header`, Header);
+customElements.define(`kyndryl-header`, Header);
