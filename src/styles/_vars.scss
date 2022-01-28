@@ -14,6 +14,15 @@ $breakpoints: (
   max:                  2500px, // Fixed 16-col 1584px (no max)
 ) !default;
 
+$breakpoint-grid-columns: (
+  xs: 4,
+  sm: 8,
+  md: 16,
+  lg: 16,
+  xlg: 16,
+  max: 16
+);
+
 $devices: (
   mobile:               (xs, sm),
   tablet:               (md),
