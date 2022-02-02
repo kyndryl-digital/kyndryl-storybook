@@ -1,7 +1,7 @@
-import { LitElement, html } from "lit-element";
+import { LitElement, html } from "lit";
 
-import markup from "./header.html.js";
-import stylesheet from "./_header.scss";
+import markup from "./header.html";
+import stylesheet from "./header.scss";
 
 /**
  * Kyndryl branded L0
@@ -9,8 +9,8 @@ import stylesheet from "./_header.scss";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-export class Header extends LitElement {
-    
+export class kdHeader extends LitElement {
+
 constructor(){
     super();
   }
@@ -149,4 +149,4 @@ constructor(){
   }
 }
 
-customElements.define(`kyndryl-header`, Header);
+customElements.define(`kyndryl-header`, kdHeader);

@@ -1,4 +1,4 @@
-import "../src/styles/_global.scss";
+import '!style-loader!css-loader!sass-loader!../src/styles/_global.storybook.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
@@ -8,4 +8,4 @@ export const parameters = {
       date: /Date$/,
     },
   },
-};
+}

@@ -1,6 +1,7 @@
-import { html } from 'lit-element';
-import '../header/header.js';
-import '../footer/footer.js';
+import { html } from 'lit';
+import '../header/header.ts';
+import '../footer/footer.ts';
+
 export default html`
     <kyndryl-header></kyndryl-header>
     <main>

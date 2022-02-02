@@ -6,7 +6,7 @@ export default {
 };
 
 
-export const Default = (args) => {
+export const Icons = (args) => {
   return html`
       <span class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-arrow-left"></span>
       <span class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-arrow-right"></span>

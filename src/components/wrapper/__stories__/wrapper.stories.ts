@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit';
 import readme from './README.stories.mdx';
 import '../wrapper';
 
@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const Default = () => {
+export const Wrapper = () => {
   return html`
     <kyndryl-wrapper>
       <p>YOUR CONTENT HERE</p>

@@ -1,9 +1,7 @@
-@import "../../styles/vars";
-
 :host(kyndryl-wrapper) {
 
   main {
-    margin-top: 80px;
+    margin-top: 90px;
   }
 
   ::slotted(#teconsent) {

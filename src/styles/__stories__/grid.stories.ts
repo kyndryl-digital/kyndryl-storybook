@@ -5,8 +5,7 @@ export default {
   title: 'Styles/Grid',
 };
 
-
-export const Default = (args) => {
+export const Grid = (args) => {
   return html`
   <style>
   .demo-div {

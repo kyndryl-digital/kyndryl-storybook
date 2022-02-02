@@ -1,10 +1,7 @@
 import { LitElement } from "lit-element";
-import { loadTrustArc } from "../../global/mixins/trustarc.js";
 
-import markup from "./footer.html.js";
+import markup from "./footer.html";
 import stylesheet from "./_footer.scss";
-
-import { settings } from "../../global/settings";
 
 /**
  * Kyndryl branded L0
@@ -12,15 +9,14 @@ import { settings } from "../../global/settings";
  * @slot - This element has a slot
  * @csspart button - The button
  */
-export class Footer extends LitElement {
+export class kdFooter extends LitElement {
   static get styles() {
     return [stylesheet];
   }
 
   render() {
-    loadTrustArc();
     return markup;
   }
 }
 
-customElements.define(`kyndryl-footer`, Footer);
+customElements.define(`kyndryl-footer`, kdFooter);

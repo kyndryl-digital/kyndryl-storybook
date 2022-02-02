@@ -1,5 +1,4 @@
 @import "./breakpoints";
-@import "./fonts";
 @import "./util";
 @import "./vars";
 
@@ -23,6 +22,7 @@
     line-height: #{px2rem(28)};
     @include margin(top bottom, 1);
   }
+  .#{$class-prefix}-invert,
   .#{$class-prefix}-invert &,
   &.#{$class-prefix}-invert {
     background-color: $inverted-background;
