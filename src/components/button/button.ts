@@ -1,9 +1,10 @@
-import { html, LitElement } from "lit-element";
-import {classMap} from "lit-html/directives/class-map.js";
+import { html, LitElement } from "lit";
+import { property, customElement} from "lit/decorators.js";
+import { classMap } from "lit-html/directives/class-map.js";
 
-import stylesheet from "./_button.scss";
+import stylesheet from "./button.scss";
 
-import { settings } from "../../global/settings";
+import { settings } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -11,29 +12,15 @@ import { settings } from "../../global/settings";
  * @slot - This element has a slot
  * @csspart button - The button
  */
+@customElement(`${settings.tag_prefix}-button`)
 export class Button extends LitElement {
-  static get properties() {
-    return {
-      type: {type: String},
-      href: {type: String},
-      target: {type: String},
-      size: {type: String},
-      icon: {type: String},
-    };
-  }
+  static styles = [ stylesheet ];
 
-  constructor() {
-    super();
-    this.type = null;
-    this.href = null;
-    this.target = null;
-    this.size = 'default';
-    this.icon = null;
-  }
-
-  static get styles() {
-    return [stylesheet];
-  }
+  @property({ type: String }) type;
+  @property({ type: String }) href;
+  @property({ type: String }) target;
+  @property({ type: String }) size;
+  @property({ type: String }) icon;
 
   render() {
     const classes = classMap({
@@ -60,5 +47,3 @@ export class Button extends LitElement {
     }
   }
 }
-
-customElements.define(`${settings.tag_prefix}-button`, Button);

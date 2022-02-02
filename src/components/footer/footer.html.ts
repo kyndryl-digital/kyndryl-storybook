@@ -1,8 +1,8 @@
-import { html } from "lit-element";
+import { html } from "lit";
 import { formatUrl } from "../../global/mixins/global";
-import logo from "../../lib/images/kyndryl-logo.svg";
-import linkedin from "../../lib/images/linkedin-dark.svg";
-import twitter from "../../lib/images/twitter-dark.svg";
+import logo from "../../styles/lib/images/kyndryl-logo.svg";
+import linkedin from "../../styles/lib/images/linkedin-dark.svg";
+import twitter from "../../styles/lib/images/twitter-dark.svg";
 
 export default html`
   <footer>

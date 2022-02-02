@@ -1,4 +1,4 @@
-import { html } from 'lit-element';
+import { html } from 'lit';
 import readme from './README.stories.mdx';
 import '../footer';
 
@@ -9,7 +9,7 @@ export default {
   },
 };
 
-export const Default = () => {
+export const Footer = () => {
   return html`
     <kyndryl-footer>
       <span slot="trustarc" id="teconsent"></span>

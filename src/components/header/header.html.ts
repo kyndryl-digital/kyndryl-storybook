@@ -1,7 +1,6 @@
-import { html } from "lit-element";
+import { html } from "lit";
 import { formatUrl } from "../../global/mixins/global";
-import logo from "../../lib/images/kyndryl-logo.svg";
-
+import logo from "../../styles/lib/images/kyndryl-logo.svg";
 
 export default html`
 

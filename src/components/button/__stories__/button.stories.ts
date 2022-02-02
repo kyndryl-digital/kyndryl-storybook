@@ -1,12 +1,11 @@
-import { html } from 'lit-element';
-import {classMap} from "lit-html/directives/class-map.js";
-import { settings } from "../../global/settings";
+import { html } from 'lit';
+import { settings } from '../../../global/settings';
+import '../button';
 
 export default {
-  title: 'Styles/Buttons/Link',
-  parameters: {
-    // ...readme.parameters
-  },
+  title: 'Web Components/Button',
+  component: `${settings.tag_prefix}-button`,
+  parameters: {},
   argTypes: {
     type: {
       options: ['primary', 'secondary', 'text'],
@@ -59,32 +58,19 @@ export default {
 };
 
 const Template = (args) => {
-  const classes = classMap({
-    [`${settings.class_prefix}-btn-primary`]: args.type === 'primary',
-    [`${settings.class_prefix}-btn-secondary`]: args.type === 'secondary',
-    [`${settings.class_prefix}-btn-text`]: args.type === 'text',
-    [`${settings.class_prefix}-btn-lg`]: args.size === 'large',
-    [`${settings.class_prefix}-btn-sm`]: args.size === 'small'
-  });
-  const icon_classes = classMap({
-    [`${settings.class_prefix}-icon`]: args.icon,
-    [`${settings.class_prefix}-icon-`+args.icon]: args.icon,
-  });
-  if (!args.icon || args.icon === 'none') {
-    return html`<a href=${args.href} target=${args.target} class=${classes}>
-        ${args.label}
-      </a>`;
-  }
-  else {
-    return html`<a href=${args.href} target=${args.target} class=${classes}>
-          ${args.label}
-          <span class=${icon_classes}></span>
-      </a>`;
-  }
+  return html`
+    <kd-button
+        type=${args.type}
+        size=${(args.size != 'default' ? args.size : null)}
+        icon=${(args.icon != 'none' ? args.icon : null)}
+        href=${args.href}
+        target=${args.target}
+    >${args.label}</-button>
+  `;
 };
 
-export const Link = Template.bind({});
-Link.args = {
+export const Button = Template.bind({});
+Button.args = {
   'type': 'primary',
   'href': 'http://kyndryl.com',
   'target': '_self',

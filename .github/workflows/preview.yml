@@ -25,7 +25,7 @@ jobs:
           ibmcloud plugin install -f cloud-object-storage
       - name: Build storybook preview
         run: |
-          npx build-storybook -s ./src/public
+          npx build-storybook
       - name: Deploy to Cloud Object Storage
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
