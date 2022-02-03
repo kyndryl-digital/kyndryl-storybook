@@ -4,9 +4,6 @@ on:
     workflows: ["Release"]
     branches:
       - 'release/**'
-    branches-ignore:
-      - 'release/**-alpha'
-      - 'release/**-beta'
     types:
       - completed
 jobs:
