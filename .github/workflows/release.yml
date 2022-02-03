@@ -1,16 +1,12 @@
 name: Release
 on:
-  workflow_run:
-    workflows: ["Test"]
+  push:
     branches:
+      - master
       - 'release/**'
-      - '!release/**-alpha'
-    types:
-      - completed
 jobs:
   Publish_release:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -22,6 +18,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install project
         run: npm install
+      - name: Run tests
+        run: npm test
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

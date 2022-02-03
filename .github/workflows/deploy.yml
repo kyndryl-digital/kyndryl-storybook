@@ -1,16 +1,11 @@
 name: Deploy
 on:
-  workflow_run:
-    workflows: ["Release"]
+  push:
     branches:
-      - 'release/**'
-      - '!release/**-alpha'
-    types:
-      - completed
+      - master
 jobs:
   Deploy_release:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -22,6 +17,8 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install project
         run: npm install
+      - name: Run tests
+        run: npm test
       - name: Instal IBM Cloud CLI
         run: |
           curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
@@ -32,16 +29,12 @@ jobs:
         env:
           PUBLIC_URL: ${{ secrets.WEBPACK_PUBLIC_URL }}
         run: NODE_ENV=production npm run build
-      - name: Extract branch name
-        shell: bash
-        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
-        id: extract_branch
       - name: Deploy to Cloud Object Storage
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
           IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_RESOURCE_ID }}
           IBM_CLOUD_BUCKET: ${{ secrets.IBM_CLOUD_BUCKET }}
-        run: bash ./.github/scripts/cos-upload.sh ./build ${{steps.extract_branch.outputs.branch}}
+        run: bash ./.github/scripts/cos-upload.sh ./build
       - name: Publish storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
