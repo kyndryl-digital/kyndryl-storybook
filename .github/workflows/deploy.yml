@@ -2,7 +2,9 @@ name: Deploy
 on:
   workflow_run:
     workflows: ["Release"]
-    branches: [ 'release/**' ]
+    branches:
+      - 'release/**'
+      - '!release/**-alpha'
     types:
       - completed
 jobs:
