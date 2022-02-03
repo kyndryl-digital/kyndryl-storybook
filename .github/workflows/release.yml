@@ -2,8 +2,10 @@ name: Release
 on:
   workflow_run:
     workflows: ["Test"]
-    branches: [master]
-    types: 
+    branches:
+      - 'release/**'
+      - '!release/**-alpha'
+    types:
       - completed
 jobs:
   Publish_release:

@@ -2,8 +2,10 @@ name: Deploy
 on:
   workflow_run:
     workflows: ["Release"]
-    branches: [master]
-    types: 
+    branches:
+      - 'release/**'
+      - '!release/**-alpha'
+    types:
       - completed
 jobs:
   Deploy_release:
@@ -30,12 +32,16 @@ jobs:
         env:
           PUBLIC_URL: ${{ secrets.WEBPACK_PUBLIC_URL }}
         run: NODE_ENV=production npm run build
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
       - name: Deploy to Cloud Object Storage
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
           IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_RESOURCE_ID }}
           IBM_CLOUD_BUCKET: ${{ secrets.IBM_CLOUD_BUCKET }}
-        run: bash ./.github/scripts/cos-upload.sh ./build
+        run: bash ./.github/scripts/cos-upload.sh ./build ${{steps.extract_branch.outputs.branch}}
       - name: Publish storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
