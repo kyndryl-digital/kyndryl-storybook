@@ -40,5 +40,5 @@ jobs:
           IBM_CLOUD_BUCKET: kyndryl-web-components-dev-preview
         run: |
           GREEN='\033[0;32m'
-          bash ./.github/scripts/cos-upload.sh ./storybook-static ${{steps.extract_branch.outputs.branch}}
+          bash ./.github/scripts/cos-upload.sh ./storybook-static branch/${{steps.extract_branch.outputs.branch}}
           echo -e "${GREEN}View storybook preview https://$IBM_CLOUD_BUCKET.s3.us.cloud-object-storage.appdomain.cloud/branch/${{steps.extract_branch.outputs.branch}}/index.html"
