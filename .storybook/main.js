@@ -2,11 +2,12 @@ const path = require("path");
 
 module.exports = {
   stories: [
-    "../src/**/*.stories.@(ts|tsx)"
+    "../src/**/*.stories.@(ts|tsx|mdx)"
   ],
   addons: [
     "@storybook/addon-links",
-    "@storybook/addon-essentials"
+    "@storybook/addon-essentials",
+    "@storybook/addon-docs"
   ],
   framework: "@storybook/web-components",
   core: {
