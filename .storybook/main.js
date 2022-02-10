@@ -9,6 +9,7 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-docs",
     "@storybook/addon-a11y",
+    require.resolve('storybook-addon-grid/preset'),
   ],
   framework: "@storybook/web-components",
   core: {
