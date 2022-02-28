@@ -1,0 +1,40 @@
+@use "sass:map";
+
+@import "./util";
+@import "./vars";
+
+
+.#{$class-prefix}-accordion-item {
+    @include padding(left right, 1);
+    @include margin(right, 1);
+    border-width: 0 0 1px 0;
+    border-color: map.get($colors, "sage");;
+    border-style: solid;
+    display: block;
+
+    .#{$class-prefix}-accordion-item-header {
+        cursor: pointer;
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: 0;
+            content: "+";
+        }
+
+        &.opened:after {
+            content: "-";
+        }
+
+        &.opened+.#{$class-prefix}-accordion-item-detail-wrapper {
+            height: auto;
+            transition: height .5s ease;
+        }
+    }
+    
+    .#{$class-prefix}-accordion-item-detail-wrapper {
+        overflow: hidden;
+        height: 0;
+        transition: height .5s ease;      
+    }
+}
