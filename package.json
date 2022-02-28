@@ -9,13 +9,17 @@
     "storybook": "start-storybook -p 6006",
     "build:storybook": "build-storybook",
     "build": "webpack --config webpack.config.js",
-    "publish": "npm run build:storybook && gh-pages -d storybook-static"
+    "publish": "npm run build:storybook && gh-pages -d storybook-static",
+    "sassdoc": "open sassdoc/index.html",
+    "build:sassdoc":"sassdoc src/styles"
+    
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "@babel/node": "^7.16.8",
     "@custom-elements-manifest/analyzer": "^0.5.7",
     "@esm-bundle/chai": "^4.3.4-fix.0",
     "@open-wc/testing": "^3.0.3",
@@ -75,6 +79,7 @@
     "html-webpack-plugin": "^5.5.0",
     "lit-scss-loader": "^1.1.0",
     "mini-css-extract-plugin": "^2.5.3",
+    "open": "^8.4.0",
     "sass": "^1.49.4",
     "sass-loader": "^12.4.0",
     "semantic-release": "^19.0.2",
