@@ -66,8 +66,27 @@
         padding: 0;
     }
 
-    &.#{$class-prefix}-no-gap {
+    &.#{$class-prefix}-no-grid-gap {
         grid-gap: 0px;
+    }
+
+    &.#{$class-prefix}-no-grid-padding {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    &.#{$class-prefix}-fully-fluid {
+        @include breakpoint(max) {
+            max-width: 100%;
+        }
+    
+        @include breakpoint(xlg) { 
+            max-width: 100%;
+        }
+    
+        @include breakpoint(lg) { 
+            max-width: 100%;
+        }
     }
 
 }
