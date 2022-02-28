@@ -120,6 +120,11 @@ $btn-secondary-color-active: map.get($colors, "cloud") !default;
 $btn-secondary-border-active: map.get($colors, "black") !default;
 $btn-secondary-background-active: map.get($colors, "black") !default;
 
+// Modal window
+$modal-background: map.get($colors, "white") !default;
+$modal-default-text: map.get($colors, "dark-stone") !default;
+$modal-backdrop: rgba(map.get($colors, "dark-stone"), .6) !default;
+
 // Inverted colors
 $inverted-background: map.get($colors, "dark-stone") !default;
 $inverted-default-text: map.get($colors, "cloud") !default;

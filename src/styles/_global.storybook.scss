@@ -4,3 +4,7 @@
 body {
   @extend .#{$class-prefix}-text;
 }
+
+a {
+  @extend .#{$class-prefix}-link;
+}
