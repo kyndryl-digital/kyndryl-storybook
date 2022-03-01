@@ -30,7 +30,7 @@ export const LogoGrid = (args) => {
                         <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                         </div>
                     </div>
-                    <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                    <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                         <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                             <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                             <ul class="${settings.class_prefix}-list">
@@ -70,7 +70,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -110,7 +110,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -150,7 +150,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -190,7 +190,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -230,7 +230,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -270,7 +270,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -310,7 +310,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -350,7 +350,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -390,7 +390,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -430,7 +430,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
@@ -470,7 +470,7 @@ export const LogoGrid = (args) => {
                               <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
                           </div>
                       </div>
-                      <div class="${settings.class_prefix}-bg-dark-white ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
+                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
                           <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
                               <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
                               <ul class="${settings.class_prefix}-list">
