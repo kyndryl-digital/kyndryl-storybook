@@ -1,7 +1,7 @@
-import { LitElement } from "lit-element";
+import { LitElement } from 'lit-element';
 
-import markup from "./footer.html";
-import stylesheet from "./_footer.scss";
+import markup from './footer.html';
+import stylesheet from './_footer.scss';
 
 /**
  * Kyndryl branded L0

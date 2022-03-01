@@ -1,14 +1,12 @@
-@import "../../styles/typeography";
-@import "../../styles/util";
-@import "../../styles/vars";
+@import '../../styles/typeography';
+@import '../../styles/util';
+@import '../../styles/vars';
 
 :host(#{$tag-prefix}-example) {
-
   @extend .#{$class-prefix}-text;
   @extend .#{$class-prefix}-font-warm-red;
 
   span#name {
     font-weight: $font-weight-bold;
   }
-
 }

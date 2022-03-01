@@ -1,7 +1,7 @@
-@use "sass:map";
+@use 'sass:map';
 
-@import "./util";
-@import "./vars";
+@import './util';
+@import './vars';
 
 .#{$class-prefix}-tab-list {
   margin: 0;
@@ -10,7 +10,7 @@
   line-height: #{px2rem(40)};
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: map.get($colors, "dark-white");
+  border-bottom-color: map.get($colors, 'dark-white');
 
   .#{$class-prefix}-tab {
     @include padding(left right, 1);
@@ -18,7 +18,7 @@
     display: inline-block;
     font-size: #{px2rem(14)};
     line-height: #{px2rem(40)};
-    color: map.get($colors, "earth");
+    color: map.get($colors, 'earth');
     text-decoration: none;
     margin-bottom: -2px;
     background: transparent;
@@ -28,15 +28,14 @@
     border-bottom-color: transparent;
     cursor: pointer;
     &:hover {
-      color: map.get($colors, "dark-stone");
+      color: map.get($colors, 'dark-stone');
     }
     &.#{$class-prefix}-selected,
     &:focus,
     &:active {
-      color: map.get($colors, "warm-red");
+      color: map.get($colors, 'warm-red');
       font-weight: $font-weight-bold;
-      border-bottom-color: map.get($colors, "warm-red");
+      border-bottom-color: map.get($colors, 'warm-red');
     }
   }
-
 }

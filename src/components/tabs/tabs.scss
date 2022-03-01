@@ -1,18 +1,16 @@
-@import "../../styles/tabs";
-@import "../../styles/vars";
+@import '../../styles/tabs';
+@import '../../styles/vars';
 
 :host(#{$tag-prefix}-tabs) {
-
   .#{$class-prefix}-tabs {
-    [role="tablist"] {
+    [role='tablist'] {
       @extend .#{$class-prefix}-tab-list;
-      [role="tab"] {
+      [role='tab'] {
         @extend .#{$class-prefix}-tab;
-        &[aria-selected="true"] {
+        &[aria-selected='true'] {
           @extend .#{$class-prefix}-selected;
         }
       }
     }
   }
-
 }

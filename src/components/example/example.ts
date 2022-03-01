@@ -1,7 +1,7 @@
-import { html, LitElement } from "lit";
-import { property, customElement} from "lit/decorators.js";
+import { html, LitElement } from 'lit';
+import { property, customElement } from 'lit/decorators.js';
 
-import stylesheet from "./example.scss";
+import stylesheet from './example.scss';
 
 import { settings } from '../../global/settings';
 
@@ -10,13 +10,11 @@ import { settings } from '../../global/settings';
  */
 @customElement(`${settings.tag_prefix}-example`)
 export class kdExample extends LitElement {
-  static styles = [ stylesheet ];
+  static styles = [stylesheet];
 
   @property({ type: String }) name = 'world';
 
   render() {
-    return html`
-        Hello, <span id="name">${this.name}</span>!
-    `;
+    return html` Hello, <span id="name">${this.name}</span>! `;
   }
 }

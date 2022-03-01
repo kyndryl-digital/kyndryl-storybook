@@ -5,7 +5,7 @@ import '../footer';
 export default {
   title: 'Web Components/Footer',
   parameters: {
-    ...readme.parameters
+    ...readme.parameters,
   },
 };
 

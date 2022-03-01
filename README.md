@@ -70,3 +70,14 @@ New components may be contributed via pull request to the main component reposit
 
 - Ian Whitcomb(ian.whitcomb@kyndryl.com)
 - Dennis Dolliver(dennis.dolliver@kyndryl.com)
+
+## Build Sass Document
+```
+npm run build:sassdoc
+```
+
+## Open Sass Document
+
+```
+npm run sassdoc
+```
