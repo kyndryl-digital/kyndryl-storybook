@@ -1,8 +1,8 @@
-@import "./vars";
+@import './vars';
 
 .#{$class-prefix}-icon,
-[class*=" #{$class-prefix}-icon-"],
-[class^="#{$class-prefix}-icon-"] {
+[class*=' #{$class-prefix}-icon-'],
+[class^='#{$class-prefix}-icon-'] {
   font-family: $icon-font-family !important;
   speak: never;
   font-style: normal;
@@ -20,7 +20,7 @@
 @mixin create-icon-classes {
   @each $name, $value in $icons {
     .#{$class-prefix}-icon-#{$name}:before {
-      content: "#{$value}";
+      content: '#{$value}';
     }
   }
 }

@@ -26,7 +26,8 @@ export default {
       control: { type: 'radio' },
     },
     icon: {
-      options: ['none',
+      options: [
+        'none',
         'arrow-down',
         'arrow-left',
         'arrow-right',
@@ -46,23 +47,24 @@ export default {
         'pdf',
         'play',
         'pop-out',
-        'twitter'],
+        'twitter',
+      ],
       control: {
         type: 'select',
         labels: {
-          'none': 'None',
-        }
+          none: 'None',
+        },
       },
-    }
+    },
   },
 };
 
-const Template = (args) => {
+const Template = args => {
   return html`
     <kd-button
         type=${args.type}
-        size=${(args.size != 'default' ? args.size : null)}
-        icon=${(args.icon != 'none' ? args.icon : null)}
+        size=${args.size != 'default' ? args.size : null}
+        icon=${args.icon != 'none' ? args.icon : null}
         href=${args.href}
         target=${args.target}
     >${args.label}</-button>
@@ -71,10 +73,10 @@ const Template = (args) => {
 
 export const Button = Template.bind({});
 Button.args = {
-  'type': 'primary',
-  'href': 'http://kyndryl.com',
-  'target': '_self',
-  'label': 'Click here',
-  'size': 'default',
-  'icon': 'none',
+  type: 'primary',
+  href: 'http://kyndryl.com',
+  target: '_self',
+  label: 'Click here',
+  size: 'default',
+  icon: 'none',
 };

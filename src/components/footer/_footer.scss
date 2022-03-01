@@ -1,8 +1,7 @@
-@import "../../styles/vars";
-@import "../../styles/icons";
+@import '../../styles/vars';
+@import '../../styles/icons';
 
 :host(kyndryl-footer) {
-
   ::slotted(#teconsent) {
     color: #3d3c3c;
     line-height: 30px;
@@ -53,7 +52,7 @@
     }
     .cmp-list__item-link,
     .cmp-list__item a {
-        color: #3d3c3c;
+      color: #3d3c3c;
     }
     .cmp-list {
       list-style: none;
@@ -68,24 +67,28 @@
       line-height: 54px;
       margin-bottom: 38px;
     }
-    .cmp-footer__content .cmp-list__item:first-child .cmp-list__item-link:after {
+    .cmp-footer__content
+      .cmp-list__item:first-child
+      .cmp-list__item-link:after {
       background: #ff462d;
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       margin-top: 8px;
-      -webkit-transition: background .3s ease-in-out;
-      transition: background .3s ease-in-out;
+      -webkit-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
       width: 48px;
     }
-    .cmp-footer__content .cmp-list__item:first-child .cmp-list__item-link:hover:after {
+    .cmp-footer__content
+      .cmp-list__item:first-child
+      .cmp-list__item-link:hover:after {
       background: #3d3c3c;
-      content: "";
+      content: '';
       display: block;
       height: 2px;
       margin-top: 8px;
-      -webkit-transition: background .3s ease-in-out;
-      transition: background .3s ease-in-out;
+      -webkit-transition: background 0.3s ease-in-out;
+      transition: background 0.3s ease-in-out;
       width: 48px;
     }
     .cmp-footer .cmp-list__item-link {
@@ -95,10 +98,13 @@
       line-height: 30px;
       margin-bottom: 22px;
     }
-    .cmp-list__item-link:hover, .cmp-list__item a:hover {
+    .cmp-list__item-link:hover,
+    .cmp-list__item a:hover {
       text-decoration: underline;
     }
-    .cmp-footer__content .cmp-list__item:first-child .cmp-list__item-link:hover {
+    .cmp-footer__content
+      .cmp-list__item:first-child
+      .cmp-list__item-link:hover {
       text-decoration: none;
     }
     .cmp-footer__header {
@@ -126,11 +132,11 @@
       margin-bottom: 18px;
     }
     .cmp-footer .cmp-list__item-link {
-        display: inline-block;
-        font-size: 18px;
-        font-weight: 400;
-        line-height: 30px;
-        margin-bottom: 22px;
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 30px;
+      margin-bottom: 22px;
     }
     .cmp-footer__footer-copyright * {
       color: #666;
@@ -170,7 +176,7 @@
     }
     .cmp-footer__header-social .cmp-social__title {
       display: none;
-      font-family: TWK Everett Light,Arial,Helvetica,sans-serif;
+      font-family: TWK Everett Light, Arial, Helvetica, sans-serif;
       font-size: 16px;
       font-weight: 300;
       line-height: 30px;
@@ -204,13 +210,13 @@
   @media (min-width: 768px) {
     footer {
       .cmp-footer {
-          padding-bottom: 80px;
-          padding-top: 80px;
+        padding-bottom: 80px;
+        padding-top: 80px;
       }
       .cmp-footer__content .cmp-list {
         display: grid;
         grid-column-gap: 20px;
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
       }
       .cmp-footer__header {
         -webkit-box-orient: horizontal;
@@ -250,7 +256,7 @@
         }
         &:before {
           background-color: #3d3c3c;
-          content: "";
+          content: '';
           display: block;
           height: 16px;
           left: 0;
@@ -262,7 +268,7 @@
         }
       }
       .cmp-footer__footer .cmp-list__item-link {
-          margin-bottom: 0;
+        margin-bottom: 0;
       }
       .cmp-footer__header-social .cmp-social {
         -webkit-box-align: center;
@@ -293,7 +299,7 @@
         margin-bottom: 16px;
       }
       .cmp-footer__content-col:first-child .cmp-list {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
       }
       .cmp-footer__content .cmp-list__item-link {
         font-size: 16px;
@@ -341,12 +347,11 @@
         }
       }
       .cmp-footer__footer .cmp-list__item-link {
-          font-size: 16px;
+        font-size: 16px;
       }
       .cmp-footer__header-social .cmp-social__title {
         display: none;
       }
     }
   }
-
 }

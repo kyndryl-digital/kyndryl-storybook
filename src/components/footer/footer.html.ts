@@ -1,8 +1,8 @@
-import { html } from "lit";
-import { formatUrl } from "../../global/mixins/global";
-import logo from "../../styles/lib/images/kyndryl-logo.svg";
-import linkedin from "../../styles/lib/images/linkedin-dark.svg";
-import twitter from "../../styles/lib/images/twitter-dark.svg";
+import { html } from 'lit';
+import { formatUrl } from '../../global/mixins/global';
+import logo from '../../styles/lib/images/kyndryl-logo.svg';
+import linkedin from '../../styles/lib/images/linkedin-dark.svg';
+import twitter from '../../styles/lib/images/twitter-dark.svg';
 
 export default html`
   <footer>
@@ -23,7 +23,7 @@ export default html`
           >
             <a
               class="cmp-image__link"
-              href="${formatUrl("us/en")}"
+              href="${formatUrl('us/en')}"
               data-cmp-clickable=""
               data-cmp-hook-image="link"
             >
@@ -48,8 +48,8 @@ export default html`
                 <a
                   class="cmp-social__link"
                   target="_blank"
-                  href="${formatUrl("company/kyndryl", {
-                    host: "linkedin.com",
+                  href="${formatUrl('company/kyndryl', {
+                    host: 'linkedin.com',
                   })}"
                 >
                   <img class="cmp-social__image" src="${linkedin}" alt="" />
@@ -61,8 +61,8 @@ export default html`
                 <a
                   class="cmp-social__link"
                   target="_blank"
-                  href="${formatUrl("kyndryl", {
-                    host: "twitter.com",
+                  href="${formatUrl('kyndryl', {
+                    host: 'twitter.com',
                   })}"
                 >
                   <img class="cmp-social__image" src="${twitter}" alt="" />
@@ -88,7 +88,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services")}"
+                  href="${formatUrl('us/en/services')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Services</span>
@@ -103,7 +103,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/applications-data-ai")}"
+                  href="${formatUrl('us/en/services/applications-data-ai')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title"
@@ -120,7 +120,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/cloud")}"
+                  href="${formatUrl('us/en/services/cloud')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Cloud Services</span>
@@ -135,7 +135,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/core-enterprise-zcloud")}"
+                  href="${formatUrl('us/en/services/core-enterprise-zcloud')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title"
@@ -152,7 +152,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/digital-workplace")}"
+                  href="${formatUrl('us/en/services/digital-workplace')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Digital Workplace</span>
@@ -167,7 +167,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/network")}"
+                  href="${formatUrl('us/en/services/network')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Network and Edge</span>
@@ -182,7 +182,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/services/business-continuity")}"
+                  href="${formatUrl('us/en/services/business-continuity')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title"
@@ -200,7 +200,7 @@ export default html`
                 <a
                   class="cmp-list__item-link"
                   href="${formatUrl(
-                    "us/en/services/advisory-implementation-services"
+                    'us/en/services/advisory-implementation-services',
                   )}"
                   data-cmp-clickable=""
                 >
@@ -225,7 +225,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/about-us")}"
+                  href="${formatUrl('us/en/about-us')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">About Us</span>
@@ -240,7 +240,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/about-us/leadership")}"
+                  href="${formatUrl('us/en/about-us/leadership')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Leadership</span>
@@ -255,7 +255,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/about-us/contact-us")}"
+                  href="${formatUrl('us/en/about-us/contact-us')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Contact Us</span>
@@ -270,7 +270,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/news")}"
+                  href="${formatUrl('us/en/news')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">News and Insights</span>
@@ -285,7 +285,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/about-us/locations")}"
+                  href="${formatUrl('us/en/about-us/locations')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Locations</span>
@@ -300,7 +300,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/investors")}"
+                  href="${formatUrl('us/en/investors')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Investors</span>
@@ -315,7 +315,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/careers")}"
+                  href="${formatUrl('us/en/careers')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Careers</span>
@@ -330,7 +330,7 @@ export default html`
               <article>
                 <a
                   class="cmp-list__item-link"
-                  href="${formatUrl("us/en/about-us/alliances")}"
+                  href="${formatUrl('us/en/about-us/alliances')}"
                   data-cmp-clickable=""
                 >
                   <span class="cmp-list__item-title">Alliances</span>
@@ -356,7 +356,7 @@ export default html`
                 <article>
                   <a
                     class="cmp-list__item-link"
-                    href="${formatUrl("us/en/privacy")}"
+                    href="${formatUrl('us/en/privacy')}"
                     data-cmp-clickable=""
                   >
                     <span class="cmp-list__item-title">Privacy</span>
@@ -371,7 +371,7 @@ export default html`
                 <article>
                   <a
                     class="cmp-list__item-link"
-                    href="${formatUrl("us/en/terms")}"
+                    href="${formatUrl('us/en/terms')}"
                     data-cmp-clickable=""
                   >
                     <span class="cmp-list__item-title">Terms</span>
@@ -386,7 +386,7 @@ export default html`
                 <article>
                   <a
                     class="cmp-list__item-link"
-                    href="${formatUrl("us/en/cyber-security")}"
+                    href="${formatUrl('us/en/cyber-security')}"
                     data-cmp-clickable=""
                   >
                     <span class="cmp-list__item-title">Security</span>
@@ -398,7 +398,7 @@ export default html`
                 <article>
                   <a
                     class="cmp-list__item-link"
-                    href="${formatUrl("us/en/sitemap")}"
+                    href="${formatUrl('us/en/sitemap')}"
                     data-cmp-clickable=""
                   >
                     <span class="cmp-list__item-title">Sitemap</span>
