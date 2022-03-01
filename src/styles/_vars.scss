@@ -10,7 +10,7 @@ $breakpoints: (
   // Fluid 4-col
   sm: 672px,
   // Fluid 8-col
-  md: 1055px,
+  md: 1183px,
   // Fluid 16-col
   lg: 1311px,
   // Fixed 16-col 1056px
@@ -23,10 +23,10 @@ $breakpoints: (
 $breakpoint-grid-columns: (
   xs: 4,
   sm: 8,
-  md: 16,
-  lg: 16,
-  xlg: 16,
-  max: 16,
+  md: 12,
+  lg: 12,
+  xlg: 12,
+  max: 12,
 );
 
 $devices: (
