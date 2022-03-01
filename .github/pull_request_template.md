@@ -25,6 +25,13 @@ Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Donec id el
 <!-- Provide a link to the testing environment -->
 [Click here to view the testing environment](https://kyndryl-web-components-dev-preview.s3.us.cloud-object-storage.appdomain.cloud/pr/1234/index.html)
 
+-----
+
+## Reviewers
+<!-- Enter the team(s) required for review-->
+
+- @marketing/engineering
+- @marketing/design
 
 <!-- Reference the related issue(s)  -->
 closes #1234
