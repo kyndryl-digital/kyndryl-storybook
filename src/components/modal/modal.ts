@@ -1,13 +1,8 @@
-import { html, LitElement } from 'lit';
-import {
-  state,
-  property,
-  customElement,
-  eventOptions,
-} from 'lit/decorators.js';
-import { classMap } from 'lit-html/directives/class-map.js';
+import { html, LitElement } from "lit";
+import { state, property, customElement, eventOptions } from "lit/decorators.js";
+import { classMap } from "lit-html/directives/class-map.js";
 
-import stylesheet from './modal.scss';
+import stylesheet from "./modal.scss";
 
 import { settings } from '../../global/settings';
 
@@ -16,7 +11,7 @@ import { settings } from '../../global/settings';
  */
 @customElement(`${settings.tag_prefix}-modal`)
 export class kdModal extends LitElement {
-  static styles = [stylesheet];
+  static styles = [ stylesheet ];
 
   @property({ type: String }) size;
 
@@ -32,7 +27,8 @@ export class kdModal extends LitElement {
   public toggleModal() {
     if (this._active) {
       this._handleClose();
-    } else {
+    }
+    else {
       this._handleOpen();
     }
   }
@@ -41,23 +37,18 @@ export class kdModal extends LitElement {
    * Allows users to center the modal vertically based on window and modal height.
    */
   public centerModal() {
-    const modalBackdrop = this.renderRoot?.querySelector(
-      '.' + settings.class_prefix + '-modal-backdrop',
-    );
-    const modal = this.renderRoot?.querySelector(
-      '.' + settings.class_prefix + '-modal',
-    );
+    const modalBackdrop = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal-backdrop");
+    const modal = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal");
     const modalHeight = modal.scrollHeight;
     const windowHeight = window?.innerHeight;
-    const modalMargin = 50 - ((100 / windowHeight) * modalHeight) / 2;
+    const modalMargin = 50-(((100/windowHeight) * modalHeight)/2);
 
     modalBackdrop.scrollTop = 0;
     if (windowHeight >= modalHeight && modalMargin > 0) {
-      modal.style.marginTop =
-        50 - ((100 / windowHeight) * modalHeight) / 2 + 'vh';
-      modal.style.marginBottom =
-        50 - ((100 / windowHeight) * modalHeight) / 2 + 'vh';
-    } else {
+      modal.style.marginTop = 50-(((100/windowHeight) * modalHeight)/2) + 'vh';
+      modal.style.marginBottom = 50-(((100/windowHeight) * modalHeight)/2) + 'vh';
+    }
+    else {
       modal.style.marginTop = null;
       modal.style.marginBottom = null;
     }
@@ -89,23 +80,22 @@ export class kdModal extends LitElement {
 
   connectedCallback() {
     super.connectedCallback();
-    document?.addEventListener('modal-open', e => this._handleClose(e));
-    if (window?.attachEvent) {
-      window?.attachEvent(
-        'onresize',
-        window?.addEventListener('resize', e => this.centerModal(e), true),
-      );
-    } else if (window?.addEventListener) {
-      window?.addEventListener('resize', e => this.centerModal(e), true);
+    document?.addEventListener('modal-open', (e) => this._handleClose(e));
+    if(window?.attachEvent) {
+      window?.attachEvent('onresize', window?.addEventListener('resize', (e) => this.centerModal(e), true));
+    }
+    else if(window?.addEventListener) {
+      window?.addEventListener('resize', (e) => this.centerModal(e), true);
     }
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
     document?.removeEventListener('modal-open');
-    if (window?.attachEvent) {
+    if(window?.attachEvent) {
       window?.detachEvent('onresize');
-    } else if (window?.addEventListener) {
+    }
+    else if(window?.addEventListener) {
       window?.removeEventListener('resize');
     }
   }
@@ -116,31 +106,17 @@ export class kdModal extends LitElement {
       [`${settings.class_prefix}-modal-lg`]: this.size === 'large',
       [`${settings.class_prefix}-modal-sm`]: this.size === 'small',
       [`visible`]: this._active === true,
-      [`hidden`]: this._active === false,
+      [`hidden`]: this._active === false
     });
     return html`
       <span @click="${e => this._handleOpen(e)}">
         <slot name="trigger"></slot>
       </span>
-      <div
-        @click="${e => this._handleClose(e)}"
-        class="${settings.class_prefix}-modal-backdrop ${this._active
-          ? 'visible'
-          : 'hidden'}"
-      >
-        <div
-          @click="${e => e.stopPropagation()}"
-          role="dialog"
-          aria-describedby=".${settings.class_prefix}-modal-content"
-          class=${classes}
-        >
+      <div @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-backdrop ${this._active ? 'visible' : 'hidden'}">
+        <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${settings.class_prefix}-modal-content" class=${classes}>
           <div class="${settings.class_prefix}-modal-controls">
-            <button
-              @click="${e => this._handleClose(e)}"
-              class="${settings.class_prefix}-modal-control"
-              title="Close window"
-            >
-              <span class="${settings.class_prefix}-icon-close"></span>
+            <button @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-control" title="Close window">
+                <span class="${settings.class_prefix}-icon-close"></span>
             </button>
           </div>
           <div class="${settings.class_prefix}-modal-content">

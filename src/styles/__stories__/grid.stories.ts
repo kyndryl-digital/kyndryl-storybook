@@ -1,6 +1,6 @@
 import { html } from 'lit-element';
-import { classMap } from 'lit-html/directives/class-map.js';
-import { settings } from '../../global/settings';
+import {classMap} from "lit-html/directives/class-map.js";
+import { settings } from "../../global/settings";
 
 export default {
   title: 'Styles/Grid',
@@ -8,35 +8,34 @@ export default {
   argTypes: {
     fluidity: {
       options: ['Standard', 'Fully fluid'],
-      control: { type: 'radio' },
+      control: {type: 'radio'},
       defaultValue: 'Standard',
-      description:
-        'Controls whether the grid has a max width determined by breakpoints or is always fluid',
+      description: 'Controls whether the grid has a max width determined by breakpoints or is always fluid'
     },
     gap: {
       options: ['Standard', 'No grid gap'],
-      control: { type: 'radio' },
+      control: {type: 'radio'},
       defaultValue: 'Standard',
-      description: 'Controls the gap between grid items',
+      description: 'Controls the gap between grid items'
     },
     padding: {
       options: ['Standard', 'No grid container padding'],
-      control: { type: 'radio' },
+      control: {type: 'radio'},
       defaultValue: 'Standard',
-      description:
-        'Controls the padding that appears at the left / right of grid container',
-    },
-  },
+      description: 'Controls the padding that appears at the left / right of grid container'
+    }
+  }
+    
 };
 
-export const Grid = args => {
+export const Grid = (args) => {
+
   const classes = classMap({
     [`${settings.class_prefix}-grid-container`]: true,
     [`${settings.class_prefix}-pb1`]: true,
     [`${settings.class_prefix}-fully-fluid`]: args.fluidity === 'Fully fluid',
     [`${settings.class_prefix}-no-grid-gap`]: args.gap === 'No grid gap',
-    [`${settings.class_prefix}-no-grid-padding`]:
-      args.padding === 'No grid container padding',
+    [`${settings.class_prefix}-no-grid-padding`]: args.padding === 'No grid container padding'
   });
 
   return html`
@@ -216,5 +215,5 @@ export const Grid = args => {
 Grid.args = {
   fluidity: 'Standard',
   gap: 'Standard',
-  padding: 'Standard',
-};
+  padding: 'Standard'
+}
