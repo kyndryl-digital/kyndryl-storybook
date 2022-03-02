@@ -1,6 +1,6 @@
-import { settings } from "../settings";
+import { settings } from '../settings';
 
-const url = require("url");
+const url = require('url');
 
 /**
  * Generic URL formatter function.

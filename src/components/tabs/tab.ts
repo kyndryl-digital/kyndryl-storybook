@@ -1,5 +1,5 @@
-import { html, LitElement } from "lit";
-import { state, property, customElement} from "lit/decorators.js";
+import { html, LitElement } from 'lit';
+import { state, property, customElement } from 'lit/decorators.js';
 
 import { settings } from '../../global/settings';
 
@@ -8,7 +8,6 @@ import { settings } from '../../global/settings';
  */
 @customElement(`${settings.tag_prefix}-tab`)
 export class kdTab extends LitElement {
-
   @property({ type: String }) label;
   @property({ type: Boolean }) selected = false;
 
@@ -27,9 +26,14 @@ export class kdTab extends LitElement {
 
   render() {
     return html`
-        <div id="panel-${this._index}" role="tabpanel" tabindex="0" ?hidden="${!this.selected}">
-          <slot></slot>
-        </div>
+      <div
+        id="panel-${this._index}"
+        role="tabpanel"
+        tabindex="0"
+        ?hidden="${!this.selected}"
+      >
+        <slot></slot>
+      </div>
     `;
   }
 }

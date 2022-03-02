@@ -1,8 +1,8 @@
-@import "./buttons";
-@import "./breakpoints";
-@import "./icons";
-@import "./util";
-@import "./vars";
+@import './buttons';
+@import './breakpoints';
+@import './icons';
+@import './util';
+@import './vars';
 
 .#{$class-prefix}-modal-backdrop {
   position: fixed;
@@ -17,8 +17,8 @@
   background: $modal-backdrop;
   -webkit-backdrop-filter: grayscale(1);
   backdrop-filter: grayscale(1);
-  -webkit-transition: opacity .4s;
-  transition: opacity .4s;
+  -webkit-transition: opacity 0.4s;
+  transition: opacity 0.4s;
   transition-timing-function: ease-out;
   &.hidden {
     visibility: hidden;
@@ -33,15 +33,15 @@
 .#{$class-prefix}-modal {
   background: $modal-background;
   overflow: scroll;
-  -webkit-transition: all .4s, margin-top 0s, margin-bottom 0s;
-  transition: all .4s, margin-top 0s, margin-bottom 0s;
+  -webkit-transition: all 0.4s, margin-top 0s, margin-bottom 0s;
+  transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition-timing-function: ease-out;
   margin: auto;
   z-index: 9999;
   &.hidden {
     visibility: hidden;
     opacity: 0;
-    transform: scale(.7);
+    transform: scale(0.7);
     transform-origin: left bottom;
   }
   &.visible {

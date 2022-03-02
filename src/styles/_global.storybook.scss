@@ -1,5 +1,5 @@
-@import "./global.build";
-@import "./vars";
+@import './global.build';
+@import './vars';
 
 body {
   @extend .#{$class-prefix}-text;

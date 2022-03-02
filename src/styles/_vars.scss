@@ -1,99 +1,114 @@
-@use "sass:color";
-@use "sass:map";
+@use 'sass:color';
+@use 'sass:map';
 
-$tag-prefix:            "kd" !default;
-$class-prefix:          "kd" !default;
-$sub-grid-px:           8 !default;
+$tag-prefix: 'kd' !default;
+$class-prefix: 'kd' !default;
+$sub-grid-px: 8 !default;
 
 $breakpoints: (
-  xs:                   320px, // Fluid 4-col
-  sm:                   672px, // Fluid 8-col
-  md:                   1055px, // Fluid 16-col
-  lg:                   1311px, // Fixed 16-col 1056px
-  xlg:                  1583px, // Fixed 16-col 1312px
-  max:                  2500px, // Fixed 16-col 1584px (no max)
+  xs: 320px,
+  // Fluid 4-col
+  sm: 672px,
+  // Fluid 8-col
+  md: 1183px,
+  // Fluid 16-col
+  lg: 1311px,
+  // Fixed 16-col 1056px
+  xlg: 1583px,
+  // Fixed 16-col 1312px
+  max: 2500px,
+  // Fixed 16-col 1584px (no max)
 ) !default;
 
 $breakpoint-grid-columns: (
   xs: 4,
   sm: 8,
-  md: 16,
-  lg: 16,
-  xlg: 16,
-  max: 16
+  md: 12,
+  lg: 12,
+  xlg: 12,
+  max: 12,
 );
 
 $devices: (
-  mobile:               (xs, sm),
-  tablet:               (md),
-  desktop:              (lg, xlg, max)
+  mobile: (
+    xs,
+    sm,
+  ),
+  tablet: (
+    md,
+  ),
+  desktop: (
+    lg,
+    xlg,
+    max,
+  ),
 ) !default;
 
 /// Fonts
-$font-family:           "TWK Everett", Helvetica, Arial, sans-serif !default;
-$icon-font-family:      "kyndryl-Icons" !default;
-$font-large:            #{px2rem(18)} !default;
-$font-size:             #{px2rem(16)} !default;
-$font-size-small:       #{px2rem(14)} !default;
-$font-size-x-small:     #{px2rem(12)} !default;
-$font-height:           1.5 !default;
+$font-family: 'TWK Everett', Helvetica, Arial, sans-serif !default;
+$icon-font-family: 'kyndryl-Icons' !default;
+$font-large: #{px2rem(18)} !default;
+$font-size: #{px2rem(16)} !default;
+$font-size-small: #{px2rem(14)} !default;
+$font-size-x-small: #{px2rem(12)} !default;
+$font-height: 1.5 !default;
 
-$font-weight-light:     300 !default;
-$font-weight-normal:    400 !default;
-$font-weight-medium:    500 !default;
-$font-weight-bold:      700 !default;
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-bold: 700 !default;
 
 /// Icons
 $icons: (
-  "arrow-down":         "\e90e",
-  "arrow-left":         "\e906",
-  "arrow-right":        "\e905",
-  "arrow-up":           "\e90f",
-  "chevron-down":       "\e903",
-  "chevron-left":       "\e910",
-  "chevron-right":      "\e911",
-  "chevron-up":         "\e908",
-  "chevron-wide-down":  "\e90b",
-  "chevron-wide-left":  "\e912",
-  "chevron-wide-right": "\e913",
-  "chevron-wide-up":    "\e90c",
-  "close":              "\e909",
-  "download":           "\e901",
-  "hamburger":          "\e90a",
-  "linkedin":           "\e900",
-  "pdf":                "\e904",
-  "play":               "\e90d",
-  "pop-out":            "\e907",
-  "twitter":            "\e902"
+  'arrow-down': '\e90e',
+  'arrow-left': '\e906',
+  'arrow-right': '\e905',
+  'arrow-up': '\e90f',
+  'chevron-down': '\e903',
+  'chevron-left': '\e910',
+  'chevron-right': '\e911',
+  'chevron-up': '\e908',
+  'chevron-wide-down': '\e90b',
+  'chevron-wide-left': '\e912',
+  'chevron-wide-right': '\e913',
+  'chevron-wide-up': '\e90c',
+  'close': '\e909',
+  'download': '\e901',
+  'hamburger': '\e90a',
+  'linkedin': '\e900',
+  'pdf': '\e904',
+  'play': '\e90d',
+  'pop-out': '\e907',
+  'twitter': '\e902',
 ) !default;
 
 /// Colors
 $colors: (
-  "white":              #FAFAFC,
-  "dark-white":         #E5E5E5,
-  "black":              #2B2B2B,
-  "warm-red":           #FF462D,
-  "cloud":              #F2F1EE,
-  "spruce":             #29707A,
-  "stone":              #BBBBBB,
-  "dark-stone":         #3D3C3C,
-  "deep-forest":        #042315,
-  "dark-spring-green":  #187E3F,
-  "spring-green":       #4CDD84,
-  "sage":               #8D978B,
-  "earth":              #9E9287,
-  "dark-earth":         #565049
+  'white': #fafafc,
+  'dark-white': #e5e5e5,
+  'black': #2b2b2b,
+  'warm-red': #ff462d,
+  'cloud': #f2f1ee,
+  'spruce': #29707a,
+  'stone': #bbbbbb,
+  'dark-stone': #3d3c3c,
+  'deep-forest': #042315,
+  'dark-spring-green': #187e3f,
+  'spring-green': #4cdd84,
+  'sage': #8d978b,
+  'earth': #9e9287,
+  'dark-earth': #565049,
 ) !default;
 
 // Default colors
-$background: map.get($colors, "white") !default;
-$default-text: map.get($colors, "dark-stone") !default;
-$h1-color: map.get($colors, "dark-stone") !default;
-$h2-color: map.get($colors, "dark-stone") !default;
-$h3-color: map.get($colors, "dark-stone") !default;
-$h4-color: map.get($colors, "dark-stone") !default;
-$h5-color: map.get($colors, "warm-red") !default;
-$h6-color: map.get($colors, "dark-stone") !default;
+$background: map.get($colors, 'white') !default;
+$default-text: map.get($colors, 'dark-stone') !default;
+$h1-color: map.get($colors, 'dark-stone') !default;
+$h2-color: map.get($colors, 'dark-stone') !default;
+$h3-color: map.get($colors, 'dark-stone') !default;
+$h4-color: map.get($colors, 'dark-stone') !default;
+$h5-color: map.get($colors, 'warm-red') !default;
+$h6-color: map.get($colors, 'dark-stone') !default;
 
 $link: $default-text !default;
 $link-focus: $link !default;
@@ -101,61 +116,79 @@ $link-active: $link !default;
 $link-hover: $link !default;
 
 $btn-primary-color: $default-text !default;
-$btn-primary-border: map.get($colors, "warm-red") !default;
+$btn-primary-border: map.get($colors, 'warm-red') !default;
 $btn-primary-background: transparent !default;
-$btn-primary-color-hover: map.get($colors, "cloud") !default;
-$btn-primary-border-hover: map.get($colors, "dark-stone") !default;
-$btn-primary-background-hover: map.get($colors, "dark-stone") !default;
-$btn-primary-color-active: map.get($colors, "cloud") !default;
-$btn-primary-border-active: map.get($colors, "black") !default;
-$btn-primary-background-active: map.get($colors, "black") !default;
+$btn-primary-color-hover: map.get($colors, 'cloud') !default;
+$btn-primary-border-hover: map.get($colors, 'dark-stone') !default;
+$btn-primary-background-hover: map.get($colors, 'dark-stone') !default;
+$btn-primary-color-active: map.get($colors, 'cloud') !default;
+$btn-primary-border-active: map.get($colors, 'black') !default;
+$btn-primary-background-active: map.get($colors, 'black') !default;
 
 $btn-secondary-color: $default-text !default;
-$btn-secondary-border: transparentize(map.get($colors, "dark-stone"), .75) !default;
-$btn-secondary-background: transparentize(map.get($colors, "stone"), .75) !default;
-$btn-secondary-color-hover: map.get($colors, "cloud") !default;
-$btn-secondary-border-hover: map.get($colors, "dark-stone") !default;
-$btn-secondary-background-hover: map.get($colors, "dark-stone") !default;
-$btn-secondary-color-active: map.get($colors, "cloud") !default;
-$btn-secondary-border-active: map.get($colors, "black") !default;
-$btn-secondary-background-active: map.get($colors, "black") !default;
+$btn-secondary-border: transparentize(
+  map.get($colors, 'dark-stone'),
+  0.75
+) !default;
+$btn-secondary-background: transparentize(
+  map.get($colors, 'stone'),
+  0.75
+) !default;
+$btn-secondary-color-hover: map.get($colors, 'cloud') !default;
+$btn-secondary-border-hover: map.get($colors, 'dark-stone') !default;
+$btn-secondary-background-hover: map.get($colors, 'dark-stone') !default;
+$btn-secondary-color-active: map.get($colors, 'cloud') !default;
+$btn-secondary-border-active: map.get($colors, 'black') !default;
+$btn-secondary-background-active: map.get($colors, 'black') !default;
 
 // Modal window
-$modal-background: map.get($colors, "white") !default;
-$modal-default-text: map.get($colors, "dark-stone") !default;
-$modal-backdrop: rgba(map.get($colors, "dark-stone"), .6) !default;
+$modal-background: map.get($colors, 'white') !default;
+$modal-default-text: map.get($colors, 'dark-stone') !default;
+$modal-backdrop: rgba(map.get($colors, 'dark-stone'), 0.6) !default;
 
 // Inverted colors
-$inverted-background: map.get($colors, "dark-stone") !default;
-$inverted-default-text: map.get($colors, "cloud") !default;
-$inverted-h1-color: map.get($colors, "cloud") !default;
-$inverted-h2-color: map.get($colors, "cloud") !default;
-$inverted-h3-color: map.get($colors, "cloud") !default;
-$inverted-h4-color: map.get($colors, "cloud") !default;
-$inverted-h5-color: map.get($colors, "cloud") !default;
-$inverted-h6-color: map.get($colors, "cloud") !default;
+$inverted-background: map.get($colors, 'dark-stone') !default;
+$inverted-default-text: map.get($colors, 'cloud') !default;
+$inverted-h1-color: map.get($colors, 'cloud') !default;
+$inverted-h2-color: map.get($colors, 'cloud') !default;
+$inverted-h3-color: map.get($colors, 'cloud') !default;
+$inverted-h4-color: map.get($colors, 'cloud') !default;
+$inverted-h5-color: map.get($colors, 'cloud') !default;
+$inverted-h6-color: map.get($colors, 'cloud') !default;
 
-$inverted-link: map.get($colors, "cloud") !default;
-$inverted-link-focus: map.get($colors, "cloud") !default;
-$inverted-link-active: map.get($colors, "cloud") !default;
-$inverted-link-hover: map.get($colors, "cloud") !default;
+$inverted-link: map.get($colors, 'cloud') !default;
+$inverted-link-focus: map.get($colors, 'cloud') !default;
+$inverted-link-active: map.get($colors, 'cloud') !default;
+$inverted-link-hover: map.get($colors, 'cloud') !default;
 
-$inverted-btn-primary-color: map.get($colors, "cloud") !default;
-$inverted-btn-primary-border: map.get($colors, "cloud") !default;
+$inverted-btn-primary-color: map.get($colors, 'cloud') !default;
+$inverted-btn-primary-border: map.get($colors, 'cloud') !default;
 $inverted-btn-primary-background: transparent !default;
-$inverted-btn-primary-color-hover: map.get($colors, "dark-stone") !default;
-$inverted-btn-primary-border-hover: map.get($colors, "white") !default;
-$inverted-btn-primary-background-hover: map.get($colors, "white") !default;
-$inverted-btn-primary-color-active: map.get($colors, "dark-stone") !default;
-$inverted-btn-primary-border-active: map.get($colors, "stone") !default;
-$inverted-btn-primary-background-active: map.get($colors, "dark-white") !default;
+$inverted-btn-primary-color-hover: map.get($colors, 'dark-stone') !default;
+$inverted-btn-primary-border-hover: map.get($colors, 'white') !default;
+$inverted-btn-primary-background-hover: map.get($colors, 'white') !default;
+$inverted-btn-primary-color-active: map.get($colors, 'dark-stone') !default;
+$inverted-btn-primary-border-active: map.get($colors, 'stone') !default;
+$inverted-btn-primary-background-active: map.get(
+  $colors,
+  'dark-white'
+) !default;
 
-$inverted-btn-secondary-color: map.get($colors, "cloud") !default;
-$inverted-btn-secondary-border: transparentize(map.get($colors, "cloud"), .75) !default;
-$inverted-btn-secondary-background: transparentize(map.get($colors, "cloud"), .75) !default;
-$inverted-btn-secondary-color-hover: map.get($colors, "dark-stone") !default;
-$inverted-btn-secondary-border-hover: map.get($colors, "white") !default;
-$inverted-btn-secondary-background-hover: map.get($colors, "white") !default;
-$inverted-btn-secondary-color-active: map.get($colors, "dark-stone") !default;
-$inverted-btn-secondary-border-active: map.get($colors, "stone") !default;
-$inverted-btn-secondary-background-active: map.get($colors, "dark-white") !default;
+$inverted-btn-secondary-color: map.get($colors, 'cloud') !default;
+$inverted-btn-secondary-border: transparentize(
+  map.get($colors, 'cloud'),
+  0.75
+) !default;
+$inverted-btn-secondary-background: transparentize(
+  map.get($colors, 'cloud'),
+  0.75
+) !default;
+$inverted-btn-secondary-color-hover: map.get($colors, 'dark-stone') !default;
+$inverted-btn-secondary-border-hover: map.get($colors, 'white') !default;
+$inverted-btn-secondary-background-hover: map.get($colors, 'white') !default;
+$inverted-btn-secondary-color-active: map.get($colors, 'dark-stone') !default;
+$inverted-btn-secondary-border-active: map.get($colors, 'stone') !default;
+$inverted-btn-secondary-background-active: map.get(
+  $colors,
+  'dark-white'
+) !default;

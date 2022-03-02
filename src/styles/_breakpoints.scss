@@ -1,4 +1,4 @@
-@import "./vars";
+@import './vars';
 
 /// Wraps a media query around the content you put inside the mixin.
 ///
@@ -6,31 +6,37 @@
 ///
 /// @output Outputs the content wrapped in a media query.
 @mixin breakpoint($breakpoint...) {
-    @each $bp in $breakpoint {
-        @if map-has-key($breakpoints, $bp) {
-            @if $bp == xs {
-                @media (max-width: 320px) { @content ; }
-            }
-            @else if $bp == sm {
-                @media (min-width: 321px) and (max-width: 672px) { @content ; }
-            }
-            @else if $bp == md {
-                @media (min-width: 673px) and (max-width: 1055px) { @content ; }
-            }
-            @else if $bp == lg {
-                @media (min-width: 1056px) and (max-width: 1311px) { @content ; }
-            }
-            @else if $bp == xlg {
-                @media (min-width: 1312px) and (max-width: 1583px) { @content ; }
-            }
-            @else if $bp == max {
-                @media (min-width: 1584px) { @content ; }
-            }
+  @each $bp in $breakpoint {
+    @if map-has-key($breakpoints, $bp) {
+      @if $bp == xs {
+        @media (max-width: 320px) {
+          @content;
         }
-        @else {
-            @warn 'breakpoint(): "#{$bp}" is not a supported breakpoint.';
+      } @else if $bp == sm {
+        @media (min-width: 321px) and (max-width: 672px) {
+          @content;
         }
+      } @else if $bp == md {
+        @media (min-width: 673px) and (max-width: 1055px) {
+          @content;
+        }
+      } @else if $bp == lg {
+        @media (min-width: 1056px) and (max-width: 1311px) {
+          @content;
+        }
+      } @else if $bp == xlg {
+        @media (min-width: 1312px) and (max-width: 1583px) {
+          @content;
+        }
+      } @else if $bp == max {
+        @media (min-width: 1584px) {
+          @content;
+        }
+      }
+    } @else {
+      @warn 'breakpoint(): "#{$bp}" is not a supported breakpoint.';
     }
+  }
 }
 
 /// Wraps a media query around the content you put inside the mixin.
@@ -39,17 +45,16 @@
 ///
 /// @output Outputs the content wrapped in a media query.
 @mixin device($device...) {
-    @each $dev in $device {
-        @if map-has-key($devices, $dev) {
-            $breakpoint: map-get($devices, $dev);
-            @each $bp in $breakpoint {
-                @include breakpoint($bp) {
-                    @content;
-                }
-            }
+  @each $dev in $device {
+    @if map-has-key($devices, $dev) {
+      $breakpoint: map-get($devices, $dev);
+      @each $bp in $breakpoint {
+        @include breakpoint($bp) {
+          @content;
         }
-        @else {
-            @warn 'device(): "#{$dev}" is not a supported device.';
-        }
+      }
+    } @else {
+      @warn 'device(): "#{$dev}" is not a supported device.';
     }
+  }
 }

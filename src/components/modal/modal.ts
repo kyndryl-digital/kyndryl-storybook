@@ -109,6 +109,9 @@ export class kdModal extends LitElement {
       [`hidden`]: this._active === false
     });
     return html`
+      <span @click="${e => this._handleOpen(e)}">
+        <slot name="trigger"></slot>
+      </span>
       <div @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-backdrop ${this._active ? 'visible' : 'hidden'}">
         <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${settings.class_prefix}-modal-content" class=${classes}>
           <div class="${settings.class_prefix}-modal-controls">
@@ -121,9 +124,6 @@ export class kdModal extends LitElement {
           </div>
         </div>
       </div>
-      <span @click="${e => this._handleOpen(e)}">
-        <slot name="trigger"></slot>
-      </span>
     `;
   }
 }

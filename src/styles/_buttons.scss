@@ -1,13 +1,13 @@
-@import "./util";
-@import "./vars";
+@import './util';
+@import './vars';
 
 // @TODO: Add button icons.
 
 .#{$class-prefix}-btn {
   @include padding(top bottom, 1);
   @include padding(right left, 3);
-  -webkit-transition: border-color .3s,color .3s, background-color .3s;
-  transition: border-color .3s,color .3s, background-color .3s;
+  -webkit-transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+  transition: border-color 0.3s, color 0.3s, background-color 0.3s;
   font-weight: $font-weight-bold;
   font-family: $font-family;
   box-sizing: border-box;

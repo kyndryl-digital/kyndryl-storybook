@@ -1,15 +1,13 @@
 /// Icons
 $icons: (
-    "close":              "\\e909",
+  'close': '\\e909',
 );
 
-@import "../../styles/icons";
-@import "../../styles/modal";
+@import '../../styles/icons';
+@import '../../styles/modal';
 
 :host(#{$tag-prefix}-modal) {
-
-  ::slotted([slot=trigger]) {
+  ::slotted([slot='trigger']) {
     cursor: pointer;
   }
-
 }

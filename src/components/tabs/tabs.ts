@@ -1,8 +1,8 @@
-import { html, LitElement, TemplateResult } from "lit";
-import { state, customElement } from "lit/decorators.js";
-import { kdTab } from "./tab";
+import { html, LitElement, TemplateResult } from 'lit';
+import { state, customElement } from 'lit/decorators.js';
+import { kdTab } from './tab';
 
-import stylesheet from "./tabs.scss";
+import stylesheet from './tabs.scss';
 
 import { settings } from '../../global/settings';
 
@@ -11,7 +11,7 @@ import { settings } from '../../global/settings';
  */
 @customElement(`${settings.tag_prefix}-tabs`)
 export class kdTabs extends LitElement {
-  static styles = [ stylesheet ];
+  static styles = [stylesheet];
 
   /**
    * Child tab components.
@@ -31,8 +31,12 @@ export class kdTabs extends LitElement {
    * @private
    */
   protected _handleSlotChange(event: Event) {
-    const slottedNodes = (event.target as HTMLSlotElement).assignedNodes({ flatten: true });
-    this._childTabs = slottedNodes.filter(node => node instanceof kdTab) as kdTab[];
+    const slottedNodes = (event.target as HTMLSlotElement).assignedNodes({
+      flatten: true,
+    });
+    this._childTabs = slottedNodes.filter(
+      node => node instanceof kdTab,
+    ) as kdTab[];
     this._childTabs.forEach((tab, index) => {
       this._activeTab = (tab as kdTab).selected ? index : this._activeTab;
     });
@@ -58,30 +62,32 @@ export class kdTabs extends LitElement {
   protected _renderTabs(): TemplateResult | string | void {
     const { _childTabs: tabs } = this;
     return html`
-        <div role="tablist">
-          ${tabs.map((tab, index) => {
-            const active = index === this._activeTab;
-            const label = (tab as kdTab).getAttribute('label');
-            return html`
-                <button
-                  role="tab"
-                  tabindex="${index}"
-                  aria-controls="panel-${index}"
-                  aria-selected="${active}"
-                  @click="${e => this._handleClick(index, e)}"
-                >${label}</button>
-            `;
-          })}
+      <div role="tablist">
+        ${tabs.map((tab, index) => {
+          const active = index === this._activeTab;
+          const label = (tab as kdTab).getAttribute('label');
+          return html`
+            <button
+              role="tab"
+              tabindex="${index}"
+              aria-controls="panel-${index}"
+              aria-selected="${active}"
+              @click="${e => this._handleClick(index, e)}"
+            >
+              ${label}
+            </button>
+          `;
+        })}
       </div>
     `;
   }
 
   render() {
     return html`
-        <div class="${settings.class_prefix}-tabs">
-          ${this._renderTabs()}
-          <slot @slotchange="${this._handleSlotChange}"></slot>
-        </div>
+      <div class="${settings.class_prefix}-tabs">
+        ${this._renderTabs()}
+        <slot @slotchange="${this._handleSlotChange}"></slot>
+      </div>
     `;
   }
 }

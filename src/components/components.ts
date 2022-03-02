@@ -5,4 +5,4 @@ import './tabs/tabs';
 import './wrapper/wrapper';
 import './header/header';
 import './footer/footer';
-import './accordion/accordion'
+import './accordion/accordion';

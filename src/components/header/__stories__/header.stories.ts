@@ -5,12 +5,10 @@ import '../header';
 export default {
   title: 'Web Components/Header',
   parameters: {
-    ...readme.parameters
+    ...readme.parameters,
   },
 };
 
 export const Header = () => {
-  return html`
-    <kyndryl-header></kyndryl-header>
-  `;
+  return html` <kyndryl-header></kyndryl-header> `;
 };

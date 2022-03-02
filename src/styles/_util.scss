@@ -1,6 +1,6 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "./vars";
+@import './vars';
 
 /// Converts amount in pixel units to the corresponding rem amount according to the base font size.
 ///
@@ -22,13 +22,9 @@
 /// @output Adds the appropriate padding in rems.
 @mixin padding($side, $amount, $unit: $sub-grid-px) {
   @each $s in $side {
-    @if $s == 'top' or
-      $s == 'right' or
-      $s == 'bottom' or
-      $s == 'left' {
+    @if $s == 'top' or $s == 'right' or $s == 'bottom' or $s == 'left' {
       padding-#{$s}: #{px2rem($amount * $unit)};
-    }
-    @else {
+    } @else {
       @warn 'padding(): "#{$s}" is not a supported side.';
     }
   }
@@ -67,13 +63,9 @@
 /// @output Adds the appropriate margins in rems.
 @mixin margin($side, $amount, $unit: $sub-grid-px) {
   @each $s in $side {
-    @if $s == 'top' or
-      $s == 'right' or
-      $s == 'bottom' or
-      $s == 'left' {
+    @if $s == 'top' or $s == 'right' or $s == 'bottom' or $s == 'left' {
       margin-#{$s}: #{px2rem($amount * $unit)};
-    }
-    @else {
+    } @else {
       @warn 'margin(): "#{$s}" is not a supported side.';
     }
   }

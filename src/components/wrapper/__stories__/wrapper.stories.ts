@@ -5,7 +5,7 @@ import '../wrapper';
 export default {
   title: 'Web Components/Wrapper',
   parameters: {
-    ...readme.parameters
+    ...readme.parameters,
   },
 };
 
