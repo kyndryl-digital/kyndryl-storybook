@@ -11,7 +11,7 @@ export const parameters = {
   grid: {
     cellSize: 8,
     gridOn: false,
-    columns: 16,
+    columns: 12,
     gap: '32px',
     gutter: '1.5rem',
     maxWidth: '1584px',
@@ -19,7 +19,7 @@ export const parameters = {
   viewport: {
     viewports: {
       mobile1: {
-        name: 'Small mobile',
+        name: 'Small mobile (xs)',
         styles: {
           height: '568px',
           width: '320px',
@@ -27,7 +27,7 @@ export const parameters = {
         type: 'mobile',
       },
       mobile2: {
-        name: 'Large mobile',
+        name: 'Large mobile (sm)',
         styles: {
           height: '896px',
           width: '414px',
@@ -35,7 +35,7 @@ export const parameters = {
         type: 'mobile',
       },
       tablet: {
-        name: 'Tablet',
+        name: 'Tablet (md)',
         styles: {
           height: '1113px',
           width: '834px',
@@ -43,15 +43,15 @@ export const parameters = {
         type: 'tablet',
       },
       laptop1: {
-        name: 'Laptop',
+        name: 'Laptop (lg)',
         styles: {
           height: '737px',
-          width: '1311px',
+          width: '1184px',
         },
         type: 'desktop',
       },
       laptop2: {
-        name: 'Large laptop',
+        name: 'Large laptop (xlg)',
         styles: {
           height: '890px',
           width: '1583px',
@@ -59,7 +59,7 @@ export const parameters = {
         type: 'desktop',
       },
       desktop: {
-        name: 'Large desktop',
+        name: 'Large desktop (max)',
         styles: {
           height: '1440px',
           width: '2560px',

@@ -45,7 +45,8 @@ $devices: (
 ) !default;
 
 /// Fonts
-$font-family: 'TWK Everett', Helvetica, Arial, sans-serif !default;
+$font-family-lg: 'TWK Everett', Helvetica, Arial, sans-serif !default;
+$font-family: Helvetica, Arial, sans-serif !default;
 $icon-font-family: 'kyndryl-Icons' !default;
 $font-large: #{px2rem(18)} !default;
 $font-size: #{px2rem(16)} !default;
