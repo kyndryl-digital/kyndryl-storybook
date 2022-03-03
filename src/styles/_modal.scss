@@ -32,7 +32,7 @@
 
 .#{$class-prefix}-modal {
   background: $modal-background;
-  overflow: scroll;
+  overflow: auto;
   -webkit-transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition-timing-function: ease-out;
@@ -51,8 +51,8 @@
     transform-origin: left bottom;
   }
   @include device(desktop) {
-    width: #{px2rem(800)};
-    min-height: #{px2rem(400)};
+    width: #{px2rem(768)};
+    min-height: #{px2rem(384)};
     margin-top: 10vh;
     margin-bottom: 10vh;
   }
@@ -72,11 +72,14 @@
     position: absolute;
     top: 0px;
     right: 0px;
+    padding-top: #{px2rem(16)};
+    padding-right: #{px2rem(16)};
+    font-size:  #{px2rem(16)};
     .#{$class-prefix}-modal-control {
       padding: 0;
-      line-height: #{px2rem(64)};
-      width: #{px2rem(64)};
-      height: #{px2rem(64)};
+      line-height: #{px2rem(48)};
+      width: #{px2rem(48)};
+      height: #{px2rem(48)};
       border: none;
       background: transparent;
       cursor: pointer;

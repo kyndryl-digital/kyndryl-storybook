@@ -7,489 +7,713 @@ export default {
   title: 'Patterns/Logo Grid',
 };
 
-export const LogoGrid = (args) => {
+export const LogoGrid = args => {
   return html`
       <div class="${settings.class_prefix}-grid-container">
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                <a href="javascript://" slot="trigger">
-                  <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                      <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                      <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                      <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                      <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                      <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                  </svg>
-                </a>
-                <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                    <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                        <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                        <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                        <p><strong>Microsoft</strong></p>
-                        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                        <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                        </div>
-                    </div>
-                    <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                        <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                            <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                            <ul class="${settings.class_prefix}-list">
-                                <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                            </ul>
-                            <p><strong>More Links:</strong></p>
-                            <ul class="${settings.class_prefix}-list">
-                                <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                            </ul>
-                        </div>
-                    </div>
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
-          <div class="${settings.class_prefix}-max-col-4 ${settings.class_prefix}-xlg-col-4 ${settings.class_prefix}-lg-col-4 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
-              <kd-modal>
-                  <a href="javascript://" slot="trigger">
-                      <svg height="auto" width="100%" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 288 216" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize ">
-                          <path d="M125.82 94.21v27.58H121v-21.62l-8.56 21.62h-3.18l-8.77-21.62h-.06v21.62H96V94.21h6.87l7.92 20.45h.12l8.37-20.45Zm4 2.09a2.52 2.52 0 0 1 .84-1.93 3 3 0 0 1 4 0 2.59 2.59 0 0 1 .81 1.91 2.52 2.52 0 0 1-.83 1.91 2.86 2.86 0 0 1-2 .77 2.82 2.82 0 0 1-2-.78 2.54 2.54 0 0 1-.82-1.88ZM135 102v19.77h-4.7V102Zm14.12 16.39a6.44 6.44 0 0 0 2.29-.48 10 10 0 0 0 2.31-1.27V121a9.5 9.5 0 0 1-2.53 1 13.7 13.7 0 0 1-3.11.32 9.4 9.4 0 0 1-9.83-9.81 11.28 11.28 0 0 1 2.75-7.91q2.79-3.07 7.91-3.08a11 11 0 0 1 2.64.33 9.27 9.27 0 0 1 2.13.78v4.47a9.48 9.48 0 0 0-2.2-1.23 6.55 6.55 0 0 0-2.3-.43 5.85 5.85 0 0 0-4.45 1.79 6.72 6.72 0 0 0-1.69 4.83 6.38 6.38 0 0 0 1.63 4.67 5.84 5.84 0 0 0 4.41 1.68Zm17.85-16.72a6.08 6.08 0 0 1 1 .08 4.09 4.09 0 0 1 .75.19v4.71a4.12 4.12 0 0 0-1.07-.51 5.32 5.32 0 0 0-1.7-.24 3.62 3.62 0 0 0-2.9 1.44 7 7 0 0 0-1.18 4.45v10h-4.66V102h4.66v3.11h.07a5.55 5.55 0 0 1 1.93-2.53 5.2 5.2 0 0 1 3.06-.89Zm2 10.5a10.69 10.69 0 0 1 2.77-7.77 10.19 10.19 0 0 1 7.69-2.87 9.51 9.51 0 0 1 7.25 2.77 12 12 0 0 1-.17 15.11 10 10 0 0 1-7.54 2.84 9.32 9.32 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.4 4.73 5 5 0 0 0 4 1.64 4.71 4.71 0 0 0 3.87-1.64 7.58 7.58 0 0 0 1.33-4.85 7.31 7.31 0 0 0-1.42-4.8 4.79 4.79 0 0 0-3.86-1.62 4.89 4.89 0 0 0-4 1.7 7.45 7.45 0 0 0-1.35 4.82Zm22.39-4.83a2 2 0 0 0 .63 1.57 11.05 11.05 0 0 0 2.81 1.43 9.6 9.6 0 0 1 3.92 2.51 5.22 5.22 0 0 1 1.12 3.38 5.42 5.42 0 0 1-2.14 4.48 9.12 9.12 0 0 1-5.8 1.69A13.79 13.79 0 0 1 194 122a12.54 12.54 0 0 1-2.53-.76v-4.58a11 11 0 0 0 2.73 1.4 7.89 7.89 0 0 0 2.65.52 4.8 4.8 0 0 0 2.33-.44 1.59 1.59 0 0 0 .75-1.48 2.06 2.06 0 0 0-.78-1.63 11.69 11.69 0 0 0-3-1.53 9.14 9.14 0 0 1-3.66-2.42 5.31 5.31 0 0 1-1.07-3.43 5.39 5.39 0 0 1 2.12-4.39 8.48 8.48 0 0 1 5.51-1.72 12.72 12.72 0 0 1 2.33.23 10.37 10.37 0 0 1 2.16.59v4.43a10.35 10.35 0 0 0-2.16-1.06 7.28 7.28 0 0 0-2.44-.44 3.52 3.52 0 0 0-2.07.52 1.64 1.64 0 0 0-.69 1.4Zm10.48 5a10.73 10.73 0 0 1 2.77-7.77 10.23 10.23 0 0 1 7.7-2.87 9.49 9.49 0 0 1 7.24 2.77 10.39 10.39 0 0 1 2.61 7.45 10.5 10.5 0 0 1-2.77 7.66 10 10 0 0 1-7.54 2.84 9.34 9.34 0 0 1-10-10.08Zm4.85-.15a7 7 0 0 0 1.41 4.73 5 5 0 0 0 4 1.64 4.68 4.68 0 0 0 3.86-1.64 7.52 7.52 0 0 0 1.33-4.85 7.37 7.37 0 0 0-1.37-4.82 4.8 4.8 0 0 0-3.86-1.62 4.88 4.88 0 0 0-4 1.7 7.39 7.39 0 0 0-1.4 4.82Zm30.92-6.21h-6.94v16h-4.71v-16h-3.31V102h3.31v-2.73a6.81 6.81 0 0 1 2-5.11 7.1 7.1 0 0 1 5.2-2 13.06 13.06 0 0 1 1.5.08 6.66 6.66 0 0 1 1.16.26v4a4.62 4.62 0 0 0-.81-.32 4.18 4.18 0 0 0-1.33-.2 2.82 2.82 0 0 0-2.25.92 4 4 0 0 0-.79 2.7v2.4h6.94v-4.43l4.67-1.42V102h4.71v3.81h-4.71v9.25a3.92 3.92 0 0 0 .66 2.58 2.67 2.67 0 0 0 2.09.75 3.36 3.36 0 0 0 1-.19 4.55 4.55 0 0 0 1-.47v3.85a5.19 5.19 0 0 1-1.47.46 10.07 10.07 0 0 1-2 .21 5.78 5.78 0 0 1-4.41-1.56 6.7 6.7 0 0 1-1.47-4.73Z" fill="#737373"></path>
-                          <path fill="#f25022" d="M36.19 85.01h21.85v21.85H36.19z"></path>
-                          <path fill="#7fba00" d="M60.31 85.01h21.85v21.85H60.31z"></path>
-                          <path fill="#00a4ef" d="M36.19 109.14h21.85v21.85H36.19z"></path>
-                          <path fill="#ffb900" d="M60.31 109.14h21.85v21.85H60.31z"></path>
-                      </svg>
-                  </a>
-                  <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-                      <div class="${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/200x100?text=Logo" /></p>
-                              <p><strong>Microsoft</strong></p>
-                              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                              <p class="${settings.class_prefix}-mt4"><kd-button type="primary" icon="arrow-right" href="javascript://">View partner page</kd-button></p>
-                          </div>
-                      </div>
-                      <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-8 ${settings.class_prefix}-xlg-col-8 ${settings.class_prefix}-lg-col-8 ${settings.class_prefix}-md-col-8 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:600px">
-                          <div class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pb6 ${settings.class_prefix}-pl4">
-                              <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                                  <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                                  <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
-                                  <li class="${settings.class_prefix}-list-item">Donec sed odio dui.</li>
-                                  <li class="${settings.class_prefix}-list-item">Cras justo odio, dapibus ac facilisis in, egestas eget quam.</li>
-                              </ul>
-                              <p><strong>More Links:</strong></p>
-                              <ul class="${settings.class_prefix}-list">
-                                  <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                              </ul>
-                          </div>
-                      </div>
-                  </div>
-              </kd-modal>
-          </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
+        
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
+        <!-- BEGIN Google Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <g>
+                      <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
+                        c2.4-2.4,5.7-3.8,9.1-3.7c3.4-0.1,6.7,1.4,8.9,4l-2.2,2.2c-1.6-2.1-4.1-3.2-6.7-3.2c-2.6-0.1-5,0.9-6.8,2.7c-1.8,1.9-2.8,4.4-2.7,7
+                        c-0.1,2.6,0.9,5.2,2.7,7.1c1.8,1.8,4.3,2.8,6.8,2.7c2.9,0,5.6-1.3,7.4-3.6l2.3,2.2c-1.2,1.4-2.6,2.5-4.3,3.2
+                        C174.4,114.5,172.5,114.9,170.7,114.9z M186.1,89.8v24.5h-3.2V89.8H186.1z M188.8,105.9c-0.1-2.4,0.8-4.7,2.4-6.4
+                        c1.6-1.7,3.9-2.6,6.2-2.5c2.3-0.1,4.6,0.9,6.2,2.5c1.7,1.7,2.5,4,2.5,6.4c0.1,2.4-0.8,4.7-2.5,6.4c-1.6,1.7-3.8,2.6-6.2,2.5
+                        c-2.3,0.1-4.6-0.8-6.2-2.5C189.6,110.6,188.7,108.3,188.8,105.9z M192,105.9c-0.1,1.6,0.5,3.2,1.6,4.4c2,2.2,5.4,2.3,7.6,0.2
+                        c0.1-0.1,0.2-0.1,0.2-0.2c1.1-1.2,1.7-2.8,1.6-4.4c0.1-1.6-0.5-3.2-1.6-4.4c-2-2.2-5.3-2.3-7.5-0.3c-0.1,0.1-0.2,0.2-0.3,0.3
+                        C192.5,102.8,191.9,104.3,192,105.9z M223.5,114.3h-3V112h-0.1c-0.5,0.9-1.3,1.6-2.2,2.1c-0.9,0.5-2,0.8-3.1,0.8
+                        c-1.8,0.1-3.5-0.5-4.8-1.8c-1.2-1.4-1.8-3.2-1.7-5V97.6h3.1v10.3c-0.2,2,1.2,3.9,3.3,4.1c0.3,0,0.6,0,0.9,0c1.2,0,2.4-0.5,3.1-1.5
+                        c0.8-1,1.3-2.3,1.3-3.7v-9.3h3.2L223.5,114.3z M234.2,114.9c-2.2,0-4.2-0.9-5.6-2.6c-1.6-1.7-2.4-4-2.4-6.3
+                        c-0.1-2.3,0.8-4.6,2.3-6.3c1.4-1.7,3.5-2.6,5.6-2.6c1.2,0,2.3,0.3,3.4,0.8c1,0.5,1.8,1.2,2.4,2.1h0.1l-0.1-2.3v-7.8h3.1v24.5h-3
+                        V112h-0.1c-0.6,0.9-1.4,1.6-2.4,2.1C236.5,114.6,235.4,114.9,234.2,114.9z M234.7,112c1.5,0,2.9-0.6,3.8-1.7c1-1.2,1.6-2.8,1.5-4.4
+                        c0.1-1.6-0.5-3.1-1.5-4.4c-0.9-1.1-2.3-1.7-3.8-1.7c-1.5,0-2.9,0.6-3.8,1.7c-1,1.2-1.6,2.8-1.5,4.4c-0.1,1.6,0.5,3.1,1.5,4.4
+                        C231.8,111.4,233.2,112,234.7,112z"/>
+                      <g id="_75x24px">
+                        <path fill="#4285F4" d="M51.1,114.9c-7.7,0-14-6.2-14.1-13.9c0.1-7.7,6.4-13.9,14.1-13.9c3.6-0.1,7,1.3,9.5,3.8l-2.7,2.7
+                          c-1.8-1.8-4.3-2.7-6.9-2.7c-5.5,0-10,4.4-10,9.9c0,0,0,0.1,0,0.1c-0.1,5.5,4.3,10,9.8,10.1c0,0,0.1,0,0.1,0c2.6,0.1,5.2-0.9,7-2.8
+                          c1.2-1.3,1.9-3,2.1-4.8h-9.1v-3.8h12.8c0.1,0.8,0.2,1.6,0.2,2.4c0.1,3.3-1.1,6.4-3.3,8.8C58.3,113.6,54.7,115,51.1,114.9z"/>
+                        <path fill="#EA4335" d="M83.9,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C83.9,105.4,83.9,105.7,83.9,105.9z M80,105.9c0.3-2.7-1.8-5.2-4.5-5.4s-5.2,1.8-5.4,4.5c0,0.3,0,0.6,0,0.9
+                          c-0.3,2.7,1.8,5.2,4.5,5.4s5.2-1.8,5.4-4.5C80.1,106.6,80.1,106.2,80,105.9z"/>
+                        <path fill="#FBBC04" d="M103.7,105.9c0.2,4.9-3.6,9-8.5,9.2c-4.9,0.2-9-3.6-9.2-8.5c0-0.2,0-0.5,0-0.7c-0.2-4.9,3.6-9,8.5-9.2
+                          c4.9-0.2,9,3.6,9.2,8.5C103.7,105.4,103.7,105.7,103.7,105.9z M99.9,105.9c0.2-2.7-1.8-5.1-4.6-5.4c-2.7-0.2-5.1,1.8-5.4,4.6
+                          c0,0.3,0,0.5,0,0.8c-0.2,2.7,1.8,5.1,4.6,5.4c2.7,0.2,5.1-1.8,5.4-4.6C99.9,106.4,99.9,106.2,99.9,105.9z"/>
+                        <path fill="#5F6368" d="M123.1,97.6v16c0,6.6-3.9,9.3-8.5,9.3c-3.5,0-6.6-2.1-8-5.3l3.4-1.5c0.7,1.9,2.5,3.1,4.5,3.2
+                          c3,0,4.8-1.8,4.8-5.2v-1.3h-0.1c-1.2,1.4-2.9,2.1-4.8,2.1c-4.9,0-8.9-4-8.9-8.9s4-8.9,8.9-8.9c1.8,0,3.5,0.7,4.8,2.1h0.1v-1.5
+                          H123.1z M119.6,106c0.2-2.8-1.8-5.2-4.6-5.4c-0.1,0-0.1,0-0.2,0c-2.9,0.1-5.1,2.5-5,5.4c0,0,0,0.1,0,0.1c-0.1,2.8,2.1,5.2,4.9,5.4
+                          c0,0,0.1,0,0.1,0c2.8-0.1,4.9-2.4,4.8-5.2C119.6,106.1,119.6,106,119.6,106L119.6,106z"/>
+                        <path fill="#34A853" d="M130,88.1v26.3H126V88.1H130z"/>
+                        <path fill="#EA4335" d="M145.4,108.9l3.1,2.1c-1.7,2.5-4.5,4-7.4,4c-4.8,0.1-8.7-3.8-8.8-8.5c0-0.1,0-0.3,0-0.4
+                          c-0.4-4.5,3-8.5,7.5-8.9c3.8-0.3,7.4,2,8.5,5.7l0.4,1l-11.9,4.9c0.8,1.7,2.5,2.8,4.4,2.7C142.9,111.4,144.5,110.4,145.4,108.9z
+                           M136,105.7l8-3.3c-0.7-1.2-2-1.9-3.3-1.8C138,100.7,135.9,102.9,136,105.7C136,105.6,136,105.7,136,105.7z"/>
+                      </g>
+                    </g>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Google logo -->
+        <!-- BEGIN Oracle Logo -->
+        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+          <kd-modal>
+            <a href="javascript://" slot="trigger" title="Microsoft">
+              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
+                    <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
+                      l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
+                       M104.5,109.7c4.9,0,8.9-4,8.9-8.9c0-4.9-4-8.9-8.9-8.9H82.4v26.3h5V96.6h16.7c2.3,0,4.3,1.9,4.3,4.3c0,2.3-1.9,4.3-4.3,4.3H89.9
+                      l15.1,13.1h7.3l-10.1-8.5H104.5 M51.3,118.3h15.3c7.3-0.2,13-6.2,12.8-13.5c-0.2-7-5.8-12.6-12.8-12.8H51.3
+                      c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C50.9,118.3,51.1,118.3,51.3,118.3 M66.2,113.6H51.7
+                      c-4.7-0.2-8.4-4.1-8.2-8.8c0.1-4.5,3.7-8.1,8.2-8.2h14.6c4.7-0.2,8.6,3.5,8.8,8.2c0.2,4.7-3.5,8.6-8.2,8.8
+                      C66.6,113.6,66.4,113.6,66.2,113.6 M162.2,118.3h15.6l3-4.6h-18.2c-4.7,0.2-8.6-3.5-8.8-8.2c-0.2-4.7,3.5-8.6,8.2-8.8
+                      c0.2,0,0.4,0,0.5,0h14.8l3-4.6h-18.1c-7.3-0.2-13.3,5.5-13.5,12.8c-0.2,7.3,5.5,13.3,12.8,13.5C161.7,118.3,161.9,118.3,162.2,118.3
+                       M224,113.6c-3.8,0-7.2-2.5-8.2-6.2h21.6l3-4.6h-24.6c1-3.7,4.4-6.2,8.2-6.2h14.8l3-4.6h-18.1c-7.3,0.2-13,6.2-12.8,13.5
+                      c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
+                    </svg>
+            </a>
+            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
+              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+                  <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
+                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                </div>
+              </div>
+              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
+                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
+                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${settings.class_prefix}-list">
+                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </kd-modal>
+        </div>
+        <!-- END Oracle logo -->
       </div>
   `;
 };

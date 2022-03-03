@@ -17,11 +17,11 @@
           @content;
         }
       } @else if $bp == md {
-        @media (min-width: 673px) and (max-width: 1055px) {
+        @media (min-width: 673px) and (max-width: 1183px) {
           @content;
         }
       } @else if $bp == lg {
-        @media (min-width: 1056px) and (max-width: 1311px) {
+        @media (min-width: 1184px) and (max-width: 1311px) {
           @content;
         }
       } @else if $bp == xlg {

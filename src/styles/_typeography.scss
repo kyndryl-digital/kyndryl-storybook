@@ -31,7 +31,7 @@
 }
 
 .#{$class-prefix}-h1 {
-  font-family: $font-family;
+  font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: $h1-color;
   font-size: #{px2rem(64)};
@@ -54,7 +54,7 @@
 }
 
 .#{$class-prefix}-h2 {
-  font-family: $font-family;
+  font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: $h2-color;
   font-size: #{px2rem(36)};
@@ -77,7 +77,7 @@
 }
 
 .#{$class-prefix}-h3 {
-  font-family: $font-family;
+  font-family: $font-family-lg;
   font-weight: $font-weight-light;
   color: $h3-color;
   font-size: #{px2rem(32)};
@@ -100,7 +100,7 @@
 }
 
 .#{$class-prefix}-h4 {
-  font-family: $font-family;
+  font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: $h4-color;
   font-size: #{px2rem(36)};
@@ -123,18 +123,22 @@
 }
 
 .#{$class-prefix}-h5 {
-  font-family: $font-family;
   font-weight: $font-weight-normal;
   color: $h5-color;
   font-size: #{px2rem(30)};
   line-height: #{px2rem(44)};
   @include margin(top bottom, 4);
+  @include device(desktop) {
+    font-family: $font-family-lg;
+  }
   @include device(tablet) {
+    font-family: $font-family;
     font-size: #{px2rem(20)};
     line-height: #{px2rem(30)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
+    font-family: $font-family;
     font-size: #{px2rem(20)};
     line-height: #{px2rem(30)};
     @include margin(top bottom, 2);
@@ -146,18 +150,22 @@
 }
 
 .#{$class-prefix}-h6 {
-  font-family: $font-family;
   font-weight: $font-weight-normal;
   color: $h6-color;
   font-size: #{px2rem(22)};
   line-height: #{px2rem(28)};
   @include margin(top bottom, 4);
+  @include device(desktop) {
+    font-family: $font-family-lg;
+  }
   @include device(tablet) {
+    font-family: $font-family;
     font-size: #{px2rem(18)};
     line-height: #{px2rem(24)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
+    font-family: $font-family;
     font-size: #{px2rem(18)};
     line-height: #{px2rem(24)};
     @include margin(top bottom, 2);
@@ -169,7 +177,6 @@
 }
 
 .#{$class-prefix}-link {
-  font-family: $font-family;
   &:link,
   &:visited {
     font-weight: $font-weight-bold;
@@ -216,7 +223,7 @@
 }
 
 .#{$class-prefix}-list {
-  @include padding(left, 6);
+  @include padding(left, 3);
   @include margin(top bottom, 3);
   @include device(tablet) {
     @include margin(top bottom, 2);
@@ -225,10 +232,13 @@
     @include margin(top bottom, 1);
   }
   &:is(ul) {
-    list-style: square;
+    li.#{$class-prefix}-list-item::marker {
+      content: '–';
+    }
   }
   .#{$class-prefix}-list-item {
     @include margin(top bottom, 2);
+    @include padding(left, 1);
     @include device(tablet) {
       @include margin(top bottom, 2);
     }
