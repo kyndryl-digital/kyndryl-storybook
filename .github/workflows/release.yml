@@ -1,14 +1,11 @@
 name: Release
 on:
-  workflow_run:
-    workflows: ["Test"]
-    branches: [master]
-    types: 
-      - completed
+  push:
+    branches:
+      - master
 jobs:
   Publish_release:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -18,8 +15,13 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Install Chrome
+        run: |
+          bash ./.github/scripts/install_chrome.sh
       - name: Install project
         run: npm install
+      - name: Run tests
+        run: npm test
       - name: Tag release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

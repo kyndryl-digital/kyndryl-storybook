@@ -1,0 +1,44 @@
+name: Preview branch
+on:
+  push:
+    branches:
+      - develop
+      - 'release/**'
+      - '!release/*-alpha'
+      - '!release/*-beta'
+jobs:
+  Build_preview:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: Install project
+        run: npm install
+      - name: Install IBM Cloud CLI
+        run: |
+          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
+          ibmcloud --version
+          ibmcloud config --check-version=false
+          ibmcloud plugin install -f cloud-object-storage
+      - name: Build storybook preview
+        run: |
+          npx build-storybook
+      - name: Extract branch name
+        shell: bash
+        run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+        id: extract_branch
+      - name: Deploy to Cloud Object Storage
+        env:
+          IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
+          IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_DEV_RESOURCE_ID }}
+          IBM_CLOUD_BUCKET: kyndryl-web-components-dev-preview
+        run: |
+          GREEN='\033[0;32m'
+          bash ./.github/scripts/cos-upload.sh ./storybook-static branch/${{steps.extract_branch.outputs.branch}}
+          echo -e "${GREEN}View storybook preview https://$IBM_CLOUD_BUCKET.s3.us.cloud-object-storage.appdomain.cloud/branch/${{steps.extract_branch.outputs.branch}}/index.html"

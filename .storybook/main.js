@@ -1,15 +1,30 @@
 const path = require("path");
 
 module.exports = {
-  stories: ["../src/components/**/__stories__/*.stories.@(js|jsx|ts|tsx)"],
-  addons: ["@storybook/addon-links", "@storybook/addon-essentials"],
+  stories: [
+    "../src/**/*.stories.@(ts|tsx|mdx)"
+  ],
+  addons: [
+    "@storybook/addon-links",
+    "@storybook/addon-essentials",
+    "@storybook/addon-docs",
+    "@storybook/addon-a11y",
+    require.resolve('storybook-addon-grid/preset'),
+  ],
+  framework: "@storybook/web-components",
   core: {
-    builder: "webpack5",
+    builder: "webpack5"
+  },
+  features: {
+    babelModeV7: true,
   },
   webpackFinal: async (config, { configType }) => {
+    // Processes scss files and loads then into variables for import into web components.
     config.module.rules.push({
-      test: /\.css|\.s(c|a)ss$/,
-      include: [path.resolve(__dirname, "../src/components")],
+      test: /\.s(c|a)ss$/,
+      include: [
+        path.resolve(__dirname, "../src/components")
+      ],
       use: [
         {
           loader: "lit-scss-loader",
@@ -20,16 +35,8 @@ module.exports = {
         "extract-loader",
         "css-loader",
         "sass-loader",
-        "postcss-loader",
       ],
     });
-
-    config.module.rules.push({
-      test: /\.css|\.s(c|a)ss$/i,
-      exclude: [path.resolve(__dirname, "../src/components")],
-      use: ["style-loader", "css-loader", "sass-loader", "postcss-loader"],
-    });
-
     return config;
-  },
-};
+  }
+}

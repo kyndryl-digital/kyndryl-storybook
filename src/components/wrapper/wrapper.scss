@@ -1,0 +1,14 @@
+:host(kyndryl-wrapper) {
+  main {
+    margin-top: 90px;
+  }
+
+  ::slotted(#teconsent) {
+    color: #3d3c3c;
+    line-height: 30px;
+  }
+
+  ::slotted(#teconsent *:hover) {
+    text-decoration: underline;
+  }
+}

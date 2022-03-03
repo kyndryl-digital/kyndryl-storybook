@@ -1,14 +1,11 @@
 name: Deploy
 on:
-  workflow_run:
-    workflows: ["Release"]
-    branches: [master]
-    types: 
-      - completed
+  push:
+    branches:
+      - master
 jobs:
   Deploy_release:
     runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
     strategy:
       matrix:
         node-version: [16.x]
@@ -18,9 +15,14 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+      - name: Install Chrome
+        run: |
+          bash ./.github/scripts/install_chrome.sh
       - name: Install project
         run: npm install
-      - name: Instal IBM Cloud CLI
+      - name: Run tests
+        run: npm test
+      - name: Install IBM Cloud CLI
         run: |
           curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
           ibmcloud --version
@@ -41,5 +43,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.kyndryl.net/${GITHUB_REPOSITORY}.git
-          npx build-storybook -s ./src/public
+          npx build-storybook
           npx gh-pages -d storybook-static -u "github-actions-bot <support+actions@github.com>"

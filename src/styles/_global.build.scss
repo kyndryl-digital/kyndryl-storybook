@@ -1,0 +1,31 @@
+@import './accordion';
+@import './breakpoints';
+@import './buttons';
+@import './fonts';
+@import './grid';
+@import './icons';
+@import './modal';
+@import './tabs';
+@import './transitions';
+@import './typeography';
+@import './vars';
+
+html {
+  min-width: map-get($breakpoints, xs);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
