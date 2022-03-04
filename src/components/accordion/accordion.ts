@@ -12,19 +12,30 @@ import { settings } from '../../global/settings';
 export class kdAccordion extends LitElement {
   private _childItems: kdAccordionItem[] = [];
 
+
   protected _handleSlotChange(event: Event) {
     const slottedNodes = (event.target as HTMLSlotElement).assignedNodes({
       flatten: true,
     });
+
     this._childItems = slottedNodes.filter(
       node => node instanceof kdAccordionItem,
     ) as kdAccordionItem[];
+
+    this._childItems.map((tab, index) => {
+      (tab as kdAccordionItem).setIndex(index);
+
+      return tab;
+    });
   }
 
+ 
+
   render() {
+
     return html`
       <div class="${settings.class_prefix}-accordion">
-        <slot></slot>
+        <slot @slotchange="${this._handleSlotChange}"></slot>
       </div>
     `;
   }

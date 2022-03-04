@@ -9,7 +9,9 @@ export const Accordion = args => {
   return html`
     <div class="${settings.class_prefix}-accordion">
       <div class="${settings.class_prefix}-accordion-item">
-        <h4>Test1</h4>
+        <button id="${settings.class_prefix}-accordion-item-header-0" tabindex="0" class="${settings.class_prefix}-accordion-item-header" aria-expanded="false" aria-controls="${settings.class_prefix}-accordion-item-detail-0">
+          Test1
+        </button>
         <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
           <div class="${settings.class_prefix}-accordion-item-detail">
             <p>
@@ -20,7 +22,9 @@ export const Accordion = args => {
         </div>
       </div>
       <div class="${settings.class_prefix}-accordion-item">
-        <h4 class="opened">Test2</h4>
+        <button id="${settings.class_prefix}-accordion-item-header-1" tabindex="1" class="${settings.class_prefix}-accordion-item-header opened" aria-expanded="true" aria-controls="${settings.class_prefix}-accordion-item-detail-1">
+          Test2
+        </button>
         <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
           <div class="${settings.class_prefix}-accordion-item-detail">
             <p>
@@ -31,7 +35,9 @@ export const Accordion = args => {
         </div>
       </div>
       <div class="${settings.class_prefix}-accordion-item">
-        <h4>Test3</h4>
+        <button id="${settings.class_prefix}-accordion-item-header-2" tabindex="2" class="${settings.class_prefix}-accordion-item-header" aria-expanded="false" aria-controls="${settings.class_prefix}-accordion-item-detail-2">
+          Test3
+        </button>
         <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
           <div class="${settings.class_prefix}-accordion-item-detail">
             <p>

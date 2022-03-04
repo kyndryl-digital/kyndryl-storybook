@@ -2,6 +2,7 @@
 
 @import './util';
 @import './vars';
+@import './typeography';
 
 .#{$class-prefix}-accordion-item {
   @include padding(left right, 1);
@@ -12,8 +13,16 @@
   display: block;
 
   .#{$class-prefix}-accordion-item-header {
-    cursor: pointer;
+    @extend .#{$class-prefix}-h6;
+    display: block;
+    background: none;
+    border: 0;
     position: relative;
+    text-align: left;
+    width: 100%;
+
+    
+
 
     &:after {
       position: absolute;
@@ -25,10 +34,16 @@
       content: '-';
     }
 
+    & + .#{$class-prefix}-accordion-item-detail-wrapper {
+        visibility: hidden;
+    }
+
     &.opened + .#{$class-prefix}-accordion-item-detail-wrapper {
       height: auto;
       transition: height 0.5s ease;
+      visibility: visible;
     }
+    
   }
 
   .#{$class-prefix}-accordion-item-detail-wrapper {
