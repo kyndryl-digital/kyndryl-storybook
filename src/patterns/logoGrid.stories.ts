@@ -7,7 +7,7 @@ export default {
   title: 'Patterns/Logo Grid',
 };
 
-export const LogoGrid = args => {
+const Template = args => {
   return html`
       <div class="${settings.class_prefix}-grid-container">
         <!-- BEGIN Google Logo -->
@@ -716,4 +716,9 @@ export const LogoGrid = args => {
         <!-- END Oracle logo -->
       </div>
   `;
+};
+
+export const LogoGrid = Template.bind({});
+LogoGrid.parameters = {
+  layout: 'fullscreen',
 };

@@ -112,6 +112,10 @@ export const Grid = (args) => {
   `;
 };
 
+Grid.parameters = {
+  layout: 'fullscreen',
+};
+
 Grid.args = {
   fluidity: 'Standard',
   gap: 'Standard',
