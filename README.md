@@ -24,7 +24,7 @@ Clone the web component library and install.
 ```
 git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
 cd kyndryl-web-components
-npm install
+npm install --legacy-peer-deps
 ```
 
 ### Run storybook

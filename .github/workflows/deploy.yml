@@ -19,7 +19,7 @@ jobs:
         run: |
           bash ./.github/scripts/install_chrome.sh
       - name: Install project
-        run: npm install
+        run: npm install --legacy-peer-deps
       - name: Run tests
         run: npm test
       - name: Install IBM Cloud CLI
