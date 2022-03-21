@@ -5,7 +5,7 @@ module.exports = {
   mode: "development",
 
   entry: [
-    "./src/components/example/example.ts",
+    "./src/components/components.ts",
   ],
 
   output: {
@@ -28,7 +28,7 @@ module.exports = {
       {
         test: /\.s(c|a)ss$/,
         include: [
-          path.resolve(__dirname, "src/components/example")
+          path.resolve(__dirname, "src/components")
         ],
         use: [
           {
