@@ -36,13 +36,13 @@ export class Button extends LitElement {
       [`${settings.class_prefix}-icon-` + this.icon]: this.icon,
     });
     if (!this.icon) {
-      return html`<a href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
       </a>`;
     } else {
-      return html`<a href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
-        <span class=${icon_classes}></span>
+        <span id="icon" class=${icon_classes}></span>
       </a>`;
     }
   }
