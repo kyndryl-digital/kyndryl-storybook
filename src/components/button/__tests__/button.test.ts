@@ -170,4 +170,236 @@ describe('Button component', () => {
       expect(icon_classes).toContain('kd-icon-arrow-up');
     });
   });
+
+   //icons
+
+   describe('test icon with different button', () => {
+    it('arrow-right', async () => {
+      const icon = 'arrow-right';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-arrow-right');
+    });
+
+    it('chevron-wide-down', async () => {
+      const icon = 'chevron-wide-down';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-wide-down');
+    });
+
+    it('chevron-up', async () => {
+      const icon = 'chevron-up';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-up');
+    });
+
+    it('chevron-right', async () => {
+      const icon = 'chevron-right';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText =  getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes =  getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-right');
+    });
+
+    it('chevron-left', async () => {
+      const icon = 'chevron-left';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-left');
+    });
+
+    it('chevron-down', async () => {
+      const icon = 'chevron-down';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-down');
+    });
+
+    it('twitter', async () => {
+      const icon = 'twitter';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-twitter');
+    });
+
+    it('pop-out', async () => {
+      const icon = 'pop-out';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+     const icon_classes =  getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-pop-out');
+    });
+
+    it('play', async () => {
+      const icon = 'play';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-play');
+    });
+
+    it('pdf', async () => {
+      const icon = 'pdf';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-pdf');
+    });
+
+    it('linkedin', async () => {
+      const icon = 'linkedin';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-linkedin');
+    });
+
+
+    it('hamburger', async () => {
+      const icon = 'hamburger';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-hamburger');
+    });
+
+    it('download', async () => {
+      const icon = 'download';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-download');
+    });
+
+
+    it('close', async () => {
+      const icon = 'close';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-close');
+    });
+
+
+    it('chevron-wide-up', async () => {
+      const icon = 'chevron-wide-up';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-wide-up');
+    });
+
+
+    it('chevron-wide-right', async () => {
+      const icon = 'chevron-wide-right';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-wide-right');
+    });
+
+
+    it('chevron-wide-left', async () => {
+      const icon = 'chevron-wide-left';
+      const type = 'text';
+      element.setAttribute('type', type);
+      element.setAttribute('icon', icon);
+      await element.updateComplete;
+      const renderedText = getShadowRoot(COMPONENT_TAG).getElementById(ELEMENT_ID);
+      expect(renderedText).toBeTruthy();
+      const icon_classes = getShadowRoot(COMPONENT_TAG).getElementById('icon').className;
+      expect(icon_classes).toContain('kd-icon-chevron-wide-left');
+    });
+  });
 });
+
+//added them here for reference 
+// 'chevron-down',
+// 'chevron-left',
+// 'chevron-right',
+// 'chevron-up',
+// 'chevron-wide-down',
+// 'chevron-wide-left',
+// 'chevron-wide-right',
+// 'chevron-wide-up',
+// 'close',
+// 'download',
+// 'hamburger',
+// 'linkedin',
+// 'pdf',
+// 'play',
+// 'pop-out',
+// 'twitter',
+
