@@ -4,6 +4,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   devtool: 'inline-source-map',
@@ -35,6 +36,10 @@ module.exports = {
     new ESLintPlugin({
       context: path.resolve(__dirname, 'src'),
       extensions: ['.ts', '.tsx', '.js', 'jsx'],
+      exclude: 'node_modules',
+    }),
+    new StylelintPlugin({
+      context: path.resolve(__dirname, 'src'),
       exclude: 'node_modules',
     }),
   ],

@@ -1,5 +1,6 @@
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 module.exports = {
   stories: [
@@ -24,6 +25,10 @@ module.exports = {
       new ESLintPlugin({
         context: path.resolve(__dirname, '../src'),
         extensions: ['.ts', '.tsx', '.js', 'jsx'],
+        exclude: 'node_modules',
+      }),
+      new StylelintPlugin({
+        context: path.resolve(__dirname, '../src'),
         exclude: 'node_modules',
       }),
     )
