@@ -19,7 +19,11 @@
     "rules": {
         "indent": [
             "error",
-            2
+            2, {
+                "ignoredNodes": [
+                    "TemplateLiteral *"
+                ]
+            }
         ],
         "linebreak-style": [
             "error",
@@ -27,7 +31,9 @@
         ],
         "quotes": [
             "error",
-            "single"
+            "single", {
+                "allowTemplateLiterals": true
+            }
         ],
         "semi": [
             "error",

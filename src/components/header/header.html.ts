@@ -1,3 +1,5 @@
+/* eslint-disable */
+// disable since this will be re-written
 import { html } from 'lit';
 import { formatUrl } from '../../global/mixins/global';
 import logo from '../../styles/lib/images/kyndryl-logo.svg';
