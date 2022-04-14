@@ -10,6 +10,7 @@ export class kdContentCard extends LitElement {
 
   @property({ type: String }) youtubeId;
   @property({ type: String }) image;
+  @property({ type: String }) imageAltText = '';
   @property({ type: String }) title;
   @property({ type: String }) titleSize;
   @property({ type: String }) ctaLink;
@@ -50,7 +51,7 @@ export class kdContentCard extends LitElement {
     if (this.image) {
       return html`
         <div class="${settings.class_prefix}-content-card__image">
-          <img src=${this.image} alt="" />
+          <img src=${this.image} alt=${this.imageAltText} />
         </div>
       `;
     }

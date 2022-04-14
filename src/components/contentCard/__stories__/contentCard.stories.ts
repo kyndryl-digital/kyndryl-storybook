@@ -12,6 +12,9 @@ export default {
     image: {
       control: { type: 'text' },
     },
+    imageAltText: {
+      control: { type: 'text' },
+    },
     title: {
       control: { type: 'text' },
     },
@@ -51,6 +54,7 @@ const Template = args => {
     <kd-content-card
       youtubeId=${args.youtubeId}
       image=${args.image}
+      imageAltText=${args.imageAltText}
       title=${args.title}
       titleSize=${args.titleSize}
       ctaLink="${args.ctaLink}"

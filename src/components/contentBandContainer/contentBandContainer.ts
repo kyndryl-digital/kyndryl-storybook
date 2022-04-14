@@ -9,6 +9,10 @@ export class kdContentBandContainer extends LitElement {
 
   @property({ type: String }) title;
   @property({ type: String }) titleSize;
+  @property({ type: String }) titleCtaLink;
+  @property({ type: String }) titleCtaTarget;
+  @property({ type: String }) titleCtaLabel;
+  @property({ type: String }) titleCtaIcon;
   @property({ type: String }) columnLayout = '2';
 
   protected _renderTitle(): TemplateResult | string | void {
@@ -29,14 +33,33 @@ export class kdContentBandContainer extends LitElement {
     }
   }
 
+  protected _renderCta(): TemplateResult | string | void {
+    if (this.titleCtaLink) {
+      return html`
+        <div class="${settings.class_prefix}-content-band-container__action-container">
+          <kd-button
+            icon=${this.titleCtaIcon}
+            href=${this.titleCtaLink}
+            target=${this.titleCtaTarget}
+          >${this.titleCtaLabel}</kd-button>
+        </div>
+      `;
+    }
+
+    return null;
+  }
+
   render() {
     return html`
       <div class="${settings.class_prefix}-content-band-container">
-        ${this._renderTitle()}
-        <div class="${settings.class_prefix}-content-band-container__desc-container">
-          <div class="${settings.class_prefix}-content-band-container__description">
-            <slot name="description"></slot>
+        <div class="${settings.class_prefix}-content-band-container__header">
+          <div class="${settings.class_prefix}-content-band-container__desc-container">
+            ${this._renderTitle()}
+            <div class="${settings.class_prefix}-content-band-container__description">
+              <slot name="description"></slot>
+            </div>
           </div>
+          ${this._renderCta()}
         </div>
         <div class="${settings.class_prefix}-content-band-container__bottom ${settings.class_prefix}-content-band-container__bottom--${this.columnLayout}-col">
           <slot></slot>
