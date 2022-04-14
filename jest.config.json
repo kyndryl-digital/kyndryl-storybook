@@ -1,0 +1,8 @@
+{
+  "verbose": true,
+  "preset": "ts-jest",
+  "runner": "jest-electron/runner",
+  "testEnvironment": "jest-electron/environment",
+  "setupFiles": ["./test/kyndryl-web-components.js"],
+  "testMatch": ["**/__tests__/*.test.ts"]
+}
