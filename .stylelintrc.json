@@ -2,7 +2,7 @@
 	"extends": "stylelint-config-sass-guidelines",
 	"defaultSeverity": "warning",
 	"rules": {
-		"max-nesting-depth": [3, {
+		"max-nesting-depth": [5, {
 			"ignore": ["blockless-at-rules", "pseudo-classes"]
 		}],
 		"number-no-trailing-zeros": null,
