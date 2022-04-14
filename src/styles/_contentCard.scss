@@ -54,7 +54,7 @@
     }
   }
 
-  .title-line {
+  &__hr {
     background-color: map.get($colors, 'warm-red');
     display: block;
     height: 2px;
@@ -145,49 +145,6 @@
 
     .cmp-content-card__title + & {
       margin-top: 24px;
-    }
-  }
-
-  &__action-link {
-    align-items: center;
-    background-color: transparent;
-    border: 2px solid map.get($colors, 'cloud');
-    display: flex;
-    justify-content: center;
-    margin-bottom: 0;
-    margin-top: 21px;
-    width: fit-content;
-
-    @include breakpoint(sm, md, lg, xlg, max) {
-      margin-top: 0;
-    }
-
-    @include breakpoint(lg) {
-      justify-content: normal;
-    }
-  }
-
-  &--bottom-border {
-    border-bottom: 1px solid map.get($colors, 'dark-stone');
-  }
-
-  &--border-gray {
-    border-color: map.get($colors, 'stone');
-  }
-
-  @include breakpoint(lg) {
-    &--mobile-only-border {
-      border-bottom: 0;
-    }
-  }
-
-  @include breakpoint(md) {
-    &--bottom-border {
-      border-width: 2px;
-    }
-
-    &--border-thin {
-      border-width: 1px;
     }
   }
 }

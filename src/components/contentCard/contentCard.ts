@@ -68,7 +68,7 @@ export class kdContentCard extends LitElement {
             <h2 class="${settings.class_prefix}-content-card__title ${settings.class_prefix}-h2 ${this.titleSize}">
                <span>${this.title}</span>
             </h2>
-            <span class="title-line"></span>
+            <span class="${settings.class_prefix}-content-card__hr"></span>
             <div class="${settings.class_prefix}-content-card__description">
               <slot></slot>
             </div>
