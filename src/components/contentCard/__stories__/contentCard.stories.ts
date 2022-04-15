@@ -46,6 +46,10 @@ export default {
         },
       },
     },
+    theme: {
+      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -61,6 +65,7 @@ const Template = args => {
       ctaTarget="${args.ctaTarget}"
       ctaLabel="${args.ctaLabel}"
       ctaIcon="${args.ctaIcon}"
+      theme="${args.theme}"
     >
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </kd-content-card>

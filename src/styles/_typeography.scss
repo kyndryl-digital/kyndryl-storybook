@@ -1,6 +1,7 @@
 @import './breakpoints';
 @import './util';
 @import './vars';
+@import './variables';
 
 .#{$class-prefix}-text {
   font-family: $font-family;
@@ -8,7 +9,7 @@
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $default-text;
+  color: var(--kd-color-text-01);
   font-size: #{px2rem(16)};
   line-height: #{px2rem(28)};
   @include margin(top bottom, 3);
@@ -33,7 +34,7 @@
 .#{$class-prefix}-h1 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h1-color;
+  color: var(--kd-color-h1);
   font-size: #{px2rem(64)};
   line-height: #{px2rem(68)};
   @include margin(top bottom, 4);
@@ -56,7 +57,7 @@
 .#{$class-prefix}-h2 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h2-color;
+  color: var(--kd-color-h2);
   font-size: #{px2rem(36)};
   line-height: #{px2rem(46)};
   @include margin(top bottom, 4);
@@ -79,7 +80,7 @@
 .#{$class-prefix}-h3 {
   font-family: $font-family-lg;
   font-weight: $font-weight-light;
-  color: $h3-color;
+  color: var(--kd-color-h3);
   font-size: #{px2rem(32)};
   line-height: #{px2rem(42)};
   @include margin(top bottom, 4);
@@ -102,7 +103,7 @@
 .#{$class-prefix}-h4 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h4-color;
+  color: var(--kd-color-h4);
   font-size: #{px2rem(36)};
   line-height: #{px2rem(54)};
   @include margin(top bottom, 4);
@@ -124,7 +125,7 @@
 
 .#{$class-prefix}-h5 {
   font-weight: $font-weight-normal;
-  color: $h5-color;
+  color: var(--kd-color-h5);
   font-size: #{px2rem(30)};
   line-height: #{px2rem(44)};
   @include margin(top bottom, 4);
@@ -151,7 +152,7 @@
 
 .#{$class-prefix}-h6 {
   font-weight: $font-weight-normal;
-  color: $h6-color;
+  color: var(--kd-color-h6);
   font-size: #{px2rem(22)};
   line-height: #{px2rem(28)};
   @include margin(top bottom, 4);
@@ -180,19 +181,19 @@
   &:link,
   &:visited {
     font-weight: $font-weight-bold;
-    color: $link;
+    color: var(--kd-color-link-01);
     text-decoration: none;
   }
   &:focus {
-    color: $link-focus;
+    color: var(--kd-color-link-01-hover);
     text-decoration: none;
   }
   &:active {
-    color: $link-active;
+    color: var(--kd-color-link-01-active);
     text-decoration: underline;
   }
   &:hover {
-    color: $link-hover;
+    color: var(--kd-color-link-01-hover);
     text-decoration: underline;
   }
   .#{$class-prefix}-icon {

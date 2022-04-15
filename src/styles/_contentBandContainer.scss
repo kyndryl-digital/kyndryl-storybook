@@ -2,8 +2,12 @@
 @import './vars';
 @import './breakpoints';
 @import './typeography';
+@import './variables';
+@import './themes';
 
 .#{$class-prefix}-content-band-container {
+  background: var(--kd-color-background);
+  color: var(--kd-color-text-01);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;

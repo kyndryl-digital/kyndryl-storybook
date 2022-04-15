@@ -9,6 +9,8 @@
 @import './transitions';
 @import './typeography';
 @import './vars';
+@import './variables';
+@import './themes';
 
 html {
   min-width: map-get($breakpoints, xs);

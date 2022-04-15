@@ -1,5 +1,7 @@
 @import './util';
 @import './vars';
+@import './variables';
+@import './themes';
 
 // @TODO: Add button icons.
 
@@ -48,19 +50,19 @@
 
 .#{$class-prefix}-btn-primary {
   @extend .#{$class-prefix}-btn;
-  color: $btn-primary-color;
-  border-color: $btn-primary-border;
-  background-color: $btn-primary-background;
+  color: var(--kd-color-button-primary-text);
+  border-color: var(--kd-color-button-primary-border);
+  background-color: var(--kd-color-button-primary-bg);
   &:focus,
   &:active {
-    color: $btn-primary-color-active;
-    border-color: $btn-primary-border-active;
-    background-color: $btn-primary-background-active;
+    color: var(--kd-color-button-primary-active-text);
+    border-color: var(--kd-color-button-primary-active-border);
+    background-color: var(--kd-color-button-primary-active-bg);
   }
   &:hover {
-    color: $btn-primary-color-hover;
-    border-color: $btn-primary-border-hover;
-    background-color: $btn-primary-background-hover;
+    color: var(--kd-color-button-primary-hover-text);
+    border-color: var(--kd-color-button-primary-hover-border);
+    background-color: var(--kd-color-button-primary-hover-bg);
   }
   .#{$class-prefix}-invert &,
   &.#{$class-prefix}-invert {
@@ -85,19 +87,19 @@
 
 .#{$class-prefix}-btn-secondary {
   @extend .#{$class-prefix}-btn;
-  color: $btn-secondary-color;
-  border-color: $btn-secondary-border;
-  background-color: $btn-secondary-background;
+  color: var(--kd-color-button-secondary-text);
+  border-color: var(--kd-color-button-secondary-border);
+  background-color: var(--kd-color-button-secondary-bg);
   &:focus,
   &:active {
-    color: $btn-secondary-color-active;
-    border-color: $btn-secondary-border-active;
-    background-color: $btn-secondary-background-active;
+    color: var(--kd-color-button-secondary-active-text);
+    border-color: var(--kd-color-button-secondary-active-border);
+    background-color: var(--kd-color-button-secondary-active-bg);
   }
   &:hover {
-    color: $btn-secondary-color-hover;
-    border-color: $btn-secondary-border-hover;
-    background-color: $btn-secondary-background-hover;
+    color: var(--kd-color-button-secondary-hover-text);
+    border-color: var(--kd-color-button-secondary-hover-border);
+    background-color: var(--kd-color-button-secondary-hover-bg);
   }
   .#{$class-prefix}-invert &,
   &.#{$class-prefix}-invert {
@@ -122,14 +124,14 @@
 
 .#{$class-prefix}-btn-text {
   @extend .#{$class-prefix}-btn;
-  color: $link;
-  border-color: transparent;
-  background-color: transparent;
+  color: var(--kd-color-button-link-text);
+  border-color: var(--kd-color-button-link-border);
+  background-color: var(--kd-color-button-link-bg);
   &:focus,
   &:active {
-    color: $link-active;
-    border-color: transparent;
-    background-color: transparent;
+    color: var(--kd-color-button-link-hover-text);
+    border-color: var(--kd-color-button-link-hover-border);
+    background-color: var(--kd-color-button-link-hover-bg);
     text-decoration: underline;
     .#{$class-prefix}-icon,
     .#{$class-prefix}-icon * {
@@ -137,9 +139,9 @@
     }
   }
   &:hover {
-    color: $link-hover;
-    border-color: transparent;
-    background-color: transparent;
+    color: var(--kd-color-button-link-active-text);
+    border-color: var(--kd-color-button-link-active-border);
+    background-color: var(--kd-color-button-link-active-bg);
     text-decoration: underline;
   }
   .#{$class-prefix}-invert &,

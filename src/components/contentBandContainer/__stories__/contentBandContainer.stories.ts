@@ -42,6 +42,10 @@ export default {
       options: ['1', '2', '2-1', '3', '4'],
       control: { type: 'select' },
     },
+    theme: {
+      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      control: { type: 'select' },
+    },
   },
 };
 
@@ -55,6 +59,7 @@ export const ContentCards = args => {
       titleCtaLabel="${args.titleCtaLabel}"
       titleCtaIcon="${args.titleCtaIcon}"
       columnLayout=${args.columnLayout}
+      theme=${args.theme}
     >
       <div slot="description">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>

@@ -17,6 +17,7 @@ export class kdContentCard extends LitElement {
   @property({ type: String }) ctaTarget;
   @property({ type: String }) ctaLabel;
   @property({ type: String }) ctaIcon;
+  @property({ type: String }) theme = '';
 
   protected _renderCta(): TemplateResult | string | void {
     if (this.ctaLink) {
@@ -61,7 +62,7 @@ export class kdContentCard extends LitElement {
 
   render() {
     return html`
-      <div class="${settings.class_prefix}-content-card">
+      <div class="${settings.class_prefix}-content-card ${this.theme}">
         <div class="${settings.class_prefix}-content-card__content">
           <div class="${settings.class_prefix}-content-card__content-inner">
             ${this._renderMedia()}

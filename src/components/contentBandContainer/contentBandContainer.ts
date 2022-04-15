@@ -14,6 +14,8 @@ export class kdContentBandContainer extends LitElement {
   @property({ type: String }) titleCtaLabel;
   @property({ type: String }) titleCtaIcon;
   @property({ type: String }) columnLayout = '2';
+  @property({ type: String }) theme = '';
+
 
   protected _renderTitle(): TemplateResult | string | void {
     switch (this.titleSize) {
@@ -51,7 +53,7 @@ export class kdContentBandContainer extends LitElement {
 
   render() {
     return html`
-      <div class="${settings.class_prefix}-content-band-container">
+      <div class="${settings.class_prefix}-content-band-container ${this.theme}">
         <div class="${settings.class_prefix}-content-band-container__header">
           <div class="${settings.class_prefix}-content-band-container__desc-container">
             ${this._renderTitle()}

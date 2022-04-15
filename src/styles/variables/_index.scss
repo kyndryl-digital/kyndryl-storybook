@@ -1,0 +1,6 @@
+@import 'colors';
+
+:root {
+  @include css-vars-color-tokens;
+  @include css-vars-color-usage;
+}

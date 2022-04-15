@@ -1,0 +1,10 @@
+@import '../../styles/variables/colors';
+
+.kd-theme-cloud {
+  --kd-color-token-base: var(--kd-color-brand-cloud);
+  --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
+  --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
+  --kd-color-token-accent: var(--kd-color-brand-warm-red);
+
+  @include css-vars-color-usage;
+}
