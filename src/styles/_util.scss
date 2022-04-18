@@ -94,29 +94,3 @@
 }
 
 @include create-margin-classes();
-
-/// Generates classes for setting background on elements.
-///
-/// @output Creates classes for the individual colors.
-@mixin create-background-classes {
-  @each $name, $value in $colors {
-    .#{$class-prefix}-bg-#{$name} {
-      background-color: #{$value};
-    }
-  }
-}
-
-@include create-background-classes;
-
-/// Generates classes for setting font color on elements.
-///
-/// @output Creates classes for the individual colors.
-@mixin create-color-classes {
-  @each $name, $value in $colors {
-    .#{$class-prefix}-font-#{$name} {
-      color: #{$value};
-    }
-  }
-}
-
-@include create-color-classes;

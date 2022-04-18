@@ -23,12 +23,6 @@
     line-height: #{px2rem(28)};
     @include margin(top bottom, 1);
   }
-  .#{$class-prefix}-invert,
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    background-color: $inverted-background;
-    color: $inverted-default-text;
-  }
 }
 
 .#{$class-prefix}-h1 {
@@ -47,10 +41,6 @@
     font-size: #{px2rem(36)};
     line-height: #{px2rem(46)};
     @include margin(top bottom, 2);
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h1-color;
   }
 }
 
@@ -71,10 +61,6 @@
     line-height: #{px2rem(42)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h2-color;
-  }
 }
 
 .#{$class-prefix}-h3 {
@@ -94,10 +80,6 @@
     line-height: #{px2rem(37)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h3-color;
-  }
 }
 
 .#{$class-prefix}-h4 {
@@ -116,10 +98,6 @@
     font-size: #{px2rem(28)};
     line-height: #{px2rem(54)};
     @include margin(top bottom, 2);
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h4-color;
   }
 }
 
@@ -144,10 +122,6 @@
     line-height: #{px2rem(30)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h5-color;
-  }
 }
 
 .#{$class-prefix}-h6 {
@@ -170,10 +144,6 @@
     font-size: #{px2rem(18)};
     line-height: #{px2rem(24)};
     @include margin(top bottom, 2);
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h6-color;
   }
 }
 
@@ -200,26 +170,6 @@
     @include margin(left, 1);
     font-size: #{px2rem(14)};
     font-weight: $font-weight-bold;
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    &:link {
-      font-weight: $font-weight-bold;
-      color: $inverted-link;
-      text-decoration: none;
-    }
-    &:focus {
-      color: $inverted-link-focus;
-      text-decoration: none;
-    }
-    &:active {
-      color: $inverted-link-active;
-      text-decoration: underline;
-    }
-    &:hover {
-      color: $inverted-link-hover;
-      text-decoration: underline;
-    }
   }
 }
 

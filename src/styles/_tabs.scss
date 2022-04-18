@@ -10,7 +10,7 @@
   line-height: #{px2rem(40)};
   border-bottom-width: 2px;
   border-bottom-style: solid;
-  border-bottom-color: map.get($colors, 'dark-white');
+  border-bottom-color: var(--kd-color-brand-dark-white);
 
   .#{$class-prefix}-tab {
     @include padding(left right, 1);
@@ -18,7 +18,7 @@
     display: inline-block;
     font-size: #{px2rem(14)};
     line-height: #{px2rem(40)};
-    color: map.get($colors, 'earth');
+    color: var(--kd-color-brand-earth);
     text-decoration: none;
     margin-bottom: -2px;
     background: transparent;
@@ -28,14 +28,14 @@
     border-bottom-color: transparent;
     cursor: pointer;
     &:hover {
-      color: map.get($colors, 'dark-stone');
+      color: var(--kd-color-brand-dark-stone);
     }
     &.#{$class-prefix}-selected,
     &:focus,
     &:active {
-      color: map.get($colors, 'warm-red');
+      color: var(--kd-color-brand-warm-red);
       font-weight: $font-weight-bold;
-      border-bottom-color: map.get($colors, 'warm-red');
+      border-bottom-color: var(--kd-color-brand-warm-red);
     }
   }
 }

@@ -64,25 +64,6 @@
     border-color: var(--kd-color-button-primary-hover-border);
     background-color: var(--kd-color-button-primary-hover-bg);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-btn-primary-color;
-    border-color: $inverted-btn-primary-border;
-    background-color: $inverted-btn-primary-background;
-    &:focus,
-    &:active {
-      color: $inverted-btn-primary-color-active;
-      border-color: $inverted-btn-primary-border-active;
-      background-color: $inverted-btn-primary-background-active;
-      text-decoration: none;
-    }
-    &:hover {
-      color: $inverted-btn-primary-color-hover;
-      border-color: $inverted-btn-primary-border-hover;
-      background-color: $inverted-btn-primary-background-hover;
-      text-decoration: none;
-    }
-  }
 }
 
 .#{$class-prefix}-btn-secondary {
@@ -100,25 +81,6 @@
     color: var(--kd-color-button-secondary-hover-text);
     border-color: var(--kd-color-button-secondary-hover-border);
     background-color: var(--kd-color-button-secondary-hover-bg);
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-btn-secondary-color;
-    border-color: $inverted-btn-secondary-border;
-    background-color: $inverted-btn-secondary-background;
-    &:focus,
-    &:active {
-      color: $inverted-btn-secondary-color-active;
-      border-color: $inverted-btn-secondary-border-active;
-      background-color: $inverted-btn-secondary-background-active;
-      text-decoration: none;
-    }
-    &:hover {
-      color: $inverted-btn-secondary-color-hover;
-      border-color: $inverted-btn-secondary-border-hover;
-      background-color: $inverted-btn-secondary-background-hover;
-      text-decoration: none;
-    }
   }
 }
 
@@ -143,16 +105,5 @@
     border-color: var(--kd-color-button-link-active-border);
     background-color: var(--kd-color-button-link-active-bg);
     text-decoration: underline;
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-link;
-    &:focus,
-    &:active {
-      color: $inverted-link-active;
-    }
-    &:hover {
-      color: $inverted-link-hover;
-    }
   }
 }
