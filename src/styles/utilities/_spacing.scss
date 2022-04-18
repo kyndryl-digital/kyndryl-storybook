@@ -1,17 +1,5 @@
-@use 'sass:math';
-
-@import './variables';
-
-/// Converts amount in pixel units to the corresponding rem amount according to the base font size.
-///
-/// @param {Keyword|Number} $px - The amount of pixels
-/// @param {Keyword|Number} $base - The base font size
-///
-/// @output Outputs the calculated rem units.
-@function px2rem($px, $base: 16) {
-  $multiplier: math.div(10, $base);
-  @return math.div($px * $multiplier, 10) + 'rem';
-}
+@import '../variables';
+@import './units';
 
 /// Adds the appropriate padding according to the sub-grid units.
 ///
