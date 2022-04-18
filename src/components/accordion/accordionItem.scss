@@ -1,6 +1,6 @@
 @use 'sass:map';
 
-@import '../../styles/vars';
+@import '../../styles/variables';
 @import '../../styles/accordion';
 
 :host(#{$tag-prefix}-accordion-item) {

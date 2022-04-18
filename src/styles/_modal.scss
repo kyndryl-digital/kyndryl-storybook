@@ -1,9 +1,9 @@
+
+@import './variables';
 @import './buttons';
 @import './breakpoints';
 @import './icons';
 @import './util';
-@import './vars';
-@import './variables';
 
 .#{$class-prefix}-modal-backdrop {
   position: fixed;

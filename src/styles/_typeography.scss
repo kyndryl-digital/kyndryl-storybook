@@ -1,7 +1,7 @@
+
+@import './variables';
 @import './breakpoints';
 @import './util';
-@import './vars';
-@import './variables';
 
 .#{$class-prefix}-text {
   font-family: $font-family;

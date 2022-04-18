@@ -1,7 +1,7 @@
 @use 'sass:map';
 
+@import './variables';
 @import './util';
-@import './vars';
 @import './typeography';
 
 .#{$class-prefix}-accordion-item {
