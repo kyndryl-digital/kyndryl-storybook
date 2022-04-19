@@ -2,8 +2,9 @@
   "name": "kyndryl-design-system",
   "version": "1.0.0",
   "description": "",
-  "main" :"src/components/components.ts",
-  "module" :"src/components/components.ts",
+  "main": "build/kyndryl-web-components.js",
+  "module": "build/kyndryl-web-components.js",
+  "types": "src/components/components.ts",
   "scripts": {
     "test": "wtr \"src/test/**/*.test.{ts,tsx}\" --node-resolve",
     "start": "webpack serve --config webpack.config.js",

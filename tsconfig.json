@@ -11,6 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": true,
+    "useDefineForClassFields": false,
     "esModuleInterop": true,
   },
 }
