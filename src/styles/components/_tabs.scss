@@ -1,7 +1,7 @@
 @use 'sass:map';
 
-@import './variables';
-@import './utilities';
+@import '../variables/index';
+@import '../utilities/index';
 
 .#{$class-prefix}-tab-list {
   margin: 0;

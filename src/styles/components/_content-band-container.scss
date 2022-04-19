@@ -1,9 +1,9 @@
 @use 'sass:map';
 
-@import './variables';
-@import './utilities';
-@import './typeography';
-@import './themes';
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+@import '../themes/index';
 
 .#{$class-prefix}-content-band-container {
   background: var(--kd-color-background);

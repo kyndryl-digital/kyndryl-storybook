@@ -1,6 +1,6 @@
 
 @import '../../styles/variables';
-@import '../../styles/tabs';
+@import '../../styles/components/tabs';
 
 :host(#{$tag-prefix}-tabs) {
   .#{$class-prefix}-tabs {
