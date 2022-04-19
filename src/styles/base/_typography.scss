@@ -1,8 +1,7 @@
-
 @import '../variables/index';
 @import '../utilities/index';
 
-.#{$class-prefix}-text {
+.#{$prefix-class}-text {
   font-family: $font-family;
   font-weight: $font-weight-normal;
   text-rendering: optimizeSpeed;
@@ -24,7 +23,7 @@
   }
 }
 
-.#{$class-prefix}-h1 {
+.#{$prefix-class}-h1 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: var(--kd-color-h1);
@@ -43,7 +42,7 @@
   }
 }
 
-.#{$class-prefix}-h2 {
+.#{$prefix-class}-h2 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: var(--kd-color-h2);
@@ -62,7 +61,7 @@
   }
 }
 
-.#{$class-prefix}-h3 {
+.#{$prefix-class}-h3 {
   font-family: $font-family-lg;
   font-weight: $font-weight-light;
   color: var(--kd-color-h3);
@@ -81,7 +80,7 @@
   }
 }
 
-.#{$class-prefix}-h4 {
+.#{$prefix-class}-h4 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
   color: var(--kd-color-h4);
@@ -100,7 +99,7 @@
   }
 }
 
-.#{$class-prefix}-h5 {
+.#{$prefix-class}-h5 {
   font-weight: $font-weight-normal;
   color: var(--kd-color-h5);
   font-size: #{px2rem(30)};
@@ -123,7 +122,7 @@
   }
 }
 
-.#{$class-prefix}-h6 {
+.#{$prefix-class}-h6 {
   font-weight: $font-weight-normal;
   color: var(--kd-color-h6);
   font-size: #{px2rem(22)};
@@ -146,7 +145,7 @@
   }
 }
 
-.#{$class-prefix}-link {
+.#{$prefix-class}-link {
   &:link,
   &:visited {
     font-weight: $font-weight-bold;
@@ -165,14 +164,14 @@
     color: var(--kd-color-link-01-hover);
     text-decoration: underline;
   }
-  .#{$class-prefix}-icon {
+  .#{$prefix-class}-icon {
     @include margin(left, 1);
     font-size: #{px2rem(14)};
     font-weight: $font-weight-bold;
   }
 }
 
-.#{$class-prefix}-list {
+.#{$prefix-class}-list {
   @include padding(left, 3);
   @include margin(top bottom, 3);
   @include device(tablet) {
@@ -182,11 +181,11 @@
     @include margin(top bottom, 1);
   }
   &:is(ul) {
-    li.#{$class-prefix}-list-item::marker {
+    li.#{$prefix-class}-list-item::marker {
       content: '–';
     }
   }
-  .#{$class-prefix}-list-item {
+  .#{$prefix-class}-list-item {
     @include margin(top bottom, 2);
     @include padding(left, 1);
     @include device(tablet) {

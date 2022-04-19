@@ -3,7 +3,7 @@
 @import '../variables/index';
 @import '../utilities/index';
 
-.#{$class-prefix}-tab-list {
+.#{$prefix-class}-tab-list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -12,7 +12,7 @@
   border-bottom-style: solid;
   border-bottom-color: var(--kd-color-brand-dark-white);
 
-  .#{$class-prefix}-tab {
+  .#{$prefix-class}-tab {
     @include padding(left right, 1);
     @include margin(right, 1);
     display: inline-block;
@@ -30,7 +30,7 @@
     &:hover {
       color: var(--kd-color-brand-dark-stone);
     }
-    &.#{$class-prefix}-selected,
+    &.#{$prefix-class}-selected,
     &:focus,
     &:active {
       color: var(--kd-color-brand-warm-red);

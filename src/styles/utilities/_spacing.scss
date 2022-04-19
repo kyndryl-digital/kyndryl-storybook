@@ -1,4 +1,5 @@
-@import '../variables/index';
+@import '../variables/config';
+@import '../variables/grid';
 @import './units';
 
 /// Adds the appropriate padding according to the sub-grid units.
@@ -25,16 +26,16 @@
 /// @output Creates $n classes for setting padding.
 @mixin create-padding-classes($n: 8) {
   @for $i from 0 through $n {
-    .#{$class-prefix}-pt#{$i} {
+    .#{$prefix-class}-pt#{$i} {
       @include padding(top, $i);
     }
-    .#{$class-prefix}-pr#{$i} {
+    .#{$prefix-class}-pr#{$i} {
       @include padding(right, $i);
     }
-    .#{$class-prefix}-pb#{$i} {
+    .#{$prefix-class}-pb#{$i} {
       @include padding(bottom, $i);
     }
-    .#{$class-prefix}-pl#{$i} {
+    .#{$prefix-class}-pl#{$i} {
       @include padding(left, $i);
     }
   }
@@ -66,16 +67,16 @@
 /// @output Creates $n classes for setting margins.
 @mixin create-margin-classes($n: 8) {
   @for $i from 0 through $n {
-    .#{$class-prefix}-mt#{$i} {
+    .#{$prefix-class}-mt#{$i} {
       @include margin(top, $i);
     }
-    .#{$class-prefix}-mr#{$i} {
+    .#{$prefix-class}-mr#{$i} {
       @include margin(right, $i);
     }
-    .#{$class-prefix}-mb#{$i} {
+    .#{$prefix-class}-mb#{$i} {
       @include margin(bottom, $i);
     }
-    .#{$class-prefix}-ml#{$i} {
+    .#{$prefix-class}-ml#{$i} {
       @include margin(left, $i);
     }
   }

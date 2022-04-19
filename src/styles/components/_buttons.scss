@@ -4,7 +4,7 @@
 
 // @TODO: Add button icons.
 
-.#{$class-prefix}-btn {
+.#{$prefix-class}-btn {
   @include padding(top bottom, 1);
   @include padding(right left, 3);
   -webkit-transition: border-color 0.3s, color 0.3s, background-color 0.3s;
@@ -25,30 +25,30 @@
   &:hover {
     text-decoration: none;
   }
-  .#{$class-prefix}-icon {
+  .#{$prefix-class}-icon {
     @include margin(left, 1);
     font-size: #{px2rem(14)};
     font-weight: $font-weight-bold;
   }
 }
 
-.#{$class-prefix}-btn-lg {
+.#{$prefix-class}-btn-lg {
   @include padding(top bottom, 2);
 }
 
-.#{$class-prefix}-btn-sm {
+.#{$prefix-class}-btn-sm {
   @include padding(right left, 2);
   font-size: 87.5%;
   line-height: 1rem;
-  .#{$class-prefix}-icon {
+  .#{$prefix-class}-icon {
     @include margin(left, 1);
     font-size: 87.5%;
     font-weight: $font-weight-bold;
   }
 }
 
-.#{$class-prefix}-btn-primary {
-  @extend .#{$class-prefix}-btn;
+.#{$prefix-class}-btn-primary {
+  @extend .#{$prefix-class}-btn;
   color: var(--kd-color-button-primary-text);
   border-color: var(--kd-color-button-primary-border);
   background-color: var(--kd-color-button-primary-bg);
@@ -65,8 +65,8 @@
   }
 }
 
-.#{$class-prefix}-btn-secondary {
-  @extend .#{$class-prefix}-btn;
+.#{$prefix-class}-btn-secondary {
+  @extend .#{$prefix-class}-btn;
   color: var(--kd-color-button-secondary-text);
   border-color: var(--kd-color-button-secondary-border);
   background-color: var(--kd-color-button-secondary-bg);
@@ -83,8 +83,8 @@
   }
 }
 
-.#{$class-prefix}-btn-text {
-  @extend .#{$class-prefix}-btn;
+.#{$prefix-class}-btn-text {
+  @extend .#{$prefix-class}-btn;
   color: var(--kd-color-button-link-text);
   border-color: var(--kd-color-button-link-border);
   background-color: var(--kd-color-button-link-bg);
@@ -94,8 +94,8 @@
     border-color: var(--kd-color-button-link-hover-border);
     background-color: var(--kd-color-button-link-hover-bg);
     text-decoration: underline;
-    .#{$class-prefix}-icon,
-    .#{$class-prefix}-icon * {
+    .#{$prefix-class}-icon,
+    .#{$prefix-class}-icon * {
       text-decoration: none;
     }
   }

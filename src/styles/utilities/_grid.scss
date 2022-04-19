@@ -1,4 +1,6 @@
-@import '../variables/index';
+@import '../variables/config';
+@import '../variables/breakpoints';
+@import './breakpoints';
 @import './spacing';
 
 @function gridColumnsToFractionalUnits($columns) {
@@ -13,7 +15,7 @@
 
     @for $column-span from 1 through $numberOfColumns {
         @include breakpoint($breakpoint) {
-            .#{$class-prefix}-#{$breakpoint}-col-#{$column-span} {
+            .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
                 grid-column: auto / span #{$column-span};
             }
         }
@@ -22,7 +24,7 @@
 }
 
 
-.#{$class-prefix}-grid-container {
+.#{$prefix-class}-grid-container {
     display: grid;
     grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "max"));
     grid-gap: $sub-grid-px * 4px;
@@ -65,16 +67,16 @@
         padding: 0;
     }
 
-    &.#{$class-prefix}-no-grid-gap {
+    &.#{$prefix-class}-no-grid-gap {
         grid-gap: 0px;
     }
 
-    &.#{$class-prefix}-no-grid-padding {
+    &.#{$prefix-class}-no-grid-padding {
         padding-left: 0;
         padding-right: 0;
     }
 
-    &.#{$class-prefix}-fully-fluid {
+    &.#{$prefix-class}-fully-fluid {
         @include breakpoint(max) {
             max-width: 100%;
         }
@@ -98,7 +100,7 @@
 
 //Aspect Ratio Classes
 
-.#{$class-prefix}-aspect-ratio {
+.#{$prefix-class}-aspect-ratio {
 
     &--2x1:before {
         padding-top: 50%;

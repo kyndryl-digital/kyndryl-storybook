@@ -5,7 +5,7 @@
 @import '../base/typography';
 @import '../themes/index';
 
-.#{$class-prefix}-content-card {
+.#{$prefix-class}-content-card {
   background: var(--kd-color-background);
   color: var(--kd-color-text-01);
   display: flex;

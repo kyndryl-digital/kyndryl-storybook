@@ -4,7 +4,7 @@
 @import '../utilities/index';
 @import '../base/typography';
 
-.#{$class-prefix}-accordion-item {
+.#{$prefix-class}-accordion-item {
   @include padding(left right, 1);
   @include margin(right, 1);
   border-width: 0 0 1px 0;
@@ -12,8 +12,8 @@
   border-style: solid;
   display: block;
 
-  .#{$class-prefix}-accordion-item-header {
-    @extend .#{$class-prefix}-h6;
+  .#{$prefix-class}-accordion-item-header {
+    @extend .#{$prefix-class}-h6;
     display: block;
     background: none;
     border: 0;
@@ -34,11 +34,11 @@
       content: '-';
     }
 
-    & + .#{$class-prefix}-accordion-item-detail-wrapper {
+    & + .#{$prefix-class}-accordion-item-detail-wrapper {
         visibility: hidden;
     }
 
-    &.opened + .#{$class-prefix}-accordion-item-detail-wrapper {
+    &.opened + .#{$prefix-class}-accordion-item-detail-wrapper {
       height: auto;
       transition: height 0.5s ease;
       visibility: visible;
@@ -46,7 +46,7 @@
 
   }
 
-  .#{$class-prefix}-accordion-item-detail-wrapper {
+  .#{$prefix-class}-accordion-item-detail-wrapper {
     overflow: hidden;
     height: 0;
     transition: height 0.5s ease;

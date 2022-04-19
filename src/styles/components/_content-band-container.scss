@@ -5,7 +5,7 @@
 @import '../base/typography';
 @import '../themes/index';
 
-.#{$class-prefix}-content-band-container {
+.#{$prefix-class}-content-band-container {
   background: var(--kd-color-background);
   color: var(--kd-color-text-01);
   display: flex;

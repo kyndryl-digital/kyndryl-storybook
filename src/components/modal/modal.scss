@@ -6,7 +6,7 @@ $icons: (
 @import '../../styles/components/icons';
 @import '../../styles/components/modal';
 
-:host(#{$tag-prefix}-modal) {
+:host(#{$prefix-tag}-modal) {
   ::slotted([slot='trigger']) {
     cursor: pointer;
   }
