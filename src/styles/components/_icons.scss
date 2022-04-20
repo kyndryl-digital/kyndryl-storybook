@@ -1,4 +1,4 @@
-@import './vars';
+@import '../variables/index';
 
 .#{$class-prefix}-icon,
 [class*=' #{$class-prefix}-icon-'],

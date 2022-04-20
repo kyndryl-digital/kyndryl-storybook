@@ -1,17 +1,5 @@
-@use 'sass:math';
-
-@import './vars';
-
-/// Converts amount in pixel units to the corresponding rem amount according to the base font size.
-///
-/// @param {Keyword|Number} $px - The amount of pixels
-/// @param {Keyword|Number} $base - The base font size
-///
-/// @output Outputs the calculated rem units.
-@function px2rem($px, $base: 16) {
-  $multiplier: math.div(10, $base);
-  @return math.div($px * $multiplier, 10) + 'rem';
-}
+@import '../variables/index';
+@import './units';
 
 /// Adds the appropriate padding according to the sub-grid units.
 ///
@@ -94,29 +82,3 @@
 }
 
 @include create-margin-classes();
-
-/// Generates classes for setting background on elements.
-///
-/// @output Creates classes for the individual colors.
-@mixin create-background-classes {
-  @each $name, $value in $colors {
-    .#{$class-prefix}-bg-#{$name} {
-      background-color: #{$value};
-    }
-  }
-}
-
-@include create-background-classes;
-
-/// Generates classes for setting font color on elements.
-///
-/// @output Creates classes for the individual colors.
-@mixin create-color-classes {
-  @each $name, $value in $colors {
-    .#{$class-prefix}-font-#{$name} {
-      color: #{$value};
-    }
-  }
-}
-
-@include create-color-classes;

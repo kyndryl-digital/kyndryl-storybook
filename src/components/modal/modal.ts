@@ -1,8 +1,8 @@
-import { html, LitElement } from "lit";
-import { state, property, customElement, eventOptions } from "lit/decorators.js";
-import { classMap } from "lit-html/directives/class-map.js";
+import { html, LitElement } from 'lit';
+import { state, property, customElement, eventOptions } from 'lit/decorators.js';
+import { classMap } from 'lit-html/directives/class-map.js';
 
-import stylesheet from "./modal.scss";
+import stylesheet from './modal.scss';
 
 import { settings } from '../../global/settings';
 
@@ -19,7 +19,7 @@ export class kdModal extends LitElement {
    * Defines the active tab index.
    */
   @state()
-  private _active: boolean = false;
+  private _active = false;
 
   /**
    * Allows users to toggle the modal open and close.
@@ -37,8 +37,8 @@ export class kdModal extends LitElement {
    * Allows users to center the modal vertically based on window and modal height.
    */
   public centerModal() {
-    const modalBackdrop = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal-backdrop");
-    const modal = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal");
+    const modalBackdrop = this.renderRoot?.querySelector('.' + settings.class_prefix + '-modal-backdrop');
+    const modal = this.renderRoot?.querySelector('.' + settings.class_prefix + '-modal');
     const modalHeight = modal.scrollHeight;
     const windowHeight = window?.innerHeight;
     const modalMargin = 50-(((100/windowHeight) * modalHeight)/2);

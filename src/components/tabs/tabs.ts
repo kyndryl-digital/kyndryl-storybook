@@ -23,7 +23,7 @@ export class kdTabs extends LitElement {
    * Defines the active tab index.
    */
   @state()
-  private _activeTab: number = 0;
+  private _activeTab = 0;
 
   /**
    * Handler for @slotChange, creates tabs from kd-tab components.

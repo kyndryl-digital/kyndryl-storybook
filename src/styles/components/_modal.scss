@@ -1,8 +1,8 @@
+
+@import '../variables/index';
+@import '../utilities/index';
 @import './buttons';
-@import './breakpoints';
 @import './icons';
-@import './util';
-@import './vars';
 
 .#{$class-prefix}-modal-backdrop {
   position: fixed;
@@ -14,7 +14,7 @@
   height: 100%;
   z-index: 9998;
   overflow: scroll;
-  background: $modal-backdrop;
+  background: var(--kd-color-modal-backdrop);
   -webkit-backdrop-filter: grayscale(1);
   backdrop-filter: grayscale(1);
   -webkit-transition: opacity 0.4s;
@@ -31,7 +31,8 @@
 }
 
 .#{$class-prefix}-modal {
-  background: $modal-background;
+  background: var(--kd-color-modal-bg);
+  color: var(--kd-color-modal-text);
   overflow: auto;
   -webkit-transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition: all 0.4s, margin-top 0s, margin-bottom 0s;

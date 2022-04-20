@@ -1,14 +1,8 @@
-@import './accordion';
-@import './breakpoints';
-@import './buttons';
-@import './fonts';
-@import './grid';
-@import './icons';
-@import './modal';
-@import './tabs';
-@import './transitions';
-@import './typeography';
-@import './vars';
+@import './variables/index';
+@import './utilities/index';
+@import './base/index';
+@import './components/index';
+@import './themes/index';
 
 html {
   min-width: map-get($breakpoints, xs);

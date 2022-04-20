@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit';
+import { LitElement } from 'lit';
 
 import markup from './header.html';
 import stylesheet from './header.scss';
@@ -16,24 +16,24 @@ export class kdHeader extends LitElement {
 
   firstUpdated() {
     (this.namespace = 'Navigation'),
-      (this.mainNavItems = this.shadowRoot.querySelectorAll(
-        '.header__desktop-menu .cmp-navigation__item--level-0 > [data-cmp-clickable]',
-      )),
-      (this.mobileNavItems = this.shadowRoot.querySelectorAll(
-        '.header__mobile-nav .cmp-navigation__item--level-0 > .cmp-navigation__item-link-sub',
-      )),
-      (this.mainNavDropdownItems = this.shadowRoot.querySelectorAll(
-        '.cmp-navigation__item-link-sub',
-      )),
-      (this.mobileTriggerOpen = this.shadowRoot.querySelectorAll(
-        '.header__trigger-menu--open',
-      )),
-      (this.mobileTriggerClose = this.shadowRoot.querySelectorAll(
-        '.header__trigger-menu--close',
-      )),
-      (this.header = this.shadowRoot.querySelector('.header')),
-      this._init(),
-      this._bindEvents();
+    (this.mainNavItems = this.shadowRoot.querySelectorAll(
+      '.header__desktop-menu .cmp-navigation__item--level-0 > [data-cmp-clickable]',
+    )),
+    (this.mobileNavItems = this.shadowRoot.querySelectorAll(
+      '.header__mobile-nav .cmp-navigation__item--level-0 > .cmp-navigation__item-link-sub',
+    )),
+    (this.mainNavDropdownItems = this.shadowRoot.querySelectorAll(
+      '.cmp-navigation__item-link-sub',
+    )),
+    (this.mobileTriggerOpen = this.shadowRoot.querySelectorAll(
+      '.header__trigger-menu--open',
+    )),
+    (this.mobileTriggerClose = this.shadowRoot.querySelectorAll(
+      '.header__trigger-menu--close',
+    )),
+    (this.header = this.shadowRoot.querySelector('.header')),
+    this._init(),
+    this._bindEvents();
   }
 
   _init() {
@@ -84,12 +84,12 @@ export class kdHeader extends LitElement {
 
     this.mobileTriggerOpen[0].addEventListener('click', e => {
       e.preventDefault(),
-        this.header.classList.add('header__mobile-nav--opened');
+      this.header.classList.add('header__mobile-nav--opened');
     }),
-      this.mobileTriggerClose[0].addEventListener('click', e => {
-        e.preventDefault(),
-          this.header.classList.remove('header__mobile-nav--opened');
-      });
+    this.mobileTriggerClose[0].addEventListener('click', e => {
+      e.preventDefault(),
+      this.header.classList.remove('header__mobile-nav--opened');
+    });
   }
 
   toggleMenu(e) {
@@ -107,9 +107,9 @@ export class kdHeader extends LitElement {
     if ((e.classList.add('cmp-navigation__item-link--active'), null !== t)) {
       const e = t.querySelector('.cmp-navigation__group-wrapper');
       t.addEventListener('transitionend', this.animationEnd),
-        t.setAttribute('aria-hidden', 'false'),
-        this.changeIndex(t, 0),
-        (t.style.height = e.offsetHeight + 'px');
+      t.setAttribute('aria-hidden', 'false'),
+      this.changeIndex(t, 0),
+      (t.style.height = e.offsetHeight + 'px');
     }
   }
 
@@ -118,12 +118,12 @@ export class kdHeader extends LitElement {
     if ((e.classList.remove('cmp-navigation__item-link--active'), null !== t)) {
       const e = t.querySelector('.cmp-navigation__group-wrapper');
       (t.style.height = e.offsetHeight + 'px'),
-        t.removeEventListener('transitionend', this.animationEnd),
-        setTimeout(() => {
-          (t.style.height = '0'),
-            t.setAttribute('aria-hidden', 'true'),
-            this.changeIndex(t, -1);
-        }, 100);
+      t.removeEventListener('transitionend', this.animationEnd),
+      setTimeout(() => {
+        (t.style.height = '0'),
+        t.setAttribute('aria-hidden', 'true'),
+        this.changeIndex(t, -1);
+      }, 100);
     }
   }
 

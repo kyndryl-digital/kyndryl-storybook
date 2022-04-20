@@ -12,11 +12,11 @@ const url = require('url');
  * @returns Formatted URL string.
  */
 export const formatUrl = (path, options = {}) => {
-  var urlObject = {
+  const urlObject = {
     host: settings.domain,
     pathname: path || null,
     ...options,
   };
-  var urlStr = url.format(urlObject);
+  const urlStr = url.format(urlObject);
   return urlStr.toString();
 };

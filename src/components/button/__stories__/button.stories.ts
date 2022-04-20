@@ -11,6 +11,10 @@ export default {
       options: ['primary', 'secondary', 'text'],
       control: { type: 'select' },
     },
+    theme: {
+      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      control: { type: 'select' },
+    },
     href: {
       control: { type: 'text' },
     },
@@ -67,6 +71,7 @@ const Template = args => {
         icon=${args.icon != 'none' ? args.icon : null}
         href=${args.href}
         target=${args.target}
+        theme=${args.theme}
     >${args.label}</-button>
   `;
 };

@@ -1,14 +1,14 @@
 @use 'sass:map';
 
-@import './util';
-@import './vars';
-@import './typeography';
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
 
 .#{$class-prefix}-accordion-item {
   @include padding(left right, 1);
   @include margin(right, 1);
   border-width: 0 0 1px 0;
-  border-color: map.get($colors, 'sage');
+  border-color: var(--kd-color-brand-sage);
   border-style: solid;
   display: block;
 
@@ -21,7 +21,7 @@
     text-align: left;
     width: 100%;
 
-    
+
 
 
     &:after {
@@ -43,7 +43,7 @@
       transition: height 0.5s ease;
       visibility: visible;
     }
-    
+
   }
 
   .#{$class-prefix}-accordion-item-detail-wrapper {

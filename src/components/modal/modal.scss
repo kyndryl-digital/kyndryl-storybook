@@ -3,8 +3,8 @@ $icons: (
   'close': '\\e909',
 );
 
-@import '../../styles/icons';
-@import '../../styles/modal';
+@import '../../styles/components/icons';
+@import '../../styles/components/modal';
 
 :host(#{$tag-prefix}-modal) {
   ::slotted([slot='trigger']) {

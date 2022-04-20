@@ -1,0 +1,13 @@
+@import './breakpoints';
+@import './colors';
+@import './fonts';
+@import './grid';
+@import './icons';
+
+$tag-prefix: 'kd' !default;
+$class-prefix: 'kd' !default;
+
+:root {
+  @include css-vars-color-tokens;
+  @include css-vars-color-usage;
+}

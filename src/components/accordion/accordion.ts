@@ -1,5 +1,5 @@
 import { html, LitElement } from 'lit';
-import { state, property, customElement } from 'lit/decorators.js';
+import { customElement } from 'lit/decorators.js';
 import { kdAccordionItem } from './accordionItem';
 
 import { settings } from '../../global/settings';
@@ -29,7 +29,7 @@ export class kdAccordion extends LitElement {
     });
   }
 
- 
+
 
   render() {
 

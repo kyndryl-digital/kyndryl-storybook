@@ -1,5 +1,4 @@
 import './button/button';
-import './example/example';
 import './modal/modal';
 import './tabs/tabs';
 import './wrapper/wrapper';

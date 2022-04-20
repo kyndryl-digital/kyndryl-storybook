@@ -21,6 +21,7 @@ export class Button extends LitElement {
   @property({ type: String }) target;
   @property({ type: String }) size;
   @property({ type: String }) icon;
+  @property({ type: String }) theme;
 
   render() {
     const classes = classMap({
@@ -30,6 +31,7 @@ export class Button extends LitElement {
       [`${settings.class_prefix}-btn-text`]: this.type === 'text',
       [`${settings.class_prefix}-btn-lg`]: this.size === 'large',
       [`${settings.class_prefix}-btn-sm`]: this.size === 'small',
+      [this.theme]: this.theme?.length,
     });
     const icon_classes = classMap({
       [`${settings.class_prefix}-icon`]: this.icon,

@@ -1,0 +1,30 @@
+
+$breakpoints: (
+  xs: 320px,
+  // Fluid 4-col
+  sm: 672px,
+  // Fluid 8-col
+  md: 1183px,
+  // Fluid 16-col
+  lg: 1311px,
+  // Fixed 16-col 1056px
+  xlg: 1583px,
+  // Fixed 16-col 1312px
+  max: 2500px,
+  // Fixed 16-col 1584px (no max)
+) !default;
+
+$devices: (
+  mobile: (
+    xs,
+    sm,
+  ),
+  tablet: (
+    md,
+  ),
+  desktop: (
+    lg,
+    xlg,
+    max,
+  ),
+) !default;

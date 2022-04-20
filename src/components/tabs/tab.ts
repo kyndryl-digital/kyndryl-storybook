@@ -15,12 +15,12 @@ export class kdTab extends LitElement {
    * Defines the index of the tab relative to other tabs.
    */
   @state()
-  private _index: Number = 0;
+  private _index = 0;
 
   /**
    * Sets the index of the tab.
    */
-  setIndex(index: Number) {
+  setIndex(index: number) {
     this._index = index;
   }
 

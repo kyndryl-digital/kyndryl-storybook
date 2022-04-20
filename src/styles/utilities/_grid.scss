@@ -1,6 +1,5 @@
-@import "./vars";
-@import "./breakpoints";
-@import "./util";
+@import '../variables/index';
+@import './spacing';
 
 @function gridColumnsToFractionalUnits($columns) {
     $cssColumnNotation:'';
@@ -11,15 +10,15 @@
 }
 
 @mixin generateGridColumnDefinitions($numberOfColumns, $breakpoint) {
-  
+
     @for $column-span from 1 through $numberOfColumns {
-        @include breakpoint($breakpoint) { 
+        @include breakpoint($breakpoint) {
             .#{$class-prefix}-#{$breakpoint}-col-#{$column-span} {
                 grid-column: auto / span #{$column-span};
             }
         }
     }
-   
+
 }
 
 
@@ -31,31 +30,31 @@
     @include padding(right, 3);
     margin: 0 auto;
 
-    
+
 
     @include breakpoint(max) {
         max-width: map-get($breakpoints, "xlg") + 1;
     }
 
-    @include breakpoint(xlg) { 
+    @include breakpoint(xlg) {
         max-width: map-get($breakpoints, "lg") + 1;
         @include padding(left, 2);
         @include padding(right, 2);
     }
 
-    @include breakpoint(lg) { 
+    @include breakpoint(lg) {
         max-width: map-get($breakpoints, "md") + 1;
         @include padding(left, 2);
         @include padding(right, 2);
     }
 
-    @include breakpoint(md) { 
+    @include breakpoint(md) {
         grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "md"));
         @include padding(left, 2);
         @include padding(right, 2);
     }
 
-    @include breakpoint(sm) { 
+    @include breakpoint(sm) {
         grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "sm"));
         @include padding(left, 2);
         @include padding(right, 2);
@@ -79,12 +78,12 @@
         @include breakpoint(max) {
             max-width: 100%;
         }
-    
-        @include breakpoint(xlg) { 
+
+        @include breakpoint(xlg) {
             max-width: 100%;
         }
-    
-        @include breakpoint(lg) { 
+
+        @include breakpoint(lg) {
             max-width: 100%;
         }
     }

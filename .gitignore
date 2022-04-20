@@ -7,3 +7,4 @@ test
 .vscode
 *.d.ts
 sassdoc
+.DS_Store

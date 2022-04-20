@@ -1,6 +1,6 @@
 import { html } from 'lit-element';
-import {classMap} from "lit-html/directives/class-map.js";
-import { settings } from "../../global/settings";
+import {classMap} from 'lit-html/directives/class-map.js';
+import { settings } from '../../global/settings';
 
 export default {
   title: 'Styles/Grid',
@@ -25,7 +25,7 @@ export default {
       description: 'Controls the padding that appears at the left / right of grid container'
     }
   }
-    
+
 };
 
 export const Grid = (args) => {
@@ -120,4 +120,4 @@ Grid.args = {
   fluidity: 'Standard',
   gap: 'Standard',
   padding: 'Standard'
-}
+};

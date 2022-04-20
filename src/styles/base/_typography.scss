@@ -1,6 +1,6 @@
-@import './breakpoints';
-@import './util';
-@import './vars';
+
+@import '../variables/index';
+@import '../utilities/index';
 
 .#{$class-prefix}-text {
   font-family: $font-family;
@@ -8,7 +8,7 @@
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $default-text;
+  color: var(--kd-color-text-01);
   font-size: #{px2rem(16)};
   line-height: #{px2rem(28)};
   @include margin(top bottom, 3);
@@ -22,18 +22,12 @@
     line-height: #{px2rem(28)};
     @include margin(top bottom, 1);
   }
-  .#{$class-prefix}-invert,
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    background-color: $inverted-background;
-    color: $inverted-default-text;
-  }
 }
 
 .#{$class-prefix}-h1 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h1-color;
+  color: var(--kd-color-h1);
   font-size: #{px2rem(64)};
   line-height: #{px2rem(68)};
   @include margin(top bottom, 4);
@@ -47,16 +41,12 @@
     line-height: #{px2rem(46)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h1-color;
-  }
 }
 
 .#{$class-prefix}-h2 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h2-color;
+  color: var(--kd-color-h2);
   font-size: #{px2rem(36)};
   line-height: #{px2rem(46)};
   @include margin(top bottom, 4);
@@ -70,16 +60,12 @@
     line-height: #{px2rem(42)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h2-color;
-  }
 }
 
 .#{$class-prefix}-h3 {
   font-family: $font-family-lg;
   font-weight: $font-weight-light;
-  color: $h3-color;
+  color: var(--kd-color-h3);
   font-size: #{px2rem(32)};
   line-height: #{px2rem(42)};
   @include margin(top bottom, 4);
@@ -93,16 +79,12 @@
     line-height: #{px2rem(37)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h3-color;
-  }
 }
 
 .#{$class-prefix}-h4 {
   font-family: $font-family-lg;
   font-weight: $font-weight-normal;
-  color: $h4-color;
+  color: var(--kd-color-h4);
   font-size: #{px2rem(36)};
   line-height: #{px2rem(54)};
   @include margin(top bottom, 4);
@@ -116,15 +98,11 @@
     line-height: #{px2rem(54)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h4-color;
-  }
 }
 
 .#{$class-prefix}-h5 {
   font-weight: $font-weight-normal;
-  color: $h5-color;
+  color: var(--kd-color-h5);
   font-size: #{px2rem(30)};
   line-height: #{px2rem(44)};
   @include margin(top bottom, 4);
@@ -143,15 +121,11 @@
     line-height: #{px2rem(30)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h5-color;
-  }
 }
 
 .#{$class-prefix}-h6 {
   font-weight: $font-weight-normal;
-  color: $h6-color;
+  color: var(--kd-color-h6);
   font-size: #{px2rem(22)};
   line-height: #{px2rem(28)};
   @include margin(top bottom, 4);
@@ -170,55 +144,31 @@
     line-height: #{px2rem(24)};
     @include margin(top bottom, 2);
   }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    color: $inverted-h6-color;
-  }
 }
 
 .#{$class-prefix}-link {
   &:link,
   &:visited {
     font-weight: $font-weight-bold;
-    color: $link;
+    color: var(--kd-color-link-01);
     text-decoration: none;
   }
   &:focus {
-    color: $link-focus;
+    color: var(--kd-color-link-01-hover);
     text-decoration: none;
   }
   &:active {
-    color: $link-active;
+    color: var(--kd-color-link-01-active);
     text-decoration: underline;
   }
   &:hover {
-    color: $link-hover;
+    color: var(--kd-color-link-01-hover);
     text-decoration: underline;
   }
   .#{$class-prefix}-icon {
     @include margin(left, 1);
     font-size: #{px2rem(14)};
     font-weight: $font-weight-bold;
-  }
-  .#{$class-prefix}-invert &,
-  &.#{$class-prefix}-invert {
-    &:link {
-      font-weight: $font-weight-bold;
-      color: $inverted-link;
-      text-decoration: none;
-    }
-    &:focus {
-      color: $inverted-link-focus;
-      text-decoration: none;
-    }
-    &:active {
-      color: $inverted-link-active;
-      text-decoration: underline;
-    }
-    &:hover {
-      color: $inverted-link-hover;
-      text-decoration: underline;
-    }
   }
 }
 
