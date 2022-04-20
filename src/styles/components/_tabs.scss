@@ -7,17 +7,16 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  line-height: #{px2rem(40)};
   border-bottom-width: 2px;
   border-bottom-style: solid;
   border-bottom-color: var(--kd-color-brand-dark-white);
 
   .#{$prefix-class}-tab {
-    @include padding(left right, 1);
+    @include padding(top bottom, 2);
+    @include padding(right left, 3);
     @include margin(right, 1);
     display: inline-block;
-    font-size: #{px2rem(14)};
-    line-height: #{px2rem(40)};
+    font-size: var(--kd-font-size-02);
     color: var(--kd-color-brand-earth);
     text-decoration: none;
     margin-bottom: -2px;
@@ -34,7 +33,7 @@
     &:focus,
     &:active {
       color: var(--kd-color-brand-warm-red);
-      font-weight: $font-weight-bold;
+      font-weight: var(--kd-font-weight-bold);
       border-bottom-color: var(--kd-color-brand-warm-red);
     }
   }

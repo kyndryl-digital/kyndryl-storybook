@@ -2,145 +2,109 @@
 @import '../utilities/index';
 
 .#{$prefix-class}-text {
-  font-family: $font-family;
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-text);
+  font-weight: var(--kd-font-weight-text);
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: var(--kd-color-text-01);
-  font-size: #{px2rem(16)};
-  line-height: #{px2rem(28)};
+  color: var(--kd-color-text);
+  font-size: var(--kd-font-size-text);
+  line-height: var(--kd-font-height-text);
   @include margin(top bottom, 3);
   @include device(tablet) {
-    font-size: #{px2rem(18)};
-    line-height: #{px2rem(28)};
     @include margin(top bottom, 2);
   }
   @include device(mobile) {
-    font-size: #{px2rem(18)};
-    line-height: #{px2rem(28)};
     @include margin(top bottom, 1);
   }
 }
 
 .#{$prefix-class}-h1 {
-  font-family: $font-family-lg;
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h1);
   color: var(--kd-color-h1);
-  font-size: #{px2rem(64)};
-  line-height: #{px2rem(68)};
+  font-size: var(--kd-font-size-h1);
+  line-height: var(--kd-font-height-h1);
   @include margin(top bottom, 4);
   @include device(tablet) {
-    font-size: #{px2rem(48)};
-    line-height: #{px2rem(63)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-size: #{px2rem(36)};
-    line-height: #{px2rem(46)};
     @include margin(top bottom, 2);
   }
 }
 
 .#{$prefix-class}-h2 {
-  font-family: $font-family-lg;
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h2);
   color: var(--kd-color-h2);
-  font-size: #{px2rem(36)};
-  line-height: #{px2rem(46)};
+  font-size: var(--kd-font-size-h2);
+  line-height: var(--kd-font-height-h2);
   @include margin(top bottom, 4);
   @include device(tablet) {
-    font-size: #{px2rem(36)};
-    line-height: #{px2rem(46)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-size: #{px2rem(32)};
-    line-height: #{px2rem(42)};
     @include margin(top bottom, 2);
   }
 }
 
 .#{$prefix-class}-h3 {
-  font-family: $font-family-lg;
-  font-weight: $font-weight-light;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h3);
   color: var(--kd-color-h3);
-  font-size: #{px2rem(32)};
-  line-height: #{px2rem(42)};
+  font-size: var(--kd-font-size-h3);
+  line-height: var(--kd-font-height-h3);
   @include margin(top bottom, 4);
   @include device(tablet) {
-    font-size: #{px2rem(32)};
-    line-height: #{px2rem(42)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-size: #{px2rem(28)};
-    line-height: #{px2rem(37)};
     @include margin(top bottom, 2);
   }
 }
 
 .#{$prefix-class}-h4 {
-  font-family: $font-family-lg;
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h4);
   color: var(--kd-color-h4);
-  font-size: #{px2rem(36)};
-  line-height: #{px2rem(54)};
+  font-size: var(--kd-font-size-h4);
+  line-height: var(--kd-font-height-h4);
   @include margin(top bottom, 4);
   @include device(tablet) {
-    font-size: #{px2rem(28)};
-    line-height: #{px2rem(54)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-size: #{px2rem(28)};
-    line-height: #{px2rem(54)};
     @include margin(top bottom, 2);
   }
 }
 
 .#{$prefix-class}-h5 {
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h5);
   color: var(--kd-color-h5);
-  font-size: #{px2rem(30)};
-  line-height: #{px2rem(44)};
+  font-size: var(--kd-font-size-h5);
+  line-height: var(--kd-font-height-h5);
   @include margin(top bottom, 4);
-  @include device(desktop) {
-    font-family: $font-family-lg;
-  }
   @include device(tablet) {
-    font-family: $font-family;
-    font-size: #{px2rem(20)};
-    line-height: #{px2rem(30)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-family: $font-family;
-    font-size: #{px2rem(20)};
-    line-height: #{px2rem(30)};
     @include margin(top bottom, 2);
   }
 }
 
 .#{$prefix-class}-h6 {
-  font-weight: $font-weight-normal;
+  font-family: var(--kd-font-family-heading);
+  font-weight: var(--kd-font-weight-h6);
   color: var(--kd-color-h6);
-  font-size: #{px2rem(22)};
-  line-height: #{px2rem(28)};
+  font-size: var(--kd-font-size-h6);
+  line-height: var(--kd-font-height-h6);
   @include margin(top bottom, 4);
-  @include device(desktop) {
-    font-family: $font-family-lg;
-  }
   @include device(tablet) {
-    font-family: $font-family;
-    font-size: #{px2rem(18)};
-    line-height: #{px2rem(24)};
     @include margin(top bottom, 3);
   }
   @include device(mobile) {
-    font-family: $font-family;
-    font-size: #{px2rem(18)};
-    line-height: #{px2rem(24)};
     @include margin(top bottom, 2);
   }
 }
@@ -148,26 +112,26 @@
 .#{$prefix-class}-link {
   &:link,
   &:visited {
-    font-weight: $font-weight-bold;
-    color: var(--kd-color-link-01);
+    font-weight: var(--kd-font-weight-link);
+    color: var(--kd-color-link);
     text-decoration: none;
   }
   &:focus {
-    color: var(--kd-color-link-01-hover);
+    color: var(--kd-color-link-hover);
     text-decoration: none;
   }
   &:active {
-    color: var(--kd-color-link-01-active);
+    color: var(--kd-color-link-active);
     text-decoration: underline;
   }
   &:hover {
-    color: var(--kd-color-link-01-hover);
+    color: var(--kd-color-link-hover);
     text-decoration: underline;
   }
   .#{$prefix-class}-icon {
     @include margin(left, 1);
-    font-size: #{px2rem(14)};
-    font-weight: $font-weight-bold;
+    font-size: var(--kd-font-size-link-icon);
+    font-weight: var(--kd-font-weight-link);
   }
 }
 

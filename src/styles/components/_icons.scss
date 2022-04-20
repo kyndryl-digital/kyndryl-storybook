@@ -3,10 +3,10 @@
 .#{$prefix-class}-icon,
 [class*=' #{$prefix-class}-icon-'],
 [class^='#{$prefix-class}-icon-'] {
-  font-family: $icon-font-family !important;
+  font-family: var(--kd-font-family-icon);
   speak: never;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--kd-font-weight-normal);
   font-variant: normal;
   text-transform: none;
   line-height: 1;

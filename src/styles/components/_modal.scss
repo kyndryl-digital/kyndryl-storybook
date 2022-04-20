@@ -75,7 +75,7 @@
     right: 0px;
     padding-top: #{px2rem(16)};
     padding-right: #{px2rem(16)};
-    font-size:  #{px2rem(16)};
+    font-size: var(--kd-font-size-03);
     .#{$prefix-class}-modal-control {
       padding: 0;
       line-height: #{px2rem(48)};
