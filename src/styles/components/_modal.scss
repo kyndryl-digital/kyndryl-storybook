@@ -12,7 +12,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 9998;
+  z-index: var(--kd-z-index-modal-backdrop);
   overflow: scroll;
   background: var(--kd-color-modal-backdrop);
   -webkit-backdrop-filter: grayscale(1);
@@ -38,7 +38,7 @@
   transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition-timing-function: ease-out;
   margin: auto;
-  z-index: 9999;
+  z-index: var(--kd-z-index-modal-window);
   &.hidden {
     visibility: hidden;
     opacity: 0;

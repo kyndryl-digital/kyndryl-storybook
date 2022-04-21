@@ -4,9 +4,11 @@
 @import './fonts';
 @import './grid';
 @import './icons';
+@import './z-index';
 
 :root {
   @include css-vars-color-tokens;
   @include css-vars-color-usage;
   @include css-vars-fonts;
+  @include css-vars-z-index;
 }
