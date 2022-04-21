@@ -9,7 +9,7 @@
 /// @param {Keyword|Number} $unit - The number of pixels per sub-grid unit.
 ///
 /// @output Adds the appropriate padding in rems.
-@mixin padding($side, $amount, $unit: $sub-grid-px) {
+@mixin padding($side, $amount, $unit: $grid-sub-px) {
   @each $s in $side {
     @if $s == 'top' or $s == 'right' or $s == 'bottom' or $s == 'left' {
       padding-#{$s}: #{px2rem($amount * $unit)};
@@ -50,7 +50,7 @@
 /// @param {Keyword|Number} $unit - The number of pixels per sub-grid unit.
 ///
 /// @output Adds the appropriate margins in rems.
-@mixin margin($side, $amount, $unit: $sub-grid-px) {
+@mixin margin($side, $amount, $unit: $grid-sub-px) {
   @each $s in $side {
     @if $s == 'top' or $s == 'right' or $s == 'bottom' or $s == 'left' {
       margin-#{$s}: #{px2rem($amount * $unit)};

@@ -7,29 +7,33 @@
 /// @output Outputs the content wrapped in a media query.
 @mixin breakpoint($breakpoint...) {
   @each $bp in $breakpoint {
-    @if map-has-key($breakpoints, $bp) {
+    @if map-has-key($breakpoints-map-all, $bp) {
+      $breakpoints: map-get($breakpoints-map-all, $bp);
+      $min: nth($breakpoints, 1);
+      $max: nth($breakpoints, 2);
+
       @if $bp == xs {
-        @media (max-width: 320px) {
+        @media (max-width: $max) {
           @content;
         }
       } @else if $bp == sm {
-        @media (min-width: 321px) and (max-width: 672px) {
+        @media (min-width: $min) and (max-width: $max) {
           @content;
         }
       } @else if $bp == md {
-        @media (min-width: 673px) and (max-width: 1183px) {
+        @media (min-width: $min) and (max-width: $max) {
           @content;
         }
       } @else if $bp == lg {
-        @media (min-width: 1184px) and (max-width: 1311px) {
+        @media (min-width: $min) and (max-width: $max) {
           @content;
         }
       } @else if $bp == xlg {
-        @media (min-width: 1312px) and (max-width: 1583px) {
+        @media (min-width: $min) and (max-width: $max) {
           @content;
         }
       } @else if $bp == max {
-        @media (min-width: 1584px) {
+        @media (min-width: $min) {
           @content;
         }
       }
@@ -46,8 +50,8 @@
 /// @output Outputs the content wrapped in a media query.
 @mixin device($device...) {
   @each $dev in $device {
-    @if map-has-key($devices, $dev) {
-      $breakpoint: map-get($devices, $dev);
+    @if map-has-key($breakpoints-map-devices, $dev) {
+      $breakpoint: map-get($breakpoints-map-devices, $dev);
       @each $bp in $breakpoint {
         @include breakpoint($bp) {
           @content;

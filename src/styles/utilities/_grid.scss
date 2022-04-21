@@ -1,142 +1,121 @@
 @import '../variables/config';
 @import '../variables/breakpoints';
+@import '../variables/grid';
 @import './breakpoints';
 @import './spacing';
 
-@function gridColumnsToFractionalUnits($columns) {
-    $cssColumnNotation:'';
-    @for $i from 1 through $columns {
-        $cssColumnNotation : $cssColumnNotation + '1fr '
-    }
-    @return unquote($cssColumnNotation);
+@function grid-columns-to-fractional-units($columns) {
+  $css-column-notation: '';
+  @for $i from 1 through $columns {
+    $css-column-notation: $css-column-notation + '1fr ';
+  }
+  @return unquote($css-column-notation);
 }
 
-@mixin generateGridColumnDefinitions($numberOfColumns, $breakpoint) {
-
-    @for $column-span from 1 through $numberOfColumns {
-        @include breakpoint($breakpoint) {
-            .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
-                grid-column: auto / span #{$column-span};
-            }
-        }
+@mixin generate-grid-column-definitions($numberOfColumns, $breakpoint) {
+  @for $column-span from 1 through $numberOfColumns {
+    @include breakpoint($breakpoint) {
+      .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
+        grid-column: auto / span #{$column-span};
+      }
     }
-
+  }
 }
-
 
 .#{$prefix-class}-grid-container {
-    display: grid;
-    grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "max"));
-    grid-gap: $sub-grid-px * 4px;
+  display: grid;
+  grid-gap: $grid-sub-px * 4px;
+  grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, xs));
+  margin: 0 auto;
+  max-width: var(--kd-grid-max-width);
+  padding: 0;
+
+  @include breakpoint(sm) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, sm));
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, md));
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, lg));
+  }
+
+  @include breakpoint(xlg) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, xlg));
+  }
+
+  @include breakpoint(sm, md, lg, xlg) {
+    @include padding(left, 2);
+    @include padding(right, 2);
+  }
+
+  @include breakpoint(max) {
     @include padding(left, 3);
     @include padding(right, 3);
-    margin: 0 auto;
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, 'max'));
+  }
 
+  &.#{$prefix-class}-no-grid-gap {
+    grid-gap: 0;
+  }
 
+  &.#{$prefix-class}-no-grid-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
-    @include breakpoint(max) {
-        max-width: map-get($breakpoints, "xlg") + 1;
+  &.#{$prefix-class}-fully-fluid {
+    @include breakpoint(lg, xlg, max) {
+      max-width: 100%;
     }
-
-    @include breakpoint(xlg) {
-        max-width: map-get($breakpoints, "lg") + 1;
-        @include padding(left, 2);
-        @include padding(right, 2);
-    }
-
-    @include breakpoint(lg) {
-        max-width: map-get($breakpoints, "md") + 1;
-        @include padding(left, 2);
-        @include padding(right, 2);
-    }
-
-    @include breakpoint(md) {
-        grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "md"));
-        @include padding(left, 2);
-        @include padding(right, 2);
-    }
-
-    @include breakpoint(sm) {
-        grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "sm"));
-        @include padding(left, 2);
-        @include padding(right, 2);
-    }
-
-    @include breakpoint(xs) {
-        grid-template-columns: gridColumnsToFractionalUnits(map-get($breakpoint-grid-columns, "xs"));
-        padding: 0;
-    }
-
-    &.#{$prefix-class}-no-grid-gap {
-        grid-gap: 0px;
-    }
-
-    &.#{$prefix-class}-no-grid-padding {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    &.#{$prefix-class}-fully-fluid {
-        @include breakpoint(max) {
-            max-width: 100%;
-        }
-
-        @include breakpoint(xlg) {
-            max-width: 100%;
-        }
-
-        @include breakpoint(lg) {
-            max-width: 100%;
-        }
-    }
-
+  }
 }
 
 //Grid Column Definitions
-@each $name, $columns in $breakpoint-grid-columns {
-    @include generateGridColumnDefinitions($columns, $name);
+@each $name, $columns in $grid-cols-per-breakpoint {
+  @include generate-grid-column-definitions($columns, $name);
 }
 
-
 //Aspect Ratio Classes
-
 .#{$prefix-class}-aspect-ratio {
 
-    &--2x1:before {
-        padding-top: 50%;
-    }
+  &--2x1::before {
+    padding-top: 50%;
+  }
 
-    &--1x2:before {
-        padding-top: 200%;
-    }
+  &--1x2::before {
+    padding-top: 200%;
+  }
 
-    &--16x9:before {
-        padding-top: 56.25%;
-    }
+  &--16x9::before {
+    padding-top: 56.25%;
+  }
 
-    &--4x3:before {
-        padding-top: 75%;
-    }
+  &--4x3::before {
+    padding-top: 75%;
+  }
 
-    &--3x4:before {
-        padding-top: 133.33%;
-    }
+  &--3x4::before {
+    padding-top: 133.33%;
+  }
 
-    &--1x1:before {
-        padding-top: 100%;
-    }
+  &--1x1::before {
+    padding-top: 100%;
+  }
 
-    &:after {
-        clear: both;
-        content: "";
-        display: table;
-    }
+  &::after {
+    clear: both;
+    content: '';
+    display: table;
+  }
 
-    &:before {
-        content: "";
-        float: left;
-        height: 0;
-        margin-left: -1px;
-        width: 1px;
-    }
+  &::before {
+    content: '';
+    float: left;
+    height: 0;
+    margin-left: -1px;
+    width: 1px;
+  }
 }
