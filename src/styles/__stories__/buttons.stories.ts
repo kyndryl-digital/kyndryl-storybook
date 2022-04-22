@@ -1,6 +1,6 @@
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings';
 
 export default {
   title: 'Styles/Buttons',
@@ -52,15 +52,15 @@ export default {
 
 export const Link = args => {
   const classes = classMap({
-    [`${settings.class_prefix}-btn-primary`]: args.type === 'primary',
-    [`${settings.class_prefix}-btn-secondary`]: args.type === 'secondary',
-    [`${settings.class_prefix}-btn-text`]: args.type === 'text',
-    [`${settings.class_prefix}-btn-lg`]: args.size === 'large',
-    [`${settings.class_prefix}-btn-sm`]: args.size === 'small',
+    [`${PREFIX_CLASS}-btn-primary`]: args.type === 'primary',
+    [`${PREFIX_CLASS}-btn-secondary`]: args.type === 'secondary',
+    [`${PREFIX_CLASS}-btn-text`]: args.type === 'text',
+    [`${PREFIX_CLASS}-btn-lg`]: args.size === 'large',
+    [`${PREFIX_CLASS}-btn-sm`]: args.size === 'small',
   });
   const icon_classes = classMap({
-    [`${settings.class_prefix}-icon`]: args.icon,
-    [`${settings.class_prefix}-icon-` + args.icon]: args.icon,
+    [`${PREFIX_CLASS}-icon`]: args.icon,
+    [`${PREFIX_CLASS}-icon-` + args.icon]: args.icon,
   });
   if (!args.icon || args.icon === 'none') {
     return html`<a href=${args.href} target=${args.target} class=${classes}>
@@ -85,15 +85,15 @@ Link.args = {
 
 export const Button = args => {
   const classes = classMap({
-    [`${settings.class_prefix}-btn-primary`]: args.type === 'primary',
-    [`${settings.class_prefix}-btn-secondary`]: args.type === 'secondary',
-    [`${settings.class_prefix}-btn-text`]: args.type === 'text',
-    [`${settings.class_prefix}-btn-lg`]: args.size === 'large',
-    [`${settings.class_prefix}-btn-sm`]: args.size === 'small',
+    [`${PREFIX_CLASS}-btn-primary`]: args.type === 'primary',
+    [`${PREFIX_CLASS}-btn-secondary`]: args.type === 'secondary',
+    [`${PREFIX_CLASS}-btn-text`]: args.type === 'text',
+    [`${PREFIX_CLASS}-btn-lg`]: args.size === 'large',
+    [`${PREFIX_CLASS}-btn-sm`]: args.size === 'small',
   });
   const icon_classes = classMap({
-    [`${settings.class_prefix}-icon`]: args.icon,
-    [`${settings.class_prefix}-icon-` + args.icon]: args.icon,
+    [`${PREFIX_CLASS}-icon`]: args.icon,
+    [`${PREFIX_CLASS}-icon-` + args.icon]: args.icon,
   });
   if (!args.icon || args.icon === 'none') {
     return html`<button class=${classes}>${args.label}</button>`;

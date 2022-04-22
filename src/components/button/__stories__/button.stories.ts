@@ -1,10 +1,10 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings';
 import '../button';
 
 export default {
   title: 'Web Components/Button',
-  component: `${settings.tag_prefix}-button`,
+  component: `${PREFIX_TAG}-button`,
   parameters: {},
   argTypes: {
     type: {
@@ -12,7 +12,7 @@ export default {
       control: { type: 'select' },
     },
     theme: {
-      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      options: ['', `${PREFIX_TAG}-theme-dark-stone`, `${PREFIX_TAG}-theme-cloud`],
       control: { type: 'select' },
     },
     href: {

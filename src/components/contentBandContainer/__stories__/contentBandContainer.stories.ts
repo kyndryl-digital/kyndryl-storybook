@@ -1,11 +1,11 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings';
 import '../contentBandContainer';
 import '../../contentCard/contentCard';
 
 export default {
   title: 'Web Components/Content Band Container',
-  component: `${settings.tag_prefix}-content-band-container`,
+  component: `${PREFIX_TAG}-content-band-container`,
   argTypes: {
     title: {
       control: { type: 'text' },
@@ -43,7 +43,7 @@ export default {
       control: { type: 'select' },
     },
     theme: {
-      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      options: ['', `${PREFIX_TAG}-theme-dark-stone`, `${PREFIX_TAG}-theme-cloud`],
       control: { type: 'select' },
     },
   },

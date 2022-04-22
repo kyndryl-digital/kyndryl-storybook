@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings';
 
 export default {
   title: 'Styles/Icons',
@@ -8,61 +8,61 @@ export default {
 export const Icons = args => {
   return html`
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-arrow-left"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-arrow-left"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-arrow-right"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-arrow-right"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-arrow-up"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-arrow-up"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-down"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-down"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-left"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-left"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-right"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-right"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-up"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-up"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-wide-down"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-wide-down"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-wide-left"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-wide-left"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-wide-right"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-wide-right"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-chevron-wide-up"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-chevron-wide-up"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-close"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-close"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-download"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-download"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-hamburger"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-hamburger"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-linkedin"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-linkedin"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-pdf"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-pdf"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-play"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-play"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-pop-out"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-pop-out"
     ></span>
     <span
-      class="${settings.class_prefix}-icon ${settings.class_prefix}-icon-twitter"
+      class="${PREFIX_CLASS}-icon ${PREFIX_CLASS}-icon-twitter"
     ></span>
   `;
 };

@@ -1,4 +1,4 @@
-import { settings } from '../settings';
+import { APP_DOMAIN } from '../settings';
 
 const url = require('url');
 
@@ -13,7 +13,7 @@ const url = require('url');
  */
 export const formatUrl = (path, options = {}) => {
   const urlObject = {
-    host: settings.domain,
+    host: APP_DOMAIN,
     pathname: path || null,
     ...options,
   };

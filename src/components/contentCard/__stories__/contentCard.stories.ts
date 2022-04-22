@@ -1,10 +1,10 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings';
 import '../contentCard';
 
 export default {
   title: 'Web Components/Content Card',
-  component: `${settings.tag_prefix}-content-card`,
+  component: `${PREFIX_TAG}-content-card`,
   argTypes: {
     youtubeId: {
       control: { type: 'text' },
@@ -47,7 +47,7 @@ export default {
       },
     },
     theme: {
-      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      options: ['', `${PREFIX_TAG}-theme-dark-stone`, `${PREFIX_TAG}-theme-cloud`],
       control: { type: 'select' },
     },
   },

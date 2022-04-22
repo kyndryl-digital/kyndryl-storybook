@@ -1,10 +1,10 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings';
 import '../accordion';
 
 export default {
   title: 'Web Components/Accordion',
-  component: `${settings.tag_prefix}-accordion`,
+  component: `${PREFIX_TAG}-accordion`,
 };
 
 const Template = args => {
