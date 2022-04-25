@@ -1,5 +1,9 @@
-// Update CSS variables when adding new icons
-// src/styles/variables/_icons.scss
+// Update all icon variables when modifying these
+//  - src/styles/variables/_icons.scss
+//  - src/styles/variables/_icons-lit.scss
+//  - src/global/settings/iconIds.ts
+
+// JS variables used to create icon classes in web components
 export const ICON_ID_ARROW_DOWN = 'arrow-down';
 export const ICON_ID_ARROW_LEFT = 'arrow-left';
 export const ICON_ID_ARROW_RIGHT = 'arrow-right';
