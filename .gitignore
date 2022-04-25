@@ -5,3 +5,4 @@ storybook-static
 .vscode
 *.d.ts
 sassdoc
+build
