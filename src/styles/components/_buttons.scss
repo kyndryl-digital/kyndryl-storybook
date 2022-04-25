@@ -2,8 +2,6 @@
 @import '../utilities/index';
 @import '../themes/index';
 
-// @TODO: Add button icons.
-
 .#{$prefix-class}-btn {
   @include padding(top bottom, 1);
   @include padding(right left, 3);
@@ -23,14 +21,18 @@
   &:focus,
   &:active {
     text-decoration: none;
+    &--icon {
+      text-decoration: none;
+    }
   }
   &:hover {
     text-decoration: none;
   }
-  .#{$prefix-class}-icon {
+  &--icon {
     @include margin(left, 1);
+    display: inherit;
     font-size: var(--kd-font-size-button-icon);
-    font-weight: var(--kd-font-weight-button);
+    font-weight: var(--kd-font-weight-button-icon);
   }
 }
 
@@ -91,10 +93,6 @@
     border-color: var(--kd-color-button-link-hover-border);
     background-color: var(--kd-color-button-link-hover-bg);
     text-decoration: underline;
-    .#{$prefix-class}-icon,
-    .#{$prefix-class}-icon * {
-      text-decoration: none;
-    }
   }
   &:hover {
     color: var(--kd-color-button-link-active-text);

@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { PREFIX_CLASS } from '../global/settings';
+import { PREFIX_CLASS } from '../global/settings/settings';
 import '../components/modal/modal';
 import '../components/button/button';
 

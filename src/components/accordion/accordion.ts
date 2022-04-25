@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { kdAccordionItem } from './accordionItem';
 
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * kd-accordion web component

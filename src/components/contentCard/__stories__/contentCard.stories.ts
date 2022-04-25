@@ -1,5 +1,6 @@
 import { html } from 'lit';
-import { PREFIX_TAG } from '../../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { ICON_ID_ARROW_RIGHT, ICON_ID_DOWNLOAD, ICON_ID_POP_OUT } from '../../../global/settings/iconIds';
 import '../contentCard';
 
 export default {
@@ -35,9 +36,9 @@ export default {
     ctaIcon: {
       options: [
         'none',
-        'arrow-right',
-        'download',
-        'pop-out',
+        ICON_ID_ARROW_RIGHT,
+        ICON_ID_DOWNLOAD,
+        ICON_ID_POP_OUT,
       ],
       control: {
         type: 'select',
@@ -47,7 +48,7 @@ export default {
       },
     },
     theme: {
-      options: ['', `${PREFIX_TAG}-theme-dark-stone`, `${PREFIX_TAG}-theme-cloud`],
+      options: ['', `${PREFIX_CLASS}-theme-dark-stone`, `${PREFIX_CLASS}-theme-cloud`],
       control: { type: 'select' },
     },
   },
@@ -79,5 +80,5 @@ contentCard.args = {
   titleSize: 'default',
   ctaLink: '#',
   ctaLabel: 'CTA Label',
-  ctaIcon: 'arrow-right',
+  ctaIcon: ICON_ID_ARROW_RIGHT,
 };

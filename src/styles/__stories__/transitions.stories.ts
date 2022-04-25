@@ -1,6 +1,6 @@
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { PREFIX_CLASS } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings/settings';
 
 export default {
   title: 'Styles/Transitions',

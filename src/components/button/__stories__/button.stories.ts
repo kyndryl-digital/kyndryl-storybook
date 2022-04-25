@@ -1,6 +1,10 @@
 import { html } from 'lit';
-import { PREFIX_TAG } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
+import * as ICON_IDS from '../../../global/settings/iconIds';
+import { createOptionsArray } from '../../../global/mixins/global';
 import '../button';
+
+const iconOptions = createOptionsArray(ICON_IDS);
 
 export default {
   title: 'Web Components/Button',
@@ -32,26 +36,7 @@ export default {
     icon: {
       options: [
         'none',
-        'arrow-down',
-        'arrow-left',
-        'arrow-right',
-        'arrow-up',
-        'chevron-down',
-        'chevron-left',
-        'chevron-right',
-        'chevron-up',
-        'chevron-wide-down',
-        'chevron-wide-left',
-        'chevron-wide-right',
-        'chevron-wide-up',
-        'close',
-        'download',
-        'hamburger',
-        'linkedin',
-        'pdf',
-        'play',
-        'pop-out',
-        'twitter',
+        ...iconOptions,
       ],
       control: {
         type: 'select',
@@ -72,7 +57,7 @@ const Template = args => {
         href=${args.href}
         target=${args.target}
         theme=${args.theme}
-    >${args.label}</-button>
+    >${args.label}</kd-button>
   `;
 };
 

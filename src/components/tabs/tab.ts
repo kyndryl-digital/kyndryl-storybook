@@ -1,7 +1,7 @@
 import { html, LitElement } from 'lit';
 import { state, property, customElement } from 'lit/decorators.js';
 
-import { PREFIX_TAG } from '../../global/settings';
+import { PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * Example web component

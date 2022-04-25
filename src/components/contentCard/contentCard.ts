@@ -1,6 +1,6 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import '../button/button';
 import stylesheet from './contentCard.scss';
 

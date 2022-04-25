@@ -1,6 +1,6 @@
 import { html, LitElement } from 'lit';
 import { state, property, customElement} from 'lit/decorators.js';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import stylesheet from './accordionItem.scss';
 
 /**

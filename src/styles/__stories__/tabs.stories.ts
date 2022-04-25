@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import { PREFIX_CLASS } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings/settings';
 
 export default {
   title: 'Styles/Tabs',

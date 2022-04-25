@@ -4,7 +4,7 @@ import { kdTab } from './tab';
 
 import stylesheet from './tabs.scss';
 
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * Example web component

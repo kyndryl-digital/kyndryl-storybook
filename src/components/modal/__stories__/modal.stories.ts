@@ -1,6 +1,6 @@
 import { html } from 'lit';
 
-import { PREFIX_TAG } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import '../modal';
 import '../../button/button';
 

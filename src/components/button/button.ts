@@ -1,10 +1,10 @@
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
-
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
+import '../icon/icon';
 import stylesheet from './button.scss';
 
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -33,10 +33,6 @@ export class Button extends LitElement {
       [`${PREFIX_CLASS}-btn-sm`]: this.size === 'small',
       [this.theme]: this.theme?.length,
     });
-    const icon_classes = classMap({
-      [`${PREFIX_CLASS}-icon`]: this.icon,
-      [`${PREFIX_CLASS}-icon-` + this.icon]: this.icon,
-    });
     if (!this.icon) {
       return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
@@ -44,7 +40,9 @@ export class Button extends LitElement {
     } else {
       return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
-        <span id="icon" class=${icon_classes}></span>
+        <span class="${PREFIX_CLASS}-btn--icon">
+          <kd-icon icon=${this.icon}></kd-icon>
+        </span>
       </a>`;
     }
   }
