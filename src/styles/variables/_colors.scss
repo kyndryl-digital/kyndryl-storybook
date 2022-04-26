@@ -28,7 +28,7 @@
   // Base elements
   --kd-color-background: var(--kd-color-token-base);
 
-  --kd-color-text-01: var(--kd-color-token-inverse);
+  --kd-color-text: var(--kd-color-token-inverse);
 
   --kd-color-h1: var(--kd-color-token-inverse);
   --kd-color-h2: var(--kd-color-token-inverse);
@@ -37,9 +37,9 @@
   --kd-color-h5: var(--kd-color-token-inverse);
   --kd-color-h6: var(--kd-color-token-inverse);
 
-  --kd-color-link-01: var(--kd-color-token-inverse);
-  --kd-color-link-01-hover: var(--kd-color-theme-primary-interactive);
-  --kd-color-link-01-active: var(--kd-color-theme-primary-interactive);
+  --kd-color-link: var(--kd-color-token-inverse);
+  --kd-color-link-hover: var(--kd-color-theme-primary-interactive);
+  --kd-color-link-active: var(--kd-color-theme-primary-interactive);
 
   // Component specific
   --kd-color-button-primary-text: var(--kd-color-token-inverse);

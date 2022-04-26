@@ -1,7 +1,9 @@
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
 
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_CLASS_ICON } from '../../global/settings/settings';
+import { ICON_ID_CLOSE } from '../../global/settings/iconIds';
+import '../../components/icon/icon';
 
 export default {
   title: 'Styles/Modal',
@@ -21,30 +23,28 @@ export default {
 
 export const Modal = args => {
   const classes = classMap({
-    [`${settings.class_prefix}-modal`]: args.size === 'default' || !args.size,
-    [`${settings.class_prefix}-modal-lg`]: args.size === 'large',
-    [`${settings.class_prefix}-modal-sm`]: args.size === 'small',
+    [`${PREFIX_CLASS}-modal`]: args.size === 'default' || !args.size,
+    [`${PREFIX_CLASS}-modal-lg`]: args.size === 'large',
+    [`${PREFIX_CLASS}-modal-sm`]: args.size === 'small',
     [`visible`]: args.visible === true,
     [`hidden`]: args.visible === false,
   });
   return html`<div
-    class="${settings.class_prefix}-modal-backdrop ${args.visible
+    class="${PREFIX_CLASS}-modal-backdrop ${args.visible
       ? 'visible'
       : 'hidden'}"
   >
     <div class=${classes}>
-      <div class="${settings.class_prefix}-modal-controls">
+      <div class="${PREFIX_CLASS}-modal-controls">
         <button
-          class="${settings.class_prefix}-modal-control"
+          class="${PREFIX_CLASS}-modal-control"
           title="Close window"
         >
-          <span class="${settings.class_prefix}-icon-close"></span>
+          <kd-icon icon="${PREFIX_CLASS_ICON}-${ICON_ID_CLOSE}"></kd-icon>
         </button>
       </div>
-      <div class="${settings.class_prefix}-modal-content">
-        <div
-          class="${settings.class_prefix}-pt4 ${settings.class_prefix}-pr4 ${settings.class_prefix}-pl4 ${settings.class_prefix}-pb6"
-        >
+      <div class="${PREFIX_CLASS}-modal-content">
+        <div class="${PREFIX_CLASS}-pt4 ${PREFIX_CLASS}-pr4 ${PREFIX_CLASS}-pl4 ${PREFIX_CLASS}-pb6">
           ${args.content}
         </div>
       </div>

@@ -1,10 +1,10 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import '../button/button';
 import stylesheet from './contentCard.scss';
 
-@customElement(`${settings.tag_prefix}-content-card`)
+@customElement(`${PREFIX_TAG}-content-card`)
 export class kdContentCard extends LitElement {
   static styles = [stylesheet];
 
@@ -22,7 +22,7 @@ export class kdContentCard extends LitElement {
   protected _renderCta(): TemplateResult | string | void {
     if (this.ctaLink) {
       return html`
-        <div class="${settings.class_prefix}-content-card__action-container">
+        <div class="${PREFIX_CLASS}-content-card__action-container">
           <kd-button
             icon=${this.ctaIcon}
             href=${this.ctaLink}
@@ -38,7 +38,7 @@ export class kdContentCard extends LitElement {
   protected _renderMedia(): TemplateResult | string | void {
     if (this.youtubeId) {
       return html`
-        <div class="${settings.class_prefix}-content-card__youtube">
+        <div class="${PREFIX_CLASS}-content-card__youtube">
           <iframe 
             src="https://www.youtube.com/embed/${this.youtubeId}?enablejsapi=1" 
             title="YouTube video player"
@@ -51,7 +51,7 @@ export class kdContentCard extends LitElement {
 
     if (this.image) {
       return html`
-        <div class="${settings.class_prefix}-content-card__image">
+        <div class="${PREFIX_CLASS}-content-card__image">
           <img src=${this.image} alt=${this.imageAltText} />
         </div>
       `;
@@ -62,15 +62,15 @@ export class kdContentCard extends LitElement {
 
   render() {
     return html`
-      <div class="${settings.class_prefix}-content-card ${this.theme}">
-        <div class="${settings.class_prefix}-content-card__content">
-          <div class="${settings.class_prefix}-content-card__content-inner">
+      <div class="${PREFIX_CLASS}-content-card ${this.theme}">
+        <div class="${PREFIX_CLASS}-content-card__content">
+          <div class="${PREFIX_CLASS}-content-card__content-inner">
             ${this._renderMedia()}
-            <h2 class="${settings.class_prefix}-content-card__title ${settings.class_prefix}-h2 ${this.titleSize}">
+            <h2 class="${PREFIX_CLASS}-content-card__title ${PREFIX_CLASS}-h2 ${this.titleSize}">
                <span>${this.title}</span>
             </h2>
-            <span class="${settings.class_prefix}-content-card__hr"></span>
-            <div class="${settings.class_prefix}-content-card__description">
+            <span class="${PREFIX_CLASS}-content-card__hr"></span>
+            <div class="${PREFIX_CLASS}-content-card__description">
               <slot></slot>
             </div>
             ${this._renderCta()}

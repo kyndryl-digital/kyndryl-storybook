@@ -1,12 +1,12 @@
 import { html, LitElement } from 'lit';
 import { state, property, customElement } from 'lit/decorators.js';
 
-import { settings } from '../../global/settings';
+import { PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * Example web component
  */
-@customElement(`${settings.tag_prefix}-tab`)
+@customElement(`${PREFIX_TAG}-tab`)
 export class kdTab extends LitElement {
   @property({ type: String }) label;
   @property({ type: Boolean }) selected = false;

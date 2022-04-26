@@ -1,12 +1,12 @@
 import { html } from 'lit';
 
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import '../modal';
 import '../../button/button';
 
 export default {
   title: 'Web Components/Modal',
-  component: `${settings.tag_prefix}-modal`,
+  component: `${PREFIX_TAG}-modal`,
   argTypes: {
     size: {
       options: ['default', 'large', 'small'],

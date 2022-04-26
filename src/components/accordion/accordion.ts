@@ -2,13 +2,13 @@ import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { kdAccordionItem } from './accordionItem';
 
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * kd-accordion web component
  */
 
-@customElement(`${settings.tag_prefix}-accordion`)
+@customElement(`${PREFIX_TAG}-accordion`)
 export class kdAccordion extends LitElement {
   private _childItems: kdAccordionItem[] = [];
 
@@ -34,7 +34,7 @@ export class kdAccordion extends LitElement {
   render() {
 
     return html`
-      <div class="${settings.class_prefix}-accordion">
+      <div class="${PREFIX_CLASS}-accordion">
         <slot @slotchange="${this._handleSlotChange}"></slot>
       </div>
     `;

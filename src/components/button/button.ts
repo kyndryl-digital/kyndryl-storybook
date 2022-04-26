@@ -1,10 +1,10 @@
 import { html, LitElement } from 'lit';
 import { property, customElement } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
-
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
+import '../icon/icon';
 import stylesheet from './button.scss';
 
-import { settings } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -12,7 +12,7 @@ import { settings } from '../../global/settings';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement(`${settings.tag_prefix}-button`)
+@customElement(`${PREFIX_TAG}-button`)
 export class Button extends LitElement {
   static styles = [stylesheet];
 
@@ -25,17 +25,13 @@ export class Button extends LitElement {
 
   render() {
     const classes = classMap({
-      [`${settings.class_prefix}-btn-primary`]:
+      [`${PREFIX_CLASS}-btn-primary`]:
         this.type === 'primary' || !this.type,
-      [`${settings.class_prefix}-btn-secondary`]: this.type === 'secondary',
-      [`${settings.class_prefix}-btn-text`]: this.type === 'text',
-      [`${settings.class_prefix}-btn-lg`]: this.size === 'large',
-      [`${settings.class_prefix}-btn-sm`]: this.size === 'small',
+      [`${PREFIX_CLASS}-btn-secondary`]: this.type === 'secondary',
+      [`${PREFIX_CLASS}-btn-text`]: this.type === 'text',
+      [`${PREFIX_CLASS}-btn-lg`]: this.size === 'large',
+      [`${PREFIX_CLASS}-btn-sm`]: this.size === 'small',
       [this.theme]: this.theme?.length,
-    });
-    const icon_classes = classMap({
-      [`${settings.class_prefix}-icon`]: this.icon,
-      [`${settings.class_prefix}-icon-` + this.icon]: this.icon,
     });
     if (!this.icon) {
       return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
@@ -44,7 +40,9 @@ export class Button extends LitElement {
     } else {
       return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
-        <span id="icon" class=${icon_classes}></span>
+        <span class="${PREFIX_CLASS}-btn--icon">
+          <kd-icon icon=${this.icon}></kd-icon>
+        </span>
       </a>`;
     }
   }

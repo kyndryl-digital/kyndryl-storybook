@@ -1,10 +1,11 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { ICON_ID_ARROW_RIGHT, ICON_ID_DOWNLOAD, ICON_ID_POP_OUT } from '../../../global/settings/iconIds';
 import '../contentCard';
 
 export default {
   title: 'Web Components/Content Card',
-  component: `${settings.tag_prefix}-content-card`,
+  component: `${PREFIX_TAG}-content-card`,
   argTypes: {
     youtubeId: {
       control: { type: 'text' },
@@ -35,9 +36,9 @@ export default {
     ctaIcon: {
       options: [
         'none',
-        'arrow-right',
-        'download',
-        'pop-out',
+        ICON_ID_ARROW_RIGHT,
+        ICON_ID_DOWNLOAD,
+        ICON_ID_POP_OUT,
       ],
       control: {
         type: 'select',
@@ -47,7 +48,7 @@ export default {
       },
     },
     theme: {
-      options: ['', `${settings.tag_prefix}-theme-dark-stone`, `${settings.tag_prefix}-theme-cloud`],
+      options: ['', `${PREFIX_CLASS}-theme-dark-stone`, `${PREFIX_CLASS}-theme-cloud`],
       control: { type: 'select' },
     },
   },
@@ -79,5 +80,5 @@ contentCard.args = {
   titleSize: 'default',
   ctaLink: '#',
   ctaLabel: 'CTA Label',
-  ctaIcon: 'arrow-right',
+  ctaIcon: ICON_ID_ARROW_RIGHT,
 };

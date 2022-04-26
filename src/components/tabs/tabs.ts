@@ -4,12 +4,12 @@ import { kdTab } from './tab';
 
 import stylesheet from './tabs.scss';
 
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * Example web component
  */
-@customElement(`${settings.tag_prefix}-tabs`)
+@customElement(`${PREFIX_TAG}-tabs`)
 export class kdTabs extends LitElement {
   static styles = [stylesheet];
 
@@ -84,7 +84,7 @@ export class kdTabs extends LitElement {
 
   render() {
     return html`
-      <div class="${settings.class_prefix}-tabs">
+      <div class="${PREFIX_CLASS}-tabs">
         ${this._renderTabs()}
         <slot @slotchange="${this._handleSlotChange}"></slot>
       </div>

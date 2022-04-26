@@ -2,14 +2,14 @@
 @import '../../styles/variables';
 @import '../../styles/components/tabs';
 
-:host(#{$tag-prefix}-tabs) {
-  .#{$class-prefix}-tabs {
+:host(#{$prefix-tag}-tabs) {
+  .#{$prefix-class}-tabs {
     [role='tablist'] {
-      @extend .#{$class-prefix}-tab-list;
+      @extend .#{$prefix-class}-tab-list;
       [role='tab'] {
-        @extend .#{$class-prefix}-tab;
+        @extend .#{$prefix-class}-tab;
         &[aria-selected='true'] {
-          @extend .#{$class-prefix}-selected;
+          @extend .#{$prefix-class}-selected;
         }
       }
     }

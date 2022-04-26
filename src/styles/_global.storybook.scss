@@ -1,10 +1,10 @@
-@import './variables/index';
+@import './variables/config';
 @import './global.build';
 
 body {
-  @extend .#{$class-prefix}-text;
+  @extend .#{$prefix-class}-text;
 }
 
 a {
-  @extend .#{$class-prefix}-link;
+  @extend .#{$prefix-class}-link;
 }

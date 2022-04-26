@@ -1,12 +1,11 @@
 @import '../variables/index';
 
-.#{$class-prefix}-icon,
-[class*=' #{$class-prefix}-icon-'],
-[class^='#{$class-prefix}-icon-'] {
-  font-family: $icon-font-family !important;
+.#{$prefix-class-icon},
+[class*='#{$prefix-class-icon}'] {
+  font-family: var(--kd-font-family-icon);
   speak: never;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--kd-font-weight-normal);
   font-variant: normal;
   text-transform: none;
   line-height: 1;
@@ -19,7 +18,7 @@
 /// @output Creates classes for the individual icons.
 @mixin create-icon-classes {
   @each $name, $value in $icons {
-    .#{$class-prefix}-icon-#{$name}:before {
+    .#{$prefix-class-icon}-#{$name}:before {
       content: '#{$value}';
     }
   }

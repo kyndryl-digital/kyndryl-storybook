@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings/settings';
 
 export default {
   title: 'Styles/Accordion',
@@ -7,13 +7,13 @@ export default {
 
 export const Accordion = args => {
   return html`
-    <div class="${settings.class_prefix}-accordion">
-      <div class="${settings.class_prefix}-accordion-item">
-        <button id="${settings.class_prefix}-accordion-item-header-0" tabindex="0" class="${settings.class_prefix}-accordion-item-header" aria-expanded="false" aria-controls="${settings.class_prefix}-accordion-item-detail-0">
+    <div class="${PREFIX_CLASS}-accordion">
+      <div class="${PREFIX_CLASS}-accordion-item">
+        <button id="${PREFIX_CLASS}-accordion-item-header-0" tabindex="0" class="${PREFIX_CLASS}-accordion-item-header" aria-expanded="false" aria-controls="${PREFIX_CLASS}-accordion-item-detail-0">
           Test1
         </button>
-        <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
-          <div class="${settings.class_prefix}-accordion-item-detail">
+        <div class="${PREFIX_CLASS}-accordion-item-detail-wrapper">
+          <div class="${PREFIX_CLASS}-accordion-item-detail">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -21,12 +21,12 @@ export const Accordion = args => {
           </div>
         </div>
       </div>
-      <div class="${settings.class_prefix}-accordion-item">
-        <button id="${settings.class_prefix}-accordion-item-header-1" tabindex="1" class="${settings.class_prefix}-accordion-item-header opened" aria-expanded="true" aria-controls="${settings.class_prefix}-accordion-item-detail-1">
+      <div class="${PREFIX_CLASS}-accordion-item">
+        <button id="${PREFIX_CLASS}-accordion-item-header-1" tabindex="1" class="${PREFIX_CLASS}-accordion-item-header opened" aria-expanded="true" aria-controls="${PREFIX_CLASS}-accordion-item-detail-1">
           Test2
         </button>
-        <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
-          <div class="${settings.class_prefix}-accordion-item-detail">
+        <div class="${PREFIX_CLASS}-accordion-item-detail-wrapper">
+          <div class="${PREFIX_CLASS}-accordion-item-detail">
             <p>
               This item starts opened to demonstrate the opened attribute usage
             </p>
@@ -34,12 +34,12 @@ export const Accordion = args => {
           </div>
         </div>
       </div>
-      <div class="${settings.class_prefix}-accordion-item">
-        <button id="${settings.class_prefix}-accordion-item-header-2" tabindex="2" class="${settings.class_prefix}-accordion-item-header" aria-expanded="false" aria-controls="${settings.class_prefix}-accordion-item-detail-2">
+      <div class="${PREFIX_CLASS}-accordion-item">
+        <button id="${PREFIX_CLASS}-accordion-item-header-2" tabindex="2" class="${PREFIX_CLASS}-accordion-item-header" aria-expanded="false" aria-controls="${PREFIX_CLASS}-accordion-item-detail-2">
           Test3
         </button>
-        <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
-          <div class="${settings.class_prefix}-accordion-item-detail">
+        <div class="${PREFIX_CLASS}-accordion-item-detail-wrapper">
+          <div class="${PREFIX_CLASS}-accordion-item-detail">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.

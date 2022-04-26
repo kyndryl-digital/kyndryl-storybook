@@ -1,6 +1,6 @@
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings/settings';
 
 export default {
   title: 'Styles/Transitions',
@@ -25,9 +25,9 @@ export default {
 
 export const Transitions = args => {
   const classes = classMap({
-    [`${settings.class_prefix}-transition-default-grayscale`]:
+    [`${PREFIX_CLASS}-transition-default-grayscale`]:
       args.transition === 'gs2co',
-    [`${settings.class_prefix}-transition-hover-colorize`]:
+    [`${PREFIX_CLASS}-transition-hover-colorize`]:
       args.transition === 'gs2co',
   });
   if (args.type === 'svg') {

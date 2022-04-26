@@ -1,5 +1,5 @@
 import { html } from 'lit-element';
-import { settings } from '../../global/settings';
+import { PREFIX_CLASS } from '../../global/settings/settings';
 
 export default {
   title: 'Styles/Tabs',
@@ -7,14 +7,14 @@ export default {
 
 export const Tabs = args => {
   return html`
-    <div class="${settings.class_prefix}-tab-list">
+    <div class="${PREFIX_CLASS}-tab-list">
       <button
-        class="${settings.class_prefix}-tab ${settings.class_prefix}-selected"
+        class="${PREFIX_CLASS}-tab ${PREFIX_CLASS}-selected"
       >
         Lorem
       </button>
-      <button class="${settings.class_prefix}-tab">Ipsum</button>
-      <button class="${settings.class_prefix}-tab">Dolor</button>
+      <button class="${PREFIX_CLASS}-tab">Ipsum</button>
+      <button class="${PREFIX_CLASS}-tab">Dolor</button>
     </div>
   `;
 };

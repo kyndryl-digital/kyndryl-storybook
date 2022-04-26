@@ -4,7 +4,7 @@
 @import './buttons';
 @import './icons';
 
-.#{$class-prefix}-modal-backdrop {
+.#{$prefix-class}-modal-backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +12,7 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: 9998;
+  z-index: var(--kd-z-index-modal-backdrop);
   overflow: scroll;
   background: var(--kd-color-modal-backdrop);
   -webkit-backdrop-filter: grayscale(1);
@@ -30,7 +30,7 @@
   }
 }
 
-.#{$class-prefix}-modal {
+.#{$prefix-class}-modal {
   background: var(--kd-color-modal-bg);
   color: var(--kd-color-modal-text);
   overflow: auto;
@@ -38,7 +38,7 @@
   transition: all 0.4s, margin-top 0s, margin-bottom 0s;
   transition-timing-function: ease-out;
   margin: auto;
-  z-index: 9999;
+  z-index: var(--kd-z-index-modal-window);
   &.hidden {
     visibility: hidden;
     opacity: 0;
@@ -69,14 +69,14 @@
     margin-top: 5vh;
     margin-bottom: 5vh;
   }
-  & > .#{$class-prefix}-modal-controls {
+  & > .#{$prefix-class}-modal-controls {
     position: absolute;
     top: 0px;
     right: 0px;
     padding-top: #{px2rem(16)};
     padding-right: #{px2rem(16)};
-    font-size:  #{px2rem(16)};
-    .#{$class-prefix}-modal-control {
+    font-size: var(--kd-font-size-03);
+    .#{$prefix-class}-modal-control {
       padding: 0;
       line-height: #{px2rem(48)};
       width: #{px2rem(48)};
@@ -88,16 +88,16 @@
   }
 }
 
-.#{$class-prefix}-modal-lg {
-  @extend .#{$class-prefix}-modal;
+.#{$prefix-class}-modal-lg {
+  @extend .#{$prefix-class}-modal;
   @include device(desktop) {
     width: #{px2rem(1000)};
     min-height: #{px2rem(500)};
   }
 }
 
-.#{$class-prefix}-modal-sm {
-  @extend .#{$class-prefix}-modal;
+.#{$prefix-class}-modal-sm {
+  @extend .#{$prefix-class}-modal;
   @include device(desktop) {
     width: #{px2rem(600)};
     min-height: #{px2rem(300)};

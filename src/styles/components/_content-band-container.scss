@@ -5,9 +5,9 @@
 @import '../base/typography';
 @import '../themes/index';
 
-.#{$class-prefix}-content-band-container {
+.#{$prefix-class}-content-band-container {
   background: var(--kd-color-background);
-  color: var(--kd-color-text-01);
+  color: var(--kd-color-text);
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -45,11 +45,8 @@
 
   &__description {
     display: block;
+    font-size: var(--kd-font-size-04);
     padding-top: 12px;
-
-    p {
-      font-size: 18px;
-    }
   }
 
   &__action-container {
