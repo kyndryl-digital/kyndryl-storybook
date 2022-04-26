@@ -1,0 +1,95 @@
+@import '../variables/config';
+
+// Positioning
+// -----------------------------------------------------
+@mixin position-absolute {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.#{$prefix-class}-position-absolute {
+  @include position-absolute;
+}
+
+@mixin position-fixed {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.#{$prefix-class}-position-fixed {
+  @include position-fixed;
+}
+
+@mixin object-fit {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+}
+
+.#{$prefix-class}-object-fit {
+  @include object-fit;
+}
+
+// Aspect Ratios
+// -----------------------------------------------------
+.#{$prefix-class}-aspect-ratio {
+  aspect-ratio: 16/9;
+  display: block;
+  max-height: 100%;
+  max-width: 100%;
+  position: relative;
+
+  @supports not (aspect-ratio: 16/9) {
+    padding-top: 56.25%;
+  }
+
+  // &--16x9 is default layout
+
+  &--2x1 {
+    aspect-ratio: 2/1;
+
+    @supports not (aspect-ratio: 2/1) {
+      padding-top: 50%;
+    }
+  }
+
+  &--1x2 {
+    aspect-ratio: 1/2;
+
+    @supports not (aspect-ratio: 1/2) {
+      padding-top: 200%;
+    }
+  }
+
+  &--4x3 {
+    aspect-ratio: 4/3;
+
+    @supports not (aspect-ratio: 4/3) {
+      padding-top: 75%;
+    }
+  }
+
+  &--3x4 {
+    aspect-ratio: 3/4;
+
+    @supports not (aspect-ratio: 3/4) {
+      padding-top: 133.33%;
+    }
+  }
+
+  &--1x1 {
+    aspect-ratio: 1/1;
+
+    @supports not (aspect-ratio: 1/1) {
+      padding-top: 100%;
+    }
+  }
+}
