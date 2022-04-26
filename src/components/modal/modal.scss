@@ -1,1 +1,7 @@
 @import '../../styles/components/modal';
+
+:host(#{$prefix-tag}-modal) {
+  ::slotted([slot='trigger']) {
+    cursor: pointer;
+  }
+}
