@@ -24,7 +24,7 @@ Clone the web component library and install.
 ```
 git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
 cd kyndryl-web-components
-npm install --legacy-peer-deps
+npm install
 ```
 
 ### Run storybook
@@ -38,19 +38,20 @@ npm run storybook
 Implementation of the web components is as simple as including the compiled package in the markup of the page and freely utilizing any of the custom web component tags within the body of the page.
 
 ```
+PUBLIC_URL=https://path_to_files/ npm run build
+```
+
+```
 <html>
   <head>
 
-    <script src="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.bundle.js"></script>
-    <link href="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.css" rel="stylesheet">
+    <script src="kyndryl-web-components.js"></script>
+    <link href="kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>
   
-    <kyndryl-wrapper>
-      YOUR CONTENT HERE
-      <span slot="trustarc" id="teconsent"></span>
-    </kyndryl-wrapper>
+    <kd-example>
     
   </body>
 </html>
@@ -69,15 +70,3 @@ New components may be contributed via pull request to the main component reposit
 ## Primary maintainer(s)
 
 - Ian Whitcomb(ian.whitcomb@kyndryl.com)
-- Dennis Dolliver(dennis.dolliver@kyndryl.com)
-
-## Build Sass Document
-```
-npm run build:sassdoc
-```
-
-## Open Sass Document
-
-```
-npm run sassdoc
-```
