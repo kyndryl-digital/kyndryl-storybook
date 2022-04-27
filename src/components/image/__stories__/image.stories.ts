@@ -1,6 +1,11 @@
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
+import { createOptionsArray } from '../../../global/mixins/global';
+import { IMAGE_ASPECT_RATIOS, IMAGE_FIT } from '../defs';
 import '../image';
+
+const optionsAspectRatio = createOptionsArray(IMAGE_ASPECT_RATIOS);
+const optionsFit = createOptionsArray(IMAGE_FIT);
 
 export default {
   title: 'Web Components/Image',
@@ -13,11 +18,11 @@ export default {
       control: { type: 'text' },
     },
     aspectRatio: {
-      options: ['16:9', '2:1', '1:2', '4:3', '3:4', '1:1'],
+      options: [...optionsAspectRatio],
       control: { type: 'select' },
     },
     fit: {
-      options: ['cover', 'contain'],
+      options: [...optionsFit],
       control: { type: 'select' },
     }
   }
@@ -49,6 +54,6 @@ export const Image = Template.bind({});
 Image.args = {
   image: 'https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&wid=1200&ts=1650983065999&dpr=off',
   imageAltText: 'image alt text',
-  aspectRatio: '16:9',
-  fit: 'cover',
+  aspectRatio: IMAGE_ASPECT_RATIOS.RATIO_16_9,
+  fit: IMAGE_FIT.COVER,
 };
