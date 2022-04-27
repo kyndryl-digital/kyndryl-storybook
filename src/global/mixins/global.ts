@@ -23,9 +23,9 @@ export const formatUrl = (path, options = {}) => {
 
 /**
  * Convert an object to an array of only its values.
- * Used when importing * as OPTIONS in component stories for populating argType dropdowns.
+ * Used when importing enums in component stories for populating argType dropdowns.
  * @param {*} options
- *  imported variables object
+ *  imported enums object
  */
 export function createOptionsArray(options = {}) {
   const optionsArray = [];

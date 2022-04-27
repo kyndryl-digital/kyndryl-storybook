@@ -1,10 +1,10 @@
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
-import * as ICON_IDS from '../../../global/settings/iconIds';
+import { ICON_IDS } from '../../../global/defs/iconIds';
 import { createOptionsArray } from '../../../global/mixins/global';
 import '../button';
 
-const iconOptions = createOptionsArray(ICON_IDS);
+const optionsIcon = createOptionsArray(ICON_IDS);
 
 export default {
   title: 'Web Components/Button',
@@ -36,7 +36,7 @@ export default {
     icon: {
       options: [
         'none',
-        ...iconOptions,
+        ...optionsIcon,
       ],
       control: {
         type: 'select',

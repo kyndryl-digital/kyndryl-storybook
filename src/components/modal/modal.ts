@@ -2,7 +2,7 @@ import { html, LitElement } from 'lit';
 import { state, property, customElement, eventOptions } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
-import { ICON_ID_CLOSE } from '../../global/settings/iconIds';
+import { ICON_IDS } from '../../global/defs/iconIds';
 import '../icon/icon';
 import stylesheet from './modal.scss';
 
@@ -116,7 +116,7 @@ export class kdModal extends LitElement {
         <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${PREFIX_CLASS}-modal-content" class=${classes}>
           <div class="${PREFIX_CLASS}-modal-controls">
             <button @click="${e => this._handleClose(e)}" class="${PREFIX_CLASS}-modal-control" title="Close window">
-              <kd-icon icon="${ICON_ID_CLOSE}"></kd-icon>
+              <kd-icon icon="${ICON_IDS.CLOSE}"></kd-icon>
             </button>
           </div>
           <div class="${PREFIX_CLASS}-modal-content">
