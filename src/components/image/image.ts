@@ -11,26 +11,41 @@ export class Image extends LitElement {
   @property({ type: String }) image;
   @property({ type: String }) imageAltText = '';
   @property({ type: String }) aspectRatio = '16:9';
+  @property({ type: String }) fit = 'cover';
 
   render() {
-    const containerClasses = classMap({
-      [`${PREFIX_CLASS}-aspect-ratio`]: true,
-      [`${PREFIX_CLASS}-aspect-ratio--16x9`]: this.aspectRatio === '16:9' || !this.aspectRatio,
-      [`${PREFIX_CLASS}-aspect-ratio--2x1`]: this.aspectRatio === '2:1',
-      [`${PREFIX_CLASS}-aspect-ratio--1x2`]: this.aspectRatio === '1:2',
-      [`${PREFIX_CLASS}-aspect-ratio--4x3`]: this.aspectRatio === '4:3',
-      [`${PREFIX_CLASS}-aspect-ratio--3x4`]: this.aspectRatio === '3:4',
-      [`${PREFIX_CLASS}-aspect-ratio--1x1`]: this.aspectRatio === '1:1',
-    });
+    let classContainer;
+    switch (this.aspectRatio) {
+      case '2:1':
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-2x1`;
+        break;
+      case '1:2':
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-1x2`;
+        break;
+      case '4:3':
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-4x3`;
+        break;
+      case '3:4':
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-3x4`;
+        break;
+      case '1:1':
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-1x1`;
+        break;
+      case '16:9':
+      default:
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-16x9`;
+        break;
+    }
 
-    const imgClasses = classMap({
-      [`${PREFIX_CLASS}-object-fit`]: true,
+    const classesImage = classMap({
+      [`${PREFIX_CLASS}-object-fit-cover`]: this.fit === 'cover' || this.fit !== 'contain' || !this.fit,
+      [`${PREFIX_CLASS}-object-fit-contain`]: this.fit === 'contain',
       [`${PREFIX_CLASS}-position-absolute`]: true,
     });
 
     if (this.image) {
-      return html`<div class=${containerClasses}>
-        <img class=${imgClasses} src=${this.image} alt=${this.imageAltText} />
+      return html`<div class=${classContainer}>
+        <img class=${classesImage} src=${this.image} alt=${this.imageAltText} />
       </div>`;
     }
 

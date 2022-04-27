@@ -15,6 +15,10 @@ export default {
     aspectRatio: {
       options: ['16:9', '2:1', '1:2', '4:3', '3:4', '1:1'],
       control: { type: 'select' },
+    },
+    fit: {
+      options: ['cover', 'contain'],
+      control: { type: 'select' },
     }
   }
 };
@@ -31,7 +35,12 @@ const Template = args => {
       }
     </style>
     <div class="demo-only">
-      <kd-image image=${args.image} imageAltText=${args.imageAltText} aspectRatio=${args.aspectRatio}></kd-image>
+      <kd-image 
+        image=${args.image}
+        imageAltText=${args.imageAltText}
+        aspectRatio=${args.aspectRatio}
+        fit=${args.fit}
+      ></kd-image>
     </div>
   `;
 };
@@ -41,4 +50,5 @@ Image.args = {
   image: 'https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&wid=1200&ts=1650983065999&dpr=off',
   imageAltText: 'image alt text',
   aspectRatio: '16:9',
+  fit: 'cover',
 };

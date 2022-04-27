@@ -2,6 +2,7 @@ import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import '../button/button';
+import '../image/image';
 import stylesheet from './contentCard.scss';
 
 @customElement(`${PREFIX_TAG}-content-card`)
@@ -52,7 +53,7 @@ export class kdContentCard extends LitElement {
     if (this.image) {
       return html`
         <div class="${PREFIX_CLASS}-content-card__image">
-          <img src=${this.image} alt=${this.imageAltText} />
+          <kd-image image=${this.image} imageAltText=${this.imageAltText} aspectRatio="1:1" fit="contain" />
         </div>
       `;
     }

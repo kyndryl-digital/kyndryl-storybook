@@ -2,94 +2,98 @@
 
 // Positioning
 // -----------------------------------------------------
-@mixin position-absolute {
+@mixin position($pos: 'absolute') {
   bottom: 0;
   left: 0;
-  position: absolute;
+  position: $pos;
   right: 0;
   top: 0;
 }
 
 .#{$prefix-class}-position-absolute {
-  @include position-absolute;
-}
-
-@mixin position-fixed {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
+  @include position('absolute');
 }
 
 .#{$prefix-class}-position-fixed {
-  @include position-fixed;
+  @include position('fixed');
 }
 
-@mixin object-fit {
+// Object fit
+@mixin object-fit($fit: 'cover') {
   display: block;
   height: 100%;
-  object-fit: cover;
+  object-fit: $fit;
   object-position: 50% 50%;
   width: 100%;
 }
 
 .#{$prefix-class}-object-fit {
-  @include object-fit;
+  &-cover {
+    @include object-fit('cover');
+  }
+
+  &-contain {
+    @include object-fit('contain');
+  }
 }
 
 // Aspect Ratios
 // -----------------------------------------------------
-.#{$prefix-class}-aspect-ratio {
-  aspect-ratio: 16/9;
+$aspect-ratios-map: (
+  '16:9': ('16/9', '56.25%'),
+  '2:1': ('2/1', '50%'),
+  '1:2': ('1/2', '200%'),
+  '4:3': ('4/3', '75%'),
+  '3:4': ('3/4', '133.33%'),
+  '1:1': ('1/1', '100%'),
+);
+
+@mixin aspect-ratio($ratio: '16:9') {
+  $aspect-ratios: map-get($aspect-ratios-map, '16:9');
+  $aspect-ratio: nth($aspect-ratios, 1);
+  $padding-top: nth($aspect-ratios, 2);
+
+  @if map-has-key($aspect-ratios-map, $ratio) {
+    $aspect-ratios: map-get($aspect-ratios-map, $ratio);
+    $aspect-ratio: nth($aspect-ratios, 1);
+    $padding-top: nth($aspect-ratios, 2);
+  } @else {
+    @warn 'aspect-ratio(): "#{$ratio}" is not a supported aspect ratio. Fallback to 16:9.';
+  }
+
+  aspect-ratio: #{$aspect-ratio};
   display: block;
   max-height: 100%;
   max-width: 100%;
   position: relative;
 
-  @supports not (aspect-ratio: 16/9) {
-    padding-top: 56.25%;
+  @supports not (aspect-ratio: unquote($aspect-ratio)) {
+    padding-top: #{$padding-top};
+  }
+}
+
+.#{$prefix-class}-aspect-ratio {
+  &-16x9 {
+    @include aspect-ratio('16:9');
   }
 
-  // &--16x9 is default layout
-
-  &--2x1 {
-    aspect-ratio: 2/1;
-
-    @supports not (aspect-ratio: 2/1) {
-      padding-top: 50%;
-    }
+  &-2x1 {
+    @include aspect-ratio('2:1');
   }
 
-  &--1x2 {
-    aspect-ratio: 1/2;
-
-    @supports not (aspect-ratio: 1/2) {
-      padding-top: 200%;
-    }
+  &-1x2 {
+    @include aspect-ratio('1:2');
   }
 
-  &--4x3 {
-    aspect-ratio: 4/3;
-
-    @supports not (aspect-ratio: 4/3) {
-      padding-top: 75%;
-    }
+  &-4x3 {
+    @include aspect-ratio('4:3');
   }
 
-  &--3x4 {
-    aspect-ratio: 3/4;
-
-    @supports not (aspect-ratio: 3/4) {
-      padding-top: 133.33%;
-    }
+  &-3x4 {
+    @include aspect-ratio('3:4');
   }
 
-  &--1x1 {
-    aspect-ratio: 1/1;
-
-    @supports not (aspect-ratio: 1/1) {
-      padding-top: 100%;
-    }
+  &-1x1 {
+    @include aspect-ratio('1:1');
   }
 }
