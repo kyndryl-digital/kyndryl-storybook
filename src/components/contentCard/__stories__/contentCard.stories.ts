@@ -10,6 +10,9 @@ export default {
     youtubeId: {
       control: { type: 'text' },
     },
+    videoTitle: {
+      control: { type: 'text' },
+    },
     image: {
       control: { type: 'text' },
     },
@@ -58,6 +61,7 @@ const Template = args => {
   return html`
     <kd-content-card
       youtubeId=${args.youtubeId}
+      videoTitle=${args.videoTitle}
       image=${args.image}
       imageAltText=${args.imageAltText}
       title=${args.title}
@@ -76,6 +80,7 @@ const Template = args => {
 export const contentCard = Template.bind({});
 contentCard.args = {
   youtubeId: 'Um8XEj-1_fY',
+  videoTitle: 'Video Title',
   title: 'Content Card Title',
   titleSize: 'default',
   ctaLink: '#',
