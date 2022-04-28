@@ -72,12 +72,11 @@
   &__image,
   &__youtube {
     margin-bottom: 24px;
+  }
 
-    img {
-      display: block;
-      height: 54px;
-      width: 54px;
-    }
+  &__image {
+    height: 54px;
+    width: 54px;
   }
 
   &__description {

@@ -1,6 +1,6 @@
 import { html } from 'lit';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
-import { ICON_ID_ARROW_RIGHT, ICON_ID_DOWNLOAD, ICON_ID_POP_OUT } from '../../../global/settings/iconIds';
+import { ICON_IDS } from '../../../global/defs/iconIds';
 import '../contentBandContainer';
 import '../../contentCard/contentCard';
 
@@ -28,9 +28,9 @@ export default {
     titleCtaIcon: {
       options: [
         'none',
-        ICON_ID_ARROW_RIGHT,
-        ICON_ID_DOWNLOAD,
-        ICON_ID_POP_OUT,
+        ICON_IDS.ARROW_RIGHT,
+        ICON_IDS.DOWNLOAD,
+        ICON_IDS.POP_OUT,
       ],
       control: {
         type: 'select',
@@ -72,7 +72,7 @@ export const ContentCards = args => {
         titleSize="default"
         ctaLink="#"
         ctaLabel="CTA Label"
-        ctaIcon="${ICON_ID_ARROW_RIGHT}"
+        ctaIcon="${ICON_IDS.ARROW_RIGHT}"
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </kd-content-card>
@@ -82,7 +82,7 @@ export const ContentCards = args => {
         titleSize="default"
         ctaLink="#"
         ctaLabel="CTA Label"
-        ctaIcon="${ICON_ID_ARROW_RIGHT}"
+        ctaIcon="${ICON_IDS.ARROW_RIGHT}"
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </kd-content-card>
@@ -92,7 +92,7 @@ export const ContentCards = args => {
         titleSize="default"
         ctaLink="#"
         ctaLabel="CTA Label"
-        ctaIcon="${ICON_ID_ARROW_RIGHT}"
+        ctaIcon="${ICON_IDS.ARROW_RIGHT}"
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </kd-content-card>
@@ -102,7 +102,7 @@ export const ContentCards = args => {
         titleSize="default"
         ctaLink="#"
         ctaLabel="CTA Label"
-        ctaIcon="${ICON_ID_ARROW_RIGHT}"
+        ctaIcon="${ICON_IDS.ARROW_RIGHT}"
       >
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </kd-content-card>
@@ -115,6 +115,6 @@ ContentCards.args = {
   titleSize: 'h1',
   titleCtaLink: '#',
   titleCtaLabel: 'CTA Label',
-  titleCtaIcon: ICON_ID_ARROW_RIGHT,
+  titleCtaIcon: ICON_IDS.ARROW_RIGHT,
   columnLayout: '2',
 };

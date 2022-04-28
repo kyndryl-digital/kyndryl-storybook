@@ -2,7 +2,7 @@ import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
 
 import { PREFIX_CLASS, PREFIX_CLASS_ICON } from '../../global/settings/settings';
-import { ICON_ID_CLOSE } from '../../global/settings/iconIds';
+import { ICON_IDS } from '../../global/defs/iconIds';
 import '../../components/icon/icon';
 
 export default {
@@ -40,7 +40,7 @@ export const Modal = args => {
           class="${PREFIX_CLASS}-modal-control"
           title="Close window"
         >
-          <kd-icon icon="${PREFIX_CLASS_ICON}-${ICON_ID_CLOSE}"></kd-icon>
+          <kd-icon icon="${PREFIX_CLASS_ICON}-${ICON_IDS.CLOSE}"></kd-icon>
         </button>
       </div>
       <div class="${PREFIX_CLASS}-modal-content">

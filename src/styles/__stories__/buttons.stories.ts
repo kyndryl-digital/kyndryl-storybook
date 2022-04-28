@@ -1,6 +1,10 @@
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS } from '../../global/settings/settings';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import { createOptionsArray } from '../../global/mixins/global';
+
+const optionsIcon = createOptionsArray(ICON_IDS);
 
 export default {
   title: 'Styles/Buttons',
@@ -19,26 +23,7 @@ export default {
     icon: {
       options: [
         'none',
-        'arrow-down',
-        'arrow-left',
-        'arrow-right',
-        'arrow-up',
-        'chevron-down',
-        'chevron-left',
-        'chevron-right',
-        'chevron-up',
-        'chevron-wide-down',
-        'chevron-wide-left',
-        'chevron-wide-right',
-        'chevron-wide-up',
-        'close',
-        'download',
-        'hamburger',
-        'linkedin',
-        'pdf',
-        'play',
-        'pop-out',
-        'twitter',
+        ...optionsIcon
       ],
       control: {
         type: 'select',

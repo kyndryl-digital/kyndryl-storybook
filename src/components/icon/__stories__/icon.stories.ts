@@ -1,18 +1,20 @@
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
-import * as ICON_IDS from '../../../global/settings/iconIds';
-import { ICON_ID_ARROW_RIGHT } from '../../../global/settings/iconIds';
+import { ICON_IDS } from '../../../global/defs/iconIds';
 import { createOptionsArray } from '../../../global/mixins/global';
 import '../icon';
 
-const iconOptions = createOptionsArray(ICON_IDS);
+const optionsIcon = createOptionsArray(ICON_IDS);
 
 export default {
   title: 'Web Components/Icon',
   component: `${PREFIX_TAG}-icon`,
   argTypes: {
     icon: {
-      options: iconOptions,
+      options: [
+        'none',
+        ...optionsIcon,
+      ],
       control: {
         type: 'select',
         labels: {
@@ -47,7 +49,7 @@ export const Icons = () => {
         margin-top: 1rem;
       }
     </style>
-    ${iconOptions.map((id) =>
+    ${optionsIcon.map((id) =>
       html`
        <div class="demo-icon">
          <kd-icon icon=${id}></kd-icon>
@@ -60,5 +62,5 @@ export const Icons = () => {
 
 export const SingleIcon = Template.bind({});
 SingleIcon.args = {
-  icon: ICON_ID_ARROW_RIGHT,
+  icon: ICON_IDS.ARROW_RIGHT,
 };
