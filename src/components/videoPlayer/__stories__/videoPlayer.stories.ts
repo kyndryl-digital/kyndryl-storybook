@@ -1,7 +1,10 @@
 import { html } from 'lit';
-import { PREFIX_TAG } from '../../../global/settings/settings';
-
+import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { THEMES } from '../../../global/defs/themes';
+import { createOptionsArray } from '../../../global/mixins/global';
 import '../videoPlayer';
+
+const optionsTheme = createOptionsArray(THEMES);
 
 export default {
   title: 'Web Components/Video Player',
@@ -25,6 +28,18 @@ export default {
     duration: {
       control: { type: 'text' },
     },
+    theme: {
+      options: [
+        null,
+        ...optionsTheme,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'None',
+        },
+      },
+    },
   }
 };
 
@@ -37,6 +52,7 @@ const Template = args => {
       poster=${args.poster}
       buttonLabel=${args.buttonLabel}
       duration=${args.duration}
+      theme=${args.theme}
     ></kd-video-player>
   `;
 };

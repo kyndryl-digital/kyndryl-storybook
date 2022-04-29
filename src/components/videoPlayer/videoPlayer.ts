@@ -1,8 +1,9 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, eventOptions, property, state, query } from 'lit/decorators.js';
-import { PREFIX_TAG, PREFIX_CLASS } from '../../global/settings/settings';
+import { PREFIX_TAG, PREFIX_CLASS, PREFIX_CLASS_THEME } from '../../global/settings/settings';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { ICON_IDS } from '../../global/defs/iconIds';
+import { THEMES } from '../../global/defs/themes';
 import '../button/button';
 import stylesheet from './videoPlayer.scss';
 
@@ -16,6 +17,7 @@ export class VideoPlayer extends LitElement {
   @property({ type: String }) poster;
   @property({ type: String }) buttonLabel;
   @property({ type: String }) duration;
+  @property() theme: THEMES = THEMES.DARK_STONE;
 
   @query('video') videoPlayer;
 
@@ -28,12 +30,12 @@ export class VideoPlayer extends LitElement {
   });
 
   firstUpdated() {
-    this.videoPlayer.addEventListener('ended', this._onVideoEnded.bind(this));
+    this.videoPlayer?.addEventListener('ended', this._onVideoEnded.bind(this));
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    this.videoPlayer.removeEventListener('ended', this._onVideoEnded);
+    this.videoPlayer?.removeEventListener('ended', this._onVideoEnded);
   }
 
   @eventOptions({ capture: true })
@@ -78,7 +80,7 @@ export class VideoPlayer extends LitElement {
       ${this._showPlayButton ? html`
         <div class="${PREFIX_CLASS}-video-player--cta-container">
           <div class="${PREFIX_CLASS}-video-player--cta-button">
-            <kd-button icon=${ICON_IDS.PLAY} @click="${e => this._onTriggerClick(e)}">
+            <kd-button size="large" icon=${ICON_IDS.PLAY} @click="${e => this._onTriggerClick(e)}">
               <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
               ${this.duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this.duration})</span>` : null}
             </kd-button>
@@ -98,8 +100,17 @@ export class VideoPlayer extends LitElement {
   }
 
   render() {
+    if (!this.theme) {
+      this.theme = THEMES.DARK_STONE;
+    }
+    const classesContainer = classMap({
+      [`${PREFIX_CLASS}-video-player`]: true,
+      [`${PREFIX_CLASS}-aspect-ratio-16x9`]: true,
+      [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
+    });
+
     return html`
-      <div class="${PREFIX_CLASS}-video-player ${PREFIX_CLASS}-aspect-ratio-16x9">
+      <div class="${classesContainer}">
         ${this._renderMedia()}
       </div>
     `;

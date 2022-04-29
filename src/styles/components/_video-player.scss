@@ -1,6 +1,7 @@
 @import '../variables/index';
 @import '../utilities/layout';
 @import '../utilities/spacing';
+@import '../themes/index';
 
 .#{$prefix-class}-video-player {
   iframe {
@@ -13,7 +14,7 @@
 
     &::before {
       @include position(absolute);
-      background: linear-gradient(0deg, rgba(var(--kd-color-brand-black-rgb), 100%) 0%, rgba(var(--kd-color-brand-black-rgb), 0%) 100%);
+      background: linear-gradient(0deg, rgba(var(--kd-color-brand-black-rgb), 1) 0%, rgba(var(--kd-color-brand-black-rgb), 0) 100%);
       content: '';
       display: block;
       height: 40%;
