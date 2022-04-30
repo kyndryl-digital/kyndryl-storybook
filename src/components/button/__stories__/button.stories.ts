@@ -2,6 +2,7 @@ import { html } from 'lit';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../../global/defs/linkTargets';
 import { THEMES } from '../../../global/defs/themes';
 import { BUTTON_SIZES, BUTTON_TYPES } from '../defs';
 import '../button';
@@ -9,6 +10,7 @@ import '../button';
 const optionsType = createOptionsArray(BUTTON_TYPES);
 const optionsSize = createOptionsArray(BUTTON_SIZES);
 const optionsIcon = createOptionsArray(ICON_IDS);
+const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
 const optionsTheme = createOptionsArray(THEMES);
 
 export default {
@@ -23,7 +25,7 @@ export default {
       control: { type: 'text' },
     },
     target: {
-      options: ['_blank', '_self', '_parent', '_top'],
+      options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     type: {
@@ -86,8 +88,8 @@ export const Button = Template.bind({});
 Button.args = {
   label: 'Click here',
   href: 'http://kyndryl.com',
-  target: '_self',
-  type: 'primary',
+  target: LINK_TARGETS.SELF,
+  type: BUTTON_TYPES.PRIMARY,
   size: null,
   icon: null,
   theme: null,

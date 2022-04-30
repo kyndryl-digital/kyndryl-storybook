@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../global/defs/linkTargets';
 import { THEMES } from '../../global/defs/themes';
 import { BUTTON_SIZES, BUTTON_TYPES } from './defs';
 import '../icon/icon';
@@ -19,7 +20,7 @@ export class Button extends LitElement {
   static styles = [stylesheet];
 
   @property({ type: String }) href;
-  @property({ type: String }) target;
+  @property() target: LINK_TARGETS;
   @property() type: BUTTON_TYPES;
   @property() size: BUTTON_SIZES;
   @property() icon: ICON_IDS;

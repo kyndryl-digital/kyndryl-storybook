@@ -1,10 +1,12 @@
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../../global/defs/linkTargets';
 import { THEMES } from '../../../global/defs/themes';
 import { createOptionsArray } from '../../../global/mixins/global';
 import '../contentCard';
 
+const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
 const optionsTheme = createOptionsArray(THEMES);
 
 export default {
@@ -34,7 +36,7 @@ export default {
       control: { type: 'text' },
     },
     ctaTarget: {
-      options: ['_blank', '_self', '_parent', '_top'],
+      options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     ctaLabel: {
@@ -96,6 +98,7 @@ contentCard.args = {
   title: 'Content Card Title',
   titleSize: 'default',
   ctaLink: '#',
+  ctaTarget: LINK_TARGETS.SELF,
   ctaLabel: 'CTA Label',
   ctaIcon: ICON_IDS.ARROW_RIGHT,
   theme: null,

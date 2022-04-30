@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../global/defs/linkTargets';
 import { THEMES } from '../../global/defs/themes';
 import { IMAGE_ASPECT_RATIOS, IMAGE_FIT } from '../image/defs';
 import '../button/button';
@@ -21,7 +22,7 @@ export class kdContentCard extends LitElement {
   @property({ type: String }) title;
   @property({ type: String }) titleSize;
   @property({ type: String }) ctaLink;
-  @property({ type: String }) ctaTarget;
+  @property() ctaTarget: LINK_TARGETS;
   @property({ type: String }) ctaLabel;
   @property() ctaIcon: ICON_IDS;
   @property() theme: THEMES;

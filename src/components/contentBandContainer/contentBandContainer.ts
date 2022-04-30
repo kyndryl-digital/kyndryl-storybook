@@ -3,6 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../global/defs/linkTargets';
 import { THEMES } from '../../global/defs/themes';
 import '../button/button';
 import stylesheet from './contentBandContainer.scss';
@@ -14,7 +15,7 @@ export class kdContentBandContainer extends LitElement {
   @property({ type: String }) title;
   @property({ type: String }) titleSize;
   @property({ type: String }) titleCtaLink;
-  @property({ type: String }) titleCtaTarget;
+  @property() titleCtaTarget: LINK_TARGETS;
   @property({ type: String }) titleCtaLabel;
   @property() titleCtaIcon: ICON_IDS;
   @property({ type: String }) columnLayout = '2';

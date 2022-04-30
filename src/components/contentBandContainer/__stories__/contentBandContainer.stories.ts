@@ -1,11 +1,13 @@
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../../global/defs/linkTargets';
 import { THEMES } from '../../../global/defs/themes';
 import { createOptionsArray } from '../../../global/mixins/global';
 import '../contentBandContainer';
 import '../../contentCard/contentCard';
 
+const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
 const optionsTheme = createOptionsArray(THEMES);
 
 export default {
@@ -23,7 +25,7 @@ export default {
       control: { type: 'text' },
     },
     titleCtaTarget: {
-      options: ['_blank', '_self', '_parent', '_top'],
+      options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     titleCtaLabel: {
@@ -126,6 +128,7 @@ ContentCards.args = {
   title: 'Content Band Container with Content Cards',
   titleSize: 'h1',
   titleCtaLink: '#',
+  titleCtaTarget: LINK_TARGETS.SELF,
   titleCtaLabel: 'CTA Label',
   titleCtaIcon: ICON_IDS.ARROW_RIGHT,
   columnLayout: '2',
