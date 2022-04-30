@@ -1,7 +1,11 @@
 import { html } from 'lit';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { THEMES } from '../../../global/defs/themes';
+import { createOptionsArray } from '../../../global/mixins/global';
 import '../contentCard';
+
+const optionsTheme = createOptionsArray(THEMES);
 
 export default {
   title: 'Web Components/Content Card',
@@ -38,7 +42,7 @@ export default {
     },
     ctaIcon: {
       options: [
-        'none',
+        null,
         ICON_IDS.ARROW_RIGHT,
         ICON_IDS.DOWNLOAD,
         ICON_IDS.POP_OUT,
@@ -46,13 +50,21 @@ export default {
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
         },
       },
     },
     theme: {
-      options: ['', `${PREFIX_CLASS}-theme-dark-stone`, `${PREFIX_CLASS}-theme-cloud`],
-      control: { type: 'select' },
+      options: [
+        null,
+        ...optionsTheme,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'none',
+        },
+      },
     },
   },
 };
@@ -86,4 +98,5 @@ contentCard.args = {
   ctaLink: '#',
   ctaLabel: 'CTA Label',
   ctaIcon: ICON_IDS.ARROW_RIGHT,
+  theme: null,
 };

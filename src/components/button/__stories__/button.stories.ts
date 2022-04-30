@@ -1,23 +1,23 @@
 import { html } from 'lit';
+import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
-import { createOptionsArray } from '../../../global/mixins/global';
+import { THEMES } from '../../../global/defs/themes';
+import { BUTTON_SIZES, BUTTON_TYPES } from '../defs';
 import '../button';
 
+const optionsType = createOptionsArray(BUTTON_TYPES);
+const optionsSize = createOptionsArray(BUTTON_SIZES);
 const optionsIcon = createOptionsArray(ICON_IDS);
+const optionsTheme = createOptionsArray(THEMES);
 
 export default {
   title: 'Web Components/Button',
   component: `${PREFIX_TAG}-button`,
   parameters: {},
   argTypes: {
-    type: {
-      options: ['primary', 'secondary', 'text'],
-      control: { type: 'select' },
-    },
-    theme: {
-      options: ['', `${PREFIX_TAG}-theme-dark-stone`, `${PREFIX_TAG}-theme-cloud`],
-      control: { type: 'select' },
+    label: {
+      control: { type: 'text' },
     },
     href: {
       control: { type: 'text' },
@@ -26,22 +26,43 @@ export default {
       options: ['_blank', '_self', '_parent', '_top'],
       control: { type: 'select' },
     },
-    label: {
-      control: { type: 'text' },
+    type: {
+      options: [...optionsType],
+      control: { type: 'select' },
     },
     size: {
-      options: ['default', 'large', 'small'],
-      control: { type: 'radio' },
+      options: [
+        null,
+        ...optionsSize,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'default',
+        },
+      },
     },
     icon: {
       options: [
-        'none',
+        null,
         ...optionsIcon,
       ],
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
+        },
+      },
+    },
+    theme: {
+      options: [
+        null,
+        ...optionsTheme,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'none',
         },
       },
     },
@@ -51,22 +72,23 @@ export default {
 const Template = args => {
   return html`
     <kd-button
-        type=${args.type}
-        size=${args.size != 'default' ? args.size : null}
-        icon=${args.icon != 'none' ? args.icon : null}
-        href=${args.href}
-        target=${args.target}
-        theme=${args.theme}
+      type=${args.type}
+      size=${args.size}
+      icon=${args.icon}
+      href=${args.href}
+      target=${args.target}
+      theme=${args.theme}
     >${args.label}</kd-button>
   `;
 };
 
 export const Button = Template.bind({});
 Button.args = {
-  type: 'primary',
+  label: 'Click here',
   href: 'http://kyndryl.com',
   target: '_self',
-  label: 'Click here',
-  size: 'default',
-  icon: 'none',
+  type: 'primary',
+  size: null,
+  icon: null,
+  theme: null,
 };

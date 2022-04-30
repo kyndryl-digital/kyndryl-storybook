@@ -1,8 +1,11 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
-import '../button/button';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import { THEMES } from '../../global/defs/themes';
 import { IMAGE_ASPECT_RATIOS, IMAGE_FIT } from '../image/defs';
+import '../button/button';
 import '../image/image';
 import '../videoPlayer/videoPlayer';
 import stylesheet from './contentCard.scss';
@@ -20,8 +23,8 @@ export class kdContentCard extends LitElement {
   @property({ type: String }) ctaLink;
   @property({ type: String }) ctaTarget;
   @property({ type: String }) ctaLabel;
-  @property({ type: String }) ctaIcon;
-  @property({ type: String }) theme = '';
+  @property() ctaIcon: ICON_IDS;
+  @property() theme: THEMES;
 
   protected _renderCta(): TemplateResult | string | void {
     if (this.ctaLink) {
@@ -65,8 +68,13 @@ export class kdContentCard extends LitElement {
   }
 
   render() {
+    const classesContainer = classMap({
+      [`${PREFIX_CLASS}-content-card`]: true,
+      [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
+    });
+
     return html`
-      <div class="${PREFIX_CLASS}-content-card ${this.theme}">
+      <div class="${classesContainer}">
         <div class="${PREFIX_CLASS}-content-card__content">
           <div class="${PREFIX_CLASS}-content-card__content-inner">
             ${this._renderMedia()}

@@ -1,6 +1,9 @@
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import { THEMES } from '../../global/defs/themes';
 import '../button/button';
 import stylesheet from './contentBandContainer.scss';
 
@@ -13,9 +16,9 @@ export class kdContentBandContainer extends LitElement {
   @property({ type: String }) titleCtaLink;
   @property({ type: String }) titleCtaTarget;
   @property({ type: String }) titleCtaLabel;
-  @property({ type: String }) titleCtaIcon;
+  @property() titleCtaIcon: ICON_IDS;
   @property({ type: String }) columnLayout = '2';
-  @property({ type: String }) theme = '';
+  @property() theme: THEMES;
 
 
   protected _renderTitle(): TemplateResult | string | void {
@@ -53,8 +56,13 @@ export class kdContentBandContainer extends LitElement {
   }
 
   render() {
+    const classesContainer = classMap({
+      [`${PREFIX_CLASS}-content-band-container`]: true,
+      [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
+    });
+
     return html`
-      <div class="${PREFIX_CLASS}-content-band-container ${this.theme}">
+      <div class="${classesContainer}">
         <div class="${PREFIX_CLASS}-content-band-container__header">
           <div class="${PREFIX_CLASS}-content-band-container__desc-container">
             ${this._renderTitle()}

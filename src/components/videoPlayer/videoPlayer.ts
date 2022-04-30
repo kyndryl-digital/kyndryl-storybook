@@ -1,9 +1,11 @@
 import { html, LitElement, TemplateResult } from 'lit';
-import { customElement, eventOptions, property, state, query } from 'lit/decorators.js';
-import { PREFIX_TAG, PREFIX_CLASS, PREFIX_CLASS_THEME } from '../../global/settings/settings';
+import { ifDefined } from 'lit/directives/if-defined.js';
+import { customElement, eventOptions, property, query, state } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
+import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
 import { THEMES } from '../../global/defs/themes';
+import { BUTTON_SIZES } from '../button/defs';
 import '../button/button';
 import stylesheet from './videoPlayer.scss';
 
@@ -16,13 +18,16 @@ export class VideoPlayer extends LitElement {
   @property({ type: String }) title;
   @property({ type: String }) poster;
   @property({ type: String }) buttonLabel;
+  @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
+  @property() buttonIcon: ICON_IDS = ICON_IDS.PLAY;
   @property({ type: String }) duration;
+  @property({ type: Boolean }) autoplay = false;
   @property() theme: THEMES = THEMES.DARK_STONE;
 
   @query('video') videoPlayer;
 
   @state()
-  private _showPlayButton = true;
+  private _showPlayButton = !this.autoplay;
 
   private _classesVideoPlayer = classMap({
     [`${PREFIX_CLASS}-object-fit-cover`]: true,
@@ -80,14 +85,18 @@ export class VideoPlayer extends LitElement {
       ${this._showPlayButton ? html`
         <div class="${PREFIX_CLASS}-video-player--cta-container">
           <div class="${PREFIX_CLASS}-video-player--cta-button">
-            <kd-button size="large" icon=${ICON_IDS.PLAY} @click="${e => this._onTriggerClick(e)}">
+            <kd-button 
+              size=${this.buttonSize} 
+              icon=${this.buttonIcon} 
+              @click="${e => this._onTriggerClick(e)}"
+            >
               <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
               ${this.duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this.duration})</span>` : null}
             </kd-button>
           </div>
         </div>
       ` : null}
-      <video class="${this._classesVideoPlayer}" poster=${this.poster}>
+      <video class="${this._classesVideoPlayer}" poster=${this.poster} autoplay=${ifDefined(this.autoplay ? this.autoplay : undefined)}>
         <source src=${videoUrl} type="video/mp4">
       </video>
     `;
