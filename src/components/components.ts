@@ -7,3 +7,12 @@ export * from './wrapper/wrapper';
 export * from './header/header';
 export * from './footer/footer';
 export * from './accordion/accordion';
+
+
+declare global {
+    namespace JSX {
+      interface IntrinsicElements {
+        [elemName: string]: any;
+      }
+    }
+  }
