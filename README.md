@@ -35,47 +35,45 @@ npm run storybook
 
 ## Usage
 
+### Method 1: Hosted package
+
 Implementation of the web components is as simple as including the compiled package in the markup of the page and freely utilizing any of the custom web component tags within the body of the page.
 
 ```
 <html>
   <head>
 
-    <script src="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.bundle.js"></script>
-    <link href="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/kyndryl-web-components.css" rel="stylesheet">
+    <script src="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/v2/kyndryl-web-components.js"></script>
+    <link href="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/v2/kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>
   
-    <kyndryl-wrapper>
-      YOUR CONTENT HERE
-      <span slot="trustarc" id="teconsent"></span>
-    </kyndryl-wrapper>
+    <kyndryl-button type="primary">EXAMPLE</kyndryl-button>
     
   </body>
 </html>
 ```
 
-kyndryl-design-system 
+### Method 2: Self-hosted build
 
-To utilize components and other features from kyndryl-design-system install it within your project. 
+The design system repository can also be installed directly onto NodeJS applications as an npm package. This method allows for full access to the design system source Typescript and SASS files within the consumer application.
 
 ```
-npm install git@github.com:DianaNikita/kyndryl-design-system.git
+npm install git@github.com:iwhitcomb/kyndryl-design-system.git#v2.0.0
 ```
-Once you install kyndryl-design-system you can start importing our components.
+
+Once you install kyndryl-design-system you can start importing the built web component package into your NodeJS application.
 
 ```
 import 'kyndryl-design-system';
 ```
 
-you can use our components similar to HTML tags, for example:
+Alternatively, you may also import the web components directly. (Note: This will likely require you to replicate some of the webpack build steps inside your own application in order to work.)
 
 ```
-<kd-button type = "primary">Primary button</kd-button>
-<kd-button type = "secondary">Secondary Button</kd-button>
-<kd-button type = "text">Text Button</kd-button>
-```        
+import 'kyndryl-design-system/src/button/button'
+```
 
 
 ## Contributing
@@ -91,15 +89,3 @@ New components may be contributed via pull request to the main component reposit
 ## Primary maintainer(s)
 
 - Ian Whitcomb(ian.whitcomb@kyndryl.com)
-- Dennis Dolliver(dennis.dolliver@kyndryl.com)
-
-## Build Sass Document
-```
-npm run build:sassdoc
-```
-
-## Open Sass Document
-
-```
-npm run sassdoc
-```
