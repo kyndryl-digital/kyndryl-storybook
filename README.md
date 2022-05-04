@@ -56,6 +56,28 @@ Implementation of the web components is as simple as including the compiled pack
 </html>
 ```
 
+ kyndryl-design-system 
+
+To utilize components and other features from kyndryl-design-system install it within your project. 
+
+```
+npm install git@github.com:DianaNikita/kyndryl-design-system.git
+```
+Once you install kyndryl-design-system you can start importing our components.
+
+```
+import ‘kyndryl-design-system’;
+```
+
+you can use our components similar to HTML tags, for example:
+
+```
+<kd-button type = "primary">Primary button</kd-button>
+<kd-button type = "secondary">Secondary Button</kd-button>
+<kd-button type = "text">Text Button</kd-button>
+```        
+
+
 ## Contributing
 
 New components may be contributed via pull request to the main component repository.
