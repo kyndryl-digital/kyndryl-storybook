@@ -1,12 +1,12 @@
-import { html, LitElement, TemplateResult } from 'lit';
-import { ifDefined } from 'lit/directives/if-defined.js';
-import { customElement, eventOptions, property, query, state } from 'lit/decorators.js';
+import { html, LitElement, PropertyValues, TemplateResult } from 'lit';
+import { customElement, eventOptions, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
 import { THEMES } from '../../global/defs/themes';
 import { BUTTON_SIZES } from '../button/defs';
 import '../button/button';
+import { VIDEO_TYPES } from './defs';
 import stylesheet from './videoPlayer.scss';
 
 @customElement(`${PREFIX_TAG}-video-player`)
@@ -21,25 +21,45 @@ export class VideoPlayer extends LitElement {
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
   @property() buttonIcon: ICON_IDS = ICON_IDS.PLAY;
   @property({ type: String }) duration;
-  @property({ type: Boolean }) autoplay = false;
+  @property() videoType: VIDEO_TYPES = VIDEO_TYPES.DEFAULT;
   @property() theme: THEMES = THEMES.DARK_STONE;
 
-  @query('video') videoPlayer;
+  @state()
+  private _showPlayButton = true;
 
   @state()
-  private _showPlayButton = !this.autoplay;
+  private _autoplay = this.videoType !== VIDEO_TYPES.DEFAULT;
+
+  private videoPlayer;
 
   private _classesVideoPlayer = classMap({
     [`${PREFIX_CLASS}-object-fit-cover`]: true,
     [`${PREFIX_CLASS}-position-absolute`]: true,
   });
 
-  firstUpdated() {
-    this.videoPlayer?.addEventListener('ended', this._onVideoEnded.bind(this));
+  protected willUpdate(_changedProperties: PropertyValues) {
+    super.willUpdate(_changedProperties);
+    this._unbindEvents();
+  }
+
+  protected updated(_changedProperties: PropertyValues) {
+    super.updated(_changedProperties);
+    this.videoPlayer = this.renderRoot.querySelector('video');
+    this._bindEvents();
   }
 
   disconnectedCallback() {
     super.disconnectedCallback();
+    this._unbindEvents();
+  }
+
+  @eventOptions({ passive: true })
+  private _bindEvents() {
+    this.videoPlayer?.addEventListener('ended', this._onVideoEnded);
+  }
+
+  @eventOptions({ passive: true })
+  private _unbindEvents() {
     this.videoPlayer?.removeEventListener('ended', this._onVideoEnded);
   }
 
@@ -49,10 +69,11 @@ export class VideoPlayer extends LitElement {
     this._playVideo();
   }
 
-  @eventOptions({ passive: true })
-  private _onVideoEnded() {
-    this._resetVideo();
-  }
+  private _onVideoEnded = () => {
+    if (this.videoType === VIDEO_TYPES.DEFAULT) {
+      this._resetVideo();
+    }
+  };
 
   private _playVideo() {
     this._showPlayButton = false;
@@ -78,16 +99,15 @@ export class VideoPlayer extends LitElement {
     `;
   }
 
-  protected _renderVideoPlayer(): TemplateResult | string | void {
+  protected _renderDefaultVideo(): TemplateResult | string | void {
     const videoUrl = `${this.video}${this.poster ? '' : '#t=0.01'}`;
-
     return html`
       ${this._showPlayButton ? html`
         <div class="${PREFIX_CLASS}-video-player--cta-container">
           <div class="${PREFIX_CLASS}-video-player--cta-button">
-            <kd-button 
-              size=${this.buttonSize} 
-              icon=${this.buttonIcon} 
+            <kd-button
+              size=${this.buttonSize}
+              icon=${this.buttonIcon}
               @click="${e => this._onTriggerClick(e)}"
             >
               <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
@@ -96,15 +116,41 @@ export class VideoPlayer extends LitElement {
           </div>
         </div>
       ` : null}
-      <video class="${this._classesVideoPlayer}" poster=${this.poster} autoplay=${ifDefined(this.autoplay ? this.autoplay : undefined)}>
+      <video class="${this._classesVideoPlayer}" poster=${this.poster}>
         <source src=${videoUrl} type="video/mp4">
+      </video>
+    `;
+  }
+
+  protected _renderAutoplayVideo(): TemplateResult | string | void {
+    return html`
+      <video class="${this._classesVideoPlayer}" autoplay=${true} controls>
+        <source src=${this.video} type="video/mp4">
+      </video>
+    `;
+  }
+
+  protected _renderBackgroundVideo(): TemplateResult | string | void {
+    return html`
+      <video class="${this._classesVideoPlayer}" autoplay loop muted>
+        <source src=${this.video} type="video/mp4">
       </video>
     `;
   }
 
   protected _renderMedia(): TemplateResult | string | void {
     if (this.youtubeId) return this._renderYoutubePlayer();
-    if (this.video) return this._renderVideoPlayer();
+    if (this.video) {
+      switch (this.videoType) {
+        case VIDEO_TYPES.AUTOPLAY:
+          return this._renderAutoplayVideo();
+        case VIDEO_TYPES.BACKGROUND:
+          return this._renderBackgroundVideo();
+        case VIDEO_TYPES.DEFAULT:
+        default:
+          return this._renderDefaultVideo();
+      }
+    }
     return null;
   }
 
