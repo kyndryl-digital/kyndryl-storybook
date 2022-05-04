@@ -1,0 +1,166 @@
+@import '../utilities/breakpoints';
+@import '../utilities/units';
+
+@mixin css-vars-fonts {
+  @include css-vars-font-family;
+  @include css-vars-font-size;
+  @include css-vars-font-weight;
+  @include css-vars-font-height;
+}
+
+// Families
+// -----------------------------------------------------
+@mixin css-vars-font-family {
+  --kd-font-family-primary: Helvetica, Arial, sans-serif;
+  --kd-font-family-secondary: 'TWK Everett', Helvetica, Arial, sans-serif;
+  --kd-font-family-icon: 'kyndryl-Icons';
+
+  --kd-font-family-text: var(--kd-font-family-primary);
+  --kd-font-family-heading: var(--kd-font-family-secondary);
+  --kd-font-family-button: var(--kd-font-family-secondary);
+}
+
+// Sizes
+// -----------------------------------------------------
+@mixin css-vars-font-size {
+  // Utility
+  --kd-font-size-01: #{px2rem(12)};
+  --kd-font-size-02: #{px2rem(14)};
+  --kd-font-size-03: #{px2rem(16)};
+  --kd-font-size-04: #{px2rem(18)};
+  --kd-font-size-05: #{px2rem(20)};
+  --kd-font-size-06: #{px2rem(24)};
+  --kd-font-size-07: #{px2rem(28)};
+  --kd-font-size-08: #{px2rem(32)};
+  --kd-font-size-09: #{px2rem(36)};
+  --kd-font-size-10: #{px2rem(42)};
+  --kd-font-size-11: #{px2rem(48)};
+  --kd-font-size-12: #{px2rem(54)};
+  --kd-font-size-13: #{px2rem(60)};
+  --kd-font-size-14: #{px2rem(68)};
+  --kd-font-size-15: #{px2rem(76)};
+  --kd-font-size-16: #{px2rem(84)};
+  --kd-font-size-17: #{px2rem(92)};
+  --kd-font-size-18: #{px2rem(96)};
+  --kd-font-size-19: #{px2rem(144)};
+  --kd-font-size-20: #{px2rem(192)};
+
+  // Base elements
+  --kd-font-size-text: var(--kd-font-size-04); // 18
+
+  --kd-font-size-h1: var(--kd-font-size-09); // 36
+  --kd-font-size-h2: var(--kd-font-size-08); // 32
+  --kd-font-size-h3: var(--kd-font-size-07); // 28
+  --kd-font-size-h4: var(--kd-font-size-07); // 28
+  --kd-font-size-h5: var(--kd-font-size-05); // 20
+  --kd-font-size-h6: var(--kd-font-size-04); // 18
+
+  --kd-font-size-button-icon: 0.875em; // relative to element
+  --kd-font-size-link-icon: 0.875em; // relative to element
+
+  @include device(tablet) {
+    --kd-font-size-text: var(--kd-font-size-04); // 18
+
+    --kd-font-size-h1: var(--kd-font-size-11); // 48
+    --kd-font-size-h2: var(--kd-font-size-09); // 36
+    --kd-font-size-h3: var(--kd-font-size-08); // 32
+    --kd-font-size-h4: var(--kd-font-size-07); // 28
+    --kd-font-size-h5: var(--kd-font-size-05); // 20
+    --kd-font-size-h6: var(--kd-font-size-04); // 18
+  }
+
+  @include device(desktop) {
+    --kd-font-size-text: var(--kd-font-size-03); // 16
+
+    --kd-font-size-h1: #{px2rem(64)}; // 64
+    --kd-font-size-h2: var(--kd-font-size-09); // 36
+    --kd-font-size-h3: var(--kd-font-size-08); // 32
+    --kd-font-size-h4: var(--kd-font-size-09); // 36
+    --kd-font-size-h5: #{px2rem(30)}; // 30
+    --kd-font-size-h6: #{px2rem(22)}; // 22
+  }
+}
+
+// Line heights
+// -----------------------------------------------------
+@mixin css-vars-font-height {
+  // Utility
+  --kd-font-height-01: #{px2rem(16)};
+  --kd-font-height-02: #{px2rem(20)};
+  --kd-font-height-03: #{px2rem(22)};
+  --kd-font-height-04: #{px2rem(22)};
+  --kd-font-height-05: #{px2rem(28)};
+  --kd-font-height-06: #{px2rem(32)};
+  --kd-font-height-07: #{px2rem(36)};
+  --kd-font-height-08: #{px2rem(40)};
+  --kd-font-height-09: #{px2rem(44)};
+  --kd-font-height-10: #{px2rem(50)};
+  --kd-font-height-11: #{px2rem(56)};
+  --kd-font-height-12: #{px2rem(64)};
+  --kd-font-height-13: #{px2rem(70)};
+  --kd-font-height-14: #{px2rem(80)};
+  --kd-font-height-15: #{px2rem(88)};
+  --kd-font-height-16: #{px2rem(96)};
+  --kd-font-height-17: #{px2rem(104)};
+  --kd-font-height-18: #{px2rem(112)};
+  --kd-font-height-19: #{px2rem(164)};
+  --kd-font-height-20: #{px2rem(218)};
+
+  // Base elements
+  --kd-font-height-text: var(--kd-font-height-04);
+
+  --kd-font-height-h1: 1.2778;
+  --kd-font-height-h2: 1.3125;
+  --kd-font-height-h3: 1.3125;
+  --kd-font-height-h4: 1.9285;
+  --kd-font-height-h5: 1.5;
+  --kd-font-height-h6: 1.333;
+
+  @include device(tablet) {
+    --kd-font-height-text: var(--kd-font-height-04);
+
+    --kd-font-height-h1: 1.3125;
+    --kd-font-height-h2: 1.2778;
+    --kd-font-height-h3: 1.3125;
+    --kd-font-height-h4: 1.9285;
+    --kd-font-height-h5: 1.5;
+    --kd-font-height-h6: 1.333;
+  }
+
+  @include device(desktop) {
+    --kd-font-height-text: var(--kd-font-height-03);
+
+    --kd-font-height-h1: 1.0625;
+    --kd-font-height-h2: 1.2778;
+    --kd-font-height-h3: 1.3125;
+    --kd-font-height-h4: 1.5;
+    --kd-font-height-h5: 1.467;
+    --kd-font-height-h6: 1.27;
+  }
+}
+
+// Weights
+// -----------------------------------------------------
+@mixin css-vars-font-weight {
+  // Utility
+  --kd-font-weight-light: 300;
+  --kd-font-weight-normal: 400;
+  --kd-font-weight-medium: 500;
+  --kd-font-weight-bold: 700;
+
+  // Base elements
+  --kd-font-weight-text: var(--kd-font-weight-normal);
+
+  --kd-font-weight-h1: var(--kd-font-weight-normal);
+  --kd-font-weight-h2: var(--kd-font-weight-normal);
+  --kd-font-weight-h3: var(--kd-font-weight-light);
+  --kd-font-weight-h4: var(--kd-font-weight-normal);
+  --kd-font-weight-h5: var(--kd-font-weight-normal);
+  --kd-font-weight-h6: var(--kd-font-weight-normal);
+
+  --kd-font-weight-button: var(--kd-font-weight-bold);
+  --kd-font-weight-button-icon: var(--kd-font-weight-normal);
+  --kd-font-weight-link: var(--kd-font-weight-bold);
+  --kd-font-weight-link-icon: var(--kd-font-weight-normal);
+
+}

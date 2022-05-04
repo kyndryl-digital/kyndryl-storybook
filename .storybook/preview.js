@@ -2,6 +2,7 @@ import '!style-loader!css-loader!sass-loader!../src/styles/_global.storybook.scs
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: 'padded',
   controls: {
     matchers: {
       color: /(background|color)$/i,

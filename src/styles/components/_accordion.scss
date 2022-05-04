@@ -1,0 +1,54 @@
+@use 'sass:map';
+
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+
+.#{$prefix-class}-accordion-item {
+  @include padding(left right, 1);
+  @include margin(right, 1);
+  border-width: 0 0 1px 0;
+  border-color: var(--kd-color-brand-sage);
+  border-style: solid;
+  display: block;
+
+  .#{$prefix-class}-accordion-item-header {
+    @extend .#{$prefix-class}-h6;
+    display: block;
+    background: none;
+    border: 0;
+    position: relative;
+    text-align: left;
+    width: 100%;
+
+
+
+
+    &:after {
+      position: absolute;
+      right: 0;
+      content: '+';
+    }
+
+    &.opened:after {
+      content: '-';
+    }
+
+    & + .#{$prefix-class}-accordion-item-detail-wrapper {
+        visibility: hidden;
+    }
+
+    &.opened + .#{$prefix-class}-accordion-item-detail-wrapper {
+      height: auto;
+      transition: height 0.5s ease;
+      visibility: visible;
+    }
+
+  }
+
+  .#{$prefix-class}-accordion-item-detail-wrapper {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.5s ease;
+  }
+}

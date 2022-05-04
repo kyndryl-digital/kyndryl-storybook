@@ -1,5 +1,5 @@
 import { html } from 'lit';
-import { settings } from '../global/settings';
+import { PREFIX_CLASS } from '../global/settings/settings';
 import '../components/modal/modal';
 import '../components/button/button';
 
@@ -7,14 +7,14 @@ export default {
   title: 'Patterns/Logo Grid',
 };
 
-export const LogoGrid = args => {
+const Template = args => {
   return html`
-      <div class="${settings.class_prefix}-grid-container">
+      <div class="${PREFIX_CLASS}-grid-container">
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -53,27 +53,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -82,10 +82,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Google logo -->
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -99,27 +99,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -128,10 +128,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Oracle logo -->
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -170,27 +170,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -199,10 +199,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Google logo -->
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -216,27 +216,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -246,10 +246,10 @@ export const LogoGrid = args => {
         <!-- END Oracle logo -->
         
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -263,27 +263,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -292,10 +292,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Oracle logo -->
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -334,27 +334,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -363,10 +363,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Google logo -->
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -380,27 +380,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -409,10 +409,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Oracle logo -->
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -451,27 +451,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -481,10 +481,10 @@ export const LogoGrid = args => {
         <!-- END Google logo -->
 
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -523,27 +523,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -552,10 +552,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Google logo -->
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -569,27 +569,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -598,10 +598,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Oracle logo -->
         <!-- BEGIN Google Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <g>
                       <path fill="#5F6368" d="M170.7,114.9c-6.9,0.2-12.6-5.3-12.7-12.2c0-0.2,0-0.5,0-0.7c-0.1-3.4,1.2-6.7,3.6-9.1
@@ -640,27 +640,27 @@ export const LogoGrid = args => {
                     </g>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -669,10 +669,10 @@ export const LogoGrid = args => {
         </div>
         <!-- END Google logo -->
         <!-- BEGIN Oracle Logo -->
-        <div class="${settings.class_prefix}-max-col-3 ${settings.class_prefix}-xlg-col-3 ${settings.class_prefix}-lg-col-3 ${settings.class_prefix}-md-col-6 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4">
+        <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
-              <svg width="280" height="210" style="width:100%;height:auto" class="${settings.class_prefix}-transition-default-grayscale ${settings.class_prefix}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <svg width="280" height="210" style="width:100%;height:auto" class="${PREFIX_CLASS}-transition-default-grayscale ${PREFIX_CLASS}-transition-hover-colorize" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 280 210" style="enable-background:new 0 0 280 210;" xml:space="preserve">
                     <path fill="#C74634" d="M126.2,109h13.5l-7.1-11.5l-13.1,20.8h-6l15.9-24.9c1.2-1.7,3.6-2.1,5.3-0.9c0.4,0.2,0.7,0.5,0.9,0.9l16,25h-6
                       l-2.8-4.6h-13.6L126.2,109 M188.1,113.6V92H183v23.8c0,0.7,0.3,1.3,0.8,1.8c0.5,0.5,1.1,0.8,1.8,0.8h23l3-4.6L188.1,113.6
@@ -686,27 +686,27 @@ export const LogoGrid = args => {
                       c0.2,7,5.8,12.6,12.8,12.8h15.6l3-4.6L224,113.6"/>
                     </svg>
             </a>
-            <div class="${settings.class_prefix}-grid-container ${settings.class_prefix}-fully-fluid ${settings.class_prefix}-no-grid-gap ${settings.class_prefix}-no-grid-padding">
-              <div class="${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <div class="${settings.class_prefix}-mt0 ${settings.class_prefix}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${settings.class_prefix}-h6 ${settings.class_prefix}-mt4 ${settings.class_prefix}-mb4"><strong>ORACLE</strong></h6>
+            <div class="${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-fully-fluid ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-no-grid-padding">
+              <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
-                  <p class="${settings.class_prefix}-mt4 ${settings.class_prefix}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
+                  <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
               </div>
-              <div class="${settings.class_prefix}-bg-cloud ${settings.class_prefix}-max-col-6 ${settings.class_prefix}-xlg-col-6 ${settings.class_prefix}-lg-col-6 ${settings.class_prefix}-md-col-12 ${settings.class_prefix}-sm-col-8 ${settings.class_prefix}-xs-col-4" style="min-height:768px">
-                <div class="${settings.class_prefix}-pt6 ${settings.class_prefix}-pr5 ${settings.class_prefix}-pb8 ${settings.class_prefix}-pl4">
-                  <p class="${settings.class_prefix}-mt0"><strong>Services Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Curabitur blandit tempus porttitor.</li>
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
-                    <li class="${settings.class_prefix}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
-                    <li class="${settings.class_prefix}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
+              <div class="${PREFIX_CLASS}-bg-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
+                <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
+                  <p class="${PREFIX_CLASS}-mt0"><strong>Services Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Curabitur blandit tempus porttitor.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Aenean lacinia bibendum nulla sed consectetur.</li>
+                    <li class="${PREFIX_CLASS}-list-item">Nulla vitae elit libero, a pharetra augue.</li>
                   </ul>
-                  <p class="${settings.class_prefix}-mt4"><strong>More Links:</strong></p>
-                  <ul class="${settings.class_prefix}-list">
-                    <li class="${settings.class_prefix}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
+                  <p class="${PREFIX_CLASS}-mt4"><strong>More Links:</strong></p>
+                  <ul class="${PREFIX_CLASS}-list">
+                    <li class="${PREFIX_CLASS}-list-item">Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</li>
                   </ul>
                 </div>
               </div>
@@ -716,4 +716,9 @@ export const LogoGrid = args => {
         <!-- END Oracle logo -->
       </div>
   `;
+};
+
+export const LogoGrid = Template.bind({});
+LogoGrid.parameters = {
+  layout: 'fullscreen',
 };

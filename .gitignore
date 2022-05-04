@@ -2,7 +2,9 @@ node_modules
 package-lock.json
 .idea
 storybook-static
+build
+test
 .vscode
 *.d.ts
 sassdoc
-build
+.DS_Store

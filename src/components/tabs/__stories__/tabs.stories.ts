@@ -1,11 +1,11 @@
 import { html } from 'lit';
-import { settings } from '../../../global/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import '../tabs';
 import '../tab';
 
 export default {
   title: 'Web Components/Tabs',
-  component: `${settings.tag_prefix}-tabs`,
+  component: `${PREFIX_TAG}-tabs`,
 };
 
 const Template = args => {

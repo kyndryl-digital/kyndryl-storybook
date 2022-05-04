@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "node": true
     },
     "extends": [
         "eslint:recommended",
@@ -18,7 +19,10 @@
     "rules": {
         "indent": [
             "error",
-            4
+            2, {
+                "ignoredNodes": [ "TemplateLiteral *" ],
+                "SwitchCase": 1
+            }
         ],
         "linebreak-style": [
             "error",
@@ -26,11 +30,14 @@
         ],
         "quotes": [
             "error",
-            "double"
+            "single", {
+                "allowTemplateLiterals": true
+            }
         ],
         "semi": [
             "error",
             "always"
-        ]
+        ],
+        "@typescript-eslint/no-var-requires": 0
     }
 }

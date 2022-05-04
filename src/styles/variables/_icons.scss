@@ -1,0 +1,28 @@
+// Update all icon variables when modifying these
+//  - src/styles/variables/_icons.scss
+//  - src/styles/variables/_icons-lit.scss
+//  - src/global/defs/iconIds.ts
+
+// Default variables for CSS
+$icons: (
+  'arrow-down': '\e90e',
+  'arrow-left': '\e906',
+  'arrow-right': '\e905',
+  'arrow-up': '\e90f',
+  'chevron-down': '\e903',
+  'chevron-left': '\e910',
+  'chevron-right': '\e911',
+  'chevron-up': '\e908',
+  'chevron-wide-down': '\e90b',
+  'chevron-wide-left': '\e912',
+  'chevron-wide-right': '\e913',
+  'chevron-wide-up': '\e90c',
+  'close': '\e909',
+  'download': '\e901',
+  'hamburger': '\e90a',
+  'linkedin': '\e900',
+  'pdf': '\e904',
+  'play': '\e90d',
+  'pop-out': '\e907',
+  'twitter': '\e902',
+) !default;

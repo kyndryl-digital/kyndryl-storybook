@@ -1,16 +1,16 @@
 @use 'sass:map';
 
-@import '../../styles/vars';
-@import '../../styles/accordion';
+@import '../../styles/variables';
+@import '../../styles/components/accordion';
 
-:host(#{$tag-prefix}-accordion-item) {
-  @extend .#{$class-prefix}-accordion-item;
+:host(#{$prefix-tag}-accordion-item) {
+  @extend .#{$prefix-class}-accordion-item;
 
-  .#{$class-prefix}-accordion-item-header {
-    @extend .#{$class-prefix}-accordion-item-header;
+  .#{$prefix-class}-accordion-item-header {
+    @extend .#{$prefix-class}-accordion-item-header;
   }
 
-  .#{$class-prefix}-accordion-item-detail-wrapper {
-    @extend .#{$class-prefix}-accordion-item-detail-wrapper;
+  .#{$prefix-class}-accordion-item-detail-wrapper {
+    @extend .#{$prefix-class}-accordion-item-detail-wrapper;
   }
 }

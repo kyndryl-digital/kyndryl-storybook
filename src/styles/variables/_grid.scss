@@ -1,0 +1,30 @@
+@import '../utilities/breakpoints';
+@import './breakpoints';
+
+$grid-sub-px: 8 !default;
+
+$grid-cols-per-breakpoint: (
+  xs: 4,
+  sm: 8,
+  md: 12,
+  lg: 12,
+  xlg: 12,
+  max: 12,
+) !default;
+
+@mixin css-vars-grid {
+  --kd-grid-min-width: #{$breakpoint-xs-max};
+  --kd-grid-max-width: 100%;
+
+  @include breakpoint(lg) {
+    --kd-grid-max-width: #{$breakpoint-lg-min};
+  }
+
+  @include breakpoint(xlg) {
+    --kd-grid-max-width: #{$breakpoint-xlg-min};
+  }
+
+  @include breakpoint(max) {
+    --kd-grid-max-width: #{$breakpoint-max};
+  }
+}

@@ -1,0 +1,64 @@
+
+// Sizes
+// -----------------------------------------------------
+$breakpoint-xs-min: 0 !default;
+$breakpoint-xs-max: 320px !default;
+
+$breakpoint-sm-min: 321px !default;
+$breakpoint-sm-max: 672px !default;
+
+$breakpoint-md-min: 673px !default;
+$breakpoint-md-max: 1183px !default;
+
+$breakpoint-lg-min: 1184px !default;
+$breakpoint-lg-max: 1311px !default;
+
+$breakpoint-xlg-min: 1312px !default;
+$breakpoint-xlg-max: 1583px !default;
+
+$breakpoint-max: 1584px !default;
+
+// Utility maps
+// -----------------------------------------------------
+$breakpoints-map-all: (
+  xs: (
+    $breakpoint-xs-min,
+    $breakpoint-xs-max,
+  ),
+  sm: (
+    $breakpoint-sm-min,
+    $breakpoint-sm-max,
+  ),
+  md: (
+    $breakpoint-md-min,
+    $breakpoint-md-max,
+  ),
+  lg: (
+    $breakpoint-lg-min,
+    $breakpoint-lg-max,
+  ),
+  xlg: (
+    $breakpoint-xlg-min,
+    $breakpoint-xlg-max,
+  ),
+  max: (
+    $breakpoint-max,
+    null,
+  ),
+) !default;
+
+// Device specific groups
+$breakpoints-map-devices: (
+  mobile: (
+    xs,
+    sm,
+  ),
+  tablet: (
+    md,
+  ),
+  desktop: (
+    lg,
+    xlg,
+    max,
+  ),
+) !default;

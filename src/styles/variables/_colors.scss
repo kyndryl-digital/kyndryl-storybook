@@ -1,0 +1,78 @@
+
+@mixin css-vars-color-tokens {
+  // Brand color palette
+  --kd-color-brand-white: #fafafc;
+  --kd-color-brand-dark-white: #e5e5e5;
+  --kd-color-brand-black: #2b2b2b;
+  --kd-color-brand-black-rgb: 43, 43, 43;
+  --kd-color-brand-warm-red: #ff462d;
+  --kd-color-brand-cloud: #f2f1ee;
+  --kd-color-brand-spruce: #29707a;
+  --kd-color-brand-stone: #bbbbbb;
+  --kd-color-brand-dark-stone: #3d3c3c;
+  --kd-color-brand-deep-forest: #042315;
+  --kd-color-brand-dark-spring-green: #187e3f;
+  --kd-color-brand-spring-green: #4cdd84;
+  --kd-color-brand-sage: #8d978b;
+  --kd-color-brand-earth: #9e9287;
+  --kd-color-brand-dark-earth: #565049;
+
+  // Color Tokens
+  --kd-color-token-base: var(--kd-color-brand-white);
+  --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
+  --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
+  --kd-color-token-accent: var(--kd-color-brand-warm-red);
+}
+
+@mixin css-vars-color-usage {
+  // Base elements
+  --kd-color-background: var(--kd-color-token-base);
+
+  --kd-color-text: var(--kd-color-token-inverse);
+
+  --kd-color-h1: var(--kd-color-token-inverse);
+  --kd-color-h2: var(--kd-color-token-inverse);
+  --kd-color-h3: var(--kd-color-token-inverse);
+  --kd-color-h4: var(--kd-color-token-inverse);
+  --kd-color-h5: var(--kd-color-token-inverse);
+  --kd-color-h6: var(--kd-color-token-inverse);
+
+  --kd-color-link: var(--kd-color-token-inverse);
+  --kd-color-link-hover: var(--kd-color-theme-primary-interactive);
+  --kd-color-link-active: var(--kd-color-theme-primary-interactive);
+
+  // Component specific
+  --kd-color-button-primary-text: var(--kd-color-token-inverse);
+  --kd-color-button-primary-bg: var(--kd-color-token-base);
+  --kd-color-button-primary-border: var(--kd-color-token-accent);
+  --kd-color-button-primary-hover-text: var(--kd-color-token-base);
+  --kd-color-button-primary-hover-bg: var(--kd-color-token-inverse);
+  --kd-color-button-primary-hover-border: var(--kd-color-token-inverse);
+  --kd-color-button-primary-active-text: var(--kd-color-token-base);
+  --kd-color-button-primary-active-bg: var(--kd-color-token-inverse);
+  --kd-color-button-primary-active-border: var(--kd-color-token-inverse);
+
+  --kd-color-button-secondary-text: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-bg: var(--kd-color-token-base);
+  --kd-color-button-secondary-border: var(--kd-color-token-base);
+  --kd-color-button-secondary-hover-text: var(--kd-color-token-base);
+  --kd-color-button-secondary-hover-bg: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-hover-border: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-active-text: var(--kd-color-token-base);
+  --kd-color-button-secondary-active-bg: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-active-border: var(--kd-color-token-inverse);
+
+  --kd-color-button-link-text: var(--kd-color-token-inverse);
+  --kd-color-button-link-bg: transparent;
+  --kd-color-button-link-border: transparent;
+  --kd-color-button-link-hover-text: var(--kd-color-token-base-interactive);
+  --kd-color-button-link-hover-bg: transparent;
+  --kd-color-button-link-hover-border: transparent;
+  --kd-color-button-link-active-text: var(--kd-color-token-base-interactive);
+  --kd-color-button-link-active-bg: transparent;
+  --kd-color-button-link-active-border: transparent;
+
+  --kd-color-modal-backdrop: rgba(var(--kd-color-brand-black-rgb), 0.6);
+  --kd-color-modal-bg: var(--kd-color-token-base);
+  --kd-color-modal-text: var(--kd-color-token-inverse);
+}

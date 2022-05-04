@@ -40,11 +40,15 @@ npm run storybook
 Implementation of the web components is as simple as including the compiled package in the markup of the page and freely utilizing any of the custom web component tags within the body of the page.
 
 ```
+PUBLIC_URL=https://path_to_files/ npm run build
+```
+
+```
 <html>
   <head>
 
-    <script src="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/v2/kyndryl-web-components.js"></script>
-    <link href="//kyndryl-web-components.s3.us.cloud-object-storage.appdomain.cloud/v2/kyndryl-web-components.css" rel="stylesheet">
+    <script src="kyndryl-web-components.js"></script>
+    <link href="kyndryl-web-components.css" rel="stylesheet">
 
   </head>
   <body>

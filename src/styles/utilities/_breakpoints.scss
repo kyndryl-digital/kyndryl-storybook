@@ -1,0 +1,64 @@
+@import '../variables/breakpoints';
+
+/// Wraps a media query around the content you put inside the mixin.
+///
+/// @param {Keyword|Number} $breakpoint... - Breakpoint name(s)(sm, md, lg, xl, max)
+///
+/// @output Outputs the content wrapped in a media query.
+@mixin breakpoint($breakpoint...) {
+  @each $bp in $breakpoint {
+    @if map-has-key($breakpoints-map-all, $bp) {
+      $breakpoints: map-get($breakpoints-map-all, $bp);
+      $min: nth($breakpoints, 1);
+      $max: nth($breakpoints, 2);
+
+      @if $bp == xs {
+        @media (max-width: $max) {
+          @content;
+        }
+      } @else if $bp == sm {
+        @media (min-width: $min) and (max-width: $max) {
+          @content;
+        }
+      } @else if $bp == md {
+        @media (min-width: $min) and (max-width: $max) {
+          @content;
+        }
+      } @else if $bp == lg {
+        @media (min-width: $min) and (max-width: $max) {
+          @content;
+        }
+      } @else if $bp == xlg {
+        @media (min-width: $min) and (max-width: $max) {
+          @content;
+        }
+      } @else if $bp == max {
+        @media (min-width: $min) {
+          @content;
+        }
+      }
+    } @else {
+      @warn 'breakpoint(): "#{$bp}" is not a supported breakpoint.';
+    }
+  }
+}
+
+/// Wraps a media query around the content you put inside the mixin.
+///
+/// @param {Keyword|Number} device... - Name of device to target(mobile, tablet, desktop)
+///
+/// @output Outputs the content wrapped in a media query.
+@mixin device($device...) {
+  @each $dev in $device {
+    @if map-has-key($breakpoints-map-devices, $dev) {
+      $breakpoint: map-get($breakpoints-map-devices, $dev);
+      @each $bp in $breakpoint {
+        @include breakpoint($bp) {
+          @content;
+        }
+      }
+    } @else {
+      @warn 'device(): "#{$dev}" is not a supported device.';
+    }
+  }
+}

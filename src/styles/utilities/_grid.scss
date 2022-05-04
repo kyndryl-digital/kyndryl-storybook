@@ -1,0 +1,79 @@
+@import '../variables/config';
+@import '../variables/breakpoints';
+@import '../variables/grid';
+@import './breakpoints';
+@import './spacing';
+
+@function grid-columns-to-fractional-units($columns) {
+  $css-column-notation: '';
+  @for $i from 1 through $columns {
+    $css-column-notation: $css-column-notation + '1fr ';
+  }
+  @return unquote($css-column-notation);
+}
+
+@mixin generate-grid-column-definitions($numberOfColumns, $breakpoint) {
+  @for $column-span from 1 through $numberOfColumns {
+    @include breakpoint($breakpoint) {
+      .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
+        grid-column: auto / span #{$column-span};
+      }
+    }
+  }
+}
+
+.#{$prefix-class}-grid-container {
+  display: grid;
+  grid-gap: $grid-sub-px * 4px;
+  grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, xs));
+  margin: 0 auto;
+  max-width: var(--kd-grid-max-width);
+  padding: 0;
+
+  @include breakpoint(sm) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, sm));
+  }
+
+  @include breakpoint(md) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, md));
+  }
+
+  @include breakpoint(lg) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, lg));
+  }
+
+  @include breakpoint(xlg) {
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, xlg));
+  }
+
+  @include breakpoint(sm, md, lg, xlg) {
+    @include padding(left, 2);
+    @include padding(right, 2);
+  }
+
+  @include breakpoint(max) {
+    @include padding(left, 3);
+    @include padding(right, 3);
+    grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, 'max'));
+  }
+
+  &.#{$prefix-class}-no-grid-gap {
+    grid-gap: 0;
+  }
+
+  &.#{$prefix-class}-no-grid-padding {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  &.#{$prefix-class}-fully-fluid {
+    @include breakpoint(lg, xlg, max) {
+      max-width: 100%;
+    }
+  }
+}
+
+//Grid Column Definitions
+@each $name, $columns in $grid-cols-per-breakpoint {
+  @include generate-grid-column-definitions($columns, $name);
+}

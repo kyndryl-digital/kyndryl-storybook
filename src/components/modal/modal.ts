@@ -1,15 +1,15 @@
-import { html, LitElement } from "lit";
-import { state, property, customElement, eventOptions } from "lit/decorators.js";
-import { classMap } from "lit-html/directives/class-map.js";
-
-import stylesheet from "./modal.scss";
-
-import { settings } from '../../global/settings';
+import { html, LitElement } from 'lit';
+import { state, property, customElement, eventOptions } from 'lit/decorators.js';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import '../icon/icon';
+import stylesheet from './modal.scss';
 
 /**
  * Example web component
  */
-@customElement(`${settings.tag_prefix}-modal`)
+@customElement(`${PREFIX_TAG}-modal`)
 export class kdModal extends LitElement {
   static styles = [ stylesheet ];
 
@@ -19,7 +19,7 @@ export class kdModal extends LitElement {
    * Defines the active tab index.
    */
   @state()
-  private _active: boolean = false;
+  private _active = false;
 
   /**
    * Allows users to toggle the modal open and close.
@@ -37,8 +37,8 @@ export class kdModal extends LitElement {
    * Allows users to center the modal vertically based on window and modal height.
    */
   public centerModal() {
-    const modalBackdrop = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal-backdrop");
-    const modal = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal");
+    const modalBackdrop = this.renderRoot?.querySelector('.' + PREFIX_CLASS + '-modal-backdrop');
+    const modal = this.renderRoot?.querySelector('.' + PREFIX_CLASS + '-modal');
     const modalHeight = modal.scrollHeight;
     const windowHeight = window?.innerHeight;
     const modalMargin = 50-(((100/windowHeight) * modalHeight)/2);
@@ -102,9 +102,9 @@ export class kdModal extends LitElement {
 
   render() {
     const classes = classMap({
-      [`${settings.class_prefix}-modal`]: this.size === 'default' || !this.size,
-      [`${settings.class_prefix}-modal-lg`]: this.size === 'large',
-      [`${settings.class_prefix}-modal-sm`]: this.size === 'small',
+      [`${PREFIX_CLASS}-modal`]: this.size === 'default' || !this.size,
+      [`${PREFIX_CLASS}-modal-lg`]: this.size === 'large',
+      [`${PREFIX_CLASS}-modal-sm`]: this.size === 'small',
       [`visible`]: this._active === true,
       [`hidden`]: this._active === false
     });
@@ -112,14 +112,14 @@ export class kdModal extends LitElement {
       <span @click="${e => this._handleOpen(e)}">
         <slot name="trigger"></slot>
       </span>
-      <div @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-backdrop ${this._active ? 'visible' : 'hidden'}">
-        <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${settings.class_prefix}-modal-content" class=${classes}>
-          <div class="${settings.class_prefix}-modal-controls">
-            <button @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-control" title="Close window">
-                <span class="${settings.class_prefix}-icon-close"></span>
+      <div @click="${e => this._handleClose(e)}" class="${PREFIX_CLASS}-modal-backdrop ${this._active ? 'visible' : 'hidden'}">
+        <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${PREFIX_CLASS}-modal-content" class=${classes}>
+          <div class="${PREFIX_CLASS}-modal-controls">
+            <button @click="${e => this._handleClose(e)}" class="${PREFIX_CLASS}-modal-control" title="Close window">
+              <kd-icon icon="${ICON_IDS.CLOSE}"></kd-icon>
             </button>
           </div>
-          <div class="${settings.class_prefix}-modal-content">
+          <div class="${PREFIX_CLASS}-modal-content">
             <slot @slotchange=${this._handleSlotChange}></slot>
           </div>
         </div>
