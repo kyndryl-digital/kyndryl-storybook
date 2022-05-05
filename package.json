@@ -2,8 +2,8 @@
   "name": "kyndryl-design-system",
   "version": "1.0.0",
   "description": "",
-  "main": "build/kyndryl-web-components.js",
-  "module": "build/kyndryl-web-components.js",
+  "main": "kyndryl-design-system.js",
+  "module": "kyndryl-design-system.js",
   "types": "src/components/components.ts",
   "scripts": {
     "test": "webpack --config webpack.test.config.js && jest --config=jest.config.json",
