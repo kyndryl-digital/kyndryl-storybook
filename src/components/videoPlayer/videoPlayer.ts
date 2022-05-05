@@ -19,16 +19,14 @@ export class VideoPlayer extends LitElement {
   @property({ type: String }) poster;
   @property({ type: String }) buttonLabel;
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
-  @property() buttonIcon: ICON_IDS = ICON_IDS.PLAY;
+  @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY;
+  @property() buttonIconPause: ICON_IDS = ICON_IDS.PAUSE;
   @property({ type: String }) duration;
   @property() videoType: VIDEO_TYPES = VIDEO_TYPES.DEFAULT;
   @property() theme: THEMES = THEMES.DARK_STONE;
 
   @state()
-  private _showPlayButton = true;
-
-  @state()
-  private _autoplay = this.videoType !== VIDEO_TYPES.DEFAULT;
+  private _isPlaying;
 
   private videoPlayer;
 
@@ -46,6 +44,11 @@ export class VideoPlayer extends LitElement {
     super.updated(_changedProperties);
     this.videoPlayer = this.renderRoot.querySelector('video');
     this._bindEvents();
+  }
+
+  connectedCallback() {
+    super.connectedCallback();
+    this._isPlaying = this.videoType !== VIDEO_TYPES.DEFAULT;
   }
 
   disconnectedCallback() {
@@ -66,7 +69,11 @@ export class VideoPlayer extends LitElement {
   @eventOptions({ capture: true })
   private _onTriggerClick(e) {
     e?.preventDefault();
-    this._playVideo();
+    if (this._isPlaying) {
+      this._pauseVideo();
+    } else {
+      this._playVideo();
+    }
   }
 
   private _onVideoEnded = () => {
@@ -76,13 +83,20 @@ export class VideoPlayer extends LitElement {
   };
 
   private _playVideo() {
-    this._showPlayButton = false;
-    this.videoPlayer?.setAttribute('controls','true');
+    this._isPlaying = true;
+    if (this.videoType === VIDEO_TYPES.DEFAULT) {
+      this.videoPlayer?.setAttribute('controls', 'true');
+    }
     this.videoPlayer?.play();
   }
 
+  private _pauseVideo() {
+    this._isPlaying = false;
+    this.videoPlayer?.pause();
+  }
+
   private _resetVideo() {
-    this._showPlayButton = true;
+    this._isPlaying = false;
     this.videoPlayer?.removeAttribute('controls');
     this.videoPlayer?.load();
   }
@@ -102,12 +116,12 @@ export class VideoPlayer extends LitElement {
   protected _renderDefaultVideo(): TemplateResult | string | void {
     const videoUrl = `${this.video}${this.poster ? '' : '#t=0.01'}`;
     return html`
-      ${this._showPlayButton ? html`
+      ${!this._isPlaying ? html`
         <div class="${PREFIX_CLASS}-video-player--cta-container">
-          <div class="${PREFIX_CLASS}-video-player--cta-button">
+          <div class="${PREFIX_CLASS}-video-player--cta-default-button">
             <kd-button
               size=${this.buttonSize}
-              icon=${this.buttonIcon}
+              icon=${this.buttonIconPlay}
               @click="${e => this._onTriggerClick(e)}"
             >
               <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
@@ -132,6 +146,17 @@ export class VideoPlayer extends LitElement {
 
   protected _renderBackgroundVideo(): TemplateResult | string | void {
     return html`
+      <div class="${PREFIX_CLASS}-video-player--cta-container">
+        <div class="${PREFIX_CLASS}-video-player--cta-bg-button">
+          <kd-button
+            size=${this.buttonSize}
+            icon=${this._isPlaying ? this.buttonIconPause : this.buttonIconPlay}
+            @click="${e => this._onTriggerClick(e)}"
+          >
+            <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
+          </kd-button>
+        </div>
+      </div>
       <video class="${this._classesVideoPlayer}" autoplay loop muted>
         <source src=${this.video} type="video/mp4">
       </video>

@@ -23,10 +23,17 @@
     }
   }
 
-  &--cta-button {
+  &--cta-default-button {
     @include margin(bottom left, 3);
     @include position(absolute);
     right: auto;
+    top: auto;
+  }
+
+  &--cta-bg-button {
+    @include margin(bottom right, 3);
+    @include position(absolute);
+    left: auto;
     top: auto;
   }
 }

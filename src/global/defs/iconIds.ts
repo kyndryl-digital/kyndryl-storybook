@@ -21,6 +21,7 @@ export enum ICON_IDS {
   DOWNLOAD = 'download',
   HAMBURGER = 'hamburger',
   LINKEDIN = 'linkedin',
+  PAUSE = 'close',  // TODO need to add pause icon. How do we update the icon font?
   PDF = 'pdf',
   PLAY = 'play',
   POP_OUT = 'pop-out',

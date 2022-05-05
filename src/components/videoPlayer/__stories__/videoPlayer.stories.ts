@@ -16,21 +16,27 @@ export default {
   component: `${PREFIX_TAG}-video-player`,
   argTypes: {
     video: {
+      description: 'URL of MP4 video',
       control: { type: 'text' },
     },
     youtubeId: {
+      description: 'YouTube Video ID (setting this overrides all other video options)',
       control: { type: 'text' },
     },
     title: {
+      description: 'Video title displayed in tooltip on hover',
       control: { type: 'text' },
     },
     poster: {
+      description: 'URL of poster image',
       control: { type: 'text' },
     },
     buttonLabel: {
+      description: 'Text to display in the play/pause button',
       control: { type: 'text' },
     },
     buttonSize: {
+      description: 'Size of the play/pause button',
       options: [
         null,
         ...optionsButtonSize,
@@ -42,7 +48,8 @@ export default {
         },
       },
     },
-    buttonIcon: {
+    buttonIconPlay: {
+      description: 'Icon to display in the play button',
       options: [
         null,
         ICON_IDS.PLAY,
@@ -54,10 +61,25 @@ export default {
         },
       },
     },
+    buttonIconPause: {
+      description: 'Icon to display in the pause button (background video type only)',
+      options: [
+        null,
+        ICON_IDS.PAUSE,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'none',
+        },
+      },
+    },
     duration: {
+      description: 'Video duration to display in the play button (default video type only)',
       control: { type: 'text' },
     },
     videoType: {
+      description: 'Type of MP4 video player',
       options: [
         ...optionsVideoTypes,
       ],
@@ -66,6 +88,7 @@ export default {
       }
     },
     theme: {
+      description: 'Color theme for play/pause button',
       options: [
         null,
         ...optionsTheme,
@@ -89,7 +112,8 @@ const Template = args => {
       poster=${args.poster}
       buttonLabel=${args.buttonLabel}
       buttonSize=${args.buttonSize}
-      buttonIcon=${args.buttonIcon}
+      buttonIconPlay=${args.buttonIconPlay}
+      buttonIconPause=${args.buttonIconPause}
       duration=${args.duration}
       videoType=${args.videoType}
       theme=${args.theme}
@@ -103,7 +127,8 @@ Default.args = {
   title: 'Video Title',
   buttonLabel: 'Play',
   buttonSize: BUTTON_SIZES.LARGE,
-  buttonIcon: ICON_IDS.PLAY,
+  buttonIconPlay: ICON_IDS.PLAY,
+  buttonIconPause: ICON_IDS.PAUSE,
   duration: '1:29',
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
@@ -116,7 +141,8 @@ DefaultPoster.args = {
   poster: 'https://s7d1.scene7.com/is/image/kyndryl/NicolasSekkaki_AppsDataAI_16x9?qlt=85&wid=600&ts=1649881438992&dpr=off',
   buttonLabel: 'Play',
   buttonSize: BUTTON_SIZES.LARGE,
-  buttonIcon: ICON_IDS.PLAY,
+  buttonIconPlay: ICON_IDS.PLAY,
+  buttonIconPause: ICON_IDS.PAUSE,
   duration: '1:29',
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
@@ -134,6 +160,9 @@ export const VideoBackground = Template.bind({});
 VideoBackground.args = {
   video: 'https://s7d1.scene7.com/is/content/kyndryl/5.%20MS-Launch-Social-1080.captions',
   title: 'Video Title',
+  buttonSize: BUTTON_SIZES.SMALL,
+  buttonIconPlay: ICON_IDS.PLAY,
+  buttonIconPause: ICON_IDS.PAUSE,
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.BACKGROUND,
 };
