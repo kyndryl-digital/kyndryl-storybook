@@ -1,3 +1,4 @@
+import '../global/settings/settings';
 import './accordion/accordion';
 import './button/button';
 import './contentBandContainer/contentBandContainer';
