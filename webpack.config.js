@@ -18,7 +18,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'kyndryl-web-components.js',
+    filename: 'components.js',
   },
 
   resolve: {
@@ -31,7 +31,7 @@ module.exports = {
       template: 'src/public/index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'kyndryl-web-components.css',
+      filename: 'styles.css',
     }),
     new ESLintPlugin({
       context: path.resolve(__dirname, 'src'),
