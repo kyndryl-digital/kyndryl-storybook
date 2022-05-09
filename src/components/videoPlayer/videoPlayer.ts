@@ -19,7 +19,7 @@ export class VideoPlayer extends LitElement {
   @property({ type: String }) poster;
   @property({ type: String }) buttonLabel;
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
-  @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY;
+  @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY_SOLID;
   @property() buttonIconPause: ICON_IDS = ICON_IDS.PAUSE;
   @property({ type: String }) duration;
   @property() videoType: VIDEO_TYPES = VIDEO_TYPES.DEFAULT;
