@@ -35,6 +35,8 @@ npm run storybook
 
 ## Usage
 
+### Method 1: Hosted package
+
 Implementation of the web components is as simple as including the compiled package in the markup of the page and freely utilizing any of the custom web component tags within the body of the page.
 
 ```
@@ -51,11 +53,32 @@ PUBLIC_URL=https://path_to_files/ npm run build
   </head>
   <body>
   
-    <kd-example>
+    <kyndryl-button type="primary">EXAMPLE</kyndryl-button>
     
   </body>
 </html>
 ```
+
+### Method 2: Self-hosted build
+
+The design system repository can also be installed directly onto NodeJS applications as an npm package. This method allows for full access to the design system source Typescript and SASS files within the consumer application.
+
+```
+npm install git@github.com:iwhitcomb/kyndryl-design-system.git#v2.0.0
+```
+
+Once you install kyndryl-design-system you can start importing the built web component package into your NodeJS application.
+
+```
+import 'kyndryl-design-system';
+```
+
+Alternatively, you may also import the web components directly. (Note: This will likely require you to replicate some of the webpack build steps inside your own application in order to work.)
+
+```
+import 'kyndryl-design-system/src/button/button'
+```
+
 
 ## Contributing
 
