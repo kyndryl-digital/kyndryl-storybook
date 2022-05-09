@@ -21,12 +21,14 @@ export class VideoPlayer extends LitElement {
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
   @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY_SOLID;
   @property() buttonIconPause: ICON_IDS = ICON_IDS.PAUSE;
-  @property({ type: String }) duration;
   @property() videoType: VIDEO_TYPES = VIDEO_TYPES.DEFAULT;
   @property() theme: THEMES = THEMES.DARK_STONE;
 
   @state()
   private _isPlaying;
+
+  @state()
+  private duration = null;
 
   private videoPlayer;
 
@@ -59,6 +61,7 @@ export class VideoPlayer extends LitElement {
   @eventOptions({ passive: true })
   private _bindEvents() {
     this.videoPlayer?.addEventListener('ended', this._onVideoEnded);
+    this.videoPlayer?.addEventListener('loadedmetadata', this._onVideoMetaDataLoaded);
   }
 
   @eventOptions({ passive: true })
@@ -81,6 +84,36 @@ export class VideoPlayer extends LitElement {
       this._resetVideo();
     }
   };
+
+  private _onVideoMetaDataLoaded = () => {
+    if (this.videoType === VIDEO_TYPES.DEFAULT) {
+      const durationSeconds = this.videoPlayer?.duration;
+      if (durationSeconds) {
+        this._setDuration(durationSeconds);
+      }
+    }
+  };
+
+  private _setDuration(totalSeconds) {
+    let duration;
+
+    if (totalSeconds) {
+      if (totalSeconds < 3600) {
+        // get minutes:seconds
+        duration = new Date(totalSeconds * 1000).toISOString().slice(14, 19);
+      } else {
+        // get hours:minutes:seconds
+        duration = new Date(totalSeconds * 1000).toISOString().slice(11, 19);
+      }
+
+      // trim leading zero
+      if (duration.charAt(0) === '0') {
+        duration = duration.slice(1);
+      }
+
+      this.duration = duration;
+    }
+  }
 
   private _playVideo() {
     this._isPlaying = true;

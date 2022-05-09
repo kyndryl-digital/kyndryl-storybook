@@ -75,10 +75,6 @@ export default {
         },
       },
     },
-    duration: {
-      description: 'Video duration to display in the play button (default video type only)',
-      control: { type: 'text' },
-    },
     videoType: {
       description: 'Type of MP4 video player',
       options: [
@@ -115,7 +111,6 @@ const Template = args => {
       buttonSize=${args.buttonSize}
       buttonIconPlay=${args.buttonIconPlay}
       buttonIconPause=${args.buttonIconPause}
-      duration=${args.duration}
       videoType=${args.videoType}
       theme=${args.theme}
     ></kd-video-player>
@@ -130,7 +125,6 @@ Default.args = {
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
-  duration: '1:29',
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
 };
@@ -144,7 +138,6 @@ DefaultPoster.args = {
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
-  duration: '1:29',
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
 };
