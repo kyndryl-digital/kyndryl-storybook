@@ -47,8 +47,8 @@ PUBLIC_URL=https://path_to_files/ npm run build
 <html>
   <head>
 
-    <script src="kyndryl-web-components.js"></script>
-    <link href="kyndryl-web-components.css" rel="stylesheet">
+    <script src="https://path_to_files/components.js"></script>
+    <link href="https://path_to_files/styles.css" rel="stylesheet">
 
   </head>
   <body>

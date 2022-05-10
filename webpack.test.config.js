@@ -10,7 +10,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "test"),
-    filename: 'kyndryl-web-components.js',
+    filename: 'components.js',
   },
 
   resolve: {
