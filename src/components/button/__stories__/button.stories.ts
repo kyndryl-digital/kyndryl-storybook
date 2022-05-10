@@ -4,12 +4,13 @@ import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
 import { LINK_TARGETS } from '../../../global/defs/linkTargets';
 import { THEMES } from '../../../global/defs/themes';
-import { BUTTON_SIZES, BUTTON_TYPES } from '../defs';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_ICON_POSITION } from '../defs';
 import '../button';
 
 const optionsType = createOptionsArray(BUTTON_TYPES);
 const optionsSize = createOptionsArray(BUTTON_SIZES);
 const optionsIcon = createOptionsArray(ICON_IDS);
+const optionsIconPosition = createOptionsArray(BUTTON_ICON_POSITION);
 const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
 const optionsTheme = createOptionsArray(THEMES);
 
@@ -56,6 +57,14 @@ export default {
         },
       },
     },
+    iconPosition: {
+      options: [
+        ...optionsIconPosition,
+      ],
+      control: {
+        type: 'select',
+      },
+    },
     theme: {
       options: [
         null,
@@ -77,6 +86,7 @@ const Template = args => {
       type=${args.type}
       size=${args.size}
       icon=${args.icon}
+      iconPosition=${args.iconPosition}
       href=${args.href}
       target=${args.target}
       theme=${args.theme}
@@ -92,5 +102,6 @@ Button.args = {
   type: BUTTON_TYPES.PRIMARY,
   size: null,
   icon: null,
+  iconPosition: null,
   theme: null,
 };

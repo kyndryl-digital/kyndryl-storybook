@@ -4,7 +4,7 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
 import { THEMES } from '../../global/defs/themes';
-import { BUTTON_SIZES } from '../button/defs';
+import { BUTTON_ICON_POSITION, BUTTON_SIZES } from '../button/defs';
 import '../button/button';
 import { VIDEO_TYPES } from './defs';
 import stylesheet from './videoPlayer.scss';
@@ -21,6 +21,7 @@ export class VideoPlayer extends LitElement {
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
   @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY_SOLID;
   @property() buttonIconPause: ICON_IDS = ICON_IDS.PAUSE;
+  @property() buttonIconPosition: BUTTON_ICON_POSITION;
   @property() videoType: VIDEO_TYPES = VIDEO_TYPES.DEFAULT;
   @property() theme: THEMES = THEMES.DARK_STONE;
 
@@ -155,10 +156,13 @@ export class VideoPlayer extends LitElement {
             <kd-button
               size=${this.buttonSize}
               icon=${this.buttonIconPlay}
+              iconPosition=${this.buttonIconPosition}
               @click="${e => this._onTriggerClick(e)}"
             >
-              <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
-              ${this.duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this.duration})</span>` : null}
+              <span class="${PREFIX_CLASS}-video-player--cta-label">
+                ${this.buttonLabel}
+                ${this.duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this.duration})</span>` : null}
+              </span>
             </kd-button>
           </div>
         </div>
@@ -184,6 +188,7 @@ export class VideoPlayer extends LitElement {
           <kd-button
             size=${this.buttonSize}
             icon=${this._isPlaying ? this.buttonIconPause : this.buttonIconPlay}
+            iconPosition=${this.buttonIconPosition}
             @click="${e => this._onTriggerClick(e)}"
           >
             <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>

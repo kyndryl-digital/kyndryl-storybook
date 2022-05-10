@@ -8,3 +8,9 @@ export enum BUTTON_SIZES {
   LARGE = 'large',
   SMALL = 'small',
 }
+
+export enum BUTTON_ICON_POSITION {
+  CENTER = 'center',
+  LEFT = 'left',
+  RIGHT = 'right',
+}

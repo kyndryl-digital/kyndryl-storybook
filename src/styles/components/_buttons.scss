@@ -12,7 +12,8 @@
   font-weight: var(--kd-font-weight-button);
   font-family: var(--kd-font-family-button);
   box-sizing: border-box;
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: row;
   white-space: nowrap;
   border-width: 2px;
   border-style: solid;
@@ -29,10 +30,23 @@
     text-decoration: none;
   }
   &--icon {
-    @include margin(left, 1);
     display: inherit;
     font-size: var(--kd-font-size-button-icon);
     font-weight: var(--kd-font-weight-button-icon);
+  }
+}
+
+.#{$prefix-class}-btn-icon-left {
+  flex-direction: row-reverse;
+
+  .#{$prefix-class}-btn--icon {
+    @include margin(right, 1);
+  }
+}
+
+.#{$prefix-class}-btn-icon-right {
+  .#{$prefix-class}-btn--icon {
+    @include margin(left, 1);
   }
 }
 

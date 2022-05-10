@@ -3,11 +3,12 @@ import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
 import { THEMES } from '../../../global/defs/themes';
-import { BUTTON_SIZES } from '../../button/defs';
+import { BUTTON_SIZES, BUTTON_ICON_POSITION } from '../../button/defs';
 import { VIDEO_TYPES } from '../defs';
 import '../videoPlayer';
 
 const optionsButtonSize = createOptionsArray(BUTTON_SIZES);
+const optionsButtonIconPosition = createOptionsArray(BUTTON_ICON_POSITION);
 const optionsTheme = createOptionsArray(THEMES);
 const optionsVideoTypes = createOptionsArray(VIDEO_TYPES);
 
@@ -75,6 +76,14 @@ export default {
         },
       },
     },
+    buttonIconPosition: {
+      options: [
+        ...optionsButtonIconPosition,
+      ],
+      control: {
+        type: 'select',
+      },
+    },
     videoType: {
       description: 'Type of MP4 video player',
       options: [
@@ -111,6 +120,7 @@ const Template = args => {
       buttonSize=${args.buttonSize}
       buttonIconPlay=${args.buttonIconPlay}
       buttonIconPause=${args.buttonIconPause}
+      buttonIconPosition=${args.buttonIconPosition}
       videoType=${args.videoType}
       theme=${args.theme}
     ></kd-video-player>
@@ -125,6 +135,7 @@ Default.args = {
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
+  buttonIconPosition: BUTTON_ICON_POSITION.RIGHT,
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
 };
@@ -138,6 +149,7 @@ DefaultPoster.args = {
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
+  buttonIconPosition: BUTTON_ICON_POSITION.RIGHT,
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.DEFAULT,
 };
@@ -157,6 +169,7 @@ VideoBackground.args = {
   buttonSize: BUTTON_SIZES.SMALL,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
+  buttonIconPosition: BUTTON_ICON_POSITION.CENTER,
   theme: THEMES.DARK_STONE,
   videoType: VIDEO_TYPES.BACKGROUND,
 };
