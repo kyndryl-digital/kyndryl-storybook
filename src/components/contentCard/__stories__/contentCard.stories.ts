@@ -1,13 +1,22 @@
 import { html } from 'lit';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../../global/defs/linkTargets';
+import { THEMES } from '../../../global/defs/themes';
+import { createOptionsArray } from '../../../global/mixins/global';
 import '../contentCard';
+
+const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
+const optionsTheme = createOptionsArray(THEMES);
 
 export default {
   title: 'Web Components/Content Card',
   component: `${PREFIX_TAG}-content-card`,
   argTypes: {
     youtubeId: {
+      control: { type: 'text' },
+    },
+    videoTitle: {
       control: { type: 'text' },
     },
     image: {
@@ -27,7 +36,7 @@ export default {
       control: { type: 'text' },
     },
     ctaTarget: {
-      options: ['_blank', '_self', '_parent', '_top'],
+      options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     ctaLabel: {
@@ -35,7 +44,7 @@ export default {
     },
     ctaIcon: {
       options: [
-        'none',
+        null,
         ICON_IDS.ARROW_RIGHT,
         ICON_IDS.DOWNLOAD,
         ICON_IDS.POP_OUT,
@@ -43,13 +52,21 @@ export default {
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
         },
       },
     },
     theme: {
-      options: ['', `${PREFIX_CLASS}-theme-dark-stone`, `${PREFIX_CLASS}-theme-cloud`],
-      control: { type: 'select' },
+      options: [
+        null,
+        ...optionsTheme,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'none',
+        },
+      },
     },
   },
 };
@@ -58,6 +75,7 @@ const Template = args => {
   return html`
     <kd-content-card
       youtubeId=${args.youtubeId}
+      videoTitle=${args.videoTitle}
       image=${args.image}
       imageAltText=${args.imageAltText}
       title=${args.title}
@@ -76,9 +94,12 @@ const Template = args => {
 export const contentCard = Template.bind({});
 contentCard.args = {
   youtubeId: 'Um8XEj-1_fY',
+  videoTitle: 'Video Title',
   title: 'Content Card Title',
   titleSize: 'default',
   ctaLink: '#',
+  ctaTarget: LINK_TARGETS.SELF,
   ctaLabel: 'CTA Label',
   ctaIcon: ICON_IDS.ARROW_RIGHT,
+  theme: null,
 };

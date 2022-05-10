@@ -21,8 +21,10 @@ export enum ICON_IDS {
   DOWNLOAD = 'download',
   HAMBURGER = 'hamburger',
   LINKEDIN = 'linkedin',
+  PAUSE = 'pause',
   PDF = 'pdf',
   PLAY = 'play',
+  PLAY_SOLID = 'play-solid',
   POP_OUT = 'pop-out',
   TWITTER = 'twitter',
 }

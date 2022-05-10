@@ -28,7 +28,7 @@ export default {
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          none: 'none',
         },
       },
     },

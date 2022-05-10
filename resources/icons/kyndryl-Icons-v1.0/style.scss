@@ -1,0 +1,141 @@
+@import "variables";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?p6zppx') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?p6zppx') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?p6zppx##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.kd-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kd-icon-arrow-down {
+  &:before {
+    content: $kd-icon-arrow-down; 
+  }
+}
+.kd-icon-arrow-left {
+  &:before {
+    content: $kd-icon-arrow-left; 
+  }
+}
+.kd-icon-arrow-right {
+  &:before {
+    content: $kd-icon-arrow-right; 
+  }
+}
+.kd-icon-arrow-up {
+  &:before {
+    content: $kd-icon-arrow-up; 
+  }
+}
+.kd-icon-chevron-down {
+  &:before {
+    content: $kd-icon-chevron-down; 
+  }
+}
+.kd-icon-chevron-left {
+  &:before {
+    content: $kd-icon-chevron-left; 
+  }
+}
+.kd-icon-chevron-right {
+  &:before {
+    content: $kd-icon-chevron-right; 
+  }
+}
+.kd-icon-chevron-up {
+  &:before {
+    content: $kd-icon-chevron-up; 
+  }
+}
+.kd-icon-chevron-wide-down {
+  &:before {
+    content: $kd-icon-chevron-wide-down; 
+  }
+}
+.kd-icon-chevron-wide-left {
+  &:before {
+    content: $kd-icon-chevron-wide-left; 
+  }
+}
+.kd-icon-chevron-wide-right {
+  &:before {
+    content: $kd-icon-chevron-wide-right; 
+  }
+}
+.kd-icon-chevron-wide-up {
+  &:before {
+    content: $kd-icon-chevron-wide-up; 
+  }
+}
+.kd-icon-close {
+  &:before {
+    content: $kd-icon-close; 
+  }
+}
+.kd-icon-download {
+  &:before {
+    content: $kd-icon-download; 
+  }
+}
+.kd-icon-hamburger {
+  &:before {
+    content: $kd-icon-hamburger; 
+  }
+}
+.kd-icon-linkedin {
+  &:before {
+    content: $kd-icon-linkedin; 
+  }
+}
+.kd-icon-pause {
+  &:before {
+    content: $kd-icon-pause;     
+    color: #3d3c3c;
+  }
+}
+.kd-icon-pdf {
+  &:before {
+    content: $kd-icon-pdf; 
+  }
+}
+.kd-icon-play {
+  &:before {
+    content: $kd-icon-play; 
+  }
+}
+.kd-icon-play-solid {
+  &:before {
+    content: $kd-icon-play-solid;     
+    color: #3d3c3c;
+  }
+}
+.kd-icon-pop-out {
+  &:before {
+    content: $kd-icon-pop-out; 
+  }
+}
+.kd-icon-twitter {
+  &:before {
+    content: $kd-icon-twitter; 
+  }
+}
+

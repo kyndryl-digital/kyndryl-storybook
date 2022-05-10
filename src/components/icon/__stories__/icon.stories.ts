@@ -12,13 +12,13 @@ export default {
   argTypes: {
     icon: {
       options: [
-        'none',
+        null,
         ...optionsIcon,
       ],
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
         },
       },
     }

@@ -1,8 +1,14 @@
 import { html } from 'lit';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
+import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../../global/defs/linkTargets';
+import { THEMES } from '../../../global/defs/themes';
+import { createOptionsArray } from '../../../global/mixins/global';
 import '../contentBandContainer';
 import '../../contentCard/contentCard';
+
+const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
+const optionsTheme = createOptionsArray(THEMES);
 
 export default {
   title: 'Web Components/Content Band Container',
@@ -19,7 +25,7 @@ export default {
       control: { type: 'text' },
     },
     titleCtaTarget: {
-      options: ['_blank', '_self', '_parent', '_top'],
+      options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     titleCtaLabel: {
@@ -27,7 +33,7 @@ export default {
     },
     titleCtaIcon: {
       options: [
-        'none',
+        null,
         ICON_IDS.ARROW_RIGHT,
         ICON_IDS.DOWNLOAD,
         ICON_IDS.POP_OUT,
@@ -35,7 +41,7 @@ export default {
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
         },
       },
     },
@@ -44,8 +50,16 @@ export default {
       control: { type: 'select' },
     },
     theme: {
-      options: ['', `${PREFIX_CLASS}-theme-dark-stone`, `${PREFIX_CLASS}-theme-cloud`],
-      control: { type: 'select' },
+      options: [
+        null,
+        ...optionsTheme,
+      ],
+      control: {
+        type: 'select',
+        labels: {
+          null: 'none',
+        },
+      },
     },
   },
 };
@@ -114,7 +128,9 @@ ContentCards.args = {
   title: 'Content Band Container with Content Cards',
   titleSize: 'h1',
   titleCtaLink: '#',
+  titleCtaTarget: LINK_TARGETS.SELF,
   titleCtaLabel: 'CTA Label',
   titleCtaIcon: ICON_IDS.ARROW_RIGHT,
   columnLayout: '2',
+  theme: null,
 };

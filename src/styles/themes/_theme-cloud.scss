@@ -1,6 +1,7 @@
+@import '../variables/config';
 @import '../variables/colors';
 
-.kd-theme-cloud {
+.#{$prefix-class-theme}-cloud {
   --kd-color-token-base: var(--kd-color-brand-cloud);
   --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
   --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
