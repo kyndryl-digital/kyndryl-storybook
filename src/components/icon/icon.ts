@@ -10,6 +10,7 @@ export class Icon extends LitElement {
   static styles = [stylesheet];
 
   @property() icon: ICON_IDS;
+  @property({ type: String }) ariaLabel;
 
   render() {
     const icon_classes = classMap({
@@ -18,7 +19,7 @@ export class Icon extends LitElement {
     });
 
     if (this.icon) {
-      return html`<span class=${icon_classes}></span>`;
+      return html`<span role="img" aria-label=${this.ariaLabel ? this.ariaLabel : this.icon} class=${icon_classes}></span>`;
     }
 
     return null;

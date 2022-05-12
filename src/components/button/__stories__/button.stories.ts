@@ -20,20 +20,25 @@ export default {
   parameters: {},
   argTypes: {
     label: {
+      description: 'Button text',
       control: { type: 'text' },
     },
     href: {
+      description: 'Link URL',
       control: { type: 'text' },
     },
     target: {
+      description: 'Where to open the link (value of the target attribute)',
       options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     type: {
+      description: 'Button type',
       options: [...optionsType],
       control: { type: 'select' },
     },
     size: {
+      description: 'Button size',
       options: [
         null,
         ...optionsSize,
@@ -46,6 +51,7 @@ export default {
       },
     },
     icon: {
+      description: 'Icon to display in the button',
       options: [
         null,
         ...optionsIcon,
@@ -57,7 +63,12 @@ export default {
         },
       },
     },
+    iconAriaLabel: {
+      description: 'Accessible aria label on the icon (used for icon only button)',
+      control: { type: 'text' },
+    },
     iconPosition: {
+      description: 'Icon position relative to text label (center for icon only button)',
       options: [
         ...optionsIconPosition,
       ],
@@ -66,6 +77,7 @@ export default {
       },
     },
     theme: {
+      description: 'Color theme',
       options: [
         null,
         ...optionsTheme,
@@ -87,6 +99,7 @@ const Template = args => {
       size=${args.size}
       icon=${args.icon}
       iconPosition=${args.iconPosition}
+      iconAriaLabel=${args.iconAriaLabel}
       href=${args.href}
       target=${args.target}
       theme=${args.theme}

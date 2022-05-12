@@ -25,6 +25,7 @@ export class Button extends LitElement {
   @property() size: BUTTON_SIZES;
   @property() icon: ICON_IDS;
   @property() iconPosition: BUTTON_ICON_POSITION;
+  @property({ type: String }) iconAriaLabel;
   @property() theme: THEMES;
 
   render() {
@@ -45,7 +46,7 @@ export class Button extends LitElement {
       return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
         <slot></slot>
         <span class="${PREFIX_CLASS}-btn--icon">
-          <kd-icon icon=${this.icon}></kd-icon>
+          <kd-icon icon=${this.icon} ariaLabel=${this.iconAriaLabel}></kd-icon>
         </span>
       </a>`;
     }

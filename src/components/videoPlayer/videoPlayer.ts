@@ -17,7 +17,9 @@ export class VideoPlayer extends LitElement {
   @property({ type: String }) youtubeId;
   @property({ type: String }) title;
   @property({ type: String }) poster;
-  @property({ type: String }) buttonLabel;
+  @property({ type: String }) buttonLabelPlay;
+  @property({ type: String }) buttonLabelPause;
+  @property({ type: String }) showButtonLabel = 'true';
   @property() buttonSize: BUTTON_SIZES = BUTTON_SIZES.LARGE;
   @property() buttonIconPlay: ICON_IDS = ICON_IDS.PLAY_SOLID;
   @property() buttonIconPause: ICON_IDS = ICON_IDS.PAUSE;
@@ -29,9 +31,15 @@ export class VideoPlayer extends LitElement {
   private _isPlaying;
 
   @state()
-  private duration = null;
+  private _buttonLabel;
 
-  private videoPlayer;
+  @state()
+  private _showButtonLabel = true;
+
+  @state()
+  private _duration = null;
+
+  private _videoPlayer;
 
   private _classesVideoPlayer = classMap({
     [`${PREFIX_CLASS}-object-fit-cover`]: true,
@@ -45,13 +53,17 @@ export class VideoPlayer extends LitElement {
 
   protected updated(_changedProperties: PropertyValues) {
     super.updated(_changedProperties);
-    this.videoPlayer = this.renderRoot.querySelector('video');
+    this._videoPlayer = this.renderRoot.querySelector('video');
+    this._showButtonLabel = this.showButtonLabel === 'true';
+    this._buttonLabel = this._isPlaying ? this.buttonLabelPause : this.buttonLabelPlay;
     this._bindEvents();
   }
 
   connectedCallback() {
     super.connectedCallback();
     this._isPlaying = this.videoType !== VIDEO_TYPES.DEFAULT;
+    this._buttonLabel = this._isPlaying ? this.buttonLabelPause : this.buttonLabelPlay;
+    this._showButtonLabel = this.showButtonLabel === 'true';
   }
 
   disconnectedCallback() {
@@ -61,13 +73,13 @@ export class VideoPlayer extends LitElement {
 
   @eventOptions({ passive: true })
   private _bindEvents() {
-    this.videoPlayer?.addEventListener('ended', this._onVideoEnded);
-    this.videoPlayer?.addEventListener('loadedmetadata', this._onVideoMetaDataLoaded);
+    this._videoPlayer?.addEventListener('ended', this._onVideoEnded);
+    this._videoPlayer?.addEventListener('loadedmetadata', this._onVideoMetaDataLoaded);
   }
 
   @eventOptions({ passive: true })
   private _unbindEvents() {
-    this.videoPlayer?.removeEventListener('ended', this._onVideoEnded);
+    this._videoPlayer?.removeEventListener('ended', this._onVideoEnded);
   }
 
   @eventOptions({ capture: true })
@@ -88,7 +100,7 @@ export class VideoPlayer extends LitElement {
 
   private _onVideoMetaDataLoaded = () => {
     if (this.videoType === VIDEO_TYPES.DEFAULT) {
-      const durationSeconds = this.videoPlayer?.duration;
+      const durationSeconds = this._videoPlayer?.duration;
       if (durationSeconds) {
         this._setDuration(durationSeconds);
       }
@@ -112,27 +124,30 @@ export class VideoPlayer extends LitElement {
         duration = duration.slice(1);
       }
 
-      this.duration = duration;
+      this._duration = duration;
     }
   }
 
   private _playVideo() {
     this._isPlaying = true;
+    this._buttonLabel = this.buttonLabelPause;
     if (this.videoType === VIDEO_TYPES.DEFAULT) {
-      this.videoPlayer?.setAttribute('controls', 'true');
+      this._videoPlayer?.setAttribute('controls', 'true');
     }
-    this.videoPlayer?.play();
+    this._videoPlayer?.play();
   }
 
   private _pauseVideo() {
     this._isPlaying = false;
-    this.videoPlayer?.pause();
+    this._buttonLabel = this.buttonLabelPlay;
+    this._videoPlayer?.pause();
   }
 
   private _resetVideo() {
     this._isPlaying = false;
-    this.videoPlayer?.removeAttribute('controls');
-    this.videoPlayer?.load();
+    this._buttonLabel = this.buttonLabelPlay;
+    this._videoPlayer?.removeAttribute('controls');
+    this._videoPlayer?.load();
   }
 
   protected _renderYoutubePlayer(): TemplateResult | string | void {
@@ -157,11 +172,12 @@ export class VideoPlayer extends LitElement {
               size=${this.buttonSize}
               icon=${this.buttonIconPlay}
               iconPosition=${this.buttonIconPosition}
+              iconAriaLabel=${this._showButtonLabel ? null : this._buttonLabel}
               @click="${e => this._onTriggerClick(e)}"
             >
               <span class="${PREFIX_CLASS}-video-player--cta-label">
-                ${this.buttonLabel}
-                ${this.duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this.duration})</span>` : null}
+                ${this._showButtonLabel ? html`${this._buttonLabel}` : null}
+                ${this._duration ? html`<span class="${PREFIX_CLASS}-video-player--cta-duration">(${this._duration})</span>` : null}
               </span>
             </kd-button>
           </div>
@@ -189,9 +205,10 @@ export class VideoPlayer extends LitElement {
             size=${this.buttonSize}
             icon=${this._isPlaying ? this.buttonIconPause : this.buttonIconPlay}
             iconPosition=${this.buttonIconPosition}
+            iconAriaLabel=${this._showButtonLabel ? null : this._buttonLabel}
             @click="${e => this._onTriggerClick(e)}"
           >
-            <span class="${PREFIX_CLASS}-video-player--cta-label">${this.buttonLabel}</span>
+            <span class="${PREFIX_CLASS}-video-player--cta-label">${this._showButtonLabel ? html`${this._buttonLabel}` : null}</span>
           </kd-button>
         </div>
       </div>

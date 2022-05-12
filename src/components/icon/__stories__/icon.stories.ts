@@ -11,6 +11,7 @@ export default {
   component: `${PREFIX_TAG}-icon`,
   argTypes: {
     icon: {
+      description: 'Icon ID',
       options: [
         null,
         ...optionsIcon,
@@ -21,13 +22,17 @@ export default {
           null: 'none',
         },
       },
-    }
-  }
+    },
+    ariaLabel: {
+      description: 'Accessible aria label for the icon (fallback value is the Icon ID)',
+      control: { type: 'text' },
+    },
+  },
 };
 
 const Template = args => {
   return html`
-    <kd-icon icon=${args.icon}></kd-icon>
+    <kd-icon icon=${args.icon} ariaLabel=${args.ariaLabel}></kd-icon>
   `;
 };
 
@@ -63,4 +68,5 @@ export const Icons = () => {
 export const SingleIcon = Template.bind({});
 SingleIcon.args = {
   icon: ICON_IDS.ARROW_RIGHT,
+  ariaLabel: 'arrow right icon'
 };
