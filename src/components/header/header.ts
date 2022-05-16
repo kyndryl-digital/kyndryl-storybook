@@ -8,10 +8,7 @@ import '../image/image';
 import tippy from 'tippy.js';
 
 /**
- * Kyndryl branded L0
- *
- * @slot - This element has a slot
- * @csspart button - The button
+ * Header component
  */
 @customElement(`${PREFIX_TAG}-header`)
 export class Header extends LitElement {
