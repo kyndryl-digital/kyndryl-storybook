@@ -25,4 +25,6 @@ export enum ICON_IDS {
   PLAY = 'play',
   POP_OUT = 'pop-out',
   TWITTER = 'twitter',
+  ANGLE_DOWN = 'angle-down',
+  ANGLE_UP = 'angle-up'
 }
