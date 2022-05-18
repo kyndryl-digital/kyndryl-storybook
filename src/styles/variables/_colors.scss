@@ -38,8 +38,8 @@
   --kd-color-h6: var(--kd-color-token-inverse);
 
   --kd-color-link: var(--kd-color-token-inverse);
-  --kd-color-link-hover: var(--kd-color-theme-primary-interactive);
-  --kd-color-link-active: var(--kd-color-theme-primary-interactive);
+  --kd-color-link-hover: var(--kd-color-token-interactive);
+  --kd-color-link-active: var(--kd-color-token-interactive);
 
   // Component specific
   --kd-color-button-primary-text: var(--kd-color-token-inverse);
