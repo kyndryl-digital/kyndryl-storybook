@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 export enum IMAGE_ASPECT_RATIOS {
   RATIO_16_9 = '16:9',
   RATIO_2_1 = '2:1',

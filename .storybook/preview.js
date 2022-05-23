@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import '!style-loader!css-loader!sass-loader!../src/styles/_global.storybook.scss';
 
 export const parameters = {

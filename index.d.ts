@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 declare module'*.scss' {
   const content: {[key: string]: any}
   export = content
