@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import './accordion/accordion';
 import './button/button';
 import './contentBandContainer/contentBandContainer';

@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement, TemplateResult } from 'lit';
 import { state, customElement } from 'lit/decorators.js';
 import { kdTab } from './tab';

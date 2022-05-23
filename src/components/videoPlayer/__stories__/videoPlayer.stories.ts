@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';

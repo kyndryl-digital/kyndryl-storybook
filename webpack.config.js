@@ -1,3 +1,8 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+const webpack = require('webpack');
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -41,6 +46,9 @@ module.exports = {
     new StylelintPlugin({
       context: path.resolve(__dirname, 'src'),
       exclude: 'node_modules',
+    }),
+    new webpack.BannerPlugin({
+      banner: 'Copyright Kyndryl, Inc. 2022',
     }),
   ],
 
@@ -117,6 +125,7 @@ module.exports = {
       new CssMinimizerPlugin(),
       new TerserPlugin({
         parallel: true,
+        extractComments: false,
       }),
     ],
   },

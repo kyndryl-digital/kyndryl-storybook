@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 export enum BUTTON_TYPES {
   PRIMARY = 'primary',
   SECONDARY = 'secondary',
