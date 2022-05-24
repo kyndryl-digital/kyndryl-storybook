@@ -172,7 +172,7 @@ export class VideoPlayer extends LitElement {
               size=${this.buttonSize}
               icon=${this.buttonIconPlay}
               iconPosition=${this.buttonIconPosition}
-              iconAriaLabel=${this._showButtonLabel ? null : this._buttonLabel}
+              ariaLabel=${this._showButtonLabel ? null : this._buttonLabel}
               @click="${e => this._onTriggerClick(e)}"
             >
               <span class="${PREFIX_CLASS}-video-player--cta-label">
@@ -205,7 +205,7 @@ export class VideoPlayer extends LitElement {
             size=${this.buttonSize}
             icon=${this._isPlaying ? this.buttonIconPause : this.buttonIconPlay}
             iconPosition=${this.buttonIconPosition}
-            iconAriaLabel=${this._showButtonLabel ? null : this._buttonLabel}
+            ariaLabel=${this._showButtonLabel ? null : this._buttonLabel}
             @click="${e => this._onTriggerClick(e)}"
           >
             <span class="${PREFIX_CLASS}-video-player--cta-label">${this._showButtonLabel ? html`${this._buttonLabel}` : null}</span>

@@ -1,5 +1,6 @@
 import { html, LitElement } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
 import { ICON_IDS } from '../../global/defs/iconIds';
@@ -19,13 +20,13 @@ import stylesheet from './button.scss';
 export class Button extends LitElement {
   static styles = [stylesheet];
 
+  @property({ type: String }) ariaLabel;
   @property({ type: String }) href;
   @property() target: LINK_TARGETS;
   @property() type: BUTTON_TYPES;
   @property() size: BUTTON_SIZES;
   @property() icon: ICON_IDS;
   @property() iconPosition: BUTTON_ICON_POSITION;
-  @property({ type: String }) iconAriaLabel;
   @property() theme: THEMES;
 
   render() {
@@ -39,14 +40,14 @@ export class Button extends LitElement {
       [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
     });
     if (!this.icon) {
-      return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.ariaLabel ? this.ariaLabel : undefined)}>
         <slot></slot>
       </a>`;
     } else {
-      return html`<a id="button" href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.ariaLabel ? this.ariaLabel : undefined)}>
         <slot></slot>
         <span class="${PREFIX_CLASS}-btn--icon">
-          <kd-icon icon=${this.icon} ariaLabel=${this.iconAriaLabel}></kd-icon>
+          <kd-icon icon=${this.icon}></kd-icon>
         </span>
       </a>`;
     }

@@ -19,8 +19,8 @@ export default {
   component: `${PREFIX_TAG}-button`,
   parameters: {},
   argTypes: {
-    label: {
-      description: 'Button text',
+    ariaLabel: {
+      description: 'Accessible aria label provides discernible text for icon only buttons or additional context.',
       control: { type: 'text' },
     },
     href: {
@@ -63,10 +63,6 @@ export default {
         },
       },
     },
-    iconAriaLabel: {
-      description: 'Accessible aria label on the icon (used for icon only button)',
-      control: { type: 'text' },
-    },
     iconPosition: {
       description: 'Icon position relative to text label (center for icon only button)',
       options: [
@@ -99,17 +95,16 @@ const Template = args => {
       size=${args.size}
       icon=${args.icon}
       iconPosition=${args.iconPosition}
-      iconAriaLabel=${args.iconAriaLabel}
+      ariaLabel=${args.ariaLabel}
       href=${args.href}
       target=${args.target}
       theme=${args.theme}
-    >${args.label}</kd-button>
+    >Button Text</kd-button>
   `;
 };
 
 export const Button = Template.bind({});
 Button.args = {
-  label: 'Click here',
   href: 'http://kyndryl.com',
   target: LINK_TARGETS.SELF,
   type: BUTTON_TYPES.PRIMARY,
