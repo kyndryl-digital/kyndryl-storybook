@@ -3,8 +3,15 @@ const path = require('path');
 const fs = require('fs');
 const readdir = promisify(fs.readdir);
 const stat = promisify(fs.stat);
+const commandLineArgs = require('command-line-args')
+const optionDefinitions = [
+	{name: 'sourceDir', type: String},
+	{name: 'destinationDir', type: String},
+]
+const options = commandLineArgs(optionDefinitions)
+
 const Netstorage = require('netstorageapi')
- 
+
 const config = {
   hostname: '${NETSTORAGE_HOST_NAME}',
   keyName: '${NETSTORAGE_KEY_NAME}',
@@ -12,11 +19,10 @@ const config = {
   cpCode: '${NETSTORAGE_CP_CODE}',
   ssl: false
 }
-const arguments = process.argv.slice(2)
-const buildDirectory = arguments[0] ? arguments[0] : "build";
+const sourceDir = options.sourceDir ? options.sourceDir : "build"
+const destinationDir = options.destinationDir ? config.cpCode + '/' + options.destinationDir + '/' : config.cpCode + '/'
 
 const ns = new Netstorage(config)
-
 
 async function getFiles(dir) {
   const subdirs = await readdir(dir);
@@ -27,20 +33,20 @@ async function getFiles(dir) {
   return files.reduce((a, f) => a.concat(f), []);
 }
 
-
-arrayOfFiles = getFiles(buildDirectory)
+arrayOfFiles = getFiles(sourceDir)
 	.then(function(files){
+
 		files.forEach((file) => {
-			ns.upload(file, config.cpCode + '/' + path.relative(buildDirectory, file), (error, response, body) => {
+			ns.upload(file, destinationDir + path.relative(sourceDir, file), (error, response, body) => {
 				
 			  if (error) {
 				console.log(`NetStorage Upload Error: ${error.message}`)
 			  }
 			  if (response.statusCode == 200) {
-				console.log(config.cpCode + '/' + path.relative(buildDirectory, file) + " uploaded")
+				console.log(destinationDir + path.relative(sourceDir, file) + " uploaded")
 			  } 
 			  else {
-				  console.log('HTTP Error: ' + response.statusCode + ": " + config.cpCode + '/' + path.relative(buildDirectory, file))
+				  console.log('HTTP Error: ' + response.statusCode + ": " + destinationDir + path.relative(sourceDir, file))
 			  }
 			});
 		})
