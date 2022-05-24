@@ -1,17 +1,19 @@
-import { html, LitElement, PropertyValues } from 'lit';
-import { state, property, customElement, eventOptions } from 'lit/decorators.js';
+import { html, LitElement } from 'lit';
+import { customElement, eventOptions, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import { KEYCODES } from '../../global/defs/keyCodes';
 import { ICON_IDS } from '../../global/defs/iconIds';
 import '../icon/icon';
+import { MODAL_SIZES } from './defs';
 import stylesheet from './modal.scss';
 
 @customElement(`${PREFIX_TAG}-modal`)
 export class kdModal extends LitElement {
   static styles = [ stylesheet ];
 
-  @property({ type: String }) size;
+  @property() size: MODAL_SIZES = MODAL_SIZES.DEFAULT;
+  @property({ type: String }) closeLabel = 'Close modal';
 
   @state()
   private _isOpen = false;
@@ -109,9 +111,9 @@ export class kdModal extends LitElement {
 
   render() {
     const classes = classMap({
-      [`${PREFIX_CLASS}-modal`]: this.size === 'default' || !this.size,
-      [`${PREFIX_CLASS}-modal-lg`]: this.size === 'large',
-      [`${PREFIX_CLASS}-modal-sm`]: this.size === 'small',
+      [`${PREFIX_CLASS}-modal`]: this.size === MODAL_SIZES.DEFAULT || !this.size,
+      [`${PREFIX_CLASS}-modal-lg`]: this.size === MODAL_SIZES.LARGE,
+      [`${PREFIX_CLASS}-modal-sm`]: this.size === MODAL_SIZES.SMALL,
       [`visible`]: this._isOpen === true,
       [`hidden`]: this._isOpen === false
     });
@@ -120,9 +122,9 @@ export class kdModal extends LitElement {
         <slot name="trigger" @click="${e => this._onTriggerClick(e)}"></slot>
       </span>
       <div @click="${e => this._onCloseClick(e)}" class="${PREFIX_CLASS}-modal-backdrop ${this._isOpen ? 'visible' : 'hidden'}">
-        <div @click="${e => e.stopPropagation()}" class=${classes} role="dialog" aria-describedby=".${PREFIX_CLASS}-modal-content">
+        <div @click="${e => e.stopPropagation()}" class=${classes} role="dialog">
           <div class="${PREFIX_CLASS}-modal-controls">
-            <button @click="${e => this._onCloseClick(e)}" class="${PREFIX_CLASS}-modal-control" title="Close window">
+            <button @click="${e => this._onCloseClick(e)}" class="${PREFIX_CLASS}-modal-control" title=${this.closeLabel}>
               <kd-icon icon="${ICON_IDS.CLOSE}"></kd-icon>
             </button>
           </div>
