@@ -22,22 +22,17 @@ jobs:
         run: npm install
       - name: Run tests
         run: npm test
-      - name: Install IBM Cloud CLI
-        run: |
-          curl -fsSL https://clis.cloud.ibm.com/install/linux | sh
-          ibmcloud --version
-          ibmcloud config --check-version=false
-          ibmcloud plugin install -f cloud-object-storage
       - name: Compile production build
         env:
           PUBLIC_URL: ${{ secrets.WEBPACK_PUBLIC_URL }}
         run: NODE_ENV=production npm run build
-      - name: Deploy to Cloud Object Storage
+      - name: Deploy to Akamai NetStorage
         env:
-          IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
-          IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_RESOURCE_ID }}
-          IBM_CLOUD_BUCKET: ${{ secrets.IBM_CLOUD_BUCKET }}
-        run: bash ./.github/scripts/cos-upload.sh ./build
+          NETSTORAGE_HOST_NAME: ${{ secrets.NETSTORAGE_HOST_NAME }}
+          NETSTORAGE_KEY_NAME: ${{ secrets.NETSTORAGE_KEY_NAME }}
+          NETSTORAGE_API_KEY: ${{ secrets.NETSTORAGE_API_KEY }}
+          NETSTORAGE_CP_CODE: ${{ secrets.NETSTORAGE_CP_CODE }}
+        run: node netstorage.js --sourceDir=build --destinationDir=components
       - name: Publish storybook
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
