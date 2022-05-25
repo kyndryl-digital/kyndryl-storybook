@@ -19,8 +19,8 @@ export default {
   component: `${PREFIX_TAG}-button`,
   parameters: {},
   argTypes: {
-    ariaLabel: {
-      description: 'Accessible aria label provides discernible text for icon only buttons or additional context.',
+    description: {
+      description: 'Accessible aria label that provides discernible text for icon only buttons or additional context',
       control: { type: 'text' },
     },
     href: {
@@ -95,7 +95,7 @@ const Template = args => {
       size=${args.size}
       icon=${args.icon}
       iconPosition=${args.iconPosition}
-      ariaLabel=${args.ariaLabel}
+      description=${args.description}
       href=${args.href}
       target=${args.target}
       theme=${args.theme}

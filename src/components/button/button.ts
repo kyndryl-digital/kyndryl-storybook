@@ -20,7 +20,7 @@ import stylesheet from './button.scss';
 export class Button extends LitElement {
   static styles = [stylesheet];
 
-  @property({ type: String }) ariaLabel;
+  @property({ type: String }) description;
   @property({ type: String }) href;
   @property() target: LINK_TARGETS;
   @property() type: BUTTON_TYPES;
@@ -40,11 +40,11 @@ export class Button extends LitElement {
       [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
     });
     if (!this.icon) {
-      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.ariaLabel ? this.ariaLabel : undefined)}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.description ? this.description : undefined)}>
         <slot></slot>
       </a>`;
     } else {
-      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.ariaLabel ? this.ariaLabel : undefined)}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.description ? this.description : undefined)}>
         <slot></slot>
         <span class="${PREFIX_CLASS}-btn--icon">
           <kd-icon icon=${this.icon}></kd-icon>
