@@ -1,0 +1,26 @@
+@use 'sass:map';
+
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+@import '../themes/index';
+
+:host{
+  box-sizing: border-box;
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: var(--kd-font-size-03);
+  line-height: 30px;
+  color: var(--kd-color-brand-dark-stone);
+  font-weight: var(--kd-font-weight-medium);
+  padding: 8px;
+}
+
+:host([selected]) {
+  background-color: var(--kd-color-token-base);
+}
+
+kd-icon{
+  margin-left: 8px;
+}

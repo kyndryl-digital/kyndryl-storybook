@@ -1,0 +1,7 @@
+@import '../../styles/components/megaMenu';
+
+:host(#{$prefix-tag}-mega-menu) {
+  ::slotted([slot='trigger']) {
+    cursor: pointer;
+  }
+}
