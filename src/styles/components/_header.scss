@@ -8,21 +8,13 @@
 .#{$prefix-class}-header__main-nav {
   background: var(--kd-color-header-main-nav-bg );
   color: var(--kd-color-text);
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
+  align-content: center;
   padding: 0 18px;
   height: 32px;
+}
 
-  a{
-    font-size: var(--kd-font-size-02);
-    line-height: 32px;
-    color: rgb(61, 60, 60);
-    font-weight: var(--kd-font-weight-normal);
-    text-decoration: none;
-    padding: 0 !important;
-  }
+.#{$prefix-class}-header__main-nav > div {
+  justify-self: end;
 }
 
 .#{$prefix-class}-header {
@@ -31,16 +23,13 @@
     // background: var(--kd-color-token-base);
     height: 90px;
     padding: 0 18px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
+    align-content: center;
     border-bottom: 1px solid var(--kd-color-brand-stone);
     box-sizing: border-box;
   }
 
   &__logo{
-    margin-right: 20px;
+    margin-right: 60px;
   }
 }
 

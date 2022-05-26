@@ -15,6 +15,7 @@
   color: var(--kd-color-brand-dark-stone);
   font-weight: var(--kd-font-weight-medium);
   padding: 8px;
+  white-space: nowrap;
 }
 
 :host([selected]) {

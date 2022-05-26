@@ -9,7 +9,7 @@ export default {
 
 const Template = args => {
   return html`
-      <nav-item>Click</nav-item>
+      <kd-nav-item>Click</kd-nav-item>
     `;
 };
 

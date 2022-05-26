@@ -20,8 +20,8 @@
   "license": "ISC",
   "dependencies": {
     "core-js": "^3.21.0",
-    "lit": "^2.1.2",
-    "tippy.js": "^6.3.7"
+    "lit": "^2.1.2"
+    
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

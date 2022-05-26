@@ -22,19 +22,20 @@ export class Header extends LitElement {
 
   protected _mainNavTemplate(): TemplateResult {
     return html`
-      <div class="${PREFIX_CLASS}-header__main-nav">
-      
-        <a class="hover-underline-animation" href="" target="_blank">Investors &#x2197;</a>
-        <slot name="primary-navigation"></slot>
+      <div class="${PREFIX_CLASS}-header__main-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-fully-fluid">
+        <div class="${PREFIX_CLASS}-max-col-12 ${PREFIX_CLASS}-xlg-col-12 ${PREFIX_CLASS}-lg-col-12 ${PREFIX_CLASS}-md-col-12">
+          <slot name="masthead"></slot>
+        </div>
       </div>
     `;
   }
 
   protected _primaryNavTemplate(): TemplateResult {
     return html`
-      <div class="${PREFIX_CLASS}-header__primary-nav">
+      <div class="${PREFIX_CLASS}-header__primary-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap ${PREFIX_CLASS}-fully-fluid">
         <img class="${PREFIX_CLASS}-header__logo" .src=${logo} .alt=${'Logo'} />
-        <slot name="main-navigation"></slot>
+        <slot name="primary-navigation"></slot>
+        <slot name="account-navigation"></slot>
       </div>
     `;
   }

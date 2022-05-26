@@ -10,5 +10,4 @@ import './modal/modal';
 import './tabs/tabs';
 import './header/header';
 import './navItem/navItem';
-import './megaMenu/megaMenu';
 import './videoPlayer/videoPlayer';
