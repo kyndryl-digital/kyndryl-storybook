@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit-element';
 import { PREFIX_CLASS } from '../../global/settings/settings';
 

@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 const path = require("path");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
@@ -10,7 +14,7 @@ module.exports = {
 
   output: {
     path: path.resolve(__dirname, "test"),
-    filename: 'kyndryl-web-components.js',
+    filename: 'components.js',
   },
 
   resolve: {

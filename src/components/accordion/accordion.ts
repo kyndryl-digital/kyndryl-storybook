@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { kdAccordionItem } from './accordionItem';

@@ -1,0 +1,43 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
+@import '../variables/index';
+@import '../utilities/layout';
+@import '../utilities/spacing';
+@import '../themes/index';
+
+.#{$prefix-class}-video-player {
+  iframe {
+    border: 0;
+  }
+
+  &--cta-container {
+    @include position(absolute);
+    z-index: var(--kd-z-index-default);
+
+    &::before {
+      @include position(absolute);
+      background: linear-gradient(0deg, rgba(var(--kd-color-brand-black-rgb), 1) 0%, rgba(var(--kd-color-brand-black-rgb), 0) 100%);
+      content: '';
+      display: block;
+      height: 40%;
+      top: auto;
+      width: 100%;
+    }
+  }
+
+  &--cta-default-button {
+    @include margin(bottom left, 3);
+    @include position(absolute);
+    right: auto;
+    top: auto;
+  }
+
+  &--cta-bg-button {
+    @include margin(bottom right, 3);
+    @include position(absolute);
+    left: auto;
+    top: auto;
+  }
+}

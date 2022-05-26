@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit-element';
 import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_CLASS } from '../../global/settings/settings';
@@ -28,7 +32,7 @@ export default {
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          none: 'none',
         },
       },
     },

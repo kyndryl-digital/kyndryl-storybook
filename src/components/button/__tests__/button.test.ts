@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { LitElement } from 'lit';
 
 describe('Button component', () => {

@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 // Update all icon variables when modifying these
 //  - src/styles/variables/_icons.scss
 //  - src/styles/variables/_icons-lit.scss
@@ -21,8 +25,10 @@ export enum ICON_IDS {
   DOWNLOAD = 'download',
   HAMBURGER = 'hamburger',
   LINKEDIN = 'linkedin',
+  PAUSE = 'pause',
   PDF = 'pdf',
   PLAY = 'play',
+  PLAY_SOLID = 'play-solid',
   POP_OUT = 'pop-out',
   TWITTER = 'twitter',
   ANGLE_DOWN = 'angle-down',

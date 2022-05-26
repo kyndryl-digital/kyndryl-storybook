@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
@@ -12,13 +16,13 @@ export default {
   argTypes: {
     icon: {
       options: [
-        'none',
+        null,
         ...optionsIcon,
       ],
       control: {
         type: 'select',
         labels: {
-          none: 'None',
+          null: 'none',
         },
       },
     }

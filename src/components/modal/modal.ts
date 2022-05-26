@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement } from 'lit';
 import { state, property, customElement, eventOptions } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
