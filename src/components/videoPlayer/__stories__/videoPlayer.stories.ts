@@ -36,9 +36,17 @@ export default {
       description: 'URL of poster image',
       control: { type: 'text' },
     },
-    buttonLabel: {
-      description: 'Text to display in the play/pause button',
+    buttonLabelPlay: {
+      description: 'Text to display in the play button',
       control: { type: 'text' },
+    },
+    buttonLabelPause: {
+      description: 'Text to display in the pause button',
+      control: { type: 'text' },
+    },
+    showButtonLabel: {
+      description: 'Show play/pause label or use them for accessible aria label on the icon',
+      control: { type: 'boolean' },
     },
     buttonSize: {
       description: 'Size of the play/pause button',
@@ -81,6 +89,7 @@ export default {
       },
     },
     buttonIconPosition: {
+      description: 'Icon position relative to button label (center for icon only button)',
       options: [
         ...optionsButtonIconPosition,
       ],
@@ -120,7 +129,9 @@ const Template = args => {
       youtubeId=${args.youtubeId}
       title=${args.title}
       poster=${args.poster}
-      buttonLabel=${args.buttonLabel}
+      buttonLabelPlay=${args.buttonLabelPlay}
+      buttonLabelPause=${args.buttonLabelPause}
+      showButtonLabel=${args.showButtonLabel}
       buttonSize=${args.buttonSize}
       buttonIconPlay=${args.buttonIconPlay}
       buttonIconPause=${args.buttonIconPause}
@@ -135,7 +146,8 @@ export const Default = Template.bind({});
 Default.args = {
   video: 'https://s7d1.scene7.com/is/content/kyndryl/5.%20MS-Launch-Social-1080.captions',
   title: 'Video Title',
-  buttonLabel: 'Play',
+  buttonLabelPlay: 'Play',
+  showButtonLabel: true,
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
@@ -149,7 +161,8 @@ DefaultPoster.args = {
   video: 'https://s7d1.scene7.com/is/content/kyndryl/5.%20MS-Launch-Social-1080.captions',
   title: 'Video Title',
   poster: 'https://s7d1.scene7.com/is/image/kyndryl/NicolasSekkaki_AppsDataAI_16x9?qlt=85&wid=600&ts=1649881438992&dpr=off',
-  buttonLabel: 'Play',
+  buttonLabelPlay: 'Play',
+  showButtonLabel: true,
   buttonSize: BUTTON_SIZES.LARGE,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,
@@ -170,6 +183,9 @@ export const VideoBackground = Template.bind({});
 VideoBackground.args = {
   video: 'https://s7d1.scene7.com/is/content/kyndryl/5.%20MS-Launch-Social-1080.captions',
   title: 'Video Title',
+  buttonLabelPlay: 'Play video',
+  buttonLabelPause: 'Pause video',
+  showButtonLabel: false,
   buttonSize: BUTTON_SIZES.SMALL,
   buttonIconPlay: ICON_IDS.PLAY_SOLID,
   buttonIconPause: ICON_IDS.PAUSE,

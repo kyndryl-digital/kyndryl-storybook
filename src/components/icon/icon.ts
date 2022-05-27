@@ -22,7 +22,7 @@ export class Icon extends LitElement {
     });
 
     if (this.icon) {
-      return html`<span class=${icon_classes}></span>`;
+      return html`<span role="img" aria-hidden="true" class=${icon_classes}></span>`;
     }
 
     return null;

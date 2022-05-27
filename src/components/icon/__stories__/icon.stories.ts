@@ -15,6 +15,7 @@ export default {
   component: `${PREFIX_TAG}-icon`,
   argTypes: {
     icon: {
+      description: 'Icon ID',
       options: [
         null,
         ...optionsIcon,
@@ -25,8 +26,8 @@ export default {
           null: 'none',
         },
       },
-    }
-  }
+    },
+  },
 };
 
 const Template = args => {
