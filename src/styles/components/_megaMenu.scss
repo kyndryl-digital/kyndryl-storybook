@@ -1,0 +1,29 @@
+@use 'sass:map';
+
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+@import '../themes/index';
+
+.#{$prefix-class}-mega-menu{
+
+  position: relative;
+
+  &__content-wrapper{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    min-height: 330px;
+    background-color: var(--kd-color-token-base);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+:host(#{$prefix-tag}-mega-menu) {
+  ::slotted([slot='trigger']) {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+@import '../themes/index';
+
+.#{$prefix-class}-header__main-nav {
+  background: var(--kd-color-header-main-nav-bg );
+  color: var(--kd-color-text);
+  align-content: center;
+  padding: 0 18px;
+  height: 32px;
+}
+
+.#{$prefix-class}-header__main-nav > div {
+  justify-self: end;
+}
+
+.#{$prefix-class}-header {
+
+  &__primary-nav {
+    // background: var(--kd-color-token-base);
+    height: 90px;
+    padding: 0 18px;
+    align-content: center;
+    border-bottom: 1px solid var(--kd-color-brand-stone);
+    box-sizing: border-box;
+  }
+
+  &__logo{
+    margin-right: 60px;
+  }
+}
+
+::slotted(*) {
+  margin-left: 40px;
+}
