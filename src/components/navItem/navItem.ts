@@ -33,7 +33,9 @@ export class NavItem extends LitElement {
     }
 
     return html`
-      <kd-icon class="down-arrow" icon="${this.selected ? 'chevron-up' : 'chevron-down'}"></kd-icon>
+    <span class="nav-item--icon">
+    <kd-icon class="down-arrow" icon="${this.selected ? 'chevron-up' : 'chevron-down'}"></kd-icon>
+</span>
     `;
   }
 
