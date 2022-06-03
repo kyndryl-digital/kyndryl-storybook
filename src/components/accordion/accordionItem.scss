@@ -1,11 +1,11 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
+
 @use 'sass:map';
 
-@import '../../styles/variables';
-@import '../../styles/components/accordion';
+@import '../../styles/variables/index';
+@import './accordion';
 
 :host(#{$prefix-tag}-accordion-item) {
   @extend .#{$prefix-class}-accordion-item;
