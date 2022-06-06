@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 
 @mixin css-vars-color-tokens {
   // Brand color palette
@@ -38,8 +42,8 @@
   --kd-color-h6: var(--kd-color-token-inverse);
 
   --kd-color-link: var(--kd-color-token-inverse);
-  --kd-color-link-hover: var(--kd-color-theme-primary-interactive);
-  --kd-color-link-active: var(--kd-color-theme-primary-interactive);
+  --kd-color-link-hover: var(--kd-color-token-interactive);
+  --kd-color-link-active: var(--kd-color-token-interactive);
 
   // Component specific
   --kd-color-button-primary-text: var(--kd-color-token-inverse);
@@ -75,4 +79,7 @@
   --kd-color-modal-backdrop: rgba(var(--kd-color-brand-black-rgb), 0.6);
   --kd-color-modal-bg: var(--kd-color-token-base);
   --kd-color-modal-text: var(--kd-color-token-inverse);
+
+  --kd-color-header-main-nav-bg: #f2f1ee;
+
 }

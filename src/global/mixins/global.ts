@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { APP_DOMAIN } from '../settings/settings';
 
 const url = require('url');

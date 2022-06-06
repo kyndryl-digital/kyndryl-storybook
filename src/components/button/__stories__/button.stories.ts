@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
@@ -19,21 +23,26 @@ export default {
   component: `${PREFIX_TAG}-button`,
   parameters: {},
   argTypes: {
-    label: {
+    description: {
+      description: 'Accessible aria label that provides discernible text for icon only buttons or additional context',
       control: { type: 'text' },
     },
     href: {
+      description: 'Link URL',
       control: { type: 'text' },
     },
     target: {
+      description: 'Where to open the link (value of the target attribute)',
       options: [...optionsLinkTargets],
       control: { type: 'select' },
     },
     type: {
+      description: 'Button type',
       options: [...optionsType],
       control: { type: 'select' },
     },
     size: {
+      description: 'Button size',
       options: [
         null,
         ...optionsSize,
@@ -46,6 +55,7 @@ export default {
       },
     },
     icon: {
+      description: 'Icon to display in the button',
       options: [
         null,
         ...optionsIcon,
@@ -58,6 +68,7 @@ export default {
       },
     },
     iconPosition: {
+      description: 'Icon position relative to text label (center for icon only button)',
       options: [
         ...optionsIconPosition,
       ],
@@ -66,6 +77,7 @@ export default {
       },
     },
     theme: {
+      description: 'Color theme',
       options: [
         null,
         ...optionsTheme,
@@ -87,16 +99,16 @@ const Template = args => {
       size=${args.size}
       icon=${args.icon}
       iconPosition=${args.iconPosition}
+      description=${args.description}
       href=${args.href}
       target=${args.target}
       theme=${args.theme}
-    >${args.label}</kd-button>
+    >Button Text</kd-button>
   `;
 };
 
 export const Button = Template.bind({});
 Button.args = {
-  label: 'Click here',
   href: 'http://kyndryl.com',
   target: LINK_TARGETS.SELF,
   type: BUTTON_TYPES.PRIMARY,

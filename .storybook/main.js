@@ -1,3 +1,8 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
+const webpack = require('webpack');
 const path = require('path');
 const ESLintPlugin = require('eslint-webpack-plugin');
 const StylelintPlugin = require('stylelint-webpack-plugin');
@@ -30,6 +35,9 @@ module.exports = {
       new StylelintPlugin({
         context: path.resolve(__dirname, '../src'),
         exclude: 'node_modules',
+      }),
+      new webpack.BannerPlugin({
+        banner: 'Copyright Kyndryl, Inc. 2022',
       }),
     )
     // Processes scss files and loads then into variables for import into web components.

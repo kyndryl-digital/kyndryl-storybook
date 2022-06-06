@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 const path = require("path");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 

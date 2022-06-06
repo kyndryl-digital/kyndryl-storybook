@@ -1,0 +1,61 @@
+@use 'sass:map';
+
+@import '../variables/index';
+@import '../utilities/index';
+@import '../base/typography';
+@import '../themes/index';
+
+:host{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  background-color: white;
+  width: 100%;
+}
+
+.#{$prefix-class}-header__main-nav {
+  background: var(--kd-color-header-main-nav-bg );
+  color: var(--kd-color-text);
+  height: #{px2rem(32)};
+}
+
+.#{$prefix-class}-header__main-nav-container {
+  padding: 0 #{px2rem(18)};
+  margin-left: auto;
+  margin-right: auto;
+  max-width: #{px2rem(1312)};
+  display: grid;
+  justify-content: flex-end;
+}
+
+.#{$prefix-class}-header__main-nav > div {
+  justify-self: end;
+}
+
+.#{$prefix-class}-header {
+
+  &__primary-nav {
+    // background: var(--kd-color-token-base);
+    height: #{px2rem(90)};
+    padding: 0 #{px2rem(18)};
+    align-content: center;
+    max-width: #{px2rem(1312)};
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  &__primary-nav-container {
+    border-bottom: #{px2rem(1)} solid var(--kd-color-brand-stone);
+  }
+
+  &__logo{
+    margin-right: #{px2rem(60)};
+  }
+}
+
+::slotted(*) {
+  margin-left: #{px2rem(40)};
+  align-self: center;
+}

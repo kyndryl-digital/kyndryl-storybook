@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html } from 'lit';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { ICON_IDS } from '../../../global/defs/iconIds';
@@ -11,6 +15,7 @@ export default {
   component: `${PREFIX_TAG}-icon`,
   argTypes: {
     icon: {
+      description: 'Icon ID',
       options: [
         null,
         ...optionsIcon,
@@ -21,8 +26,8 @@ export default {
           null: 'none',
         },
       },
-    }
-  }
+    },
+  },
 };
 
 const Template = args => {
