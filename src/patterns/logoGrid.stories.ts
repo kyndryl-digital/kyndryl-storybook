@@ -14,7 +14,7 @@ export default {
 const Template = args => {
   return html`
       <div class="${PREFIX_CLASS}-grid-container">
-        <!-- BEGIN Google Logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -51,7 +51,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -74,8 +74,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
-        <!-- BEGIN Oracle Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -112,7 +112,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -135,8 +135,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
-        <!-- BEGIN Google Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -173,7 +173,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -196,8 +196,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
-        <!-- BEGIN Oracle Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -234,7 +234,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -257,9 +257,9 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
+        <!-- END logo -->
         
-        <!-- BEGIN Oracle Logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -296,7 +296,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -319,8 +319,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
-        <!-- BEGIN Google Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -357,7 +357,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -380,8 +380,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
-        <!-- BEGIN Oracle Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -418,7 +418,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -441,8 +441,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
-        <!-- BEGIN Google Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -479,7 +479,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -502,9 +502,9 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
+        <!-- END logo -->
 
-        <!-- BEGIN Google Logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -541,7 +541,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -564,8 +564,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
-        <!-- BEGIN Oracle Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -602,7 +602,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -625,8 +625,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
-        <!-- BEGIN Google Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -663,7 +663,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>GOOGLE CLOUD</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -686,8 +686,8 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Google logo -->
-        <!-- BEGIN Oracle Logo -->
+        <!-- END logo -->
+        <!-- BEGIN Logo -->
         <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
           <kd-modal>
             <a href="javascript://" slot="trigger" title="Microsoft">
@@ -724,7 +724,7 @@ const Template = args => {
               <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4" style="min-height:768px">
                 <div class="${PREFIX_CLASS}-pt6 ${PREFIX_CLASS}-pr5 ${PREFIX_CLASS}-pb8 ${PREFIX_CLASS}-pl4">
                   <div class="${PREFIX_CLASS}-mt0 ${PREFIX_CLASS}-mb4"><img src="https://placehold.co/240x120?text=Logo" /></div>
-                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>ORACLE</strong></h6>
+                  <h6 class="${PREFIX_CLASS}-h6 ${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb4"><strong>LOREM IPSUM</strong></h6>
                   <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec sed odio dui. Morbi leo risus, porta ac consectetur ac, vestibulum.</p>
                   <p class="${PREFIX_CLASS}-mt4 ${PREFIX_CLASS}-mb0"><kd-button type="primary" icon="arrow-right" href="javascript://">See more</kd-button></p>
                 </div>
@@ -747,7 +747,7 @@ const Template = args => {
             </div>
           </kd-modal>
         </div>
-        <!-- END Oracle logo -->
+        <!-- END logo -->
       </div>
   `;
 };
