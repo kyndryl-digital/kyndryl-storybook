@@ -1,7 +1,7 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
+
 import { html } from 'lit';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
@@ -30,7 +30,7 @@ export default {
 };
 
 const demoButtonText = 'Modal Trigger';
-const demoCloseLabel = 'Close Label';
+const demoCloseLabel = 'Close window';
 const demoModalContent = html`
   <div class="kd-pt4 kd-pr4 kd-pl4 kd-pb6">
     <h2>Modal Content</h2>

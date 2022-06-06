@@ -1,7 +1,7 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
+
 import { html, LitElement } from 'lit';
 import { customElement, eventOptions, property, state } from 'lit/decorators.js';
 import { classMap } from 'lit-html/directives/class-map.js';
@@ -17,7 +17,7 @@ export class kdModal extends LitElement {
   static styles = [ stylesheet ];
 
   @property() size: MODAL_SIZES = MODAL_SIZES.DEFAULT;
-  @property({ type: String }) closeLabel = 'Close modal';
+  @property({ type: String }) closeLabel = 'Close window';
 
   @state()
   private _isOpen = false;
