@@ -22,8 +22,8 @@ nvm use 16
 Clone the web component library and install.
 
 ```
-git clone git@github.kyndryl.com:marketing/kyndryl-web-components.git
-cd kyndryl-web-components
+git clone git@github.com:kyndryl-digital/kyndryl-design-system.git kyndryl-design-system
+cd kyndryl-design-system
 npm install
 ```
 
@@ -64,13 +64,14 @@ PUBLIC_URL=https://path_to_files/ npm run build
 The design system repository can also be installed directly onto NodeJS applications as an npm package. This method allows for full access to the design system source Typescript and SASS files within the consumer application.
 
 ```
-npm install git@github.com:iwhitcomb/kyndryl-design-system.git#v2.0.0
+npm install git@github.com:kyndryl-digital/kyndryl-design-system.git#v2.0.0
 ```
 
 Once you install kyndryl-design-system you can start importing the built web component package into your NodeJS application.
 
 ```
 import 'kyndryl-design-system';
+import 'kyndryl-design-system/build/styles.css';
 ```
 
 Alternatively, you may also import the web components directly. (Note: This will likely require you to replicate some of the webpack build steps inside your own application in order to work.)
