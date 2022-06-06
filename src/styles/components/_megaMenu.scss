@@ -7,19 +7,27 @@
 
 .#{$prefix-class}-mega-menu{
 
-  position: relative;
-
   &__content-wrapper{
     position: absolute;
     left: 0;
     right: 0;
-    top: 100%;
-    min-height: 330px;
+    top: calc(100% + 1px);
+    min-height: #{px2rem(330)};
     background-color: var(--kd-color-token-base);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: #{px2rem(48)} #{px2rem(18)} #{px2rem(60)} #{px2rem(18)};
+    box-sizing: border-box;
   }
+
+  &__content-wrapper::before{
+    content: '';
+    background-color: var(--kd-color-token-base);
+    position: fixed;
+    inset: 122px 0px 0px;
+    z-index: -1;
+    width: 100vw;
+    height: #{px2rem(330)};
+  }
+
 }
 
 :host(#{$prefix-tag}-mega-menu) {

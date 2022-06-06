@@ -4,12 +4,7 @@ import { PREFIX_TAG } from '../../global/settings/settings';
 import '../icon/icon';
 import stylesheet from './navItem.scss';
 
-/**
- * Kyndryl branded L0
- *
- * @slot - This element has a slot
- * @csspart button - The button
- */
+
 @customElement(`${PREFIX_TAG}-nav-item`)
 export class NavItem extends LitElement {
   static styles = [stylesheet];
@@ -33,7 +28,9 @@ export class NavItem extends LitElement {
     }
 
     return html`
-      <kd-icon class="down-arrow" icon="${this.selected ? 'chevron-up' : 'chevron-down'}"></kd-icon>
+      <span class="nav-item--icon">
+        <kd-icon class="down-arrow" icon="${this.selected ? 'chevron-up' : 'chevron-down'}"></kd-icon>
+      </span>
     `;
   }
 
