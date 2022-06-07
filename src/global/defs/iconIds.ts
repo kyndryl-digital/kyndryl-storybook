@@ -1,10 +1,9 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
+
 // Update all icon variables when modifying these
 //  - src/styles/variables/_icons.scss
-//  - src/styles/variables/_icons-lit.scss
 //  - src/global/defs/iconIds.ts
 
 // JS variables used to create icon classes in web components

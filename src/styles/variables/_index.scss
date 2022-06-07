@@ -1,7 +1,7 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
+
 @import './config';
 @import './breakpoints';
 @import './colors';
@@ -10,7 +10,7 @@
 @import './icons';
 @import './z-index';
 
-:root {
+:host, :root {
   @include css-vars-color-tokens;
   @include css-vars-color-usage;
   @include css-vars-fonts;
