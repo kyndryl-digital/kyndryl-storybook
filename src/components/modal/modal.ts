@@ -9,6 +9,7 @@ import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import { KEYCODES } from '../../global/defs/keyCodes';
 import { ICON_IDS } from '../../global/defs/iconIds';
 import '../icon/icon';
+import '../button/button';
 import { MODAL_SIZES } from './defs';
 import stylesheet from './modal.scss';
 
