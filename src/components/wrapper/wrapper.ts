@@ -12,7 +12,7 @@ import stylesheet from './wrapper.scss';
  *
  * @slot - This element has a slot
  */
- @customElement(`${PREFIX_TAG}-wrapper`)
+@customElement(`${PREFIX_TAG}-wrapper`)
 export class Wrapper extends LitElement {
   static styles = [stylesheet];
 
