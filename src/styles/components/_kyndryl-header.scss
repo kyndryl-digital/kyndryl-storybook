@@ -98,7 +98,17 @@
     margin-top: 9px;
   }
 
-  &__label{
+  &__label {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: var(--kd-font-size-05);
+    line-height: 30px;
+    color: var(--kd-color-brand-dark-stone);
+    font-weight: var(--kd-font-weight-medium);
+  }
+  &__label2 {
     margin: 0;
     display: flex;
     flex-direction: row;
@@ -161,7 +171,20 @@
   &__extra-details &__label{
     background: linear-gradient(0deg,var(--kd-color-brand-dark-stone),var(--kd-color-brand-dark-stone)) no-repeat 100% 100%/0 2px;
     transition: background-size 350ms;
-    padding-bottom: 10px;
+    padding-bottom: 2px;
+    width: max-content;
+  }
+  &__extra-details:hover &__label2{
+    background-size: 100% 2px;
+    background-position-x: left;
+  }
+
+  &__extra-details &__label2{
+    background: linear-gradient(0deg,var(--kd-color-brand-dark-stone),var(--kd-color-brand-dark-stone)) no-repeat 100% 100%/0 2px;
+    transition: background-size 350ms;
+    padding-bottom: 2px;
+    width: max-content;
+    
   }
 }
 
