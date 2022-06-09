@@ -1,11 +1,124 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
-@import '../../styles/components/modal';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
 
 :host(#{$prefix-tag}-modal) {
   ::slotted([slot='trigger']) {
     cursor: pointer;
   }
+}
+
+.#{$prefix-class}-modal-backdrop {
+  -webkit-backdrop-filter: grayscale(1);
+  -webkit-transition: opacity 0.4s;
+  align-items: center;
+  backdrop-filter: grayscale(1);
+  background: var(--kd-color-modal-backdrop);
+  bottom: 0;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition-timing-function: ease-out;
+  transition: opacity 0.4s;
+  width: 100%;
+  z-index: var(--kd-z-index-modal-backdrop);
+
+  &.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.#{$prefix-class}-modal {
+  -webkit-transition: all 0.4s, margin-top 0s, margin-bottom 0s;
+  background: var(--kd-color-modal-bg);
+  color: var(--kd-color-modal-text);
+  margin: auto;
+  max-height: 90vh;
+  overflow: auto;
+  transition-timing-function: ease-out;
+  transition: all 0.4s, margin-top 0s, margin-bottom 0s;
+  z-index: var(--kd-z-index-modal-window);
+
+  &.hidden {
+    opacity: 0;
+    transform-origin: left bottom;
+    transform: scale(0.7);
+    visibility: hidden;
+  }
+
+  &.visible {
+    opacity: 1;
+    transform-origin: left bottom;
+    transform: scale(1);
+    visibility: visible;
+  }
+
+  @include device(desktop) {
+    min-height: #{px2rem(384)};
+    width: #{px2rem(768)};
+  }
+
+  @include device(tablet) {
+    min-height: #{px2rem(400)};
+    width: 80vw;
+  }
+
+  @include device(mobile) {
+    margin-bottom: 5vh;
+    margin-top: 5vh;
+    min-height: 90vh;
+    width: 90vw;
+  }
+}
+
+.#{$prefix-class}-modal-lg {
+  @extend .#{$prefix-class}-modal;
+
+  @include device(desktop) {
+    min-height: #{px2rem(500)};
+    width: #{px2rem(1000)};
+  }
+}
+
+.#{$prefix-class}-modal-sm {
+  @extend .#{$prefix-class}-modal;
+
+  @include device(desktop) {
+    min-height: #{px2rem(300)};
+    width: #{px2rem(600)};
+  }
+}
+
+.#{$prefix-class}-modal-controls {
+  font-size: var(--kd-font-size-03);
+  padding-right: #{px2rem(16)};
+  padding-top: #{px2rem(16)};
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: var(--kd-z-index-default);
+}
+
+.#{$prefix-class}-modal-control {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  height: #{px2rem(48)};
+  line-height: #{px2rem(48)};
+  padding: 0;
+  width: #{px2rem(48)};
 }

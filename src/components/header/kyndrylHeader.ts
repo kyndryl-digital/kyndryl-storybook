@@ -2,18 +2,18 @@
  * Copyright Kyndryl, Inc. 2022
  */
 
-import { html, LitElement, TemplateResult } from 'lit';
-import { state, property, customElement } from 'lit/decorators.js';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
-import '../../components/header/megaMenu'; //'/../../components/header/megaMenu'; //'../megaMenu';
-import '../../components/navItem/navItem'; //'../../../components/navItem/navItem'; //'..//../../navItem/navItem';
-import '../../components/header/header';
-import stylesheet from './kyndryl-header.scss';
+import { html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { PREFIX_CLASS } from '../../global/settings/settings';
+import './megaMenu'; //'/../../components/header/megaMenu'; //'../megaMenu';
+import '../navItem/navItem'; //'../../../components/navItem/navItem'; //'..//../../navItem/navItem';
+import './header';
+import stylesheet from './kyndrylHeader.scss';
 /**
 * Kyndryl-header-legacy
 */
 @customElement(`kyndryl-header`)
-export class KyndrylHeader extends LitElement {
+export class kyndrylHeader extends LitElement {
   static styles = [stylesheet];
   render() {
     return html`
@@ -182,6 +182,11 @@ export class KyndrylHeader extends LitElement {
          <kd-nav-item hasHoverEffect slot="primary-navigation">News and Insights</kd-nav-item>
          <kd-nav-item hasHoverEffect slot="primary-navigation">Customer Stories</kd-nav-item>
          <kd-nav-item hasHoverEffect slot="primary-navigation">Careers</kd-nav-item>
+
+          <slot name="primary-navigation" slot="primary-navigation"></slot>
+          <slot name="account-navigation" slot="account-navigation"></slot>
+          <slot name="masthead" slot="masthead"></slot>
+
        </kd-header>
      `;
   }

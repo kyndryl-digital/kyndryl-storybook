@@ -1,11 +1,11 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
+
 import { html } from 'lit';
-import { PREFIX_CLASS, PREFIX_TAG } from '../../../global/settings/settings';
-import '../kyndryl-header';
+import '../kyndrylHeader';
 export default {
-  title: 'Patterns/ Kyndryl Header',
+  title: 'Web Components/Header',
 };
  
 const Template = args => {
@@ -15,6 +15,6 @@ const Template = args => {
    `;
 };
  
-export const KyndrylHeader = Template.bind({});
+export const legacy = Template.bind({});
  
  
