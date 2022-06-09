@@ -2,7 +2,7 @@
  * Copyright Kyndryl, Inc. 2022
  */
 
-import { html, LitElement, TemplateResult } from 'lit';
+import { html, LitElement } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import stylesheet from './wrapper.scss';
