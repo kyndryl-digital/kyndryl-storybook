@@ -18,11 +18,11 @@ export class Wrapper extends LitElement {
 
   render() {
     return html`
-      <kd-header>
+      <kyndryl-header>
         <slot name="primary-navigation" slot="primary-navigation"></slot>
         <slot name="account-navigation" slot="account-navigation"></slot>
         <slot name="masthead" slot="masthead"></slot>
-      </kd-header>
+      </kyndryl-header>
       <div class="${PREFIX_CLASS}-wrapper__content">
         <slot></slot>
       </div>
