@@ -5,7 +5,7 @@
 import { html } from 'lit';
 import '../kyndrylHeader';
 export default {
-  title: 'Web Components/Header',
+  title: 'Legacy/Header',
 };
  
 const Template = args => {
@@ -15,6 +15,4 @@ const Template = args => {
    `;
 };
  
-export const legacy = Template.bind({});
- 
- 
+export const header = Template.bind({});
