@@ -11,3 +11,5 @@ import './tabs/tabs';
 import './header/header';
 import './navItem/navItem';
 import './videoPlayer/videoPlayer';
+import './wrapper/kyndrylWrapper';
+import './wrapper/wrapper';
