@@ -24,7 +24,8 @@ export class kyndrylHeader extends LitElement {
     return html`
       <kd-header>
         
-        <kd-nav-item hasHoverEffect dense slot="masthead">Investors &#x2197;</a></kd-nav-item>
+        <kd-nav-item hasHoverEffect dense slot="masthead"><a href="https://investors.kyndryl.com/overview/default.aspx" target="_blank" style="text-decoration:none; color:#3d3c3c">
+        Investors &#x2197;</a></kd-nav-item>
         
         <kd-mega-menu slot="primary-navigation">
           <kd-nav-item hasHoverEffect slot="trigger" hasIcon>Services</kd-nav-item>
@@ -184,9 +185,15 @@ export class kyndrylHeader extends LitElement {
           </div>
         </kd-mega-menu>
  
-        <kd-nav-item hasHoverEffect slot="primary-navigation">News and Insights</kd-nav-item>
-        <kd-nav-item hasHoverEffect slot="primary-navigation">Customer Stories</kd-nav-item>
-        <kd-nav-item hasHoverEffect slot="primary-navigation">Careers</kd-nav-item>
+        <kd-nav-item hasHoverEffect slot="primary-navigation">
+        <a href="https://www.kyndryl.com/us/en/news" style="text-decoration:none; color:#3d3c3c">
+        News and Insights</a></kd-nav-item>
+        <kd-nav-item hasHoverEffect slot="primary-navigation">
+        <a href="https://www.kyndryl.com/us/en/customer-stories" style="text-decoration:none; color:#3d3c3c">
+        Customer Stories</a></kd-nav-item>
+        <kd-nav-item hasHoverEffect slot="primary-navigation">
+        <a href="https://www.kyndryl.com/us/en/careers" style="text-decoration:none; color:#3d3c3c">
+        Careers</a></kd-nav-item>
 
         <slot name="primary-navigation" slot="primary-navigation"></slot>
         <slot name="account-navigation" slot="account-navigation"></slot>
