@@ -24,7 +24,7 @@ export class kyndrylHeader extends LitElement {
     return html`
       <kd-header>
         
-        <kd-nav-item hasHoverEffect dense slot="masthead"><a href="https://investors.kyndryl.com/overview/default.aspx" target="_blank" style="text-decoration:none; color:#3d3c3c">
+        <kd-nav-item hasHoverEffect dense slot="masthead"><a class ="link_text" href="https://investors.kyndryl.com/overview/default.aspx" target="_blank">
         Investors &#x2197;</a></kd-nav-item>
         
         <kd-mega-menu slot="primary-navigation">
@@ -186,13 +186,13 @@ export class kyndrylHeader extends LitElement {
         </kd-mega-menu>
  
         <kd-nav-item hasHoverEffect slot="primary-navigation">
-        <a href="https://www.kyndryl.com/us/en/news" style="text-decoration:none; color:#3d3c3c">
+        <a class ="link_text" href="https://www.kyndryl.com/us/en/news">
         News and Insights</a></kd-nav-item>
         <kd-nav-item hasHoverEffect slot="primary-navigation">
-        <a href="https://www.kyndryl.com/us/en/customer-stories" style="text-decoration:none; color:#3d3c3c">
+        <a class ="link_text" href="https://www.kyndryl.com/us/en/customer-stories">
         Customer Stories</a></kd-nav-item>
         <kd-nav-item hasHoverEffect slot="primary-navigation">
-        <a href="https://www.kyndryl.com/us/en/careers" style="text-decoration:none; color:#3d3c3c">
+        <a class ="link_text" href="https://www.kyndryl.com/us/en/careers">
         Careers</a></kd-nav-item>
 
         <slot name="primary-navigation" slot="primary-navigation"></slot>
