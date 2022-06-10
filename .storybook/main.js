@@ -44,7 +44,8 @@ module.exports = {
     config.module.rules.push({
       test: /\.s(c|a)ss$/,
       include: [
-        path.resolve(__dirname, '../src/components')
+        path.resolve(__dirname, '../src/components'),
+        path.resolve(__dirname, '../src/patterns'),
       ],
       use: [
         {

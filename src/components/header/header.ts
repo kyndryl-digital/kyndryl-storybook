@@ -1,3 +1,7 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
 import { html, LitElement, TemplateResult } from 'lit';
 import { customElement } from 'lit/decorators.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
@@ -39,7 +43,7 @@ export class Header extends LitElement {
     return html`
       <div class="${PREFIX_CLASS}-header__primary-nav-container">
         <div class="${PREFIX_CLASS}-header__primary-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
-          <img class="${PREFIX_CLASS}-header__logo" .src=${logo} .alt=${'Logo'} />
+          <a href="https://kyndryl.com/"><img class="${PREFIX_CLASS}-header__logo" .src=${logo} .alt=${'Logo'} /></a>
           <slot name="primary-navigation"></slot>
           <slot name="account-navigation"></slot>
         </div>
