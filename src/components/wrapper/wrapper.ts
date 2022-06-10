@@ -1,19 +1,32 @@
-import { html, LitElement } from 'lit';
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
 
-import markup from './wrapper.html';
+import { html, LitElement } from 'lit';
+import { customElement } from 'lit/decorators.js';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import stylesheet from './wrapper.scss';
 
 /**
- * Branded page wrapper with Kyndryl header and footer.
+ * Kyndryl page wrapper
  *
  * @slot - This element has a slot
- * @csspart button - The button
  */
-export class kdWrapper extends LitElement {
+@customElement(`${PREFIX_TAG}-wrapper`)
+export class Wrapper extends LitElement {
   static styles = [stylesheet];
 
   render() {
-    return html` ${markup} `;
+    return html`
+      <kyndryl-header>
+        <slot name="primary-navigation" slot="primary-navigation"></slot>
+        <slot name="account-navigation" slot="account-navigation"></slot>
+        <slot name="masthead" slot="masthead"></slot>
+      </kyndryl-header>
+      <div class="${PREFIX_CLASS}-wrapper__content">
+        <slot></slot>
+      </div>
+    `;
   }
+
 }
-customElements.define(`kyndryl-wrapper`, kdWrapper);

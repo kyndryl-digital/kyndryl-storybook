@@ -1,14 +1,9 @@
-:host(kyndryl-wrapper) {
-  main {
-    margin-top: 90px;
-  }
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
 
-  ::slotted(#teconsent) {
-    color: #3d3c3c;
-    line-height: 30px;
-  }
+@import '../../styles/variables/index';
 
-  ::slotted(#teconsent *:hover) {
-    text-decoration: underline;
-  }
+.#{$prefix-class}-wrapper__content {
+  margin-top: 122px;
 }

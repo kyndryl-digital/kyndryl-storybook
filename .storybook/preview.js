@@ -1,8 +1,15 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import '!style-loader!css-loader!sass-loader!../src/styles/_global.storybook.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
+  layout: 'padded',
   controls: {
+    expanded: true,
+    sort: 'alpha',
     matchers: {
       color: /(background|color)$/i,
       date: /Date$/,

@@ -1,0 +1,139 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+@import '../../styles/base/typography';
+@import '../../styles/themes/index';
+
+.#{$prefix-class}-content-card {
+  background: var(--kd-color-background);
+  color: var(--kd-color-text);
+  display: flex;
+  height: 100%;
+  min-height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__content-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+  }
+
+  &__content {
+    height: 100%;
+  }
+
+  &__title {
+    margin-bottom: 24px;
+
+    &.small {
+      font-size: var(--kd-font-size-06);
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  &__hr {
+    background-color: var(--kd-color-token-accent);
+    display: block;
+    height: 2px;
+    margin-bottom: 24px;
+    width: 120px;
+
+    @include breakpoint(md) {
+      margin-bottom: 26px;
+    }
+  }
+
+  &__image,
+  &__youtube {
+    margin-bottom: 24px;
+  }
+
+  &__image {
+    height: 54px;
+    width: 54px;
+  }
+
+  &__description {
+    color: inherit;
+    font-size: var(--kd-font-size-04);
+    line-height: var(--kd-font-weight-04);
+    margin-bottom: 45px;
+    overflow-wrap: anywhere;
+
+    @include breakpoint(sm, md, lg, xlg, max) {
+      margin-bottom: 48px;
+    }
+
+    @include breakpoint(md) {
+      font-size: var(--kd-font-size-03);
+      line-height: var(--kd-font-weight-03);
+    }
+
+    p, div {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    ul {
+      list-style: none;
+
+      li {
+        padding-bottom: 5px;
+        padding-left: 28px;
+        position: relative;
+
+        &::before {
+          background-color: var(--kd-color-token-inverse);
+          content: '';
+          height: 1px;
+          left: 0;
+          position: absolute;
+          top: 12px;
+          width: 12px;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
+
+      &:first-child {
+        margin-top: 40px;
+
+        li {
+          &:last-child {
+            padding-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__action-container {
+    align-items: self-start;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+
+    .cmp-content-card__title + & {
+      margin-top: 24px;
+    }
+  }
+}

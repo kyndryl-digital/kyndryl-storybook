@@ -1,17 +1,26 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement } from 'lit';
-import { state, property, customElement } from 'lit/decorators.js';
-
-import { settings } from '../../global/settings';
-
+import { state, property, customElement} from 'lit/decorators.js';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import stylesheet from './accordionItem.scss';
 
 /**
  * kd-accordion-item web component
  */
-@customElement(`${settings.tag_prefix}-accordion-item`)
+@customElement(`${PREFIX_TAG}-accordion-item`)
 export class kdAccordionItem extends LitElement {
+
   @property({ type: String }) heading;
   @property({ type: Boolean }) opened = false;
+
+  @state() private _index = 0;
+
+  setIndex(index: number) {
+    this._index = index;
+  }
 
   static get styles() {
     return [stylesheet];
@@ -19,45 +28,40 @@ export class kdAccordionItem extends LitElement {
 
   private _handleClick(e) {
     e.preventDefault();
-    this._toggleOpenState(e);
+    this._toggleOpenState();
   }
 
-  private _toggleOpenState(e) {
-    if (
-      this.renderRoot.querySelector(
-        '.' + settings.class_prefix + '-accordion-item-detail-wrapper',
-      ).offsetHeight > 0
-    ) {
-      this.renderRoot.querySelector(
-        '.' + settings.class_prefix + '-accordion-item-detail-wrapper',
-      ).style.height = '0px';
-    } else {
-      this.renderRoot.querySelector(
-        '.' + settings.class_prefix + '-accordion-item-detail-wrapper',
-      ).style.height =
-        this.renderRoot.querySelector(
-          '.' + settings.class_prefix + '-accordion-item-detail-wrapper',
-        ).scrollHeight + 'px';
+  private _toggleOpenState() {
+    if(this.renderRoot.querySelector('.' + PREFIX_CLASS + '-accordion-item-detail-wrapper').offsetHeight > 0) {
+      this.renderRoot.querySelector('.' + PREFIX_CLASS + '-accordion-item-detail-wrapper').style.height = '0px';
     }
-    this.renderRoot.querySelector('h4').classList.toggle('opened');
+    else {
+      this.renderRoot.querySelector('.' + PREFIX_CLASS + '-accordion-item-detail-wrapper').style.height = this.renderRoot.querySelector('.' + PREFIX_CLASS + '-accordion-item-detail-wrapper').scrollHeight + 'px';
+    }
+    this.renderRoot.querySelector('button').classList.toggle('opened');
+
   }
 
   firstUpdated() {
-    const openedItem = this.renderRoot.querySelector(
-      '.opened+.' + settings.class_prefix + '-accordion-item-detail-wrapper',
-    );
-    if (openedItem) openedItem.style.height = openedItem.scrollHeight + 'px';
+    const openedItem = this.renderRoot.querySelector('.opened+.' + PREFIX_CLASS + '-accordion-item-detail-wrapper');
+    if(openedItem) openedItem.style.height = openedItem.scrollHeight + 'px';
   }
 
   render() {
-    let classAdditions: string = '';
-    if (this.opened) classAdditions += 'opened';
+    let classAdditions = '';
+    let ariaExpanded = false;
+    classAdditions += `${PREFIX_CLASS}-accordion-item-header`;
+    if(this.opened) {
+      classAdditions += ' opened';
+      ariaExpanded = true;
+    }
     return html`
-      <h4 class="${classAdditions}" @click="${e => this._handleClick(e)}">
+      <button id="${PREFIX_CLASS}-accordion-item-header-${this._index}" tabindex="${this._index}" class="${classAdditions}" @click="${e => this._handleClick(e)}" aria-expanded="${ariaExpanded.toString()}" aria-controls="${PREFIX_CLASS}-accordion-item-detail-${this._index}">
         ${this.heading}
-      </h4>
-      <div class="${settings.class_prefix}-accordion-item-detail-wrapper">
-        <div class="${settings.class_prefix}-accordion-item-detail">
+      </button>
+
+      <div class="${PREFIX_CLASS}-accordion-item-detail-wrapper" id="${PREFIX_CLASS}-accordion-item-detail-${this._index}" aria-labelledby="${PREFIX_CLASS}-accordion-item-header-${this._index}">
+        <div class="${PREFIX_CLASS}-accordion-item-detail">
           <slot></slot>
         </div>
       </div>

@@ -3,7 +3,7 @@
   "display": "Node 16",
   "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "lib": ["es2021"],
+    "lib": ["es2021", "dom"],
     "module": "commonjs",
     "target": "es2021",
     "strict": false,
@@ -11,6 +11,9 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "experimentalDecorators": true,
+    "declaration": true,
+    "declarationMap": true,
+    "useDefineForClassFields": false,
     "esModuleInterop": true,
   },
 }

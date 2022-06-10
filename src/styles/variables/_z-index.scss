@@ -1,0 +1,11 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
+@mixin css-vars-z-index {
+  --kd-z-index-default: 1;
+  --kd-z-index-above-default: 2;
+  --kd-z-index-header: 3;
+  --kd-z-index-modal-backdrop: 4;
+  --kd-z-index-modal-window: 5;
+}

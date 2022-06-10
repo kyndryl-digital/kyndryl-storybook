@@ -1,0 +1,98 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
+@font-face {
+  font-family: 'kyndryl-Icons';
+  src:
+    url('fonts/kyndryl-Icons.ttf?p6zppx') format('truetype'),
+    url('fonts/kyndryl-Icons.woff?p6zppx') format('woff'),
+    url('fonts/kyndryl-Icons.svg?p6zppx#kyndryl-Icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+.kd-icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'kyndryl-Icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.kd-icon-arrow-down:before {
+  content: "\e90e";
+}
+.kd-icon-arrow-left:before {
+  content: "\e906";
+}
+.kd-icon-arrow-right:before {
+  content: "\e905";
+}
+.kd-icon-arrow-up:before {
+  content: "\e90f";
+}
+.kd-icon-chevron-down:before {
+  content: "\e903";
+}
+.kd-icon-chevron-left:before {
+  content: "\e910";
+}
+.kd-icon-chevron-right:before {
+  content: "\e911";
+}
+.kd-icon-chevron-up:before {
+  content: "\e908";
+}
+.kd-icon-chevron-wide-down:before {
+  content: "\e90b";
+}
+.kd-icon-chevron-wide-left:before {
+  content: "\e912";
+}
+.kd-icon-chevron-wide-right:before {
+  content: "\e913";
+}
+.kd-icon-chevron-wide-up:before {
+  content: "\e90c";
+}
+.kd-icon-close:before {
+  content: "\e909";
+}
+.kd-icon-download:before {
+  content: "\e901";
+}
+.kd-icon-hamburger:before {
+  content: "\e90a";
+}
+.kd-icon-linkedin:before {
+  content: "\e900";
+}
+.kd-icon-pause:before {
+  content: "\e914";
+  color: #3d3c3c;
+}
+.kd-icon-pdf:before {
+  content: "\e904";
+}
+.kd-icon-play:before {
+  content: "\e90d";
+}
+.kd-icon-play-solid:before {
+  content: "\e915";
+  color: #3d3c3c;
+}
+.kd-icon-pop-out:before {
+  content: "\e907";
+}
+.kd-icon-twitter:before {
+  content: "\e902";
+}

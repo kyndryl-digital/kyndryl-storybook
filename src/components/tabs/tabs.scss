@@ -1,14 +1,56 @@
-@import '../../styles/tabs';
-@import '../../styles/vars';
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
 
-:host(#{$tag-prefix}-tabs) {
-  .#{$class-prefix}-tabs {
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+
+.#{$prefix-class}-tab-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--kd-color-brand-dark-white);
+
+  .#{$prefix-class}-tab {
+    @include padding(top bottom, 2);
+    @include padding(right left, 3);
+    @include margin(right, 1);
+    display: inline-block;
+    font-size: var(--kd-font-size-02);
+    color: var(--kd-color-brand-earth);
+    text-decoration: none;
+    margin-bottom: -2px;
+    background: transparent;
+    border: none;
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    cursor: pointer;
+    &:hover {
+      color: var(--kd-color-brand-dark-stone);
+    }
+    &.#{$prefix-class}-selected,
+    &:focus,
+    &:active {
+      color: var(--kd-color-brand-warm-red);
+      font-weight: var(--kd-font-weight-bold);
+      border-bottom-color: var(--kd-color-brand-warm-red);
+    }
+  }
+}
+
+:host(#{$prefix-tag}-tabs) {
+  .#{$prefix-class}-tabs {
     [role='tablist'] {
-      @extend .#{$class-prefix}-tab-list;
+      @extend .#{$prefix-class}-tab-list;
       [role='tab'] {
-        @extend .#{$class-prefix}-tab;
+        @extend .#{$prefix-class}-tab;
         &[aria-selected='true'] {
-          @extend .#{$class-prefix}-selected;
+          @extend .#{$prefix-class}-selected;
         }
       }
     }

@@ -1,0 +1,197 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+@import '../../styles/base/typography';
+@import '../../styles/themes/index';
+
+.#{$prefix-class}-content-band-container {
+  background: var(--kd-color-background);
+  color: var(--kd-color-text);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100%;
+  padding-bottom: 48px;
+  padding-top: 48px;
+
+  &__header {
+    align-content: stretch;
+    align-items: flex-start;
+    display: flex;
+    flex: 0 0 100%;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    @include breakpoint(sm, md, lg, xlg, max) {
+      flex-direction: row;
+    }
+
+    @include breakpoint(md, lg, xlg, max) {
+      align-items: center;
+    }
+  }
+
+  &__desc-container {
+    @include breakpoint(sm, md, lg, xlg, max) {
+      flex: 0 0 50%;
+    }
+
+    @include breakpoint(md, lg, xlg, max) {
+      flex: unset;
+    }
+  }
+
+  &__description {
+    display: block;
+    font-size: var(--kd-font-size-04);
+    padding-top: 12px;
+  }
+
+  &__action-container {
+    width: 100%;
+
+    @include breakpoint(sm, md, lg, xlg, max) {
+      margin-left: 24px;
+      width: auto;
+    }
+  }
+
+  &__bottom {
+    @include breakpoint(md, lg, xlg, max) {
+      flex: 1;
+    }
+
+    ::slotted(kd-content-card) {
+      padding-top: 72px;
+
+      @include breakpoint(sm, md, lg, xlg, max) {
+        padding-top: 65px;
+      }
+    }
+
+    ::slotted(kd-solution-card) {
+      padding-top: 24px;
+    }
+
+    slot {
+      align-content: stretch;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: left;
+    }
+
+    &--1-col,
+    &--2-col,
+    &--2-1-col,
+    &--3-col,
+    &--4-col {
+      ::slotted(*) {
+        flex: 0 0 100%;
+        padding-right: 0;
+      }
+    }
+
+    &--2-col,
+    &--2-1-col,
+    &--3-col,
+    &--4-col {
+      ::slotted(*) {
+        @include breakpoint(sm, md, lg, xlg, max) {
+          flex: 0 0 50%;
+        }
+      }
+      ::slotted(*:nth-of-type(odd)) {
+        @include breakpoint(sm, md, lg, xlg, max) {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    &--2-col {
+      ::slotted(*) {
+        @include breakpoint(md, lg, xlg, max) {
+          flex: 0 0 50%;
+        }
+      }
+      ::slotted(*:nth-of-type(odd)) {
+        @include breakpoint(sm, md, lg, xlg, max) {
+          padding-right: 10px;
+        }
+      }
+      ::slotted(*:nth-of-type(even)) {
+        @include breakpoint(sm, md, lg, xlg, max) {
+          padding-left: 10px;
+        }
+      }
+    }
+
+    &--2-1-col {
+      @include breakpoint(md, lg, xlg, max) {
+        ::slotted(*:nth-of-type(odd)) {
+          flex: 0 0 percentage(2/3);
+        }
+        ::slotted(*:nth-of-type(even)) {
+          flex: 0 0 percentage(1/3);
+        }
+      }
+    }
+
+    &--3-col {
+      ::slotted(*) {
+        @include breakpoint(md, lg, xlg, max) {
+          flex: 0 0 percentage(1/3);
+        }
+      }
+      ::slotted(*:nth-of-type(3n-2)) {
+        @include breakpoint(md, lg, xlg, max) {
+          padding-right: calc(20px * (2/3));
+        }
+      }
+      ::slotted(*:nth-of-type(3n-1)) {
+        @include breakpoint(md, lg, xlg, max) {
+          padding-left: calc(20px * (1/3));
+          padding-right: calc(20px * (1/3));
+        }
+      }
+      ::slotted(*:nth-of-type(3n)) {
+        @include breakpoint(md, lg, xlg, max) {
+          padding-left: calc(20px * (2/3));
+          padding-right: 0;
+        }
+      }
+    }
+
+    &--4-col {
+      ::slotted(*) {
+        @include breakpoint(md, lg, xlg, max) {
+          flex: 0 0 25%;
+        }
+
+        @include breakpoint(md, lg, xlg, max) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      ::slotted(*:first-of-type) {
+        @include breakpoint(md, lg, xlg, max) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+      ::slotted(*:last-of-type) {
+        @include breakpoint(md, lg, xlg, max) {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}

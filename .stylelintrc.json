@@ -1,0 +1,16 @@
+{
+	"extends": "stylelint-config-sass-guidelines",
+	"defaultSeverity": "warning",
+	"rules": {
+		"max-nesting-depth": [5, {
+			"ignore": ["blockless-at-rules", "pseudo-classes"]
+		}],
+		"number-no-trailing-zeros": null,
+		"rule-empty-line-before": ["always-multi-line", {
+			"ignore": ["after-comment", "first-nested", "inside-block"]
+		}],
+		"selector-class-pattern": null,
+		"selector-no-qualifying-type": null,
+		"selector-list-comma-newline-after": "always-multi-line"
+	}
+}

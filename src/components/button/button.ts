@@ -1,10 +1,18 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement } from 'lit';
-import { property, customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
+import { ifDefined } from 'lit/directives/if-defined.js';
 import { classMap } from 'lit-html/directives/class-map.js';
-
+import { PREFIX_CLASS, PREFIX_CLASS_THEME, PREFIX_TAG } from '../../global/settings/settings';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import { LINK_TARGETS } from '../../global/defs/linkTargets';
+import { THEMES } from '../../global/defs/themes';
+import { BUTTON_SIZES, BUTTON_TYPES, BUTTON_ICON_POSITION } from './defs';
+import '../icon/icon';
 import stylesheet from './button.scss';
-
-import { settings } from '../../global/settings';
 
 /**
  * Kyndryl branded L0
@@ -12,37 +20,39 @@ import { settings } from '../../global/settings';
  * @slot - This element has a slot
  * @csspart button - The button
  */
-@customElement(`${settings.tag_prefix}-button`)
+@customElement(`${PREFIX_TAG}-button`)
 export class Button extends LitElement {
   static styles = [stylesheet];
 
-  @property({ type: String }) type;
+  @property({ type: String }) description;
   @property({ type: String }) href;
-  @property({ type: String }) target;
-  @property({ type: String }) size;
-  @property({ type: String }) icon;
+  @property() target: LINK_TARGETS;
+  @property() type: BUTTON_TYPES;
+  @property() size: BUTTON_SIZES;
+  @property() icon: ICON_IDS;
+  @property() iconPosition: BUTTON_ICON_POSITION;
+  @property() theme: THEMES;
 
   render() {
     const classes = classMap({
-      [`${settings.class_prefix}-btn-primary`]:
-        this.type === 'primary' || !this.type,
-      [`${settings.class_prefix}-btn-secondary`]: this.type === 'secondary',
-      [`${settings.class_prefix}-btn-text`]: this.type === 'text',
-      [`${settings.class_prefix}-btn-lg`]: this.size === 'large',
-      [`${settings.class_prefix}-btn-sm`]: this.size === 'small',
-    });
-    const icon_classes = classMap({
-      [`${settings.class_prefix}-icon`]: this.icon,
-      [`${settings.class_prefix}-icon-` + this.icon]: this.icon,
+      [`${PREFIX_CLASS}-btn-primary`]: this.type === BUTTON_TYPES.PRIMARY || !this.type,
+      [`${PREFIX_CLASS}-btn-secondary`]: this.type === BUTTON_TYPES.SECONDARY,
+      [`${PREFIX_CLASS}-btn-text`]: this.type === BUTTON_TYPES.TEXT,
+      [`${PREFIX_CLASS}-btn-lg`]: this.size === BUTTON_SIZES.LARGE,
+      [`${PREFIX_CLASS}-btn-sm`]: this.size === BUTTON_SIZES.SMALL,
+      [`${PREFIX_CLASS}-btn-icon-${this.iconPosition}`]: this.iconPosition,
+      [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
     });
     if (!this.icon) {
-      return html`<a href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.description ? this.description : undefined)}>
         <slot></slot>
       </a>`;
     } else {
-      return html`<a href=${this.href} target=${this.target} class=${classes}>
+      return html`<a id="button" href=${this.href} target=${this.target} class=${classes} aria-label=${ifDefined(this.description ? this.description : undefined)}>
         <slot></slot>
-        <span class=${icon_classes}></span>
+        <span class="${PREFIX_CLASS}-btn--icon">
+          <kd-icon icon=${this.icon}></kd-icon>
+        </span>
       </a>`;
     }
   }

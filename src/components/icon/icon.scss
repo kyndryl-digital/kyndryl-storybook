@@ -1,0 +1,32 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@import '../../styles/variables/config';
+@import '../../styles/variables/icons';
+
+.#{$prefix-class-icon},
+[class*='#{$prefix-class-icon}'] {
+  font-family: var(--kd-font-family-icon);
+  speak: never;
+  font-style: normal;
+  font-weight: var(--kd-font-weight-normal);
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/// Generates classes for icons.
+///
+/// @output Creates classes for the individual icons.
+@mixin create-icon-classes {
+  @each $name, $value in $icons {
+    .#{$prefix-class-icon}-#{$name}:before {
+      content: '#{$value}';
+    }
+  }
+}
+
+@include create-icon-classes;

@@ -3,6 +3,8 @@ package-lock.json
 .idea
 storybook-static
 build
+test
 .vscode
 *.d.ts
 sassdoc
+.DS_Store

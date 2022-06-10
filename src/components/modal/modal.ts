@@ -1,126 +1,140 @@
-import { html, LitElement } from "lit";
-import { state, property, customElement, eventOptions } from "lit/decorators.js";
-import { classMap } from "lit-html/directives/class-map.js";
-
-import stylesheet from "./modal.scss";
-
-import { settings } from '../../global/settings';
-
 /**
- * Example web component
+ * Copyright Kyndryl, Inc. 2022
  */
-@customElement(`${settings.tag_prefix}-modal`)
+
+import { html, LitElement } from 'lit';
+import { customElement, eventOptions, property, state } from 'lit/decorators.js';
+import { classMap } from 'lit-html/directives/class-map.js';
+import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
+import { KEYCODES } from '../../global/defs/keyCodes';
+import { ICON_IDS } from '../../global/defs/iconIds';
+import '../icon/icon';
+import '../button/button';
+import { MODAL_SIZES } from './defs';
+import stylesheet from './modal.scss';
+
+@customElement(`${PREFIX_TAG}-modal`)
 export class kdModal extends LitElement {
   static styles = [ stylesheet ];
 
-  @property({ type: String }) size;
+  @property() size: MODAL_SIZES = MODAL_SIZES.DEFAULT;
+  @property({ type: String }) closeLabel = 'Close window';
 
-  /**
-   * Defines the active tab index.
-   */
   @state()
-  private _active: boolean = false;
+  private _isOpen = false;
 
-  /**
-   * Allows users to toggle the modal open and close.
-   */
-  public toggleModal() {
-    if (this._active) {
-      this._handleClose();
-    }
-    else {
-      this._handleOpen();
-    }
-  }
-
-  /**
-   * Allows users to center the modal vertically based on window and modal height.
-   */
-  public centerModal() {
-    const modalBackdrop = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal-backdrop");
-    const modal = this.renderRoot?.querySelector("." + settings.class_prefix + "-modal");
-    const modalHeight = modal.scrollHeight;
-    const windowHeight = window?.innerHeight;
-    const modalMargin = 50-(((100/windowHeight) * modalHeight)/2);
-
-    modalBackdrop.scrollTop = 0;
-    if (windowHeight >= modalHeight && modalMargin > 0) {
-      modal.style.marginTop = 50-(((100/windowHeight) * modalHeight)/2) + 'vh';
-      modal.style.marginBottom = 50-(((100/windowHeight) * modalHeight)/2) + 'vh';
-    }
-    else {
-      modal.style.marginTop = null;
-      modal.style.marginBottom = null;
-    }
-  }
-
-  @eventOptions({ capture: true, passive: true })
-  private _handleOpen(e) {
-    e?.preventDefault();
-    e?.target.blur();
-    this.centerModal();
-    this.dispatchEvent(new CustomEvent('modal-open'));
-    document.body.style.overflow = 'hidden';
-    document?.dispatchEvent(new CustomEvent('modal-open'));
-    this._active = true;
-  }
-
-  @eventOptions({ capture: true, passive: true })
-  private _handleClose(e) {
-    e?.preventDefault();
-    this._active = false;
-    document.body.style.overflow = null;
-    document?.dispatchEvent(new CustomEvent('modal-close'));
-    this.dispatchEvent(new CustomEvent('modal-close'));
-  }
-
-  private _handleSlotChange() {
-    this.centerModal();
-  }
-
-  connectedCallback() {
-    super.connectedCallback();
-    document?.addEventListener('modal-open', (e) => this._handleClose(e));
-    if(window?.attachEvent) {
-      window?.attachEvent('onresize', window?.addEventListener('resize', (e) => this.centerModal(e), true));
-    }
-    else if(window?.addEventListener) {
-      window?.addEventListener('resize', (e) => this.centerModal(e), true);
-    }
-  }
+  private _elBtnTrigger;
+  private _elBtnClose;
+  private _delay = 400; // ms delay before setting focus/binding events (anim speed of modal open)
+  private _evtOnClickFocusIn = this._onClickFocusIn.bind(this);
+  private _evtOnKeyup = this._onKeyup.bind(this);
 
   disconnectedCallback() {
     super.disconnectedCallback();
-    document?.removeEventListener('modal-open');
-    if(window?.attachEvent) {
-      window?.detachEvent('onresize');
+    if (this._isOpen) {
+      this._unbindOpenEvents();
     }
-    else if(window?.addEventListener) {
-      window?.removeEventListener('resize');
+  }
+
+  public toggleModal() {
+    if (this._isOpen) {
+      this.closeModal();
+    } else {
+      this.openModal();
+    }
+  }
+
+  @eventOptions({ capture: true, passive: true })
+  public openModal() {
+    this._isOpen = true;
+    this._elBtnTrigger = document.activeElement;
+    this._elBtnClose = this.renderRoot.querySelector(`.${PREFIX_CLASS}-modal-control`);
+    setTimeout(() => {
+      this._elBtnClose?.focus();
+      this._bindOpenEvents();
+    }, this._delay);
+    document.body.style.overflow = 'hidden';
+  }
+
+  @eventOptions({ capture: true, passive: true })
+  public closeModal() {
+    this._isOpen = false;
+    document.body.style.overflow = null;
+    this._unbindOpenEvents();
+
+    // return focus to trigger
+    if (this._elBtnTrigger) {
+      this._elBtnTrigger.setAttribute('tabindex', '-1');
+      this._elBtnTrigger.focus();
+      setTimeout(() => {
+        this._elBtnTrigger.removeAttribute('tabindex');
+      }, this._delay);
+    }
+  }
+
+  @eventOptions({ capture: true })
+  private _onTriggerClick(e) {
+    e.preventDefault();
+    this.openModal();
+  }
+
+  @eventOptions({ capture: true })
+  private _onCloseClick(e) {
+    e.preventDefault();
+    this.closeModal();
+  }
+
+  @eventOptions({ passive: true })
+  private _bindOpenEvents() {
+    document.addEventListener('click', this._evtOnClickFocusIn);
+    document.addEventListener('focusin', this._evtOnClickFocusIn);
+    document.addEventListener('keyup', this._evtOnKeyup);
+  }
+
+  @eventOptions({ passive: true })
+  private _unbindOpenEvents() {
+    document.removeEventListener('click', this._evtOnClickFocusIn);
+    document.removeEventListener('focusin', this._evtOnClickFocusIn);
+    document.removeEventListener('keyup', this._evtOnKeyup);
+  }
+
+  @eventOptions({ capture: true, passive: true })
+  private _onClickFocusIn(e) {
+    // trap focus in the modal
+    if (!this.contains(e.target) || e.target === this._elBtnTrigger) {
+      this._elBtnClose?.focus();
+    }
+  }
+
+  @eventOptions({ capture: true, passive: true })
+  private _onKeyup(e) {
+    // close modal on escape key
+    if (e.keyCode === KEYCODES.ESCAPE) {
+      this.closeModal();
     }
   }
 
   render() {
     const classes = classMap({
-      [`${settings.class_prefix}-modal`]: this.size === 'default' || !this.size,
-      [`${settings.class_prefix}-modal-lg`]: this.size === 'large',
-      [`${settings.class_prefix}-modal-sm`]: this.size === 'small',
-      [`visible`]: this._active === true,
-      [`hidden`]: this._active === false
+      [`${PREFIX_CLASS}-modal`]: this.size === MODAL_SIZES.DEFAULT || !this.size,
+      [`${PREFIX_CLASS}-modal-lg`]: this.size === MODAL_SIZES.LARGE,
+      [`${PREFIX_CLASS}-modal-sm`]: this.size === MODAL_SIZES.SMALL,
+      [`visible`]: this._isOpen === true,
+      [`hidden`]: this._isOpen === false
     });
     return html`
-      <span @click="${e => this._handleOpen(e)}">
-        <slot name="trigger"></slot>
+      <span>
+        <slot name="trigger" @click="${e => this._onTriggerClick(e)}"></slot>
       </span>
-      <div @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-backdrop ${this._active ? 'visible' : 'hidden'}">
-        <div @click="${(e) => e.stopPropagation()}" role="dialog" aria-describedby=".${settings.class_prefix}-modal-content" class=${classes}>
-          <div class="${settings.class_prefix}-modal-controls">
-            <button @click="${e => this._handleClose(e)}" class="${settings.class_prefix}-modal-control" title="Close window">
-                <span class="${settings.class_prefix}-icon-close"></span>
+      <div @click="${e => this._onCloseClick(e)}" class="${PREFIX_CLASS}-modal-backdrop ${this._isOpen ? 'visible' : 'hidden'}">
+        <div @click="${e => e.stopPropagation()}" class=${classes} role="dialog">
+          <div class="${PREFIX_CLASS}-modal-controls">
+            <button @click="${e => this._onCloseClick(e)}" class="${PREFIX_CLASS}-modal-control" title=${this.closeLabel}>
+              <kd-icon icon="${ICON_IDS.CLOSE}"></kd-icon>
             </button>
           </div>
-          <div class="${settings.class_prefix}-modal-content">
-            <slot @slotchange=${this._handleSlotChange}></slot>
+          <div class="${PREFIX_CLASS}-modal-content">
+            ${this._isOpen ? html`<slot></slot>` : null }
           </div>
         </div>
       </div>

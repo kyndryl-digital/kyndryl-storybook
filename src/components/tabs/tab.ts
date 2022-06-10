@@ -1,12 +1,16 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
 import { html, LitElement } from 'lit';
 import { state, property, customElement } from 'lit/decorators.js';
 
-import { settings } from '../../global/settings';
+import { PREFIX_TAG } from '../../global/settings/settings';
 
 /**
  * Example web component
  */
-@customElement(`${settings.tag_prefix}-tab`)
+@customElement(`${PREFIX_TAG}-tab`)
 export class kdTab extends LitElement {
   @property({ type: String }) label;
   @property({ type: Boolean }) selected = false;
@@ -15,12 +19,12 @@ export class kdTab extends LitElement {
    * Defines the index of the tab relative to other tabs.
    */
   @state()
-  private _index: Number = 0;
+  private _index = 0;
 
   /**
    * Sets the index of the tab.
    */
-  setIndex(index: Number) {
+  setIndex(index: number) {
     this._index = index;
   }
 
