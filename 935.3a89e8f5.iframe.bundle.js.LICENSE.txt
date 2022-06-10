@@ -1,3 +1,5 @@
+/*! Copyright Kyndryl, Inc. 2022 */
+
 /** @license React v0.19.1
  * scheduler.production.min.js
  *

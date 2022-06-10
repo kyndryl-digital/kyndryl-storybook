@@ -10,3 +10,5 @@
  * Released under the MIT license.
  * Date: 02.08.2020
  */
+
+/*! Copyright Kyndryl, Inc. 2022 */

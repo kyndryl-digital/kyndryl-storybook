@@ -1,3 +1,5 @@
+/*! Copyright Kyndryl, Inc. 2022 */
+
 /*! axe v4.4.2
  * Copyright (c) 2022 Deque Systems, Inc.
  *

@@ -17,6 +17,8 @@ object-assign
  * Released under the MIT License.
  */
 
+/*! Copyright Kyndryl, Inc. 2022 */
+
 /*! https://mths.be/punycode v1.3.2 by @mathias */
 
 /**
