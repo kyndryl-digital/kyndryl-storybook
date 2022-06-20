@@ -32,6 +32,12 @@
   max-width: #{px2rem(1312)};
   display: grid;
   justify-content: flex-end;
+  grid-template-columns: auto auto;
+}
+
+.#{$prefix-class}-header__main-nav-container ::slotted(*){
+  margin-left: 40px;
+  line-height: 32px;
 }
 
 .#{$prefix-class}-header__main-nav > div {
@@ -48,18 +54,42 @@
     max-width: #{px2rem(1312)};
     box-sizing: border-box;
     position: relative;
+    grid-template-columns: 1fr auto 1fr;
   }
 
   &__primary-nav-container {
-    border-bottom: #{px2rem(1)} solid var(--kd-color-brand-stone);
+    border-bottom: #{px2rem(1)} solid #e2e2e2;
   }
 
   &__logo{
     margin-right: #{px2rem(60)};
+    margin-bottom: #{px2rem(10)};
+    display: grid;
+  }
+
+  &__primary-navigation-container{
+    padding: 0;
+    grid-template-columns: auto auto auto auto auto auto;
+  }
+
+  &__primary-navigation-container ::slotted(*){
+    margin-left: #{px2rem(40)};
+  }
+
+  &__primary-navigation-container ::slotted(:first-child){
+    margin-left: 0;
+  }
+
+  &__account-navigation-container{
+    justify-self: flex-end;
+    align-self: center;
+  }
+
+  &__account-navigation-container ::slotted(*){
+    margin-left: #{px2rem(40)};
   }
 }
 
 ::slotted(*) {
-  margin-left: #{px2rem(40)};
   align-self: center;
 }

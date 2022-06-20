@@ -14,7 +14,6 @@
   line-height: #{px2rem(32)};
   color: var(--kd-color-brand-dark-stone);
   font-weight: var(--kd-font-weight-medium);
-  white-space: nowrap;
 }
 
 :host([dense]){
