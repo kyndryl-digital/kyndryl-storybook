@@ -36,9 +36,10 @@
 }
 
 .#{$prefix-class}-header__main-nav-container ::slotted(*){
-  margin-left: 40px;
-  line-height: 32px;
+  @include margin(left, 5);
+  line-height: var(--kd-font-height-06);
 }
+
 
 .#{$prefix-class}-header__main-nav > div {
   justify-self: end;
@@ -73,7 +74,7 @@
   }
 
   &__primary-navigation-container ::slotted(*){
-    margin-left: #{px2rem(40)};
+    @include margin(left, 5);
   }
 
   &__primary-navigation-container ::slotted(:first-child){
@@ -86,7 +87,7 @@
   }
 
   &__account-navigation-container ::slotted(*){
-    margin-left: #{px2rem(40)};
+    @include margin(left, 5);
   }
 }
 
