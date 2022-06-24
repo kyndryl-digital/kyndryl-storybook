@@ -31,9 +31,7 @@ export class Header extends LitElement {
     return html`
       <div class="${PREFIX_CLASS}-header__main-nav">
         <div class="${PREFIX_CLASS}-header__main-nav-container">
-          <div class="${PREFIX_CLASS}-max-col-12 ${PREFIX_CLASS}-xlg-col-12 ${PREFIX_CLASS}-lg-col-12 ${PREFIX_CLASS}-md-col-12">
             <slot name="masthead"></slot>
-          </div>
         </div>
       </div>
     `;
@@ -41,13 +39,18 @@ export class Header extends LitElement {
 
   protected _primaryNavTemplate(): TemplateResult {
     return html`
-      <div class="${PREFIX_CLASS}-header__primary-nav-container">
-        <div class="${PREFIX_CLASS}-header__primary-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
-          <a href="https://kyndryl.com/"><img class="${PREFIX_CLASS}-header__logo" .src=${logo} .alt=${'Logo'} /></a>
-          <slot name="primary-navigation"></slot>
-          <slot name="account-navigation"></slot>
-        </div>
+    <div class="${PREFIX_CLASS}-header__primary-nav-container">
+    <div class="${PREFIX_CLASS}-header__primary-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
+      <a href="https://kyndryl.com/" class="${PREFIX_CLASS}-header__logo"><img .src=${logo} .alt=${'Logo'} /></a>
+      <div class="${PREFIX_CLASS}-header__primary-navigation-container ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
+        <slot name="primary-navigation"></slot>
       </div>
+
+      <div class="${PREFIX_CLASS}-header__account-navigation-container">
+        <slot name="account-navigation"></slot>
+      </div>
+    </div>
+  </div>
     `;
   }
 }
