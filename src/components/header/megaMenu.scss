@@ -20,6 +20,9 @@
     background-color: var(--kd-color-token-base);
     padding: #{px2rem(48)} #{px2rem(18)} #{px2rem(60)} #{px2rem(18)};
     box-sizing: border-box;
+    @include device(tablet, mobile) {
+      position: unset;
+    }
   }
 
   &__content-wrapper::before{
@@ -30,6 +33,9 @@
     z-index: -1;
     width: 100vw;
     height: #{px2rem(330)};
+    @include device(tablet, mobile) {
+      display: none;
+    }
   }
 
 }
