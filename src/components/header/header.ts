@@ -3,7 +3,7 @@
  */
 
 import { html, LitElement, TemplateResult } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 import { PREFIX_CLASS, PREFIX_TAG } from '../../global/settings/settings';
 import '../icon/icon';
 import stylesheet from './header.scss';
@@ -19,6 +19,8 @@ import '../image/image';
 @customElement(`${PREFIX_TAG}-header`)
 export class Header extends LitElement {
   static styles = [stylesheet];
+
+  @property({ type: Boolean , reflect: true }) _opened = false;
 
   render() {
     return html`
@@ -42,15 +44,30 @@ export class Header extends LitElement {
     <div class="${PREFIX_CLASS}-header__primary-nav-container">
     <div class="${PREFIX_CLASS}-header__primary-nav ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
       <a href="https://kyndryl.com/" class="${PREFIX_CLASS}-header__logo"><img .src=${logo} .alt=${'Logo'} /></a>
-      <div class="${PREFIX_CLASS}-header__primary-navigation-container ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
-        <slot name="primary-navigation"></slot>
-      </div>
 
-      <div class="${PREFIX_CLASS}-header__account-navigation-container">
-        <slot name="account-navigation"></slot>
-      </div>
+      <section class="${PREFIX_CLASS}-header__navigation-wrapper">
+        <div class="${PREFIX_CLASS}-header__primary-navigation-container ${PREFIX_CLASS}-grid-container ${PREFIX_CLASS}-no-grid-gap">
+          <slot name="primary-navigation"></slot>
+        </div>
+
+        <div class="${PREFIX_CLASS}-header__account-navigation-container">
+          <slot name="account-navigation"></slot>
+        </div>
+      </section>
+
+      ${this._hamburgerMenuTemplate()}
     </div>
   </div>
     `;
+  }
+
+  protected _hamburgerMenuTemplate(): TemplateResult{
+    return html`  
+      <kd-icon class="${PREFIX_CLASS}-header__hamburger-icon" icon="${this._opened ? 'close' : 'hamburger'}" @click="${this._toggleMenu}"></kd-icon>
+    `;
+  }
+
+  protected _toggleMenu(): void{
+    this._opened = !this._opened;
   }
 }

@@ -14,10 +14,20 @@
   line-height: #{px2rem(32)};
   color: var(--kd-color-brand-dark-stone);
   font-weight: var(--kd-font-weight-medium);
+  @include device(tablet, mobile){
+    justify-content: space-between;
+    line-height: #{px2rem(24)};
+  }
 }
 
 :host([dense]){
   padding: 0;
+}
+
+:host([hasIcon]){
+  @include device(tablet, mobile){
+    width: 100%;
+  }
 }
 
 :host(:not([selected])[hashovereffect]:hover){
@@ -30,14 +40,35 @@
   transition: background-size 350ms;
 }
 
+:host(:not([hasHoverEffectAlways])) {
+
+  @include device(tablet, mobile){
+    background: none;
+    padding-top: #{px2rem(21)};
+    padding-bottom: #{px2rem(21)};
+  }
+}
+
+
 :host([hashovereffect][selected]){
   transition: none;
   background: linear-gradient(0deg, var(--kd-color-token-accent), var(--kd-color-token-accent)) no-repeat 100% 100%/0 #{px2rem(2)};
   background-size: 100% #{px2rem(2)};
+  @include device(tablet, mobile){
+    background: none;
+  }
 }
 
 .nav-item--icon{
   font-size: #{px2rem(6)};
   width: 11px;
   margin-left: #{px2rem(10)};
+}
+
+:host([hashovereffect][selected]) .#{$prefix-class}-nav-item__text{
+  @include device(tablet){
+    text-decoration-line: underline;
+    text-underline-offset: #{px2rem(8)};
+    text-decoration-color: var(--kd-color-token-accent);
+  }
 }
