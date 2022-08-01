@@ -158,6 +158,9 @@ export class kyndrylHeader extends LitElement {
 
                 <a href="https://www.kyndryl.com/us/en/about-us/contact-us">
                 <span class="hover-underline-animation">Contact Us</span></a>
+
+                <a href="https://www.kyndryl.com/us/en/about-us/news">
+                <span class="hover-underline-animation">News</span></a>
             </div>
 
             <div class="${PREFIX_CLASS}-header__submenu-items-list group2">
@@ -172,6 +175,8 @@ export class kyndrylHeader extends LitElement {
 
               <a href="https://investors.kyndryl.com/overview/default.aspx">
               <span class="hover-underline-animation">Investors &#x2197;</span></a>
+
+            
             </div>
 
             <a href="https://www.kyndryl.com/us/en/about-us/corporate-responsibility/environmental-sustainability" class="${PREFIX_CLASS}-header__extra-details">
@@ -185,9 +190,7 @@ export class kyndrylHeader extends LitElement {
           </div>
         </kd-mega-menu>
  
-        <kd-nav-item hasHoverEffect slot="primary-navigation">
-        <a class ="link_text" href="https://www.kyndryl.com/us/en/news">
-        News and Insights</a></kd-nav-item>
+       
         <kd-nav-item hasHoverEffect slot="primary-navigation">
         <a class ="link_text" href="https://www.kyndryl.com/us/en/customer-stories">
         Customer Stories</a></kd-nav-item>
