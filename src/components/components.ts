@@ -10,6 +10,7 @@ import './modal/modal';
 import './tabs/tabs';
 import './header/kyndrylHeader';
 import './header/header';
+import './header/header-platform';
 import './navItem/navItem';
 import './videoPlayer/videoPlayer';
 import './wrapper/kyndrylWrapper';
