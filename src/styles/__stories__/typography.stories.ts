@@ -76,3 +76,139 @@ export const UnorderedList = args => {
 export const Blockquote = args => {
   return html`<blockquote>Lorem ipsum dolor sit amet.</blockquote>`;
 };
+
+
+//New Design system specs
+
+export const HeadlineXXS = args => {
+  return html`<p class="headline-xxs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineXS = args => {
+  return html`<p class="headline-xs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineSM = args => {
+  return html`<p class="headline-sm">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineMD = args => {
+  return html`<p class="headline-md">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineLG = args => {
+  return html`<p class="headline-lg">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineXL= args => {
+  return html`<p class="headline-xl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineXXL = args => {
+  return html`<p class="headline-xxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineXXXL = args => {
+  return html`<p class="headline-xxxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const HeadlineXXXXL = args => {
+  return html`<p class="headline-xxxxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+//display
+export const DisplayXXS = args => {
+  return html`<p class="display-xxs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayXS = args => {
+  return html`<p class="display-xs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplaySM = args => {
+  return html`<p class="display-sm">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayMD = args => {
+  return html`<p class="display-md">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayLG = args => {
+  return html`<p class="display-lg">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayXL= args => {
+  return html`<p class="display-xl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayXXL = args => {
+  return html`<p class="display-xxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayXXXL = args => {
+  return html`<p class="display-xxxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const DisplayXXXXL = args => {
+  return html`<p class="display-xxxxl">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const BodyXXS = args => {
+  return html`<p class="display-xxs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const BodyXS = args => {
+  return html`<p class="display-xs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const UtilityXXS = args => {
+  return html`<p class="utility-xxs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};
+
+export const UtilityXS = args => {
+  return html`<p class="utility-xs">
+   Lorem ipsum dolor sit amet
+ </p>`;
+};

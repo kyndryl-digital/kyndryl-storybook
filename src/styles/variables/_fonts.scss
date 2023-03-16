@@ -10,6 +10,10 @@
   @include css-vars-font-size;
   @include css-vars-font-weight;
   @include css-vars-font-height;
+  @include css-utility;
+  @include css-display;
+  @include css-headline;
+  @include css-body
 }
 
 // Families
@@ -168,3 +172,182 @@
   --kd-font-weight-link-icon: var(--kd-font-weight-normal);
 
 }
+
+//Typography - new version
+@mixin typography($kd-ff, $kd-fs, $kd-lh, $kd-ls) {
+  font-family: --kd-ff;
+  font-size: --kd-fs;
+  line-height: --kd-lh;
+  letter-spacing: --kd-ls;
+ }
+
+ @mixin css-display {
+  --kd-display-font-size-d10: 68px;
+  --kd-display-font-size-d20: 72px;
+  --kd-display-font-size-d30: 76px;
+  --kd-display-font-size-d40: 84px;
+  --kd-display-font-size-d50: 92px;
+  --kd-display-font-size-d60: 96px;
+  --kd-display-font-size-d70: 144px;
+  --kd-display-font-size-d80: 192px;
+  --kd-display-font-size-90: 288px;
+  --kd-display-line-height-d10: 80px;
+  --kd-display-line-height-d20: 84px;
+  --kd-display-line-height-d30: 88px;
+  --kd-display-line-height-d40: 96px;
+  --kd-display-line-height-d50: 104px;
+  --kd-display-line-height-d60: 112px;
+  --kd-display-line-height-d70: 168px;
+  --kd-display-line-height-d80: 224px;
+  --kd-display-line-height-d90: 336px;
+ 
+  --kd-display-font-family-everett: 'TWK Everett';
+  --kd-display-font-family-roboto: 'Roboto';
+ 
+  --kd-letter-spacing-l1: -0.8px;
+  --kd-letter-spacing-l2: -0.16px;
+
+  .display-xxs {
+    // @include typography(--kd-display-font-family-everett, --kd-display-font-size-d10, --kd-display-line-height-d10, --kd-letter-spacing-l1);
+    font-family: --kd-display-font-family-everett;
+    font-size: --kd-display-font-size-d10;
+    line-height: --kd-display-line-height-d10;
+    letter-spacing: --kd-letter-spacing-l1;
+  }
+
+  .display-xs {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d20, --kd-display-line-height-d20, --kd-letter-spacing-l1);
+  }
+
+  .display-sm {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d30, --kd-display-line-height-d30, --kd-letter-spacing-l1);
+  }
+
+  .display-md {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d40, --kd-display-line-height-d40, --kd-letter-spacing-l1);
+  }
+
+  .display-lg {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d50, --kd-display-line-height-d50, --kd-letter-spacing-l1);
+  }
+
+  .display-xl {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d60, --kd-display-line-height-d60, --kd-letter-spacing-l1);
+  }
+
+  .display-xxl {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d70, --kd-display-line-height-d70, --kd-letter-spacing-l2);
+  }
+
+  .display-xxxl {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d80, --kd-display-line-height-d80, --kd-letter-spacing-l2);
+  }
+
+  .display-xxxxl {
+    @include typography(--kd-display-font-family-everett, --kd-display-font-size-d90, --kd-display-line-height-d90, --kd-letter-spacing-l2);
+  }
+ }
+
+ //Set the font style headline for the element(s)
+
+ @mixin css-headline {
+  --kd-display-font-size-h10: 24px;
+  --kd-display-font-size-h20: 28px;
+  --kd-display-font-size-h30: 32px;
+  --kd-display-font-size-h40: 36px;
+  --kd-display-font-size-h50: 42px;
+  --kd-display-font-size-h60: 48px;
+  --kd-display-font-size-h70: 54px;
+  --kd-display-font-size-h80: 60px;
+  --kd-display-font-size-h90: 64px;
+
+ --kd-display-line-height-h10: 32px;
+ --kd-display-line-height-h20: 36px;
+ --kd-display-line-height-h30: 40px;
+ --kd-display-line-height-h40: 44px;
+ --kd-display-line-height-h50: 50px;
+ --kd-display-line-height-h60: 56px;
+ --kd-display-line-height-h70: 64px;
+ --kd-display-line-height-h80: 70px;
+ --kd-display-line-height-h90: 24px;
+
+ --kd-letter-spacing-h10: 0px;
+ --kd-letter-spacing-h20: -0.8px;
+ --kd-letter-spacing-h30: .16px;
+ --kd-display-font-family-everett: 'TWK Everett';
+ --kd-display-font-family-roboto: 'Roboto';
+
+ .headline-xxs {
+  // @include typography(--kd-display-font-family-everett, --kd-display-font-size-h10, --kd-display-line-height-h10, --kd-letter-spacing-h10);
+  font-family: --kd-display-font-family-everett;
+  font-size: --kd-display-font-size-h10;
+  line-height: --kd-display-line-height-h10;
+  letter-spacing: --kd-letter-spacing-h10;
+ }
+
+ .headline-xs {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h20, --kd-display-line-height-h20, --kd-letter-spacing-h10);
+}
+
+.headline-sm {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h30, --kd-display-line-height-h30, --kd-letter-spacing-h10);
+}
+
+.headline-md {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h40, --kd-display-line-height-h40, --kd-letter-spacing-h10);
+}
+
+.headline-lg {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h50, --kd-display-line-height-h50, --kd-letter-spacing-h10);
+}
+
+.headline-xl {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h60, --kd-display-line-height-h60, --kd-letter-spacing-h20);
+}
+
+.headline-xxl {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h70, --kd-display-line-height-h70, --kd-letter-spacing-h20);
+}
+
+.headline-xxxl {
+  @include typography(--kd-display-font-family-everett, --kd-display-font-size-h80, --kd-display-line-height-h80, --kd-letter-spacing-h20);
+}
+
+.headline-xxxxl {
+  @include typography(--kd-display-font-family-everett, 64px, --kd-display-line-height-h90, --kd-letter-spacing-h30);
+}
+}
+
+@mixin css-body {
+  --kd-display-line-height-b10: 24px;
+  --kd-display-font-size-b10: 16px;
+  --kd-display-line-height-b20: 28px;
+  --kd-display-font-size-b20: 20px;
+  --kd-letter-spacing-b10: 0px;
+  --kd-display-font-family-roboto: 'Roboto';
+
+  .body-xxs {
+    @include typography(--kd-display-font-family-roboto, --kd-display-font-size-b10, --kd-display-line-height-b10, --kd-letter-spacing-b10);
+  }
+
+  .body-xs {
+    @include typography(--kd-display-font-family-roboto, --kd-display-font-size-b20, --kd-display-line-height-b20, --kd-letter-spacing-b10);
+  }
+ }
+
+ @mixin css-utility {
+  --kd-display-font-size-u10: 12px;
+  --kd-display-font-size-u20: 14px;
+  --kd-display-line-height-u10: 16px;
+  --kd-display-line-height-u20: 20px;
+  --kd-letter-spacing-u10: .32;
+  --kd-display-font-family-roboto: 'Roboto';
+
+  .utility-xxs {
+    @include typography(--kd-display-font-family-roboto, --kd-display-font-size-u10, --kd-display-line-height-u10, --kd-letter-spacing-u10);
+  }
+
+  .utility-xs {
+    @include typography(--kd-display-font-family-roboto, --kd-display-font-size-u20, --kd-display-line-height-u20, --kd-letter-spacing-u10);
+  }
+ }
