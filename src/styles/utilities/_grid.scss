@@ -17,10 +17,17 @@
 }
 
 @mixin generate-grid-column-definitions($numberOfColumns, $breakpoint) {
-  @for $column-span from 1 through $numberOfColumns {
+  @for $column-span from 0 through $numberOfColumns {
     @include breakpoint($breakpoint) {
-      .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
-        grid-column: auto / span #{$column-span};
+      @if $column-span == 0 {
+        .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
+          display: none;
+        }
+      }
+      @else {
+        .#{$prefix-class}-#{$breakpoint}-col-#{$column-span} {
+          grid-column: auto / span #{$column-span};
+        }
       }
     }
   }
