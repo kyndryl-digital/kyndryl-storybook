@@ -1,1 +1,0 @@
-/*! Copyright Kyndryl, Inc. 2022 */
