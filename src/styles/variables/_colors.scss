@@ -21,6 +21,160 @@
   --kd-color-brand-earth: #9e9287;
   --kd-color-brand-dark-earth: #565049;
 
+  --k-color-darkstone-100: #161616;
+  --k-color-darkstone-80: #3D3C3C;
+  --k-color-darkstone-70: #515151;
+  --k-color-darkstone-50: #898888;
+  --k-color-darkstone-20: #DCDAD8;
+  --k-color-darkstone-10: #F9F9F9;
+  --k-color-spruce-80:#163D43;
+  --k-color-spruce-70:#205961;
+  --k-color-spruce-60: #29707A;
+  --k-color-spruce-40: #3797A4;
+  --k-color-spruce-30:#3FADBD;
+  --k-color-warmred-50: #FF462D;
+  --k-color-warmred-40: #FF6B57;
+  --k-color-neutral-white: #FFFFFF;
+  --k-color-warmgray-20: #D9D7D7;
+  --k-color-springgreen-20: #4CDD84;
+  --k-color-springgreen-30: #24C060;
+  --k-color-deepforest-90: #042315;
+  --k-color-cloud-10:#F2F1EE;
+  --k-color-cloud-20: #DDDAD3;
+  --k-color-skye-10: #E4F4F1;
+  --k-color-skye-20:#AADCD3;
+  --k-color-dk-springgreen-60: #187E3F;
+  --k-color-coolgray-30: #B6BDC0;
+  --k-color-coolgray-20: #D5D9DB;
+  --k-color-warmgray-50: #8D8888;
+  --k-color-success:#00AF41;
+  --k-color-success-light:#E5F7EB;
+  --k-color-error: #A91E48;
+  --k-color-error-light: #F7E6E6;
+  --k-color-warning: #F5C400;
+  --k-color-warning-light: #FEF9E5;
+  --k-color-informational: #E7E7E7;
+  --k-color-spruce-100: #081618;
+  --k-color-spruce-90: #0E272A;
+  --k-color-spruce-80: #163D43;
+  --k-color-spruce-70: #205961;
+  --k-color-spruce-60:#29707A;
+  --k-color-spruce-50:#2F808C;
+  --k-color-spruce-40:#3797A4;
+  --k-color-spruce-30:#3FADBD;
+  --k-color-spruce-20:#8ECFD9;
+  --k-color-spruce-10: #DDF0F3;
+  --k-color-skye-100: #091714;
+  --k-color-skye-90: #102824;
+  --k-color-skye-80: #193F38;
+  --k-color-skye-70: #23564D;
+  --k-color-skye-60:#2C6E61;
+  --k-color-skye-50:#38887B;
+  --k-color-skye-40:#44A895;
+  --k-color-skye-30:#5FBEAC;
+  --k-color-skye-20:#AADCD3;
+  --k-color-skyee-10: #E4F4F1;
+  --k-color-deepforest-100: #02150D;
+  --k-color-deepforest-90: #042315;
+  --k-color-deepforest-80: #074127;
+  --k-color-deepforest-70: #0A5734;
+  --k-color-deepforest-60:#0D7546;
+  --k-color-deepforest-50:#0F8853;
+  --k-color-deepforest-40:#13A865;
+  --k-color-deepforest-30:#15BE72;
+  --k-color-deepforest-20:#19DB83;
+  --k-color-deepforest-10: #A3F4CF;
+  --k-color-dk-springgreen-100: #061B0D;
+  --k-color-dk-springgreen-90: #072914;
+  --k-color-dk-springgreen-80: #0B3D1E;
+  --k-color-dk-springgreen-70: #10592C;
+  --k-color-dk-springgreen-60:#187E3F;
+  --k-color-dk-springgreen-50:#189048;
+  --k-color-dk-springgreen-40:#1FA452;
+  --k-color-dk-springgreen-30:#24BF5F;
+  --k-color-dk-springgreen-20:#49DC81;
+  --k-color-dk-springgreen-10: #C4F3D6;
+  --k-color-springgreen-100: #03140A;
+  --k-color-springgreen-90: #072914;
+  --k-color-springgreen-80: #0D4422;
+  --k-color-springgreen-70: #10592C;
+  --k-color-springgreen-60: #16743A;
+  --k-color-springgreen-50: #1B904B;
+  --k-color-springgreen-40: #1FA452;
+  --k-color-springgreen-30: #24C060;
+  --k-color-springgreen-20: #4CDD84;
+  --k-color-springgreen-10: #B6F1CD;
+  --k-color-warmred-100: #410700;
+  --k-color-warmred-90: #6A0C00;
+  --k-color-warmred-80: #9B1200;
+  --k-color-warmred-70: #CC1800;
+  --k-color-warmred-60: #FF2306;
+  --k-color-warmred-50: #FF462D;
+  --k-color-warmred-40: #FF6B57;
+  --k-color-warmred-30: #FF9688;
+  --k-color-warmred-20: #FEC1B9;
+  --k-color-warmred-10: #FEDEDA;
+  --k-color-darkearth-100: #1B1815;
+  --k-color-darkearth-90: #2D2824;
+  --k-color-darkearth-80: #3F3833;
+  --k-color-darkearth-70: #565049;
+  --k-color-darkearth-60: #70655B;
+  --k-color-darkearth-50: #8B7D71;
+  --k-color-darkearth-40: #A59A90;
+  --k-color-darkearth-30: #BFB7B0;
+  --k-color-darkearth-20: #DCD8D4;
+  --k-color-darkearth-10: #F5F4F3;
+  --k-color-earth-100: #161412;
+  --k-color-earth-90: #2D2824;
+  --k-color-earth-80: #3F3833;
+  --k-color-earth-70: #554D45;
+  --k-color-earth-60: #70655B;
+  --k-color-earth-50: #8B7D71;
+  --k-color-earth-40: #9E9287;
+  --k-color-earth-30: #BFB7B0;
+  --k-color-earth-20: #DCD8D4;
+  --k-color-earth-10: #F5F4F3;
+  --k-color-cloud-100: #171511;
+  --k-color-cloud-90: #29271F;
+  --k-color-cloud-80: #3C382D;
+  --k-color-cloud-70: #534E3F;
+  --k-color-cloud-60: #6E6854;
+  --k-color-cloud-50: #8A826A;
+  --k-color-cloud-40: #A49D89;
+  --k-color-cloud-30: #BDB8A9;
+  --k-color-cloud-20: #DDDAD3;
+  --k-color-cloud-10: #F2F1EE;
+  --k-color-darkstone-100: #161616;
+  --k-color-darkstone-90: #272727;
+  --k-color-darkstone-80: #3D3C3C;
+  --k-color-darkstone-70: #515151;
+  --k-color-darkstone-60: #6D6D6D;
+  --k-color-darkstone-50: #898888;
+  --k-color-darkstone-40: #A8A5A6;
+  --k-color-darkstone-30: #BCBAB8;
+  --k-color-darkstone-20: #DCDAD8;
+  --k-color-darkstone-10: #F9F9F9;
+  --k-color-warmgray-100: #141313;
+  --k-color-warmgray-90: #2D2B2B;
+  --k-color-warmgray-80: #423F3F;
+  --k-color-warmgray-70: #565353;
+  --k-color-warmgray-60: #746F6F;
+  --k-color-warmgray-50: #8D8888;
+  --k-color-warmgray-40: #A5A0A0;
+  --k-color-warmgray-30: #C1BEBE;
+  --k-color-warmgray-20: #D9D7D7;
+  --k-color-warmgray-10: #F1F0F0;
+  --k-color-coolgray-100: #121415;
+  --k-color-coolgray-90: #222527;
+  --k-color-coolgray-80: #383E41;
+  --k-color-coolgray-70: #4B5357;
+  --k-color-coolgray-60: #667076;
+  --k-color-coolray-50: #79858B;
+  --k-color-coolgray-40: #97A1A6;
+  --k-color-coolgray-30: #B6BDC0;
+  --k-color-coolgray-20: #D5D9DB;
+  --k-color-coolgray-10: #EDF1F2;
+
   // Color Tokens
   --kd-color-token-base: var(--kd-color-brand-white);
   --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
@@ -81,5 +235,142 @@
   --kd-color-modal-text: var(--kd-color-token-inverse);
 
   --kd-color-header-main-nav-bg: #f2f1ee;
-
+  --k-color-text-primary:var(--k-color-darkstone-80);
+  --k-color-text-secondary: var(--k-color-darkstone-50);
+  --k-color-text-tertiary: var(--k-color-spruce-60);
+  --k-color-text-featured: var(--k-color-warmred-50);
+  --k-color-text-inversed: var(--k-color-neutral-white);
+  --k-color-text-disabled: var(--k-color-warmgray-20);
+  --k-color-text-accent-01: var(--k-color-spruce-40);
+  --k-color-text-accent-02: var(--k-color-springgreen-20);
+  --k-color-text-link: var(--k-color-darkstone-80);
+  --k-color-text-link-hover: var(--k-color-darkstone-100);
+  --k-color-background-primary:var(--k-color-neutral-white);
+  --k-color-background-secondary: var(--k-color-cloud-10);
+  --k-color-background-tertiary: var(--k-color-skye-20);
+  --k-color-theme-darkstone-80:var(--k-color-darkstone-80);
+  --k-color-theme-spruce-60:var(--k-color-spruce-60);
+  --k-color-theme-spruce-80: var(--k-color-spruce-80);
+  --k-color-theme-dk-springgreen-60: var(--k-color-dk-springgreen-60);
+  --k-color-theme-warmred-50: var(--k-color-warmred-50);
+  --k-color-theme-springgreen-20: var(--k-color-springgreen-20);
+  --k-color-background-primary: var(--k-color-coolgray-30);
+  --k-color-border-light: var(--k-color-coolgray-20);
+  --k-color-border-dark: var(--k-color-warmgray-50);
+  --k-color-border-inversed: var(--k-color-neutral-white);
+  --k-color-border-accent-springgreen: var(--k-color-springgreen20);
+  --k-color-border-accent-spruce: var(--k-color-spruce30);
+  --k-color-border-accent-warmred: var(--k-color-warmred50);
+  --k-color-background-success:var(--k-color-success);
+  --k-color-background-success-light: var(--k-color-success-light);
+  --k-color-background-error: var(--k-color-error);
+  --k-color-background-error-light: var(--k-color-error-light);
+  --k-color-background-warning: var(--k-color-warning);
+  --k-color-background-warning-light: var(--k-color-warning-light);
+  --k-color-background-informational: var(--k-color-informational);
+  --k-color-text-success:var(--k-color-success);
+  --k-color-text-success-light: var(--k-color-success-light);
+  --k-color-text-error: var(--k-color-error);
+  --k-color-text-error-light: var(--k-color-error-light);
+  --k-color-text-warning: var(--k-color-warning);
+  --k-color-text-warning-light: var(--k-color-warning-light);
+  --k-color-text-informational: var(--k-color-informational);
+  --k-color-background-button-primary:var(--k-color-darkstone-70);
+  --k-color-background-button-primary-hover: var(--k-color-darkstone-100);
+  --k-color-text-button-primary: var(--k-color-neutral-white);
+  --k-color-border-button-secondary: var(--k-color-darkstone-70);
+  --k-color-border-button-secondary-hover: var(--k-color-darkstone-20);
+  --k-color-text-button-secondary: var(--k-color-darkstone-70);
+  --k-color-text-button-secondary-hover: var(--k-color-darkstone-100);
+  --k-color-text-button-tertiary: var(--k-color-darkstone-70);
+  --k-color-text-button-tertiary-hover: var(--k-color-darkstone-100);
 }
+
+@mixin dark-theme-darkstone-80 {
+  --k-theme-color-darkstone-background: var(--k-color-darkstone-80);
+  --k-theme-color-darkstone-foreground: var(--k-color-neutral-white);
+  --k-theme-color-darkstone-accent-primary: var(--k-color-springgreen-20);
+  --k-theme-color-darkstone-accent-secondary: var(--k-color-coolgray-40);
+  --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-70);
+ }
+ 
+ @mixin dark-theme-spruce-60 {
+  --k-theme-color-spruce-background: var(--k-color-spruce-60);
+  --k-theme-color-spruce-foreground: var(--k-color-neutral-white);
+  --k-theme-color-spruce-accent-primary: var(--k-color-springgreen-20);
+  --k-theme-color-spruce-accent-secondary: var(--k-color-springgreen-10);
+  --k-theme-color-spruce-accent-tertiary: var(--k-color-spruce-50);
+ }
+ 
+ @mixin dark-theme-spruce-80 {
+  --k-theme-color-spruce-background: var(--k-color-spruce-80);
+  --k-theme-color-spruce-foreground: var(--k-color-neutral-white);
+  --k-theme-color-spruce-accent-primary: var(--k-color-springgreen-20);
+  --k-theme-color-spruce-accent-secondary: var(--k-color-spruce-30);
+  --k-theme-color-spruce-accent-tertiary: var(--k-color-spruce-70);
+ }
+ 
+ @mixin dark-theme-darkspring-60 {
+  --k-theme-color-darkspring-background: var(--k-color-spruce-80);
+  --k-theme-color-darkspring-foreground: var(--k-color-neutral-white);
+  --k-theme-color-darkspring-accent-primary: var(--k-color-springgreen-10);
+  --k-theme-color-darkspring-accent-secondary: var(--k-color-springgreen-20);
+  --k-theme-color-darkspring-accent-tertiary: var(--k-color-darkspringgreen-50);
+ }
+ 
+ @mixin dark-theme-warmred-50 {
+  --k-theme-color-warmred-background: var(--k-color-warmred-50);
+  --k-theme-color-warmred-foreground: var(--k-color-neutral-white);
+  --k-theme-color-warmred-accent-primary: var(--k-color-neutral-white);
+  --k-theme-color-warmred-accent-secondary: var(--k-color-darkstone-80);
+  --k-theme-color-warmred-accent-tertiary: var(--k-color-warmred-40);
+ }
+ 
+ @mixin dark-theme-springgreen-20 {
+  --k-theme-color-springgreen-background: var(--k-color-springgreen-20);
+  --k-theme-color-springgreen-foreground: var(--k-color-deepforest-90);
+  --k-theme-color-springgreen-accent-primary: var(--k-color-deepforest-90);
+  --k-theme-color-springgreen-accent-secondary: var(--k-color-spruce-70);
+  --k-theme-color-springgreen-accent-tertiary: var(--k-color-springgreen-30);
+ }
+ 
+ @mixin light-theme-darkstone-light {
+  --k-theme-color-darkstone-background: var(--k-color-darkstone-10);
+  --k-theme-color-darkstone-foreground: var(--k-color-darkstone-80);
+  --k-theme-color-darkstone-accent-primary: var(--k-color-warmred-50);
+  --k-theme-color-darkstone-accent-secondary: var(--k-color-spruce-60);
+  --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-20);
+ }
+ 
+ @mixin light-theme-darkstone-light {
+  --k-theme-color-darkstone-background: var(--k-color-darkstone-10);
+  --k-theme-color-darkstone-foreground: var(--k-color-darkstone-80);
+  --k-theme-color-darkstone-accent-primary: var(--k-color-warmred-50);
+  --k-theme-color-darkstone-accent-secondary: var(--k-color-spruce-60);
+  --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-20);
+ }
+ 
+ @mixin light-theme-skye-10 {
+  --k-theme-color-skye-background: var(--k-color-skye-10);
+  --k-theme-color-skye-foreground: var(--k-color-darkstone-80);
+  --k-theme-color-skye-accent-primary: var(--k-color-warmred-50);
+  --k-theme-color-skye-accent-secondary: var(--k-color-spruce-60);
+  --k-theme-color-skye-accent-tertiary: var(--k-color-skye-20);
+ }
+ 
+ @mixin light-theme-cloud-10 {
+  --k-theme-color-cloud-background: var(--k-color-cloud-10);
+  --k-theme-color-cloud-foreground: var(--k-color-darkstone-80);
+  --k-theme-color-cloud-accent-primary: var(--k-color-warmred-50);
+  --k-theme-color-cloud-accent-secondary: var(--k-color-spruce-60);
+  --k-theme-color-cloud-accent-tertiary: var(--k-color-cloud-20);
+ }
+ 
+ @mixin light-theme-white {
+  --k-theme-color-white-background: var(--k-color-neutral-white);
+  --k-theme-color-white-foreground: var(--k-color-darkstone-80);
+  --k-theme-color-white-accent-primary: var(--k-color-warmred-50);
+  --k-theme-color-white-accent-secondary: var(--k-color-spruce-60);
+  --k-theme-color-white-accent-tertiary: var(--k-color-darkstone-10);
+ }
+ 

@@ -76,3 +76,145 @@ export const UnorderedList = args => {
 export const Blockquote = args => {
   return html`<blockquote>Lorem ipsum dolor sit amet.</blockquote>`;
 };
+
+export const HeadlineXXS = args => {
+  return html`<p class="k-font-size-headline-10">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+export const HeadlineXS = args => {
+  return html`<p class="k-font-size-headline-20">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+export const HeadlineSM = args => {
+  return html`<p class="k-font-size-headline-30">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+ 
+export const HeadlineMD = args => {
+  return html`<p class="k-font-size-headline-40">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const HeadlineLG = args => {
+  return html`<p class="k-font-size-headline-50">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const HeadlineXL= args => {
+  return html`<p class="k-font-size-headline-60">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const HeadlineXXL = args => {
+  return html`<p class="k-font-size-headline-70">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const HeadlineXXXL = args => {
+  return html`<p class="k-font-size-headline-80">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const HeadlineXXXXL = args => {
+  return html`<p class="k-font-size-headline-90">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+//display 
+export const DisplayXXS = args => {
+  return html`<p class="k-font-size-display-10">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const DisplayXS = args => {
+  return html`<p class="k-font-size-display-20">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+export const DisplaySM = args => {
+  return html`<p class="k-font-size-display-30">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+export const DisplayMD = args => {
+  return html`<p class="k-font-size-display-40">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const DisplayLG = args => {
+  return html`<p class="k-font-size-display-50">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const DisplayXL= args => {
+  return html`<p class="k-font-size-display-60">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+ 
+export const DisplayXXL = args => {
+  return html`<p class="k-font-size-display-70">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+
+export const DisplayXXXL = args => {
+  return html`<p class="k-font-size-display-80">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const DisplayXXXXL = args => {
+  return html`<p class="k-font-size-display-90">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+ 
+export const BodyXXS = args => {
+  return html`<p class="k-font-size-body-10">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const BodyXS = args => {
+  return html`<p class="k-font-size-body-20">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const UtilityXXS = args => {
+  return html`<p class="k-font-size-utility-10">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
+ 
+export const UtilityXS = args => {
+  return html`<p class="k-font-size-utility-20">
+    Lorem ipsum dolor sit amet
+  </p>`;
+};
