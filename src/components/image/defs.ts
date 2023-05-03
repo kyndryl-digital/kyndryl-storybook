@@ -9,6 +9,8 @@ export enum IMAGE_ASPECT_RATIOS {
   RATIO_4_3 = '4:3',
   RATIO_3_4 = '3:4',
   RATIO_1_1 = '1:1',
+  RATIO_21_9 = '21:9',
+  RATIO_9_16 = '9:16',
 }
 
 export enum IMAGE_FIT {

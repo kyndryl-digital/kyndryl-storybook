@@ -36,10 +36,17 @@ export class Image extends LitElement {
       case IMAGE_ASPECT_RATIOS.RATIO_1_1:
         classContainer = `${PREFIX_CLASS}-aspect-ratio-1x1`;
         break;
+      case IMAGE_ASPECT_RATIOS.RATIO_21_9:
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-21x9`;
+        break;
+      case IMAGE_ASPECT_RATIOS.RATIO_9_16:
+        classContainer = `${PREFIX_CLASS}-aspect-ratio-9x16`;
+        break;
       case IMAGE_ASPECT_RATIOS.RATIO_16_9:
       default:
         classContainer = `${PREFIX_CLASS}-aspect-ratio-16x9`;
         break;
+        
     }
 
     const classesImage = classMap({
