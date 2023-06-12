@@ -11,6 +11,7 @@ fi
 
 # Login and configure connection to IBM Cloud COS.
 ibmcloud login --apikey "${IBM_CLOUD_API_KEY}" --no-region;
+ibmcloud cos config endpoint-url s3.us.cloud-object-storage.appdomain.cloud
 ibmcloud cos config crn --crn "${IBM_CLOUD_RESOURCE_ID}";
 ibmcloud cos config region --region us-geo;
 

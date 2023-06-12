@@ -30,7 +30,7 @@ jobs:
         env:
           IBM_CLOUD_API_KEY: ${{ secrets.IBM_CLOUD_API_KEY }}
           IBM_CLOUD_RESOURCE_ID: ${{ secrets.IBM_CLOUD_DEV_RESOURCE_ID }}
-          IBM_CLOUD_BUCKET: kyndryl-web-components-dev-preview
+          IBM_CLOUD_BUCKET: kyndryl-dev-test-bucket2
         run: |
           GREEN='\033[0;32m'
           bash ./.github/scripts/cos-upload.sh ./storybook-static pr/${{github.event.number}}
