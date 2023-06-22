@@ -67,719 +67,2118 @@ $breakpoints-map-devices: (
   ),
 ) !default;
 
-$kd-display-font-size-u10: 12px;
-$kd-display-font-size-u20: 14px;
-$kd-display-line-height-u10: 16px;
-$kd-display-line-height-u20: 20px;
-$kd-letter-spacing-u10: 0.32;
-$kd-display-font-family-roboto: 'Roboto';
-$kd-display-font-family-everett: 'TWK Everett';
+$k-font-family-primary: 'TWK Everett';
+$k-font-family-secondary: 'Roboto';
+
+$k-font-weight-ultralight: 200;
+$k-font-weight-light: 300;
+$k-font-weight-regular: 400;
+$k-font-weight-medium: 500;
+$k-font-weight-bold: 600;
+
+$k-font-size-hero-1-max-xlg: 228px;
+$k-font-size-hero-1-lg: 216px;
+$k-font-size-hero-1-md: 144px;
+$k-font-size-hero-1-sm: 92px;
+
+$k-line-height-hero-1-max-xlg: 336px;
+$k-line-height-hero-1-lg: 256px;
+$k-line-height-hero-1-md: 168px;
+$k-line-height-hero-1-sm: 112px;
+$k-letter-spacing-1: -0.16px;
+
+.hero-01-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-1-sm;
+    line-height: $k-line-height-hero-1-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-1-md;
+    line-height: $k-line-height-hero-1-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-1-lg;
+    line-height: $k-line-height-hero-1-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ }
+
+ .hero-01-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-1-sm;
+    line-height: $k-line-height-hero-1-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-1-md;
+    line-height: $k-line-height-hero-1-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-1-lg;
+    line-height: $k-line-height-hero-1-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ }
+
+ .hero-01-bold {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-1-sm;
+    line-height: $k-line-height-hero-1-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-1-md;
+    line-height: $k-line-height-hero-1-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-1-lg;
+    line-height: $k-line-height-hero-1-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-1-max-xlg;
+    line-height: $k-line-height-hero-1-max-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ } 
+
+ $k-font-size-hero-2-max: 216px;
+ $k-font-size-hero-2-xlg: 192px;
+ $k-font-size-hero-2-lg: 144px;
+ $k-font-size-hero-2-md: 96px;
+ $k-font-size-hero-2-sm: 84px;
+ 
+ $k-line-height-hero-2-max: 256px;
+ $k-line-height-hero-2-xlg: 224px;
+ $k-line-height-hero-2-lg: 168px;
+ $k-line-height-hero-2-md: 112px;
+ $k-line-height-hero-2-sm: 96px;
 
 
+ .hero-02-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-2-sm;
+    line-height: $k-line-height-hero-2-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-2-md;
+    line-height: $k-line-height-hero-2-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-2-lg;
+    line-height: $k-line-height-hero-2-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-2-xlg;
+    line-height: $k-line-height-hero-2-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-2-max;
+    line-height: $k-line-height-hero-2-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ }
+ 
+ .hero-02-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-2-sm;
+    line-height: $k-line-height-hero-2-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-2-md;
+    line-height: $k-line-height-hero-2-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-2-lg;
+    line-height: $k-line-height-hero-2-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-2-xlg;
+    line-height: $k-line-height-hero-2-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-2-max;
+    line-height: $k-line-height-hero-2-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ }
+ 
+ .hero-02-bold {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-2-sm;
+    line-height: $k-line-height-hero-2-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-2-md;
+    line-height: $k-line-height-hero-2-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-2-lg;
+    line-height: $k-line-height-hero-2-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-2-xlg;
+    line-height: $k-line-height-hero-2-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-2-max;
+    line-height: $k-line-height-hero-2-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ }
 
-.k-font-size-utility-10 {
- font-size: $kd-display-font-size-u10;
- line-height: $kd-display-line-height-u10;
- letter-spacing: $kd-letter-spacing-u10;
- font-family:$kd-display-font-family-roboto;
-}
+ $k-font-size-hero-3-max: 156px;
+ $k-font-size-hero-3-xlg: 144px;
+ $k-font-size-hero-3-lg: 96px;
+ $k-font-size-hero-3-md: 84px;
+ $k-font-size-hero-3-sm: 64px;
+ 
+ $k-line-height-hero-3-max: 224px;
+ $k-line-height-hero-3-xlg: 168px;
+ $k-line-height-hero-3-lg: 112px;
+ $k-line-height-hero-3-md: 96px;
+ $k-line-height-hero-3-sm: 74px; 
 
+ .hero-03-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-3-sm;
+    line-height: $k-line-height-hero-3-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-3-md;
+    line-height: $k-line-height-hero-3-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-3-lg;
+    line-height: $k-line-height-hero-3-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-3-xlg;
+    line-height: $k-line-height-hero-3-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-3-max;
+    line-height: $k-line-height-hero-3-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ } 
 
-.k-font-size-utility-20{
- font-size: $kd-display-font-size-u20;
- line-height: $kd-display-line-height-u20;
- letter-spacing: $kd-letter-spacing-u10;
-}
+ .hero-03-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-3-sm;
+    line-height: $k-line-height-hero-3-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-3-md;
+    line-height: $k-line-height-hero-3-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-3-lg;
+    line-height: $k-line-height-hero-3-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-3-xlg;
+    line-height: $k-line-height-hero-3-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-3-max;
+    line-height: $k-line-height-hero-3-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ } 
 
-$kd-display-line-height-b10: 24px;
-$kd-display-font-size-b10: 16px;
-$kd-display-line-height-b20: 28px;
-$kd-display-font-size-b20: 20px;
-$kd-letter-spacing-b10: 0px;
-$kd-display-font-family-roboto: 'Roboto';
+ .hero-03-bold {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-hero-3-sm;
+    line-height: $k-line-height-hero-3-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-hero-3-md;
+    line-height: $k-line-height-hero-3-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-hero-3-lg;
+    line-height: $k-line-height-hero-3-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-hero-3-xlg;
+    line-height: $k-line-height-hero-3-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-hero-3-max;
+    line-height: $k-line-height-hero-3-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-bold;
+  }
+ } 
 
+ $k-font-size-display-1-max: 144px;
+ $k-font-size-display-1-xlg: 96px;
+ $k-font-size-display-1-lg: 84px;
+ $k-font-size-display-1-md: 72px;
+ $k-font-size-display-1-sm: 60px;
+ 
+ $k-line-height-display-1-max: 168px;
+ $k-line-height-display-1-xlg: 112px;
+ $k-line-height-display-1-lg: 96px;
+ $k-line-height-display-1-md: 84px;
+ $k-line-height-display-1-sm: 70px;
+ // $k-letter-spacing-1: -0.16px;
 
-.k-font-size-body-10 {
- font-size: $kd-display-font-size-b10;
- line-height: $kd-display-line-height-b10;
- letter-spacing: $kd-letter-spacing-b10;
-}
+ .display-01-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-1-sm;
+    line-height: $k-line-height-display-1-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
 
-.k-font-size-body-20 {
- font-size: $kd-display-font-size-b20;
- line-height: $kd-display-line-height-b20;
- letter-spacing: $kd-letter-spacing-b10;
-}
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-1-md;
+    line-height: $k-line-height-display-1-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-1-lg;
+    line-height: $k-line-height-display-1-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-1-xlg;
+    line-height: $k-line-height-display-1-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-1-max;
+    line-height: $k-line-height-display-1-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ }
 
-$kd-display-font-size-h10-sm-md: 20px;
-$kd-display-font-size-h10-lg-xlg-max: 24px;
-$kd-display-font-size-h20-sm-md-lg: 24px;
-$kd-display-font-size-h20-xlg-max: 28px;
-$kd-display-font-size-h30-sm: 24px;
-$kd-display-font-size-h30-md-lg: 28px;
-$kd-display-font-size-h30-xlg-max: 32px;
-$kd-display-font-size-h40-sm: 28px;
-$kd-display-font-size-h40-md-lg: 32px;
-$kd-display-font-size-h40-xlg-max: 36px;
-$kd-display-font-size-h50-sm: 28px;
-$kd-display-font-size-h50-md-lg: 32px;
-$kd-display-font-size-h50-xlg-max: 42px;
-$kd-display-font-size-h60-sm: 32px;
-$kd-display-font-size-h60-md-lg: 36px;
-$kd-display-font-size-h60-xlg-max: 48px;
-$kd-display-font-size-h70-sm: 36px;
-$kd-display-font-size-h70-md-lg: 48px;
-$kd-display-font-size-h70-xlg: 54px;
-$kd-display-font-size-h70-max: 60px;
-$kd-display-font-size-h80-sm: 42px;
-$kd-display-font-size-h80-md-lg: 54px;
-$kd-display-font-size-h80-xlg-max: 60px;
-$kd-display-font-size-h90-sm: 48px;
-$kd-display-font-size-h90-md-lg: 60px;
-$kd-display-font-size-h90-xlg-max: 64px;
-$kd-display-line-height-h10-sm-md: 28px;
-$kd-display-line-height-h10-lg-xlg-max: 32px;
-$kd-display-line-height-h20-sm-md-lg: 32px;
-$kd-display-line-height-h20-xlg-max: 36px;
-$kd-display-line-height-h30-sm: 32px;
-$kd-display-line-height-h30-md-lg: 36px;
-$kd-display-line-height-h30-xlg-max: 40px;
-$kd-display-line-height-h40-sm: 36px;
-$kd-display-line-height-h40-md-lg: 40px;
-$kd-display-line-height-h40-xlg-max: 44px;
-$kd-display-line-height-h50-sm: 36px;
-$kd-display-line-height-h50-md-lg: 40px;
-$kd-display-line-height-h50-xlg-max: 50px;
-$kd-display-line-height-h60-sm: 40px;
-$kd-display-line-height-h60-md-lg: 44px;
-$kd-display-line-height-h60-xlg-max: 56px;
-$kd-display-line-height-h70-sm: 44px;
-$kd-display-line-height-h70-md-lg: 56px;
-$kd-display-line-height-h70-xlg: 64px;
-$kd-display-line-height-h70-max: 70px;
-$kd-display-line-height-h80-sm: 50px;
-$kd-display-line-height-h80-md-lg: 64px;
-$kd-display-line-height-h80-xlg-max: 70px;
-$kd-display-line-height-h90-sm: 56px;
-$kd-display-line-height-h90-md-lg: 70px;
-$kd-display-line-height-h90-xlg-max: 74px;
-$kd-letter-spacing-h10: 0px;
-$kd-letter-spacing-h20: 0.8px;
-$kd-letter-spacing-h30: 0.16px;
+ .display-01-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-1-sm;
+    line-height: $k-line-height-display-1-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-1-md;
+    line-height: $k-line-height-display-1-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-1-lg;
+    line-height: $k-line-height-display-1-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-1-xlg;
+    line-height: $k-line-height-display-1-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-1-max;
+    line-height: $k-line-height-display-1-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ }
+ 
+ $k-font-size-display-2-max: 96px;
+ $k-font-size-display-2-xlg: 84px;
+ $k-font-size-display-2-lg: 72px;
+ $k-font-size-display-2-md: 64px;
+ $k-font-size-display-2-sm: 54px;
+ 
+ $k-line-height-display-2-max: 112px;
+ $k-line-height-display-2-xlg: 96px;
+ $k-line-height-display-2-lg: 84px;
+ $k-line-height-display-2-md: 74px;
+ $k-line-height-display-2-sm: 64px; 
+ 
+ .display-02-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-2-sm;
+    line-height: $k-line-height-display-2-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-2-md;
+    line-height: $k-line-height-display-2-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-2-lg;
+    line-height: $k-line-height-display-2-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-2-xlg;
+    line-height: $k-line-height-display-2-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-2-max;
+    line-height: $k-line-height-display-2-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ }
+ 
+ .display-02-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-2-sm;
+    line-height: $k-line-height-display-2-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-2-md;
+    line-height: $k-line-height-display-2-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-2-lg;
+    line-height: $k-line-height-display-2-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-2-xlg;
+    line-height: $k-line-height-display-2-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-2-max;
+    line-height: $k-line-height-display-2-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ } 
 
+ $k-font-size-display-3-max: 84px;
+ $k-font-size-display-3-xlg: 72px;
+ $k-font-size-display-3-lg: 64px;
+ $k-font-size-display-3-md: 54px;
+ $k-font-size-display-3-sm: 48px;
+ 
+ $k-line-height-display-3-max: 96px;
+ $k-line-height-display-3-xlg: 84px;
+ $k-line-height-display-3-lg: 74px;
+ $k-line-height-display-3-md: 64px;
+ $k-line-height-display-3-sm: 56px;
+ 
+ .display-03-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-3-sm;
+    line-height: $k-line-height-display-3-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-3-md;
+    line-height: $k-line-height-display-3-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-3-lg;
+    line-height: $k-line-height-display-3-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
 
-.k-font-size-headline-10 {
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-3-xlg;
+    line-height: $k-line-height-display-3-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-3-max;
+    line-height: $k-line-height-display-3-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ } 
+
+ .display-03-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-3-sm;
+    line-height: $k-line-height-display-3-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-3-md;
+    line-height: $k-line-height-display-3-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-3-lg;
+    line-height: $k-line-height-display-3-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-3-xlg;
+    line-height: $k-line-height-display-3-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-3-max;
+    line-height: $k-line-height-display-3-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ }
+ 
+ $k-font-size-display-4-max: 72px;
+ $k-font-size-display-4-xlg: 64px;
+ $k-font-size-display-4-lg: 60px;
+ $k-font-size-display-4-md: 48px;
+ $k-font-size-display-4-sm: 42px;
+ 
+ $k-line-height-display-4-max: 84px;
+ $k-line-height-display-4-xlg: 74px;
+ $k-line-height-display-4-lg: 70px;
+ $k-line-height-display-4-md: 56px;
+ $k-line-height-display-4-sm: 50px;
+ 
+ .display-04-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-4-sm;
+    line-height: $k-line-height-display-4-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-4-md;
+    line-height: $k-line-height-display-4-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-4-lg;
+    line-height: $k-line-height-display-4-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-4-xlg;
+    line-height: $k-line-height-display-4-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-4-max;
+    line-height: $k-line-height-display-4-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-ultralight;
+  }
+ } 
+
+ .display-04-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-display-4-sm;
+    line-height: $k-line-height-display-4-sm;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-display-4-md;
+    line-height: $k-line-height-display-4-md;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-display-4-lg;
+    line-height: $k-line-height-display-4-lg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-display-4-xlg;
+    line-height: $k-line-height-display-4-xlg;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-display-4-max;
+    line-height: $k-line-height-display-4-max;
+    letter-spacing: $k-letter-spacing-1;
+    font-weight: $k-font-weight-light;
+  }
+ }
+
+ $k-font-size-headline-1-max: 64px;
+ $k-font-size-headline-1-xlg: 60px;
+ $k-font-size-headline-1-lg: 54px;
+ $k-font-size-headline-1-md-sm: 42px;
+ 
+ $k-line-height-headline-1-max-xlg: 70px;
+ $k-line-height-headline-1-xlg: 70px;
+ $k-line-height-headline-1-lg: 64px;
+ $k-line-height-headline-1-md-sm: 50px;
+ $k-letter-spacing-3: -0.08px;
+ 
+ .headline-01-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-1-lg;
+    line-height: $k-line-height-headline-1-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-1-xlg;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-1-max;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ } 
+ 
+ .headline-01-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-1-lg;
+    line-height: $k-line-height-headline-1-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-1-xlg;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-1-max;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ } 
+
+ .headline-01-regular {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-1-md-sm;
+    line-height: $k-line-height-headline-1-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-1-lg;
+    line-height: $k-line-height-headline-1-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-1-xlg;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-1-max;
+    line-height: $k-line-height-headline-1-max-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ } 
+
+ $k-font-size-headline-2-max: 60px;
+ $k-font-size-headline-2-xlg: 54px;
+ $k-font-size-headline-2-lg: 48px;
+ $k-font-size-headline-2-md-sm: 36px;
+ 
+ $k-line-height-headline-2-max: 70px;
+ $k-line-height-headline-2-xlg: 64px;
+ $k-line-height-headline-2-lg: 56px;
+ $k-line-height-headline-2-md-sm: 44px;
+ 
+ .headline-02-ultralight {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-2-lg;
+    line-height: $k-line-height-headline-2-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-2-xlg;
+    line-height: $k-line-height-headline-2-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-2-max;
+    line-height: $k-line-height-headline-2-max;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-ultralight;
+  }
+ }
+
+ .headline-02-light {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-2-lg;
+    line-height: $k-line-height-headline-2-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-2-xlg;
+    line-height: $k-line-height-headline-2-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-2-max;
+    line-height: $k-line-height-headline-2-max;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-light;
+  }
+ } 
+
+ .headline-02-regular {
+  font-family: $k-font-family-primary;
+  @media (min-width: $breakpoint-sm-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-md-min) {
+    font-size: $k-font-size-headline-2-md-sm;
+    line-height: $k-line-height-headline-2-md-sm;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+
+  @media (min-width: $breakpoint-lg-min) {
+    font-size: $k-font-size-headline-2-lg;
+    line-height: $k-line-height-headline-2-lg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-xlg-min) {
+    font-size: $k-font-size-headline-2-xlg;
+    line-height: $k-line-height-headline-2-xlg;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ 
+  @media (min-width: $breakpoint-max) {
+    font-size: $k-font-size-headline-2-max;
+    line-height: $k-line-height-headline-2-max;
+    letter-spacing: $k-letter-spacing-3;
+    font-weight: $k-font-weight-regular;
+  }
+ } 
+
+$k-font-size-headline-3-max: 48px;
+$k-font-size-headline-3-xlg: 48px;
+$k-font-size-headline-3-lg: 42px;
+$k-font-size-headline-3-md-sm: 32px;
+
+$k-line-height-headline-3-max: 56px;
+$k-line-height-headline-3-xlg: 56px;
+$k-line-height-headline-3-lg: 50px;
+$k-line-height-headline-3-md-sm: 40px;
+
+.headline-03-ultralight {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h10-sm-md;
-   line-height: $kd-display-line-height-h10-sm-md;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-ultralight;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-h10-sm-md;
-   line-height: $kd-display-line-height-h10-sm-md;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-ultralight;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h10-lg-xlg-max;
-   line-height: $kd-display-line-height-h10-lg-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-lg;
+   line-height: $k-line-height-headline-3-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-ultralight;
  }
-
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h10-lg-xlg-max;
-   line-height: $kd-display-line-height-h10-lg-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-xlg;
+   line-height: $k-line-height-headline-3-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-ultralight;
  }
 
-
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h10-lg-xlg-max;
-   line-height: $kd-display-line-height-h10-lg-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-max;
+   line-height: $k-line-height-headline-3-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-ultralight;
  }
 }
 
-
-.k-font-size-headline-20 {
+.headline-03-light {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h20-sm-md-lg;
-   line-height: $kd-display-line-height-h20-sm-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-h20-sm-md-lg;
-   line-height: $kd-display-line-height-h20-sm-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h20-sm-md-lg;
-   line-height: $kd-display-line-height-h20-sm-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-lg;
+   line-height: $k-line-height-headline-3-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h20-xlg-max;
-   line-height: $kd-display-line-height-h20-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-xlg;
+   line-height: $k-line-height-headline-3-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h20-xlg-max;
-   line-height: $kd-display-line-height-h20-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
+   font-size: $k-font-size-headline-3-max;
+   line-height: $k-line-height-headline-3-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 }
 
-.k-font-size-headline-30 {
+.headline-03-regular {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h30-sm;
-   line-height: $kd-display-line-height-h30-sm;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h30-md-lg;
-   line-height: $kd-display-line-height-h30-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h30-xlg-max;
-   line-height: $kd-display-line-height-h30-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h30-xlg-max;
-   line-height: $kd-display-line-height-h30-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-}
-
-
-.k-font-size-headline-40 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h40-sm;
-   line-height: $kd-display-line-height-h40-sm;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h40-md-lg;
-   line-height: $kd-display-line-height-h40-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h40-xlg-max;
-   line-height: $kd-display-line-height-h40-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h40-xlg-max;
-   line-height: $kd-display-line-height-h40-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-}
-
-
-.k-font-size-headline-50 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h50-sm;
-   line-height: $kd-display-line-height-h50-sm;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h50-md-lg;
-   line-height: $kd-display-line-height-h50-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h50-xlg-max;
-   line-height: $kd-display-line-height-h50-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h50-xlg-max;
-   line-height: $kd-display-line-height-h50-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-}
-
-
-.k-font-size-headline-60 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h60-sm;
-   line-height: $kd-display-line-height-h60-sm;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h60-md-lg;
-   line-height: $kd-display-line-height-h60-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h60-xlg-max;
-   line-height: $kd-display-line-height-h60-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h60-xlg-max;
-   line-height: $kd-display-line-height-h60-xlg-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-}
-
-
-.k-font-size-headline-70 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h70-sm;
-   line-height: $kd-display-line-height-h70-sm;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h70-md-lg;
-   line-height: $kd-display-line-height-h70-md-lg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h70-xlg;
-   line-height: $kd-display-line-height-h70-xlg;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h70-max;
-   line-height: $kd-display-line-height-h70-max;
-   letter-spacing: $kd-letter-spacing-h10;
- }
-}
-
-
-.k-font-size-headline-80 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h80-sm;
-   line-height: $kd-display-line-height-h80-sm;
-   letter-spacing: $kd-letter-spacing-b10;
- }
-
-
- @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-h80-md-lg;
-   line-height: $kd-display-line-height-h80-md-lg;
-   letter-spacing: $kd-letter-spacing-b10;
- }
-
- @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h80-md-lg;
-   line-height: $kd-display-line-height-h80-md-lg;
-   letter-spacing: $kd-letter-spacing-b10;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h80-xlg-max;
-   line-height: $kd-display-line-height-h80-xlg-max;
-   letter-spacing: $kd-letter-spacing-b10;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h80-xlg-max;
-   line-height: $kd-display-line-height-h80-xlg-max;
-   letter-spacing: $kd-letter-spacing-b10;
- }
-}
-
-
-.k-font-size-headline-90 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-h90-sm;
-   line-height: $kd-display-line-height-h90-sm;
-   letter-spacing: $kd-letter-spacing-b10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-h90-md-lg;
-   line-height: $kd-display-line-height-h90-md-lg;
-   letter-spacing: $kd-letter-spacing-b10;
+   font-size: $k-font-size-headline-3-md-sm;
+   line-height: $k-line-height-headline-3-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-h90-md-lg;
-   line-height: $kd-display-line-height-h90-md-lg;
-   letter-spacing: $kd-letter-spacing-b10;
+   font-size: $k-font-size-headline-3-lg;
+   line-height: $k-line-height-headline-3-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-h90-xlg-max;
-   line-height: $kd-display-line-height-h90-xlg-max;
-   letter-spacing: $kd-letter-spacing-b10;
+   font-size: $k-font-size-headline-3-xlg;
+   line-height: $k-line-height-headline-3-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-h90-xlg-max;
-   line-height: $kd-display-line-height-h90-xlg-max;
-   letter-spacing: $kd-letter-spacing-b10;
+   font-size: $k-font-size-headline-3-max;
+   line-height: $k-line-height-headline-3-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 }
 
-$kd-display-font-size-d10-sm: 48px;
-$kd-display-font-size-d10-md-lg: 54px;
-$kd-display-font-size-d10-xlg: 68px;
-$kd-display-font-size-d10-max: 68px;
-$kd-display-font-size-d20-sm: 54px;
-$kd-display-font-size-d20-md-lg: 60px;
-$kd-display-font-size-d20-xlg: 72px;
-$kd-display-font-size-d20-max: 76px;
-$kd-display-font-size-d30-sm: 60px;
-$kd-display-font-size-d30-md-lg: 68px;
-$kd-display-font-size-d30-xlg: 76px;
-$kd-display-font-size-d30-max: 84px;
-$kd-display-font-size-d40-sm: 68px;
-$kd-display-font-size-d40-md: 72px;
-$kd-display-font-size-d40-lg: 72px;
-$kd-display-font-size-d40-xlg: 84px;
-$kd-display-font-size-d40-max: 92px;
-$kd-display-font-size-d50-sm: 72px;
-$kd-display-font-size-d50-md: 76px;
-$kd-display-font-size-d50-lg: 84px;
-$kd-display-font-size-d50-xlg: 92px;
-$kd-display-font-size-d50-max: 96px;
-$kd-display-font-size-d60-sm: 76px;
-$kd-display-font-size-d60-md: 84px;
-$kd-display-font-size-d60-lg: 92px;
-$kd-display-font-size-d60-xlg: 96px;
-$kd-display-font-size-d60-max: 144px;
-$kd-display-font-size-d70-sm: 84px;
-$kd-display-font-size-d70-md: 92px;
-$kd-display-font-size-d70-lg: 96px;
-$kd-display-font-size-d70-xlg: 144px;
-$kd-display-font-size-d70-max: 192px;
-$kd-display-font-size-d80-sm: 92px;
-$kd-display-font-size-d80-md: 96px;
-$kd-display-font-size-d80-lg: 144px;
-$kd-display-font-size-d80-xlg: 192px;
-$kd-display-font-size-d80-max: 216px;
-$kd-display-font-size-d90-sm: 144px;
-$kd-display-font-size-d90-md: 192px;
-$kd-display-font-size-d90-lg: 216px;
-$kd-display-font-size-d90-xlg: 288px;
-$kd-display-font-size-d90-max: 336px;
-$kd-display-line-height-d10-sm: 56px;
-$kd-display-line-height-d10-md-lg: 64px;
-$kd-display-line-height-d10-xlg: 80px;
-$kd-display-line-height-d10-max: 64px;
-$kd-display-line-height-d20-sm: 64px;
-$kd-display-line-height-d20-md-lg: 70px;
-$kd-display-line-height-d20-xlg: 64px;
-$kd-display-line-height-d20-max: 88px;
-$kd-display-line-height-d20-sm: 64px;
-$kd-display-line-height-d20-md-lg: 70px;
-$kd-display-line-height-d20-xlg: 64px;
-$kd-display-line-height-d20-max: 88px;
-$kd-display-line-height-d30-sm: 70px;
-$kd-display-line-height-d30-md-lg: 80px;
-$kd-display-line-height-d30-xlg: 88px;
-$kd-display-line-height-d30-max: 70px;
-$kd-display-line-height-d40-sm: 80px;
-$kd-display-line-height-d40-md: 64px;
-$kd-display-line-height-d40-lg: 88px;
-$kd-display-line-height-d40-xlg: 70px;
-$kd-display-line-height-d40-max: 104px;
-$kd-display-line-height-d50-sm: 64px;
-$kd-display-line-height-d50-md: 88px;
-$kd-display-line-height-d50-lg: 70px;
-$kd-display-line-height-d50-xlg: 104px;
-$kd-display-line-height-d50-max: 112px;
-$kd-display-line-height-d60-sm: 88px;
-$kd-display-line-height-d60-md: 88px;
-$kd-display-line-height-d60-lg: 104px;
-$kd-display-line-height-d60-xlg: 112p;
-$kd-display-line-height-d60-max: 168px;
-$kd-display-line-height-d70-sm: 24px;
-$kd-display-line-height-d70-md: 104px;
-$kd-display-line-height-d70-lg: 112px;
-$kd-display-line-height-d70-xlg: 168px;
-$kd-display-line-height-d70-max: 224px;
-$kd-display-line-height-d80-sm: 104px;
-$kd-display-line-height-d80-md: 112px;
-$kd-display-line-height-d80-lg: 168px;
-$kd-display-line-height-d80-xlg: 224px;
-$kd-display-line-height-d80-max: 256px;
-$kd-display-line-height-d90-sm: 168px;
-$kd-display-line-height-d90-md: 224px;
-$kd-display-line-height-d90-lg: 256px;
-$kd-display-line-height-d90-xlg: 336px;
-$kd-display-line-height-d90-max: 400px;
-$kd-letter-spacing-d90-sm: 0.16px;
-$kd-letter-spacing-d80-sm: 0.08px;
-$kd-letter-spacing-d80-lg: 0.16px;
-$kd-letter-spacing-d70-sm: 0.08px;
-$kd-letter-spacing-d70-xlg: 0.16px;
-$kd-letter-spacing-d70-max: 0.16px;
-$kd-letter-spacing-d60-sm: 0.08px;
-$kd-letter-spacing-d60-max: 0.16px;
-$kd-letter-spacing-d50-sm: 0.08px;
-$kd-letter-spacing-d40-sm: 0.08px;
-$kd-letter-spacing-d30-sm: 0.08px;
-$kd-letter-spacing-d20-sm: 0.08px;
-$kd-letter-spacing-d10-sm: 0.08px;
+$k-font-size-headline-4-max: 48px;
+$k-font-size-headline-4-xlg: 42px;
+$k-font-size-headline-4-lg: 36px;
+$k-font-size-headline-4-md-sm: 28px;
+
+$k-line-height-headline-4-max: 56px;
+$k-line-height-headline-4-xlg: 50px;
+$k-line-height-headline-4-lg: 44px;
+$k-line-height-headline-4-md-sm: 36px;
 
 
-.k-font-size-display-10 {
+.headline-04-light {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d10-sm;
-   line-height: $kd-display-line-height-d10-sm;
-   letter-spacing: $kd-letter-spacing-d10-sm;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d10-md-lg;
-   line-height: $kd-display-line-height-d10-md-lg;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d10-xlg;
-   line-height: $kd-display-line-height-d10-xlg;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d10-max;
-   line-height: $kd-display-line-height-d10-max;
- }
-}
-
-
-.k-font-size-display-20 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d20-sm;
-   line-height: $kd-display-line-height-d20-sm;
-   letter-spacing: $kd-letter-spacing-d20-sm;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d20-md-lg;
-   line-height: $kd-display-line-height-d20-md-lg;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d20-xlg;
-   line-height: $kd-display-line-height-d20-xlg;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d20-max;
-   line-height: $kd-display-line-height-d20-max;
- }
-}
-
-.k-font-size-display-30 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d30-sm;
-   line-height: $kd-display-line-height-d30-sm;
-   letter-spacing: $kd-letter-spacing-d30-sm;
- }
-
- @media (min-width: $breakpoint-md-min) and (max-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d30-md-lg;
-   line-height: $kd-display-line-height-d30-md-lg;
- }
-
- @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d30-xlg;
-   line-height: $kd-display-line-height-d30-xlg;
- }
-
- @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d30-max;
-   line-height: $kd-display-line-height-d30-max;
- }
-}
-
-
-.k-font-size-display-40 {
- @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d40-sm;
-   line-height: $kd-display-line-height-d40-sm;
-   letter-spacing: $kd-letter-spacing-d40-sm;
+   font-size: $k-font-size-headline-4-md-sm;
+   line-height: $k-line-height-headline-4-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d40-md;
-   line-height: $kd-display-line-height-d40-md;
+   font-size: $k-font-size-headline-4-md-sm;
+   line-height: $k-line-height-headline-4-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d40-lg;
-   line-height: $kd-display-line-height-d40-lg;
+   font-size: $k-font-size-headline-4-lg;
+   line-height: $k-line-height-headline-4-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d40-xlg;
-   line-height: $kd-display-line-height-d40-xlg;
+   font-size: $k-font-size-headline-4-xlg;
+   line-height: $k-line-height-headline-4-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d40-max;
-   line-height: $kd-display-line-height-d40-max;
+   font-size: $k-font-size-headline-4-max;
+   line-height: $k-line-height-headline-4-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 }
 
-
-.k-font-size-display-50 {
+.headline-04-regular {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d50-sm;
-   line-height: $kd-display-line-height-d50-sm;
-   letter-spacing: $kd-letter-spacing-d50-sm;
+   font-size: $k-font-size-headline-4-md-sm;
+   line-height: $k-line-height-headline-4-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d50-md;
-   line-height: $kd-display-line-height-d50-md;
+   font-size: $k-font-size-headline-4-md-sm;
+   line-height: $k-line-height-headline-4-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d50-lg;
-   line-height: $kd-display-line-height-d50-lg;
+   font-size: $k-font-size-headline-4-lg;
+   line-height: $k-line-height-headline-4-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
+
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d50-xlg;
-   line-height: $kd-display-line-height-d50-xlg;
+   font-size: $k-font-size-headline-4-xlg;
+   line-height: $k-line-height-headline-4-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d50-max;
-   line-height: $kd-display-line-height-d50-max;
+   font-size: $k-font-size-headline-4-max;
+   line-height: $k-line-height-headline-4-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 }
 
 
-.k-font-size-display-60 {
+$k-font-size-headline-5-max: 42px;
+$k-font-size-headline-5-xlg: 36px;
+$k-font-size-headline-5-lg: 32px;
+$k-font-size-headline-5-md-sm: 28px;
+
+$k-line-height-headline-5-max: 50px;
+$k-line-height-headline-5-xlg: 44px;
+$k-line-height-headline-5-lg: 40px;
+$k-line-height-headline-5-md-sm: 36px;
+
+
+.headline-05-light {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d60-sm;
-   line-height: $kd-display-line-height-d60-sm;
-   letter-spacing: $kd-letter-spacing-d60-sm;
+   font-size: $k-font-size-headline-5-md-sm;
+   line-height: $k-line-height-headline-5-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d60-md;
-   line-height: $kd-display-line-height-d60-md;
+   font-size: $k-font-size-headline-5-md-sm;
+   line-height: $k-line-height-headline-5-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d60-lg;
-   line-height: $kd-display-line-height-d60-lg;
+   font-size: $k-font-size-headline-5-lg;
+   line-height: $k-line-height-headline-5-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d60-xlg;
-   line-height: $kd-display-line-height-d60-xlg;
+   font-size: $k-font-size-headline-5-xlg;
+   line-height: $k-line-height-headline-5-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d60-max;
-   line-height: $kd-display-line-height-d60-max;
-   letter-spacing: $kd-letter-spacing-d60-max;
+   font-size: $k-font-size-headline-5-max;
+   line-height: $k-line-height-headline-5-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 }
 
-.k-font-size-display-70 {
+.headline-05-regular {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d70-sm;
-   line-height: $kd-display-line-height-d70-sm;
-   letter-spacing: $kd-letter-spacing-d70-sm;
+   font-size: $k-font-size-headline-5-md-sm;
+   line-height: $k-line-height-headline-5-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d70-md;
-   line-height: $kd-display-line-height-d70-md;
+   font-size: $k-font-size-headline-5-md-sm;
+   line-height: $k-line-height-headline-5-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d70-lg;
-   line-height: $kd-display-line-height-d70-lg;
+   font-size: $k-font-size-headline-5-lg;
+   line-height: $k-line-height-headline-5-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d70-xlg;
-   line-height: $kd-display-line-height-d70-xlg;
-   letter-spacing: $kd-letter-spacing-d70-max;
+   font-size: $k-font-size-headline-5-xlg;
+   line-height: $k-line-height-headline-5-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d70-max;
-   line-height: $kd-display-line-height-d70-max;
-   letter-spacing: $kd-letter-spacing-d70-max;
+   font-size: $k-font-size-headline-5-max;
+   line-height: $k-line-height-headline-5-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 }
 
-.k-font-size-display-80 {
+$k-font-size-headline-6-max: 42px;
+$k-font-size-headline-6-xlg: 32px;
+$k-font-size-headline-6-lg: 28px;
+$k-font-size-headline-6-md-sm: 24px;
+
+$k-line-height-headline-6-max: 50px;
+$k-line-height-headline-6-xlg: 40px;
+$k-line-height-headline-6-lg: 36px;
+$k-line-height-headline-6-md-sm: 32px;
+
+.headline-06-light {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d80-sm;
-   line-height: $kd-display-line-height-d80-sm;
-   letter-spacing: $kd-letter-spacing-d80-sm;
+   font-size: $k-font-size-headline-6-md-sm;
+   line-height: $k-line-height-headline-6-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d80-md;
-   line-height: $kd-display-line-height-d80-md;
+   font-size: $k-font-size-headline-6-md-sm;
+   line-height: $k-line-height-headline-6-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d80-lg;
-   line-height: $kd-display-line-height-d80-lg;
-   letter-spacing: $kd-letter-spacing-d80-lg;
+   font-size: $k-font-size-headline-6-lg;
+   line-height: $k-line-height-headline-6-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d80-xlg;
-   line-height: $kd-display-line-height-d80-xlg;
+   font-size: $k-font-size-headline-6-xlg;
+   line-height: $k-line-height-headline-6-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d80-max;
-   line-height: $kd-display-line-height-d80-max;
+   font-size: $k-font-size-headline-6-max;
+   line-height: $k-line-height-headline-6-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
  }
 }
 
-.k-font-size-display-90{
+.headline-06-regular {
+ font-family: $k-font-family-primary;
  @media (min-width: $breakpoint-sm-min) {
-   font-size: $kd-display-font-size-d90-sm;
-   line-height: $kd-display-line-height-d90-sm;
-   letter-spacing: $kd-letter-spacing-d90-sm;
+   font-size: $k-font-size-headline-6-md-sm;
+   line-height: $k-line-height-headline-6-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-md-min) {
-   font-size: $kd-display-font-size-d90-md;
-   line-height: $kd-display-line-height-d90-md;
+   font-size: $k-font-size-headline-6-md-sm;
+   line-height: $k-line-height-headline-6-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-lg-min) {
-   font-size: $kd-display-font-size-d90-lg;
-   line-height: $kd-display-line-height-d90-lg;
+   font-size: $k-font-size-headline-6-lg;
+   line-height: $k-line-height-headline-6-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-xlg-min) {
-   font-size: $kd-display-font-size-d90-xlg;
-   line-height: $kd-display-line-height-d90-xlg;
+   font-size: $k-font-size-headline-6-xlg;
+   line-height: $k-line-height-headline-6-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 
  @media (min-width: $breakpoint-max) {
-   font-size: $kd-display-font-size-d90-max;
-   line-height: $kd-display-line-height-d90-max;
+   font-size: $k-font-size-headline-6-max;
+   line-height: $k-line-height-headline-6-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
  }
 }
+
+$k-font-size-headline-7-max: 32px;
+$k-font-size-headline-7-xlg: 28px;
+$k-font-size-headline-7-lg: 28px;
+$k-font-size-headline-7-md-sm: 24px;
+
+$k-line-height-headline-7-max: 40px;
+$k-line-height-headline-7-xlg: 36px;
+$k-line-height-headline-7-lg: 36px;
+$k-line-height-headline-7-md-sm: 32px;
+
+
+.headline-07-light {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-headline-7-md-sm;
+   line-height: $k-line-height-headline-7-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-headline-7-md-sm;
+   line-height: $k-line-height-headline-7-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-headline-7-lg;
+   line-height: $k-line-height-headline-7-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-headline-7-xlg;
+   line-height: $k-line-height-headline-7-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-headline-7-max;
+   line-height: $k-line-height-headline-7-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+}
+
+.headline-07-regular {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-headline-7-md-sm;
+   line-height: $k-line-height-headline-7-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-headline-7-md-sm;
+   line-height: $k-line-height-headline-7-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-headline-7-lg;
+   line-height: $k-line-height-headline-7-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-headline-7-xlg;
+   line-height: $k-line-height-headline-7-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-headline-7-max;
+   line-height: $k-line-height-headline-7-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+$k-font-size-headline-8-max: 28px;
+$k-font-size-headline-8-xlg: 24px;
+$k-font-size-headline-8-lg: 24px;
+$k-font-size-headline-8-md-sm: 24px;
+
+$k-line-height-headline-8-max: 36px;
+$k-line-height-headline-8-xlg: 32px;
+$k-line-height-headline-8-lg: 32px;
+$k-line-height-headline-8-md-sm: 32px;
+
+.headline-08-light {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-headline-8-md-sm;
+   line-height: $k-line-height-headline-8-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-headline-8-md-sm;
+   line-height: $k-line-height-headline-8-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-headline-8-lg;
+   line-height: $k-line-height-headline-8-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-headline-8-xlg;
+   line-height: $k-line-height-headline-8-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-headline-8-max;
+   line-height: $k-line-height-headline-8-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-light;
+ }
+}
+
+.headline-08-regular {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-headline-8-md-sm;
+   line-height: $k-line-height-headline-8-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-headline-8-md-sm;
+   line-height: $k-line-height-headline-8-md-sm;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-headline-8-lg;
+   line-height: $k-line-height-headline-8-lg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-headline-8-xlg;
+   line-height: $k-line-height-headline-8-xlg;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-headline-8-max;
+   line-height: $k-line-height-headline-8-max;
+   letter-spacing: $k-letter-spacing-3;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+$k-font-size-body-1-max: 24px;
+$k-font-size-body-1-xlg: 20px;
+$k-font-size-body-1-lg: 20px;
+$k-font-size-body-1-md-sm: 20px;
+
+$k-line-height-body-1-max: 32px;
+$k-line-height-body-1-xlg: 28px;
+$k-line-height-body-1-lg: 28px;
+$k-line-height-body-1-md-sm: 28px;
+
+$k-letter-spacing-4: 0.32px;
+
+.body-01-light {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-body-1-lg;
+   line-height: $k-line-height-body-1-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-body-1-xlg;
+   line-height: $k-line-height-body-1-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-body-1-max;
+   line-height: $k-line-height-body-1-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+}
+
+.body-01-regular {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-body-1-lg;
+   line-height: $k-line-height-body-1-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-body-1-xlg;
+   line-height: $k-line-height-body-1-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-body-1-max;
+   line-height: $k-line-height-body-1-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+.body-01-medium {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-body-1-md-sm;
+   line-height: $k-line-height-body-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-body-1-lg;
+   line-height: $k-line-height-body-1-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-body-1-xlg;
+   line-height: $k-line-height-body-1-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-body-1-max;
+   line-height: $k-line-height-body-1-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+$k-font-size-body-2-max: 20px;
+$k-font-size-body-2-xlg: 16px;
+$k-font-size-body-2-lg: 16px;
+$k-font-size-body-2-md-sm: 16px;
+
+$k-line-height-body-2-max: 28px;
+$k-line-height-body-2-xlg: 24px;
+$k-line-height-body-2-lg: 24px;
+$k-line-height-body-2-md-sm: 24px;
+
+.body-02-medium {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-body-2-md-sm;
+   line-height: $k-line-height-body-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-body-2-md-sm;
+   line-height: $k-line-height-body-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-body-2-lg;
+   line-height: $k-line-height-body-2-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-body-2-xlg;
+   line-height: $k-line-height-body-2-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-body-2-max;
+   line-height: $k-line-height-body-2-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+.body-02-regular {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-body-2-md-sm;
+   line-height: $k-line-height-body-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-body-2-md-sm;
+   line-height: $k-line-height-body-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-body-2-lg;
+   line-height: $k-line-height-body-2-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-body-2-xlg;
+   line-height: $k-line-height-body-2-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-body-2-max;
+   line-height: $k-line-height-body-2-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+$k-font-size-utility-1-max: 16px;
+$k-font-size-utility-1-xlg: 16px;
+$k-font-size-utility-1-lg: 16px;
+$k-font-size-utility-1-md-sm: 16px;
+
+$k-line-height-utility-1-max: 24px;
+$k-line-height-utility-1-xlg: 24px;
+$k-line-height-utility-1-lg: 24px;
+$k-line-height-utility-1-md-sm: 24px;
+
+.ui-01-light {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-1-md-sm;
+   line-height: $k-line-height-utility-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-1-md-sm;
+   line-height: $k-line-height-utility-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-1-lg;
+   line-height: $k-line-height-utility-1-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-1-xlg;
+   line-height: $k-line-height-utility-1-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-1-max;
+   line-height: $k-line-height-utility-1-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-light;
+ }
+}
+
+.ui-01-medium {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-1-md-sm;
+   line-height: $k-line-height-utility-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-1-md-sm;
+   line-height: $k-line-height-utility-1-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-1-lg;
+   line-height: $k-line-height-utility-1-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-1-xlg;
+   line-height: $k-line-height-utility-1-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-1-max;
+   line-height: $k-line-height-utility-1-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+$k-font-size-utility-2-max: 14px;
+$k-font-size-utility-2-xlg: 14px;
+$k-font-size-utility-2-lg: 14px;
+$k-font-size-utility-2-md-sm: 14px;
+
+$k-line-height-utility-2-max: 20px;
+$k-line-height-utility-2-xlg: 20px;
+$k-line-height-utility-2-lg: 20px;
+$k-line-height-utility-2-md-sm: 20px;
+
+.ui-02-medium {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-2-md-sm;
+   line-height: $k-line-height-utility-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-2-md-sm;
+   line-height: $k-line-height-utility-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-2-lg;
+   line-height: $k-line-height-utility-2-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-2-xlg;
+   line-height: $k-line-height-utility-2-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-2-max;
+   line-height: $k-line-height-utility-2-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+.ui-02-regular {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-2-md-sm;
+   line-height: $k-line-height-utility-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-2-md-sm;
+   line-height: $k-line-height-utility-2-md-sm;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-2-lg;
+   line-height: $k-line-height-utility-2-lg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-2-xlg;
+   line-height: $k-line-height-utility-2-xlg;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-2-max;
+   line-height: $k-line-height-utility-2-max;
+   letter-spacing: $k-letter-spacing-4;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+$k-font-size-utility-3-regular: 16px;
+$k-line-height-utility-3-regular: 24px;
+$k-font-size-utility-3-medium: 14px;
+$k-line-height-utility-3-medium: 20px;
+$k-letter-spacing-5: 0;
+
+.ui-03-regular {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-3-regular;
+   line-height: $k-line-height-utility-3-regular;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-3-regular;
+   line-height: $k-line-height-utility-3-regular;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-3-regular;
+   line-height: $k-line-height-utility-3-regular;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-3-regular;
+   line-height: $k-line-height-utility-3-regular;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-3-regular;
+   line-height: $k-line-height-utility-3-regular;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+.ui-03-medium {
+ font-family: $k-font-family-secondary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-3-medium;
+   line-height: $k-line-height-utility-3-medium;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-3-medium;
+   line-height: $k-line-height-utility-3-medium;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-3-medium;
+   line-height: $k-line-height-utility-3-medium;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-3-medium;
+   line-height: $k-line-height-utility-3-medium;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-3-medium;
+   line-height: $k-line-height-utility-3-medium;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+$k-font-size-utility-4-max: 14px;
+$k-font-size-utility-4-xlg: 14px;
+$k-font-size-utility-4-lg: 14px;
+$k-font-size-utility-4-md-sm: 14px;
+$k-line-height-utility-4-max: 20px;
+$k-line-height-utility-4-xlg: 20px;
+$k-line-height-utility-4-lg: 20px;
+$k-line-height-utility-4-md-sm: 20px;
+
+.ui-04-regular {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-4-md-sm;
+   line-height: $k-line-height-utility-4-md-sm;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-4-md-sm;
+   line-height: $k-line-height-utility-4-md-sm;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-4-lg;
+   line-height: $k-line-height-utility-4-lg;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-4-xlg;
+   line-height: $k-line-height-utility-4-xlg;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-4-max;
+   line-height: $k-line-height-utility-4-max;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-regular;
+ }
+}
+
+.ui-04-medium {
+ font-family: $k-font-family-primary;
+ @media (min-width: $breakpoint-sm-min) {
+   font-size: $k-font-size-utility-4-md-sm;
+   line-height: $k-line-height-utility-4-md-sm;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-md-min) {
+   font-size: $k-font-size-utility-4-md-sm;
+   line-height: $k-line-height-utility-4-md-sm;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-lg-min) {
+   font-size: $k-font-size-utility-4-lg;
+   line-height: $k-line-height-utility-4-lg;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-xlg-min) {
+   font-size: $k-font-size-utility-4-xlg;
+   line-height: $k-line-height-utility-4-xlg;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+
+ @media (min-width: $breakpoint-max) {
+   font-size: $k-font-size-utility-4-max;
+   line-height: $k-line-height-utility-4-max;
+   letter-spacing: $k-letter-spacing-5;
+   font-weight: $k-font-weight-medium;
+ }
+}
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
