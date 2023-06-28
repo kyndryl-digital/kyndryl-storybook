@@ -1,0 +1,71 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+
+.#{$prefix-class}-promo-split {
+
+    .full-bleed-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container-one {
+        grid-row-start: 1;
+        grid-column: 1;
+    }
+
+    .container-two {
+        grid-row-start: 1;
+        grid-column: 2;
+    }
+
+
+    @include breakpoint(lg, xlg, max) {
+       .full-bleed-internal-container {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-column: 1 / span 2;
+       }
+    }
+
+    @include breakpoint(sm, md) {
+
+        .full-bleed-grid {
+            grid-template-columns: 1fr;
+        }
+
+        &.stack-one {
+            .container-one {
+                grid-row-start: 1;
+                grid-column: 1 / auto;
+            }
+            .container-two {
+                grid-row-start: 2;
+                grid-column: 1 / auto;
+            }
+        }
+        &.stack-two {
+            .container-two {
+                grid-row-start: 1;
+                grid-column: 1 / auto;
+            }
+            .container-one {
+                grid-row-start: 2;
+                grid-column: 1 / auto;
+            }
+        }
+    }
+
+    @include breakpoint(sm) {
+
+    }
+    @include breakpoint(xs) {
+       
+    }
+
+}

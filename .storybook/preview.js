@@ -6,7 +6,7 @@ import '!style-loader!css-loader!sass-loader!../src/styles/_global.storybook.scs
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-  layout: 'padded',
+  layout: 'fullscreen',
   controls: {
     expanded: true,
     sort: 'alpha',

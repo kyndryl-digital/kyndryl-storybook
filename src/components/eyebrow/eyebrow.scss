@@ -1,0 +1,29 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+
+.#{$prefix-class}-eyebrow {
+
+
+        font-family: --kd-display-font-family-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+
+
+    .mini-border-bottom-red {
+        width: 16px;
+        height: 2px;
+        background-color: #ff462d;
+        margin-top: 8px;
+        margin-bottom: 16px;
+        margin-left: -1px;
+    }
+}
