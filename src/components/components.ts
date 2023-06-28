@@ -6,7 +6,7 @@ import './accordion/accordion';
 import './button/button';
 import './contentBandContainer/contentBandContainer';
 import './contentCard/contentCard';
-import './eyebrow/eyebrow'
+import './eyebrow/eyebrow';
 import './modal/modal';
 import './tabs/tabs';
 import './header/kyndrylHeader';
