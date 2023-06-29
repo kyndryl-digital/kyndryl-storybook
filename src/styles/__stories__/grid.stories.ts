@@ -53,68 +53,44 @@ export const Grid = (args) => {
   }
   </style>
   <div class="${classes}">
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-12 ${PREFIX_CLASS}-xlg-col-12 ${PREFIX_CLASS}-lg-col-12 ${PREFIX_CLASS}-md-col-12 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>12 columns @ max, xlg, lg and md, 8 columns @ sm and 4 columns @ xs</p></div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>1</p></div>
     </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>2</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>3</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>4</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>5</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>6</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>7</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>8</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>9</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>10</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>11</p></div>
+    </div>
+    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-1 ${PREFIX_CLASS}-xlg-col-1 ${PREFIX_CLASS}-lg-col-1 ${PREFIX_CLASS}-md-col-1 ${PREFIX_CLASS}-sm-col-1 ${PREFIX_CLASS}-xs-col-1">
+      <div class="demo-div"><p>12</p></div>
+    </div>
+    
   </div>
-
-  <div class="${classes}">
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>6 columns @ max, xlg, lg and md, 8 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-6 ${PREFIX_CLASS}-xlg-col-6 ${PREFIX_CLASS}-lg-col-6 ${PREFIX_CLASS}-md-col-6 ${PREFIX_CLASS}-sm-col-8 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>6 columns @ max, xlg, lg and md, 8 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-  </div>
-
-  <div class="${classes}">
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-4 ${PREFIX_CLASS}-xlg-col-4 ${PREFIX_CLASS}-lg-col-4 ${PREFIX_CLASS}-md-col-4 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>4 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-4 ${PREFIX_CLASS}-xlg-col-4 ${PREFIX_CLASS}-lg-col-4 ${PREFIX_CLASS}-md-col-4 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>4 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-4 ${PREFIX_CLASS}-xlg-col-4 ${PREFIX_CLASS}-lg-col-4 ${PREFIX_CLASS}-md-col-4 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>4 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-  </div>
-
-  <div class="${classes}">
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-3 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>3 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-3 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>3 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-3 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>3 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-3 ${PREFIX_CLASS}-xlg-col-3 ${PREFIX_CLASS}-lg-col-3 ${PREFIX_CLASS}-md-col-3 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>3 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-  </div>
-
-  <div class="${classes}">
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-theme-cloud ${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-    <div class="${PREFIX_CLASS}-max-col-2 ${PREFIX_CLASS}-xlg-col-2 ${PREFIX_CLASS}-lg-col-2 ${PREFIX_CLASS}-md-col-2 ${PREFIX_CLASS}-sm-col-4 ${PREFIX_CLASS}-xs-col-4">
-      <div class="demo-div"><p>2 columns @ max, xlg, lg and md, 4 columns @ sm and 4 columns @ xs</p></div>
-    </div>
-  </div>
-  
   
   `;
 };
