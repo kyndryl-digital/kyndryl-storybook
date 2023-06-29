@@ -77,144 +77,167 @@ export const Blockquote = args => {
   return html`<blockquote>Lorem ipsum dolor sit amet.</blockquote>`;
 };
 
-export const HeadlineXXS = args => {
-  return html`<p class="k-font-size-headline-10">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-export const HeadlineXS = args => {
-  return html`<p class="k-font-size-headline-20">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-export const HeadlineSM = args => {
-  return html`<p class="k-font-size-headline-30">
-    Lorem ipsum dolor sit amet
-  </p>`;
+export const Headline01 = args => {
+  return html`<div>
+    <p class="headline-01-ultralight">Headline 01</p>
+    <p class="headline-01-light">Headline 01</p>
+    <p class="headline-01-regular">Headline 01</p>
+  </div>`;
 };
  
  
-export const HeadlineMD = args => {
-  return html`<p class="k-font-size-headline-40">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const HeadlineLG = args => {
-  return html`<p class="k-font-size-headline-50">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const HeadlineXL= args => {
-  return html`<p class="k-font-size-headline-60">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const HeadlineXXL = args => {
-  return html`<p class="k-font-size-headline-70">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const HeadlineXXXL = args => {
-  return html`<p class="k-font-size-headline-80">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const HeadlineXXXXL = args => {
-  return html`<p class="k-font-size-headline-90">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-//display 
-export const DisplayXXS = args => {
-  return html`<p class="k-font-size-display-10">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const DisplayXS = args => {
-  return html`<p class="k-font-size-display-20">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-export const DisplaySM = args => {
-  return html`<p class="k-font-size-display-30">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-export const DisplayMD = args => {
-  return html`<p class="k-font-size-display-40">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const DisplayLG = args => {
-  return html`<p class="k-font-size-display-50">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const DisplayXL= args => {
-  return html`<p class="k-font-size-display-60">
-    Lorem ipsum dolor sit amet
-  </p>`;
+export const Headline02 = args => {
+  return html`<div>
+    <p class="headline-02-ultralight">Headline 02</p>
+    <p class="headline-02-light">Headline 02</p>
+    <p class="headline-02-regular">Headline 02</p>
+  </div>`;
 };
  
  
-export const DisplayXXL = args => {
-  return html`<p class="k-font-size-display-70">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-
-export const DisplayXXXL = args => {
-  return html`<p class="k-font-size-display-80">
-    Lorem ipsum dolor sit amet
-  </p>`;
-};
- 
-export const DisplayXXXXL = args => {
-  return html`<p class="k-font-size-display-90">
-    Lorem ipsum dolor sit amet
-  </p>`;
+export const Headline03 = args => {
+  return html`<div>
+    <p class="headline-03-ultralight">Headline 03</p>
+    <p class="headline-03-light">Headline 03</p>
+    <p class="headline-03-regular">Headline 03</p>
+  </div>`;
 };
  
  
-export const BodyXXS = args => {
-  return html`<p class="k-font-size-body-10">
-    Lorem ipsum dolor sit amet
-  </p>`;
+export const Headline04 = args => {
+  return html`<div>
+    <p class="headline-04-light">Headline 04</p>
+    <p class="headline-04-regular">Headline 04</p>
+  </div>`;
 };
  
-export const BodyXS = args => {
-  return html`<p class="k-font-size-body-20">
-    Lorem ipsum dolor sit amet
-  </p>`;
+export const Headline05 = args => {
+  return html`<div>
+    <p class="headline-05-light">Headline 05</p>
+    <p class="headline-05-regular">Headline 05</p>
+  </div>`;
 };
  
-export const UtilityXXS = args => {
-  return html`<p class="k-font-size-utility-10">
-    Lorem ipsum dolor sit amet
-  </p>`;
+ 
+export const Headline06 = args => {
+  return html`<div>
+    <p class="headline-06-light">Headline 06</p>
+    <p class="headline-06-regular">Headline 06</p>
+  </div>`;
 };
  
-export const UtilityXS = args => {
-  return html`<p class="k-font-size-utility-20">
-    Lorem ipsum dolor sit amet
-  </p>`;
+ 
+export const Headline07 = args => {
+  return html`<div>
+    <p class="headline-07-light">Headline 07</p>
+    <p class="headline-07-regular">Headline 07</p>
+  </div>`;
+};
+ 
+ 
+export const Headline08 = args => {
+  return html`<div>
+    <p class="headline-08-regular">Headline 08</p>
+  </div>`;
+};
+ 
+ 
+export const Display01 = args => {
+  return html`<div>
+  <p class="display-01-ultralight">Display 01</p>
+  <p class="display-01-light">Display 01</p>
+  </div>`;
+};
+ 
+ 
+export const Display02 = args => {
+  return html`<div>
+  <p class="display-02-ultralight">Display 02</p>
+  <p class="display-02-light">Display 02</p>
+  </div>`;
+};
+ 
+export const Display03 = args => {
+  return html`<div>
+  <p class="display-03-ultralight">Display 03</p>
+  <p class="display-03-light">Display 03</p>
+  </div>`;
+};
+ 
+ 
+export const Display04 = args => {
+  return html`<div>
+  <p class="display-04-ultralight">Display 04</p>
+  <p class="display-04-light">Display 04</p>
+  </div>`;
+};
+  
+export const Hero01 = args => {
+  return html`<div>
+  <p class="hero-01-ultralight">Hero 01</p>
+  <p class="hero-01-light">Hero 01</p>
+  <p class="hero-01-bold">Hero 01</p>
+  </div>`;
+};
+ 
+export const Hero02 = args => {
+  return html`<div>
+  <p class="hero-02-ultralight">Hero 02</p>
+  <p class="hero-02-light">Hero 02</p>
+  <p class="hero-02-bold">Hero 03</p>
+  </div>`;
+};
+ 
+export const Hero03 = args => {
+  return html`<div>
+  <p class="hero-03-ultralight">Hero 03</p>
+  <p class="hero-03-light">Hero 03</p>
+  <p class="hero-03-bold">Hero 03</p>
+  </div>`;
+};
+ 
+ 
+export const Body01 = args => {
+  return html`<div>
+  <p class="body-01-light">Body 01</p>
+  <p class="body-01-regular">Body 01</p>
+  <p class="body-01-medium">Body 01</p>
+  </div>`;
+};
+ 
+export const Body02 = args => {
+  return html`<div>
+  <p class="body-01-regular">Body 02</p>
+  <p class="body-01-medium">Body 02</p>
+  </div>`;
+};
+ 
+ 
+export const Utility01 = args => {
+  return html`<div>
+  <p class="ui-01-light">Utility 01</p>
+  <p class="ui-01-medium">Utility 01</p>
+  </div>`;
+};
+ 
+ 
+export const Utility02 = args => {
+  return html`<div>
+  <p class="ui-01-regular">Utility 02</p>
+  <p class="ui-01-medium">Utility 02</p>
+  </div>`;
+};
+ 
+export const Utility03 = args => {
+  return html`<div>
+  <p class="ui-01-regular">Utility 03</p>
+  <p class="ui-01-medium">Utility 03</p>
+  </div>`;
+};
+ 
+export const Utility04 = args => {
+  return html`<div>
+  <p class="ui-01-light">Utility 04</p>
+  <p class="ui-01-medium">Utility 04</p>
+  </div>`;
 };

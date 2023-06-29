@@ -56,7 +56,7 @@ const Template = args => {
 
 export const Image = Template.bind({});
 Image.args = {
-  image: 'https://s7d1.scene7.com/is/image/kyndryl/ls_windingriver_16x9?qlt=85&wid=1200&ts=1650983065999&dpr=off',
+  image: 'https://s7d1.scene7.com/is/image/kyndryl/ls_ricefieldaerial_16x9',
   imageAltText: 'image alt text',
   aspectRatio: IMAGE_ASPECT_RATIOS.RATIO_16_9,
   fit: IMAGE_FIT.COVER,

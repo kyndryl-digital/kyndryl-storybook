@@ -93,4 +93,6 @@ New components may be contributed via pull request to the main component reposit
 
 ## Primary maintainer(s)
 
+
 - Dennis Dolliver(dennis.dolliver@kyndryl.com)
+- Diana C(diana.c@kyndryl.com) 
