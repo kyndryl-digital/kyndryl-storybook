@@ -24,8 +24,9 @@ export class kdEyebrow extends LitElement {
     return html`
 
       <div class="${PREFIX_CLASS}-eyebrow">
-        <slot></slot>
-        <div class="mini-border-bottom-red"></div>
+        <p class="ui-03-regular">
+          <slot></slot>
+        </p>
       </div>
 
 

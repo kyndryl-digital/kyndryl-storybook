@@ -1,0 +1,93 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@use 'sass:map';
+
+@import '../../styles/variables/index';
+@import '../../styles/utilities/index';
+@import '../../styles/themes/index';
+
+.#{$prefix-class}-alternating-feature-with-image {
+
+    background: var(--kd-color-background);
+    color: var(--kd-color-text);
+
+    h3 {
+        margin: 0 0 24px 0;
+    }
+
+    .full-bleed-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .container-one {
+        grid-row-start: 1;
+        grid-column: 1;
+    }
+
+    .container-two {
+        grid-row-start: 1;
+        grid-column: 2;
+    }
+
+
+    @include breakpoint(lg, xlg, max) {
+        .full-bleed-internal-container {
+            grid-column-start: 1;
+            grid-row-start: 1;
+            grid-column: 1 / span 2;
+        }
+    }
+
+    @include breakpoint(max){
+        .internal-text-slot {
+            padding: 64px 96px 0px 24px;
+        }
+    }
+    @include breakpoint(max){
+        .internal-text-slot {
+            padding: 64px 96px 0px 24px;
+        }
+    }
+    @include breakpoint(xlg){
+        .internal-text-slot {
+            padding: 64px 96px 0px 24px;
+        }
+    }
+    @include breakpoint(lg){
+        .internal-text-slot {
+            padding: 48px 96px 0px 16px;
+        }
+    }
+
+    @include breakpoint(sm, md) {
+
+        .full-bleed-grid {
+            grid-template-columns: 1fr;
+        }
+
+        
+        .container-one.container-media {
+            grid-row-start: 1;
+            grid-column: 1 / auto;
+        }
+        .container-two.container-text {
+            grid-row-start: 2;
+            grid-column: 1 / auto;
+        }
+    
+       
+        .container-two.container-media {
+            grid-row-start: 1;
+            grid-column: 1 / auto;
+        }
+        .container-one.container-text {
+            grid-row-start: 2;
+            grid-column: 1 / auto;
+        }
+        
+    }
+
+}

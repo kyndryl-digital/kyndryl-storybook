@@ -13,7 +13,7 @@ import './header/kyndrylHeader';
 import './header/header';
 import './header/header-platform';
 import './navItem/navItem';
-import './promoSplit/promoSplit';
+import './alternatingFeatureWithImage/alternatingFeatureWithImage';
 import './videoPlayer/videoPlayer';
 import './wrapper/kyndrylWrapper';
 import './wrapper/wrapper';

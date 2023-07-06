@@ -1,0 +1,16 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+ 
+ @import '../variables/config';
+ @import '../variables/colors';
+ 
+ .#{$prefix-class-theme}-dark-spring-green-60 {
+   --kd-color-token-base: var(--k-color-dk-springgreen-60);
+   --kd-color-token-inverse: var(--kd-color-brand-cloud);
+   --kd-color-token-interactive: var(--kd-color-brand-cloud);
+   --kd-color-token-accent: var(--kd-color-brand-cloud);
+ 
+   @include css-vars-color-usage;
+ }
+ 
