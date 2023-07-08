@@ -9,4 +9,5 @@ export enum THEMES {
   SPRUCE_80 = 'spruce-80',
   SPRUCE_60 = 'spruce-60',
   CLOUD = 'cloud',
+  WHITE = 'white',
 }

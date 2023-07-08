@@ -62,7 +62,19 @@
         }
     }
 
-    @include breakpoint(sm, md) {
+    @include breakpoint(md){
+        .internal-text-slot {
+            padding: 64px 96px 64px 32px;
+        }
+    }
+
+    @include breakpoint(xs, sm){
+        .internal-text-slot {
+            padding: 32px 48px 32px 0px;
+        }
+    }
+
+    @include breakpoint(xs, sm, md) {
 
         .full-bleed-grid {
             grid-template-columns: 1fr;

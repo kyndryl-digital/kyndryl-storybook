@@ -6,10 +6,11 @@
 
 @import '../../styles/variables/index';
 @import '../../styles/utilities/index';
+@import '../../styles/themes/index';
 
 .#{$prefix-class}-eyebrow {
-    & p {
-        color: var(--k-color-spruce-40);
+    p {
+        color: var(--kd-color-eyebrow);
         margin: 0 0 16px 0;
     }
 }

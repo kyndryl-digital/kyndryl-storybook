@@ -102,6 +102,7 @@
 
 .#{$prefix-class}-btn-text {
   @extend .#{$prefix-class}-btn;
+  @include padding(right left, 0);
   color: var(--kd-color-button-link-text);
   border-color: var(--kd-color-button-link-border);
   background-color: var(--kd-color-button-link-bg);

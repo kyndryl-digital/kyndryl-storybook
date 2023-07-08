@@ -1,16 +1,15 @@
 /**
  * Copyright Kyndryl, Inc. 2022
  */
- 
- @import '../variables/config';
- @import '../variables/colors';
- 
- .#{$prefix-class-theme}-spring-green-20 {
-   --kd-color-token-base: var(--k-color-springgreen-20);
-   --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
-   --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
-   --kd-color-token-accent: var(--kd-color-brand-warm-red);
- 
-   @include css-vars-color-usage;
- }
- 
+
+@import '../variables/config';
+@import '../variables/colors';
+
+.#{$prefix-class-theme}-spring-green-20 {
+  --kd-color-token-base: var(--k-color-springgreen-20);
+  --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
+  --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
+  --kd-color-token-accent: var(--kd-color-brand-warm-red);
+  --kd-color-eyebrow: var(--k-color-spruce-70);
+  @include css-vars-color-usage;
+}

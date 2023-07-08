@@ -99,7 +99,7 @@ export class kdAlternatingFeatureWithImage extends LitElement {
 
   get textCard() {
     return html`
-      <kd-eyebrow>${this.eyebrowText}</kd-eyebrow>
+      <kd-eyebrow theme="${this.theme}">${this.eyebrowText}</kd-eyebrow>
       <h3 class="headline-06-light">${this.title}</h3>
       <slot name="text"></slot>
       <kd-button type="text" size="small" icon="chevron-right" iconposition="right" description="" href="${this.buttonLink}" target="_self" theme="${this.theme}">${this.buttonLabel}</kd-button>
@@ -108,22 +108,31 @@ export class kdAlternatingFeatureWithImage extends LitElement {
 
 
   render() {
-    console.log(this.theme);
     const classesContainer = classMap({
       [`${PREFIX_CLASS}-alternating-feature-with-image`]: true,
       [`${PREFIX_CLASS_THEME}-${this.theme}`]: this.theme,
     });
-    return html`
-      <div class="${classesContainer}">
-        <div class="full-bleed-grid">
-          
-            ${this.slot1Template}
-            ${this.slot2Template}
 
-
+    if(this.reverse === 'true') {
+      return html`
+        <div class="${classesContainer}">
+          <div class="full-bleed-grid">  
+            ${this.slot1Template}      
+            ${this.slot2Template}      
+          </div>
+          </div>
         </div>
+      `;
+    } else {  
+      return html`
+        <div class="${classesContainer}">
+          <div class="full-bleed-grid">  
+              ${this.slot2Template}      
+              ${this.slot1Template}
+          </div>
+          </div>
         </div>
-      </div>
-    `;
+      `;
+    }
   }
 }
