@@ -9,6 +9,8 @@
 @import '../../styles/themes/index';
 
 .#{$prefix-class}-eyebrow {
+
+    font-family: var(--k-font-family-secondary);
     p {
         color: var(--kd-color-eyebrow);
         margin: 0 0 16px 0;

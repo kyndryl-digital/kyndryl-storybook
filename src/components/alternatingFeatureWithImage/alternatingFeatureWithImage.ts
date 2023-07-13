@@ -25,6 +25,28 @@ export class kdAlternatingFeatureWithImage extends LitElement {
 
   @property() theme: THEMES;
 
+  get eyebrowTemplate() {
+    if(this.eyebrowText) {
+      return html`
+        <kd-eyebrow theme="${this.theme}">${this.eyebrowText}</kd-eyebrow>
+      `;
+    }
+    else {
+      return null;
+    }
+  }
+
+  get ctaTemplate() {
+    if(this.buttonLabel) {
+      return html`
+      <kd-button type="text" size="small" icon="chevron-right" iconposition="right" description="" href="${this.buttonLink}" target="_self" theme="${this.theme}">${this.buttonLabel}</kd-button>
+      `;
+    }
+    else {
+      return null;
+    }
+  }
+
   get slot1Template() {
     if(this.reverse === 'true') {
       if(this.bleedMedia === 'true') {
@@ -99,10 +121,10 @@ export class kdAlternatingFeatureWithImage extends LitElement {
 
   get textCard() {
     return html`
-      <kd-eyebrow theme="${this.theme}">${this.eyebrowText}</kd-eyebrow>
+      ${this.eyebrowTemplate}
       <h3 class="headline-06-light">${this.title}</h3>
       <slot name="text"></slot>
-      <kd-button type="text" size="small" icon="chevron-right" iconposition="right" description="" href="${this.buttonLink}" target="_self" theme="${this.theme}">${this.buttonLabel}</kd-button>
+      ${this.ctaTemplate}
     `;
   }
 
