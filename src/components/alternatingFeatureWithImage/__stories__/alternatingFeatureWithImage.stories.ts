@@ -7,11 +7,14 @@ import { classMap } from 'lit-html/directives/class-map.js';
 import { PREFIX_TAG } from '../../../global/settings/settings';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { THEMES } from '../../../global/defs/themes';
+import { BUTTON_TYPES, BUTTON_ICON_POSITION } from '../../button/defs';
+import '../../button/button';
 
 import '../alternatingFeatureWithImage';
 import '../../image/image';
 
 const optionsTheme = createOptionsArray(THEMES);
+const optionsButtonType = createOptionsArray(BUTTON_TYPES);
 
 export default {
   title: 'Web Components/Alternating Feature with Image',
@@ -28,9 +31,9 @@ export default {
       options: ['true', 'false'],
       description: 'Bleed the media slot to the edge of the browser'
     },
-    title: {
+    headlineText: {
       control: {type: 'text'},
-      description: 'Title'
+      description: 'Headline Text (required)'
     },
     eyebrowText: {
       control: {type: 'text'},
@@ -43,6 +46,11 @@ export default {
     buttonLink: {
       control: {type: 'text'},
       description: 'Button Link'
+    },
+    buttonType: {
+      control: {type: 'select'},
+      options: optionsButtonType,
+      description: 'Button Type'
     },
     theme: {
       options: [
@@ -64,10 +72,11 @@ const Template = args => {
     <kd-alternating-feature-with-image 
       reverse="${args.reverse}"
       bleedmedia="${args.bleedMedia}"
-      title="${args.title}"
+      headlineText="${args.headlineText}"
       eyebrowtext="${args.eyebrowText}"
       buttonlabel="${args.buttonLabel}"
       buttonlink="${args.buttonLink}"
+      buttontype="${args.buttonType}"
       theme="${args.theme}"
     >   
       <div slot="media">
@@ -86,7 +95,7 @@ alternatingFeatureWithImage.args = {
   reverse: 'false',
   bleedMedia: 'false',
   eyebrowText: 'Lorem Ipsum',
-  title: 'Lorem ipsum dolor sit amet',
+  headlineText: 'Lorem ipsum dolor sit amet',
   buttonLabel: 'Button text',
   buttonLink: 'https://www.kyndryl.com'
 };

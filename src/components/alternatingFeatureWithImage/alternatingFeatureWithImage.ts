@@ -20,7 +20,8 @@ export class kdAlternatingFeatureWithImage extends LitElement {
   @property({ type: String }) bleedMedia;
   @property({ type: String }) buttonLabel;
   @property({ type: String }) buttonLink;
-  @property({ type: String }) title;
+  @property({ type: String }) buttonType;
+  @property({ type: String }) headlineText;
   @property({ type: String }) eyebrowText;
 
   @property() theme: THEMES;
@@ -39,7 +40,7 @@ export class kdAlternatingFeatureWithImage extends LitElement {
   get ctaTemplate() {
     if(this.buttonLabel) {
       return html`
-      <kd-button type="text" size="small" icon="chevron-right" iconposition="right" description="" href="${this.buttonLink}" target="_self" theme="${this.theme}">${this.buttonLabel}</kd-button>
+      <kd-button type="${this.buttonType}" size="small" icon="chevron-right" iconposition="right" description="" href="${this.buttonLink}" target="_self" theme="${this.theme}">${this.buttonLabel}</kd-button>
       `;
     }
     else {
@@ -122,7 +123,7 @@ export class kdAlternatingFeatureWithImage extends LitElement {
   get textCard() {
     return html`
       ${this.eyebrowTemplate}
-      <h3 class="headline-06-light">${this.title}</h3>
+      <h3 class="headline-06-light">${this.headlineText}</h3>
       <slot name="text"></slot>
       ${this.ctaTemplate}
     `;
