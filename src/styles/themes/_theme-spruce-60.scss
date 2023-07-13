@@ -1,0 +1,15 @@
+/**
+ * Copyright Kyndryl, Inc. 2022
+ */
+
+@import '../variables/config';
+@import '../variables/colors';
+
+.#{$prefix-class-theme}-spruce-60 {
+  --kd-color-token-base: var(--k-color-spruce-60);
+  --kd-color-token-inverse: var(--kd-color-brand-cloud);
+  --kd-color-token-interactive: var(--kd-color-brand-cloud);
+  --kd-color-token-accent: var(--kd-color-brand-cloud);
+  --kd-color-eyebrow: var(--k-color-springgreen-20);
+  @include css-vars-color-usage;
+}
