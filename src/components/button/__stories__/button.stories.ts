@@ -1,7 +1,7 @@
-/**
- * Copyright Kyndryl, Inc. 2022
- */
- 
+/** 
+* Copyright Kyndryl, Inc. 2023
+*/
+
 import { html } from 'lit';
 import { createOptionsArray } from '../../../global/mixins/global';
 import { PREFIX_TAG } from '../../../global/settings/settings';
@@ -19,6 +19,7 @@ const optionsLinkTargets = createOptionsArray(LINK_TARGETS);
 const optionsTheme = createOptionsArray(THEMES);
 
 export default {
+
   title: 'Web Components/Button',
   component: `${PREFIX_TAG}-button`,
   parameters: {},
@@ -76,6 +77,7 @@ export default {
         type: 'select',
       },
     },
+
     theme: {
       description: 'Color theme',
       options: [
@@ -94,17 +96,19 @@ export default {
 
 const Template = args => {
   return html`
-    <kd-button
-      type=${args.type}
-      size=${args.size}
-      icon=${args.icon}
-      iconPosition=${args.iconPosition}
-      description=${args.description}
-      href=${args.href}
-      target=${args.target}
-      theme=${args.theme}
-    >Button Text</kd-button>
-  `;
+ <div style="background-color:lightgreen;height: 100px;display: flex;justify-content: center;align-items: center;">
+   <kd-button
+     type=${args.type}
+     size=${args.size}
+     icon=${args.icon}
+     iconPosition=${args.iconPosition}
+     description=${args.description}
+     href=${args.href}
+     target=${args.target}
+     theme=${args.theme}
+   >Button Text</kd-button>
+   </div>
+ `;
 };
 
 export const Button = Template.bind({});

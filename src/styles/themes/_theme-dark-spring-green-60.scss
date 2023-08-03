@@ -1,0 +1,27 @@
+/**
+* Copyright Kyndryl, Inc. 2023
+*/
+
+@import '../variables/config';
+@import '../variables/colors';
+
+.#{$prefix-class-theme}-dark-spring-green-60 {
+ --k-color-button-primary-text: var(--k-color-darkstone-80);
+ --k-color-button-primary-bg: var(--k-color-neutral-white);
+ --k-color-button-primary-border: var(--k-color-neutral-white);
+ //   --k-color-token-accent: var(--kd-color-brand-warm-red);
+ --k-color-button-primary-hover-border: var(--k-color-springgreen-70);
+ --k-color-button-primary-hover-bg: var(--k-color-springgreen-70);
+ --k-color-button-primary-hover-text: var(--k-color-neutral-white);
+ --k-color-button-secondary-text: var(--k-color-neutral-white);
+ --k-color-button-secondary-bg: transparent;
+ --k-color-button-secondary-border: var(--k-color-neutral-white);
+ //   --k-color-button-secondary-accent: var(--kd-color-brand-warm-red);
+ --k-color-button-secondary-hover-border: var(--k-color-springgreen-70);
+ --k-color-button-secondary-hover-bg: transparent;
+ --k-color-button-secondary-hover-text: var(--k-color-neutral-white);
+ --k-color-button-link-text:var(--k-color-neutral-white);
+ --k-color-button-link-hover-text: var(--k-color-neutral-white);
+  @include css-vars-color-usage;
+
+}
