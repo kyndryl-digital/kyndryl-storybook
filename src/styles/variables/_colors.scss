@@ -1,10 +1,10 @@
 /**
- * Copyright Kyndryl, Inc. 2022
- */
- 
+* Copyright Kyndryl, Inc. 2023
+*/
 
 @mixin css-vars-color-tokens {
   // Brand color palette
+  --kd-color-brand-sage: #8d978b;
   --kd-color-brand-white: #fafafc;
   --kd-color-brand-dark-white: #e5e5e5;
   --kd-color-brand-black: #2b2b2b;
@@ -17,16 +17,34 @@
   --kd-color-brand-deep-forest: #042315;
   --kd-color-brand-dark-spring-green: #187e3f;
   --kd-color-brand-spring-green: #4cdd84;
-  --kd-color-brand-sage: #8d978b;
   --kd-color-brand-earth: #9e9287;
   --kd-color-brand-dark-earth: #565049;
-
+  --kd-color-warm-gray-shade-10: #f1f0f0;
+  --kd-color-dark-stone-shade-20: #dcdad8;
+  --kd-color-dark-stone-shade-10: #f4f4f4;
+  --kd-color-dark-stone-shade-70: #515151;
+  --kd-color-skye-shade-10: #e4f4f1;
+  --kd-color-skye-shade-20: #aadcd3;
+  --kd-color-cloud-shade-20: #dddad3;
+  --kd-color-brand-warm-red-shade-40: #ff6b57;
+  --kd-color-brand-spring-green-shade-30: #24c060;
+  --kd-color-brand-spring-green-shade-10: #b6f1cd;
+  --kd-color-brand-dark-spring-green-shade-50: #189048;
+  --kd-color-brand-spruce-shade-50: #2f808c;
+  --kd-color-brand-spruce-shade-80: #163d43;
+  --kd-color-brand-spruce-shade-30: #3fadbd;
+  --kd-color-brand-spruce-shade-70: #205961;
+  --kd-color-cool-gray-shade-40: #97a1a6;
+  
+//new colors
   --k-color-darkstone-100: #161616;
   --k-color-darkstone-80: #3D3C3C;
   --k-color-darkstone-70: #515151;
   --k-color-darkstone-50: #898888;
+  --k-color-darkstone-30: #cdd3d0;
   --k-color-darkstone-20: #DCDAD8;
   --k-color-darkstone-10: #F9F9F9;
+  --k-color-spruce-90:#0e272a;
   --k-color-spruce-80:#163D43;
   --k-color-spruce-70:#205961;
   --k-color-spruce-60: #29707A;
@@ -38,6 +56,7 @@
   --k-color-warmgray-20: #D9D7D7;
   --k-color-springgreen-20: #4CDD84;
   --k-color-springgreen-30: #24C060;
+  --k-color-springgreen-70: #10592c;
   --k-color-deepforest-90: #042315;
   --k-color-cloud-10:#F2F1EE;
   --k-color-cloud-20: #DDDAD3;
@@ -46,6 +65,7 @@
   --k-color-dk-springgreen-60: #187E3F;
   --k-color-coolgray-30: #B6BDC0;
   --k-color-coolgray-20: #D5D9DB;
+  --k-color-coolgray-60: #667076;
   --k-color-warmgray-50: #8D8888;
   --k-color-success:#00AF41;
   --k-color-success-light:#E5F7EB;
@@ -54,153 +74,61 @@
   --k-color-warning: #F5C400;
   --k-color-warning-light: #FEF9E5;
   --k-color-informational: #E7E7E7;
-  --k-color-spruce-100: #081618;
-  --k-color-spruce-90: #0E272A;
-  --k-color-spruce-80: #163D43;
-  --k-color-spruce-70: #205961;
-  --k-color-spruce-60:#29707A;
-  --k-color-spruce-50:#2F808C;
-  --k-color-spruce-40:#3797A4;
-  --k-color-spruce-30:#3FADBD;
-  --k-color-spruce-20:#8ECFD9;
-  --k-color-spruce-10: #DDF0F3;
-  --k-color-skye-100: #091714;
-  --k-color-skye-90: #102824;
-  --k-color-skye-80: #193F38;
-  --k-color-skye-70: #23564D;
-  --k-color-skye-60:#2C6E61;
-  --k-color-skye-50:#38887B;
-  --k-color-skye-40:#44A895;
-  --k-color-skye-30:#5FBEAC;
-  --k-color-skye-20:#AADCD3;
-  --k-color-skyee-10: #E4F4F1;
-  --k-color-deepforest-100: #02150D;
-  --k-color-deepforest-90: #042315;
-  --k-color-deepforest-80: #074127;
-  --k-color-deepforest-70: #0A5734;
-  --k-color-deepforest-60:#0D7546;
-  --k-color-deepforest-50:#0F8853;
-  --k-color-deepforest-40:#13A865;
-  --k-color-deepforest-30:#15BE72;
-  --k-color-deepforest-20:#19DB83;
-  --k-color-deepforest-10: #C4F3D6;
-  --k-color-springgreen-100: #03140A;
-  --k-color-springgreen-90: #072914;
-  --k-color-springgreen-80: #0D4422;
-  --k-color-springgreen-70: #10592C;
-  --k-color-dk-springgreen-60: #187E3F;
-  --k-color-springgreen-50: #1B904B;
-  --k-color-springgreen-40: #1FA452;
-  --k-color-springgreen-30: #24C060;
-  --k-color-springgreen-20: #4CDD84;
-  --k-color-springgreen-10: #B6F1CD;
-  --k-color-warmred-100: #410700;
-  --k-color-warmred-90: #6A0C00;
-  --k-color-warmred-80: #9B1200;
-  --k-color-warmred-70: #CC1800;
-  --k-color-warmred-60: #FF2306;
-  --k-color-warmred-50: #FF462D;
-  --k-color-warmred-40: #FF6B57;
-  --k-color-warmred-30: #FF9688;
-  --k-color-warmred-20: #FEC1B9;
-  --k-color-warmred-10: #FEDEDA;
-  --k-color-earth-100: #161412;
-  --k-color-earth-90: #2D2824;
-  --k-color-earth-80: #3F3833;
-  --k-color-darkearth-70: #565049;
-  --k-color-earth-60: #70655B;
-  --k-color-earth-50: #8B7D71;
-  --k-color-earth-40: #9E9287;
-  --k-color-earth-30: #BFB7B0;
-  --k-color-earth-20: #DCD8D4;
-  --k-color-earth-10: #F5F4F3;
-  --k-color-cloud-100: #171511;
-  --k-color-cloud-90: #29271F;
-  --k-color-cloud-80: #3C382D;
-  --k-color-cloud-70: #534E3F;
-  --k-color-cloud-60: #6E6854;
-  --k-color-cloud-50: #8A826A;
-  --k-color-cloud-40: #A49D89;
-  --k-color-cloud-30: #BDB8A9;
-  --k-color-cloud-20: #DDDAD3;
-  --k-color-cloud-10: #F2F1EE;
-  --k-color-darkstone-100: #161616;
-  --k-color-darkstone-90: #272727;
-  --k-color-darkstone-80: #3D3C3C;
-  --k-color-darkstone-70: #515151;
-  --k-color-darkstone-60: #6D6D6D;
-  --k-color-darkstone-50: #898888;
-  --k-color-darkstone-40: #A8A5A6;
-  --k-color-darkstone-30: #BCBAB8;
-  --k-color-darkstone-20: #DCDAD8;
-  --k-color-darkstone-10: #F9F9F9;
-  --k-color-warmgray-100: #141313;
-  --k-color-warmgray-90: #2D2B2B;
-  --k-color-warmgray-80: #423F3F;
-  --k-color-warmgray-70: #565353;
-  --k-color-warmgray-60: #746F6F;
-  --k-color-warmgray-50: #8D8888;
-  --k-color-warmgray-40: #A5A0A0;
-  --k-color-warmgray-30: #C1BEBE;
-  --k-color-warmgray-20: #D9D7D7;
-  --k-color-warmgray-10: #F1F0F0;
-  --k-color-coolgray-100: #121415;
-  --k-color-coolgray-90: #222527;
-  --k-color-coolgray-80: #383E41;
-  --k-color-coolgray-70: #4B5357;
-  --k-color-coolgray-60: #667076;
-  --k-color-coolgray-50: #79858B;
-  --k-color-coolgray-40: #97A1A6;
-  --k-color-coolgray-30: #B6BDC0;
-  --k-color-coolgray-20: #D5D9DB;
-  --k-color-coolgray-10: #EDF1F2;
+  --k-color-dark-opacity: #313131;
 
+  
   // Color Tokens
+  
   --kd-color-token-base: var(--kd-color-brand-white);
   --kd-color-token-inverse: var(--kd-color-brand-dark-stone);
   --kd-color-token-interactive: var(--kd-color-brand-dark-stone);
   --kd-color-token-accent: var(--kd-color-brand-warm-red);
-}
-
-@mixin css-vars-color-usage {
-  // Base elements
-  --kd-color-background: var(--kd-color-token-base);
-
-  --kd-color-text: var(--kd-color-token-inverse);
-
-  --kd-color-h1: var(--kd-color-token-inverse);
-  --kd-color-h2: var(--kd-color-token-inverse);
-  --kd-color-h3: var(--kd-color-token-inverse);
-  --kd-color-h4: var(--kd-color-token-inverse);
-  --kd-color-h5: var(--kd-color-token-inverse);
-  --kd-color-h6: var(--kd-color-token-inverse);
-
-  --kd-color-link: var(--kd-color-token-inverse);
-  --kd-color-link-hover: var(--kd-color-token-interactive);
-  --kd-color-link-active: var(--kd-color-token-interactive);
-
-  // Component specific
+  
+  --k-color-button-primary-text: var(--k-color-neutral-white);
+  --k-color-button-primary-bg: var(--k-color-darkstone-70);
+  --k-color-button-primary-border: var(--k-color-darkstone-70);
+  --k-color-token-accent: var(--kd-color-brand-warm-red);
+  --k-color-button-primary-hover-border: var(--k-color-darkstone-100);
+  --k-color-button-primary-hover-bg: var(--k-color-darkstone-100);
+  --k-color-button-primary-hover-text: var(--k-color-neutral-white);
+  --k-color-button-primary-disabled-text: var(--k-color-darkstone-50);
+  --k-color-button-primary-disabled-bg: var(--k-color-darkstone-20);
+  --k-color-button-primary-disabled-border: var(--k-color-darkstone-20);
+  --k-color-button-secondary-disabled-text: var(--k-color-darkstone-50);
+  --k-color-button-secondary-disabled-bg: transparent;
+  --k-color-button-secondary-disabled-border: var(--k-color-darkstone-20);
+  --k-color-button-disabled-text: var(--k-color-darkstone-50);
+  --k-color-button-disabled-bg: transparent;
+  --k-color-button-disabled-border: transparent;
+  --k-color-button-secondary-text: var(--k-color-darkstone-80);
+  --k-color-button-secondary-bg: transparent;
+  --k-color-button-secondary-border: var(--k-color-darkstone-80);
+  --k-color-button-secondary-accent: var(--kd-color-brand-warm-red);
+  --k-color-button-secondary-hover-border: var(--k-color-darkstone-100);
+  --k-color-button-secondary-hover-bg: transparent;
+  --k-color-button-secondary-hover-text: var(--k-color-darkstone-30);
+  --k-color-button-link-text:var(--k-color-darkstone-80);
+  --k-color-button-link-hover-text: var(--k-color-darkstone-100);
+  
   --kd-color-button-primary-text: var(--kd-color-token-inverse);
   --kd-color-button-primary-bg: var(--kd-color-token-base);
   --kd-color-button-primary-border: var(--kd-color-token-accent);
-  --kd-color-button-primary-hover-text: var(--kd-color-token-base);
-  --kd-color-button-primary-hover-bg: var(--kd-color-token-inverse);
-  --kd-color-button-primary-hover-border: var(--kd-color-token-inverse);
+  --kd-color-button-primary-hover-text: var(--kd-color-token-hover-base);
+  --kd-color-button-primary-hover-bg: var(--kd-color-token-hover-interactive);
+  --kd-color-button-primary-hover-border: var(--kd-color-token-hover-interactive);
   --kd-color-button-primary-active-text: var(--kd-color-token-base);
   --kd-color-button-primary-active-bg: var(--kd-color-token-inverse);
   --kd-color-button-primary-active-border: var(--kd-color-token-inverse);
-
-  --kd-color-button-secondary-text: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-text: var(--kd-color-token-base);
   --kd-color-button-secondary-bg: var(--kd-color-token-base);
   --kd-color-button-secondary-border: var(--kd-color-token-base);
   --kd-color-button-secondary-hover-text: var(--kd-color-token-base);
-  --kd-color-button-secondary-hover-bg: var(--kd-color-token-inverse);
-  --kd-color-button-secondary-hover-border: var(--kd-color-token-inverse);
+  --kd-color-button-secondary-hover-bg: var(--kd-color-token-transparent);
+  --kd-color-button-secondary-hover-border: var(--kd-color-token-interactive);
   --kd-color-button-secondary-active-text: var(--kd-color-token-base);
   --kd-color-button-secondary-active-bg: var(--kd-color-token-inverse);
   --kd-color-button-secondary-active-border: var(--kd-color-token-inverse);
-
-  --kd-color-button-link-text: var(--kd-color-token-inverse);
+  --kd-color-button-link-text: var(--kd-color-token-base);
   --kd-color-button-link-bg: transparent;
   --kd-color-button-link-border: transparent;
   --kd-color-button-link-hover-text: var(--kd-color-token-base-interactive);
@@ -209,12 +137,28 @@
   --kd-color-button-link-active-text: var(--kd-color-token-base-interactive);
   --kd-color-button-link-active-bg: transparent;
   --kd-color-button-link-active-border: transparent;
-
+  
+  }
+  
+  
+  @mixin css-vars-color-usage {
+  // Base elements
+  --kd-color-background: var(--kd-color-token-base);
+  --kd-color-text: var(--kd-color-token-inverse);
+  --kd-color-h1: var(--kd-color-token-inverse);
+  --kd-color-h2: var(--kd-color-token-inverse);
+  --kd-color-h3: var(--kd-color-token-inverse);
+  --kd-color-h4: var(--kd-color-token-inverse);
+  --kd-color-h5: var(--kd-color-token-inverse);
+  --kd-color-h6: var(--kd-color-token-inverse);
+  --kd-color-link: var(--kd-color-token-inverse);
+  --kd-color-link-hover: var(--kd-color-token-interactive);
+  --kd-color-link-active: var(--kd-color-token-interactive);
   --kd-color-modal-backdrop: rgba(var(--kd-color-brand-black-rgb), 0.6);
   --kd-color-modal-bg: var(--kd-color-token-base);
   --kd-color-modal-text: var(--kd-color-token-inverse);
+  --kd-color-header-main-nav-bg: var(--kd-color-brand-cloud);
 
-  --kd-color-header-main-nav-bg: #f2f1ee;
   --k-color-text-primary:var(--k-color-darkstone-80);
   --k-color-text-secondary: var(--k-color-darkstone-50);
   --k-color-text-tertiary: var(--k-color-spruce-60);
@@ -248,6 +192,7 @@
   --k-color-background-warning: var(--k-color-warning);
   --k-color-background-warning-light: var(--k-color-warning-light);
   --k-color-background-informational: var(--k-color-informational);
+
   --k-color-text-success:var(--k-color-success);
   --k-color-text-success-light: var(--k-color-success-light);
   --k-color-text-error: var(--k-color-error);
@@ -264,93 +209,98 @@
   --k-color-text-button-secondary-hover: var(--k-color-darkstone-100);
   --k-color-text-button-tertiary: var(--k-color-darkstone-70);
   --k-color-text-button-tertiary-hover: var(--k-color-darkstone-100);
-}
-
-@mixin dark-theme-darkstone-80 {
+  }
+  
+  
+  @mixin dark-theme-darkstone-80 {
   --k-theme-color-darkstone-background: var(--k-color-darkstone-80);
   --k-theme-color-darkstone-foreground: var(--k-color-neutral-white);
   --k-theme-color-darkstone-accent-primary: var(--k-color-springgreen-20);
   --k-theme-color-darkstone-accent-secondary: var(--k-color-coolgray-40);
   --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-70);
- }
- 
- @mixin dark-theme-spruce-60 {
+  }
+  
+
+  @mixin dark-theme-spruce-60 {
   --k-theme-color-spruce-background: var(--k-color-spruce-60);
   --k-theme-color-spruce-foreground: var(--k-color-neutral-white);
   --k-theme-color-spruce-accent-primary: var(--k-color-springgreen-20);
   --k-theme-color-spruce-accent-secondary: var(--k-color-springgreen-10);
   --k-theme-color-spruce-accent-tertiary: var(--k-color-spruce-50);
- }
- 
- @mixin dark-theme-spruce-80 {
+  }
+  
+  
+  @mixin dark-theme-spruce-80 {
   --k-theme-color-spruce-background: var(--k-color-spruce-80);
   --k-theme-color-spruce-foreground: var(--k-color-neutral-white);
   --k-theme-color-spruce-accent-primary: var(--k-color-springgreen-20);
   --k-theme-color-spruce-accent-secondary: var(--k-color-spruce-30);
   --k-theme-color-spruce-accent-tertiary: var(--k-color-spruce-70);
- }
- 
- @mixin dark-theme-darkspring-60 {
+  }
+  
+  
+  @mixin dark-theme-darkspring-60 {
   --k-theme-color-darkspring-background: var(--k-color-spruce-80);
   --k-theme-color-darkspring-foreground: var(--k-color-neutral-white);
   --k-theme-color-darkspring-accent-primary: var(--k-color-springgreen-10);
   --k-theme-color-darkspring-accent-secondary: var(--k-color-springgreen-20);
   --k-theme-color-darkspring-accent-tertiary: var(--k-color-darkspringgreen-50);
- }
- 
- @mixin dark-theme-warmred-50 {
+  }
+  
+  @mixin dark-theme-warmred-50 {
   --k-theme-color-warmred-background: var(--k-color-warmred-50);
   --k-theme-color-warmred-foreground: var(--k-color-neutral-white);
   --k-theme-color-warmred-accent-primary: var(--k-color-neutral-white);
   --k-theme-color-warmred-accent-secondary: var(--k-color-darkstone-80);
   --k-theme-color-warmred-accent-tertiary: var(--k-color-warmred-40);
- }
- 
- @mixin dark-theme-springgreen-20 {
+  }
+  
+  @mixin dark-theme-springgreen-20 {
   --k-theme-color-springgreen-background: var(--k-color-springgreen-20);
   --k-theme-color-springgreen-foreground: var(--k-color-deepforest-90);
   --k-theme-color-springgreen-accent-primary: var(--k-color-deepforest-90);
   --k-theme-color-springgreen-accent-secondary: var(--k-color-spruce-70);
   --k-theme-color-springgreen-accent-tertiary: var(--k-color-springgreen-30);
- }
- 
- @mixin light-theme-darkstone-light {
+  }
+  
+  @mixin light-theme-darkstone-light {
   --k-theme-color-darkstone-background: var(--k-color-darkstone-10);
   --k-theme-color-darkstone-foreground: var(--k-color-darkstone-80);
   --k-theme-color-darkstone-accent-primary: var(--k-color-warmred-50);
   --k-theme-color-darkstone-accent-secondary: var(--k-color-spruce-60);
   --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-20);
- }
- 
- @mixin light-theme-darkstone-light {
+  }
+  
+  
+  @mixin light-theme-darkstone-light {
   --k-theme-color-darkstone-background: var(--k-color-darkstone-10);
   --k-theme-color-darkstone-foreground: var(--k-color-darkstone-80);
   --k-theme-color-darkstone-accent-primary: var(--k-color-warmred-50);
   --k-theme-color-darkstone-accent-secondary: var(--k-color-spruce-60);
   --k-theme-color-darkstone-accent-tertiary: var(--k-color-darkstone-20);
- }
- 
- @mixin light-theme-skye-10 {
+  }
+  
+  @mixin light-theme-skye-10 {
   --k-theme-color-skye-background: var(--k-color-skye-10);
   --k-theme-color-skye-foreground: var(--k-color-darkstone-80);
   --k-theme-color-skye-accent-primary: var(--k-color-warmred-50);
   --k-theme-color-skye-accent-secondary: var(--k-color-spruce-60);
   --k-theme-color-skye-accent-tertiary: var(--k-color-skye-20);
- }
- 
- @mixin light-theme-cloud-10 {
+  }
+  
+  @mixin light-theme-cloud-10 {
   --k-theme-color-cloud-background: var(--k-color-cloud-10);
   --k-theme-color-cloud-foreground: var(--k-color-darkstone-80);
   --k-theme-color-cloud-accent-primary: var(--k-color-warmred-50);
   --k-theme-color-cloud-accent-secondary: var(--k-color-spruce-60);
   --k-theme-color-cloud-accent-tertiary: var(--k-color-cloud-20);
- }
- 
- @mixin light-theme-white {
+  }
+  
+  
+  @mixin light-theme-white {
   --k-theme-color-white-background: var(--k-color-neutral-white);
   --k-theme-color-white-foreground: var(--k-color-darkstone-80);
   --k-theme-color-white-accent-primary: var(--k-color-warmred-50);
   --k-theme-color-white-accent-secondary: var(--k-color-spruce-60);
   --k-theme-color-white-accent-tertiary: var(--k-color-darkstone-10);
- }
- 
+  }
