@@ -57,14 +57,29 @@
     grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, xlg));
   }
 
-  @include breakpoint(sm, md, lg, xlg) {
+  @include breakpoint(sm) {
     @include padding(left, 2);
     @include padding(right, 2);
   }
 
+  @include breakpoint(md) {
+    @include padding(left, 4);
+    @include padding(right, 4);
+  }
+
+  @include breakpoint(lg) {
+    @include padding(left, 4);
+    @include padding(right, 4);
+  }
+
+  @include breakpoint(xlg) {
+    @include padding(left, 6);
+    @include padding(right, 6);
+  }
+
   @include breakpoint(max) {
-    @include padding(left, 3);
-    @include padding(right, 3);
+    @include padding(left, 5);
+    @include padding(right, 5);
     grid-template-columns: grid-columns-to-fractional-units(map-get($grid-cols-per-breakpoint, 'max'));
   }
 
