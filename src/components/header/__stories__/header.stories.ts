@@ -31,8 +31,7 @@ const Template = args => {
           <kd-nav-item hasHoverEffect slot="trigger" hasIcon>About Us</kd-nav-item>
           <div slot="content">About Us Mega menu</div>
         </kd-mega-menu>
-
-        <kd-nav-item hasHoverEffect slot="primary-navigation">News and Insights</kd-nav-item>
+        
         <kd-nav-item hasHoverEffect slot="primary-navigation">Customer Stories</kd-nav-item>
         <kd-nav-item hasHoverEffect slot="primary-navigation">Careers</kd-nav-item>
 
